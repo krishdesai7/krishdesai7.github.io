@@ -1,0 +1,6 @@
+FROM ruby:3.4
+
+RUN apt-get update && apt-get install -y zsh
+
+# Set zsh as default shell (optional)
+CMD [ "zsh" ]

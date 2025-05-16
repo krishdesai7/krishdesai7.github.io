@@ -8,6 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
+[Download full CV as PDF]({{ site.baseurl }}/files/your_cv.pdf)
 
 Education
 ======
