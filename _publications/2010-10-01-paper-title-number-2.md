@@ -1,8 +1,8 @@
 ---
-title: "Paper Title Number 2"
-collection: publications
+title: "Symmetry Discovery with Deep Learning"
+collection: conference-proceedings
 category: manuscripts
-permalink: /publication/2010-10-01-paper-title-number-2
+permalink: https://ml4physicalsciences.github.io/2021/files/NeurIPS_ML4PS_2021_117.pdf
 excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
 date: 2010-10-01
 venue: 'Journal 1'
