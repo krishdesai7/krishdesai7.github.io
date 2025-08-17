@@ -13,7 +13,7 @@ By marrying statistical rigour with powerful machine learning methods, this work
 
 date: 2025-08-15
 venue: 'University of California, Berkeley'
-paperurl: 'http://academicpages.github.io/files/10-paper.pdf'
-bibtexurl: 'http://academicpages.github.io/files/10-biblatex.bib'
+paperurl: 'https://www.desai.ml/files/10-paper.pdf'
+bibtexurl: 'https://www.desai.ml/files/10-biblatex.bib'
 citation: 'Desai, Krish. (2025). Machine Learning Methods for Cross Section Measurements. <i>University of California, Berkeley</i>. PhD Physics Dissertation.'
 ---

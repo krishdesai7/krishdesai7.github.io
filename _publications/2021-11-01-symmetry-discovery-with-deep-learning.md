@@ -14,8 +14,8 @@ the LHC Olympics dataset. Symmetry discovery may lead to new insights and can
 reduce the effective dimensionality of a dataset to increase its effective statistic'
 date: 2021-11-01
 venue: 'NeurIPS 2021'
-slidesurl: 'http://academicpages.github.io/files/3-slides.pdf'
-paperurl: 'http://academicpages.github.io/files/3-paper.pdf'
-bibtexurl: 'http://academicpages.github.io/files/3-biblatex.bib'
+slidesurl: 'https://www.desai.ml/files/3-slides.pdf'
+paperurl: 'https://www.desai.ml/files/3-paper.pdf'
+bibtexurl: 'https://www.desai.ml/files/3-biblatex.bib'
 citation: 'Desai, K., Nachman, B., & Thaler, J. (2021). Symmetry Discovery with Deep Learning. <i>NeurIPS</i> ML4PS 117 (2021)'
 ---

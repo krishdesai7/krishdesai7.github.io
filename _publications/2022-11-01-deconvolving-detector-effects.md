@@ -7,8 +7,8 @@ excerpt: 'Deconvolving (‘unfolding’) detector distortions is a critical step
 without having to first discretize the data. Our Moment Unfolding technique uses machine learning and is inspired by Generative Adversarial Networks (GANs). We demonstrate the performance of this approach using jet substructure measurements in collider physics.'
 date: 2022-11-01
 venue: 'NeurIPS ML4PS'
-paperurl: 'https://academicpages.github.io/files/5-paper.pdf'
-bibtexurl: 'http://academicpages.github.io/files/5-biblatex.bib'
-slidesurl: 'https://academicpages.github.io/files/5-slides.pdf'
+paperurl: 'https://www.desai.ml/files/5-paper.pdf'
+bibtexurl: 'https://www.desai.ml/files/5-biblatex.bib'
+slidesurl: 'https://www.desai.ml/files/5-slides.pdf'
 citation: 'Desai, K., Nachman, B., & Thaler, J. (2022). Deconvolving Detector Effects for Distribution Moments. <i>NeurIPS</i> ML4PS, 43.'
 ---
