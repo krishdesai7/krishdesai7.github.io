@@ -6,9 +6,9 @@ permalink: https://doi.org/10.1007/s00022-021-00620-4
 excerpt: 'An oblivious point on a translation surface is a point with no closed geodesic passing through it. Nguyen et al. (Mathematische Annalen, 2017) showed that there are at most finitely many oblivious points on any given translation surface and constructed a family of surfaces with exactly one oblivious point. We construct new families of translation surfaces with arbitrarily many oblivious points and prove that there is a translation surface in every genus ≥ 3 with an oblivious point on it.'
 date: 2021-12-16
 venue: 'Journal of Geometry'
-paperurl: 'http://academicpages.github.io/files/1-paper.pdf'
-bibtexurl: 'http://academicpages.github.io/files/1-biblatex.bib'
-slidesurl: 'http://academicpages.github.io/files/1-slides.pdf'
+paperurl: 'https://www.desai.ml/files/1-paper.pdf'
+bibtexurl: 'https://www.desai.ml/files/1-biblatex.bib'
+slidesurl: 'https://www.desai.ml/files/1-slides.pdf'
 citation: 'Adelstein, I., Desai, K., Ji, A., & Zdeblick, G. (2022). Oblivious points on translation surfaces. <i>Journal of Geometry</i>, 113(1), 6.'
 ---
 
