@@ -13,7 +13,7 @@ title                    : "Krish Desai"
 title_separator          : "-"
 name                     : &name "Krish Desai, PhD"
 description              : &description "Machine Learning Researcher"
-url                      : https://www.desai.ml # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+url                      : "" # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "krishdesai7/krishdesai7.github.io"
 
