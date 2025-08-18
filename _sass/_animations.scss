@@ -1,0 +1,202 @@
+/* ==========================================================================
+   ANIMATIONS & TRANSITIONS
+   ========================================================================== */
+
+/* Global fade-in animation */
+@keyframes intro {
+    0% { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Subtle scale animation */
+@keyframes scale-in {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Fade animation without movement */
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Apply intro animation to main elements */
+.masthead {
+    animation: fade-in 0.3s both;
+    animation-delay: 0.15s;
+}
+
+#main {
+    animation: intro 0.3s both;
+    animation-delay: 0.35s;
+}
+
+.page__footer {
+    animation: fade-in 0.3s both;
+    animation-delay: 0.45s;
+}
+
+/* Sidebar animation */
+.sidebar {
+    animation: fade-in 0.4s both;
+    animation-delay: 0.25s;
+}
+
+/* Archive items staggered animation */
+.archive__item {
+    animation: fade-in 0.3s both;
+    
+    @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{0.1 + ($i * 0.05)}s;
+        }
+    }
+}
+
+/* Navigation items animation */
+.greedy-nav__toggle,
+.visible-links li {
+    animation: fade-in 0.3s both;
+    
+    @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+            animation-delay: #{0.2 + ($i * 0.05)}s;
+        }
+    }
+}
+
+/* Author profile animation */
+.author__avatar,
+.author__content,
+.author__urls {
+    animation: scale-in 0.4s both;
+    animation-delay: 0.3s;
+}
+
+/* Smooth transitions for interactive elements */
+a,
+button,
+.btn,
+.archive__item-teaser,
+.archive__item-title,
+.author__avatar img,
+.nav__list a,
+.pagination li a,
+input,
+textarea,
+select {
+    transition: $global-transition;
+}
+
+/* Image hover effects */
+img:hover {
+    filter: brightness(1.05);
+}
+
+/* Link underline animation */
+.page__content a:not(.btn) {
+    position: relative;
+    text-decoration: none;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--global-link-color);
+        transition: width 0.3s ease;
+    }
+    
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+/* Button hover lift effect */
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Card hover effects */
+.archive__item:hover {
+    .archive__item-teaser {
+        transform: scale(1.02);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+    
+    .archive__item-title {
+        color: var(--global-link-color-hover);
+    }
+}
+
+/* Author avatar hover effect */
+.author__avatar {
+    img {
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+
+/* Social icon hover effects */
+.author__urls a:hover {
+    transform: translateX(5px);
+    color: var(--global-link-color-hover);
+    
+    i, svg {
+        transform: scale(1.1);
+    }
+}
+
+/* Navigation hover effects */
+.greedy-nav a:hover {
+    color: var(--global-link-color-hover);
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 2px;
+        background-color: var(--global-link-color);
+        animation: fade-in 0.2s;
+    }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Prefers reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

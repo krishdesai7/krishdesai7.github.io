@@ -40,8 +40,9 @@ $type-size-7                : 0.6875em; // ~11px
 $type-size-8                : 0.625em;  // ~10px
 
 $global-font-family         : $serif;
-$header-font-family         : $serif;
-$caption-font-family        : $serif;
+$header-font-family         : $sans-serif;
+$caption-font-family        : $georgia;
+$nav-font-family            : $sans-serif;
 
 /* ==========================================================================
    Breakpoints

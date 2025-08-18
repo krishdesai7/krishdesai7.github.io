@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .archive {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 
   @include breakpoint($medium) {
     @include span(12 of 12);
@@ -41,8 +41,18 @@
 
 .archive__item-title {
   margin-bottom: 0.25em;
-  font-family: $sans-serif-narrow;
+  font-family: $header-font-family;
+  transition: color 0.2s ease;
 
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+    
+    &:hover {
+      color: var(--global-link-color-hover);
+    }
+  }
+  
   a + a {
     opacity: 0.5;
   }
@@ -69,18 +79,33 @@
 .archive__item-teaser {
   border-radius: $border-radius;
   overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
   img {
     width: 100%;
+    transition: transform 0.3s ease;
   }
 }
 
-.archive__item:hover {
-  .archive__item-teaser {
-    box-shadow: 0 0 10px rgba(#000, 0.25);
-  }
+.archive__item {
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    
+    .archive__item-teaser {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      transform: scale(1.02);
+      
+      img {
+        transform: scale(1.05);
+      }
+    }
 
-  .archive__item-title {
-    text-decoration: underline;
+    .archive__item-title {
+      color: var(--global-link-color-hover);
+    }
   }
 }
 
