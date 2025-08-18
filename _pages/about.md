@@ -8,8 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-# About
-
 I am a machine learning researcher with a PhD in Physics from UC Berkeley (2025), specializing in the intersection of statistical inference and high energy physics. In my work at Lawrence Berkeley National Lab, I develop novel computational methods to extract fundamental physics insights from complex experimental data.
 
 ## Research Philosophy
