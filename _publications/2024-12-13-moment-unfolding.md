@@ -1,6 +1,6 @@
 ---
 title: "Moment Unfolding"
-collection: manuscripts
+collection: publications
 permalink: /publication/2024-12-13-moment-unfolding
 date: 2024-12-13
 venue: 'Physical Review D'

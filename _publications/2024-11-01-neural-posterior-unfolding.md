@@ -1,6 +1,6 @@
 ---
 title: "Neural Posterior Unfolding"
-collection: manuscripts
+collection: publications
 permalink: /publication/2024-11-01-neural-posterior-unfolding
 date: 2024-11-01
 venue: 'NeurIPS ML4PS'

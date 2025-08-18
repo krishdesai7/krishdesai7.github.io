@@ -1,6 +1,6 @@
 ---
 title: "Unbinned Inference with Correlated Events"
-collection: manuscripts
+collection: publications
 permalink: /publication/2025-04-18-unbinned-inference-correlated-events
 date: 2025-04-18
 venue: 'arXiv'

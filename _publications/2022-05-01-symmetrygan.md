@@ -1,6 +1,6 @@
 ---
 title: "SymmetryGAN"
-collection: manuscripts
+collection: publications
 permalink: /publication/2022-05-01-symmetrygan
 date: 2022-05-01
 venue: 'Physical Review D'

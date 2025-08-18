@@ -1,6 +1,6 @@
 ---
 title: "Symmetry Discovery with Deep Learning"
-collection: manuscripts
+collection: publications
 permalink: /publication/2021-11-01-symmetry-discovery-deep-learning
 date: 2021-11-01
 venue: 'NeurIPS 2021'

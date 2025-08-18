@@ -1,6 +1,6 @@
 ---
 title: "Oblivious points on translation surfaces"
-collection: manuscripts
+collection: publications
 permalink: /publication/2021-12-16-oblivious-points-translation-surfaces
 date: 2021-12-16
 venue: 'Journal of Geometry'

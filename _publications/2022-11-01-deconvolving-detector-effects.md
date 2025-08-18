@@ -1,6 +1,6 @@
 ---
 title: "Deconvolving Detector Effects for Distribution Moments"
-collection: manuscripts
+collection: publications
 permalink: /publication/2022-11-01-deconvolving-detector-effects
 date: 2022-11-01
 venue: 'NeurIPS ML4PS'

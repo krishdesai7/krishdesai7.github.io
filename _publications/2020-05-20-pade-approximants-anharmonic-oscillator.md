@@ -1,6 +1,6 @@
 ---
 title: "Padé Approximants and the Anharmonic Oscillator"
-collection: manuscripts
+collection: publications
 permalink: /publication/2020-05-20-pade-approximants-anharmonic-oscillator
 date: 2020-05-20
 venue: 'Yale University'

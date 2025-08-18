@@ -1,6 +1,6 @@
 ---
 title: "Multidimensional Deconvolution with Profiling"
-collection: manuscripts
+collection: publications
 permalink: /publication/2024-11-01-multidimensional-deconvolution-profiling
 date: 2024-11-01
 venue: 'NeurIPS ML4PS'

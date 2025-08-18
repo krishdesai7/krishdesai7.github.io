@@ -1,6 +1,6 @@
 ---
 title: "Machine Learning Methods for Cross Section Measurements"
-collection: manuscripts
+collection: publications
 permalink: /publication/2025-08-15-machine-learning-cross-section-measurements
 date: 2025-08-15
 venue: 'University of California, Berkeley'
