@@ -21,19 +21,9 @@
   border: 0 !important;
   border-radius: $border-radius;
   cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  letter-spacing: 0.5px;
 
   &:hover {
     background-color: mix(#000, $gray, 20%);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
-  
-  &:active {
-    transform: translateY(0);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   }
 
   .icon {
@@ -79,11 +69,9 @@
 
   &--info {
     background-color: $info-color;
-    box-shadow: 0 2px 4px rgba($info-color, 0.3);
 
     &:hover {
       background-color: mix(#000, $info-color, 20%);
-      box-shadow: 0 4px 8px rgba($info-color, 0.4);
     }
   }
 
@@ -91,11 +79,9 @@
 
   &--warning {
     background-color: $warning-color;
-    box-shadow: 0 2px 4px rgba($warning-color, 0.3);
 
     &:hover {
       background-color: mix(#000, $warning-color, 20%);
-      box-shadow: 0 4px 8px rgba($warning-color, 0.4);
     }
   }
 
@@ -103,11 +89,9 @@
 
   &--success {
     background-color: $success-color;
-    box-shadow: 0 2px 4px rgba($success-color, 0.3);
 
     &:hover {
       background-color: mix(#000, $success-color, 20%);
-      box-shadow: 0 4px 8px rgba($success-color, 0.4);
     }
   }
 
@@ -115,11 +99,9 @@
 
   &--danger {
     background-color: $danger-color;
-    box-shadow: 0 2px 4px rgba($danger-color, 0.3);
 
     &:hover {
       background-color: mix(#000, $danger-color, 20%);
-      box-shadow: 0 4px 8px rgba($danger-color, 0.4);
     }
   }
 
