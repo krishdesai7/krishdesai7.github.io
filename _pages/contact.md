@@ -7,16 +7,17 @@ author_profile: true
 
 ## Contact Information
 
-**Email:** your.email@example.com
+**Email:** krishdesai7@gmail.com
 
-**Office:** Your office location
+**Office:** 10001
 
 **Address:**  
-Department of Physics  
-University Name  
-Street Address  
-City, State Zip Code  
-Country
+50-3098  
+Lawrence Berkeley National Laboratory  
+1 Cyclotron Road  
+Berkeley, CA 94720  
+United States
 
 **Social Media:**  
-[Links to your professional social media profiles]
+[LinkedIn](https://www.linkedin.com/in/krish-desai)
+[GitHub](https://github.com/krishdesai7)
