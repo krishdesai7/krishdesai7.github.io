@@ -7,12 +7,11 @@ author_profile: true
 
 ## Contact Information
 
-**Email:** krishdesai7@gmail.com
+**Email:** krishdesai7 [at] gmail [dot] com
 
-**Office:** 10001
+**Office:** 50-5048
 
 **Address:**  
-50-3098  
 Lawrence Berkeley National Laboratory  
 1 Cyclotron Road  
 Berkeley, CA 94720  

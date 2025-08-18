@@ -46,28 +46,28 @@ With my PhD completed in 2025, I'm excited about continuing to push the boundari
 
 <div class="featured-publications">
   <div class="publication-highlight">
-    <h4>📚 Machine Learning Methods for Cross Section Measurements</h4>
+    <h4> Machine Learning Methods for Cross Section Measurements</h4>
     <p><em>PhD Dissertation, UC Berkeley (2025)</em></p>
     <p>Comprehensive framework for applying modern ML techniques to particle physics data analysis, introducing novel unfolding methods and symmetry discovery algorithms.</p>
     <p><a href="/files/10-paper.pdf" class="btn btn--primary btn--small">Download PDF</a></p>
   </div>
 
   <div class="publication-highlight">
-    <h4>🎯 Moment Unfolding</h4>
+    <h4> Moment Unfolding</h4>
     <p><em>Physical Review D 110(11), 116013 (2024)</em></p>
     <p>Revolutionary GAN-inspired approach to directly unfold distribution moments without histogram binning, enabling more precise theoretical comparisons in high-energy physics.</p>
     <p><a href="/files/6-paper.pdf" class="btn btn--primary btn--small">Paper</a> <a href="/files/6-biblatex.bib" class="btn btn--small">BibTeX</a></p>
   </div>
 
   <div class="publication-highlight">
-    <h4>🔄 SymmetryGAN</h4>
+    <h4> SymmetryGAN</h4>
     <p><em>Physical Review D 105(9), 096031 (2022)</em></p>
     <p>Deep learning method to automatically discover symmetries in datasets, with applications ranging from particle physics to broader data science domains.</p>
     <p><a href="/files/4-paper.pdf" class="btn btn--primary btn--small">Paper</a> <a href="/files/4-biblatex.bib" class="btn btn--small">BibTeX</a></p>
   </div>
 
   <div class="publication-highlight">
-    <h4>🧠 Symmetry Discovery with Deep Learning</h4>
+    <h4> Symmetry Discovery with Deep Learning</h4>
     <p><em>NeurIPS ML4PS (2021)</em></p>
     <p>Foundational work on using neural networks to identify hidden symmetries in complex datasets, opening new avenues for physics-informed machine learning.</p>
     <p><a href="/files/3-paper.pdf" class="btn btn--primary btn--small">Paper</a> <a href="/files/3-slides.pdf" class="btn btn--small">Slides</a> <a href="/files/3-biblatex.bib" class="btn btn--small">BibTeX</a></p>
