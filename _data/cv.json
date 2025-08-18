@@ -1,22 +1,21 @@
 {
   "basics": {
     "name": "Krish Desai, PhD",
-    "email": "krishdesai7@gmail.com",
-    "phone": "",
-    "website": "",
-    "summary": "Currently employed at Lawrence Berkeley National Laboratory. Machine Learning Researcher",
+    "email": "krishdesai7 [at] gmail [dot] com",
+    "website": "https://www.desai.ml",
+    "summary": "PhD in Physics from University of California, Berkeley. Machine Learning Researcher at Lawrence Berkeley National Laboratory.",
     "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "Berkeley, California",
+      "address": "50-5048, Lawrence Berkeley National Laboratory, 1 Cyclotron Rd",
+      "postalCode": "94720",
+      "city": "Berkeley",
       "countryCode": "US",
-      "region": ""
+      "region": "CA"
     },
     "profiles": [
       {
         "network": "Google Scholar",
         "username": "",
-        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+        "url": "https://scholar.google.com/citations?hl=en&user=StYT3XIAAAAJ"
       },
       {
         "network": "ORCID",
@@ -37,18 +36,97 @@
         "network": "LinkedIn",
         "username": "krish-desai",
         "url": "https://www.linkedin.com/in/krish-desai"
-      },
-      {
-        "network": "Twitter",
-        "username": "@krishdesai7",
-        "url": "https://twitter.com/@krishdesai7"
       }
     ]
   },
-  "work": [],
-  "education": [],
-  "skills": [],
-  "languages": [],
+  "work": [
+    {
+      "company": "Lawrence Berkeley National Laboratory",
+      "position": "Machine Learning Researcher",
+      "startDate": "2020-09-01",
+      "endDate": "2025-05-15",
+      "summary": "Research at the intersection of machine learning and high energy physics. Development of novel computational methods for analyzing particle physics data. Collaboration with international teams on ATLAS experiment data analysis."
+    },
+    {
+      "company": "Bridgewater Associates",
+      "position": "Investment Analyst Intern",
+      "startDate": "2023-06-01",
+      "endDate": "2023-08-31",
+      "summary": "Systematic trading research and execution. Development of Bayesian Hierarchical Networks for market liquidity prediction and transaction cost minimization."
+    },
+    {
+      "company": "Microsoft Research",
+      "position": "PhD Research Intern",
+      "startDate": "2022-05-01",
+      "endDate": "2022-08-31",
+      "summary": "Theoretical and computational research on non-local field theory from matrix models. Collaboration with Jaron Lanier on applications to optimization problems."
+    },
+    {
+      "company": "Purple Gaze Inc.",
+      "position": "Software Developer Intern",
+      "startDate": "2020-05-01",
+      "endDate": "2020-07-31",
+      "summary": "Development of AI-driven glint detection algorithms for eye-tracking software. Real-time image processing pipeline implementation in Python and C++."
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of California, Berkeley",
+      "area": "Ph.D. in Physics",
+      "endDate": "2020-08 &mdash; 2025-05"
+    },
+    {
+      "institution": "Yale University",
+      "area": "M.S. in Mathematics",
+      "endDate": "2017-08 &mdash; 2020-05"
+    },
+    {
+      "institution": "Yale University",
+      "area": "B.S. in Mathematics (Intensive) with Distinction",
+      "endDate": "2017-08 &mdash; 2020-05"
+    },
+    {
+      "institution": "Yale University",
+      "area": "B.S. in Physics (Intensive) with Distinction",
+      "endDate": "2017-08 &mdash; 2020-05"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "keywords": ["Python", "Julia", "C", "MATLAB"]
+    },
+    {
+      "name": "Machine Learning",
+      "keywords": ["TensorFlow/Keras", "PyTorch", "scikit-learn", "Deep Learning", "Bayesian Methods", "Generative Models"]
+    },
+    {
+      "name": "Data Science",
+      "keywords": ["Statistical Inference", "Bayesian Statistics", "Monte Carlo Methods", "Unfolding", "Deconvolution"]
+    },
+    {
+      "name": "Physics & Mathematics",
+      "keywords": ["Particle Physics", "Quantum Field Theory", "Stochastic Calculus", "Operator Theory", "Differential Geometry"]
+    },
+    {
+      "name": "Computing",
+      "keywords": ["High Performance Computing", "Git", "Docker"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+    },
+    {
+      "language": "French",
+    },
+    {
+      "language": "Hindi",
+    },
+    {
+      "language": "Gujarati",
+    }
+  ],
   "interests": [],
   "references": [],
   "publications": [
@@ -241,80 +319,89 @@
     {
       "course": "Physics for Scientists and Engineers",
       "institution": "University of California, Berkeley",
-      "date": "",
+      "date": "Fall 2020, Spring 2021, Summer 2021",
       "role": "Associate Instructor",
       "description": ""
     },
     {
       "course": "Introductory Physics",
       "institution": "University of California, Berkeley",
-      "date": "",
+      "date": "Spring 2022",
       "role": "Head Associate Instructor",
-      "description": ""
-    },
-    {
-      "course": "Physics for Scientists and Engineers",
-      "institution": "University of California, Berkeley",
-      "date": "",
-      "role": "Associate Instructor",
-      "description": ""
-    },
-    {
-      "course": "Physics for Scientists and Engineers",
-      "institution": "University of California, Berkeley",
-      "date": "",
-      "role": "Associate Instructor",
       "description": ""
     },
     {
       "course": "Introduction to Computational Techniques in Physics",
       "institution": "University of California, Berkeley",
-      "date": "",
+      "date": "Fall 2022, Summer 2023, Summer 2024, Fall 2024",
       "role": "Associate Instructor",
       "description": ""
     },
     {
       "course": "Data Science Applications in Physics",
       "institution": "University of California, Berkeley",
-      "date": "",
+      "date": "Fall 2022, Fall 2024",
       "role": "Associate Instructor",
       "description": ""
     },
     {
       "course": "Introduction to Mathematical Physics",
       "institution": "University of California, Berkeley",
-      "date": "",
-      "role": "Associate Instructor",
-      "description": ""
-    },
-    {
-      "course": "Introduction to Computational Techniques in Physics",
-      "institution": "University of California, Berkeley",
-      "date": "",
-      "role": "Associate Instructor",
-      "description": ""
-    },
-    {
-      "course": "Introduction to Computational Techniques in Physics",
-      "institution": "University of California, Berkeley",
-      "date": "",
-      "role": "Associate Instructor",
-      "description": ""
-    },
-    {
-      "course": "Data Science Applications in Physics",
-      "institution": "University of California, Berkeley",
-      "date": "",
-      "role": "Associate Instructor",
-      "description": ""
-    },
-    {
-      "course": "Introduction to Computational Techniques in Physics",
-      "institution": "University of California, Berkeley",
-      "date": "",
+      "date": "Fall 2023",
       "role": "Associate Instructor",
       "description": ""
     }
   ],
-  "portfolio": []
+  "honors": [
+    {
+      "title": "Election to Sigma Xi",
+      "organization": "Scientific Research Honor Society, Full Membership",
+      "date": "2025"
+    },
+    {
+      "title": "Election to Sigma Pi Sigma",
+      "organization": "Physics Honor Society, Lifetime Membership",
+      "date": "2021"
+    },
+    {
+      "title": "Howard L. Schultz Prize",
+      "organization": "Yale University",
+      "date": "2020",
+      "description": "The most outstanding graduating senior in physics at Yale"
+    },
+    {
+      "title": "George J. Schulz Summer Fellowship",
+      "organization": "Yale University",
+      "date": "2020",
+      "description": "Excellence in physical science research"
+    },
+    {
+      "title": "Howard Robert Topol Fellowship",
+      "organization": "Yale University",
+      "date": "2019",
+      "description": "Excellence in mathematical research"
+    }
+  ],
+  "service": [
+    {
+      "position": "Invited Journal Peer Reviewer",
+      "organization": "Nature, Scientific Reports",
+      "date": "2025"
+    },
+    {
+      "position": "Invited Journal Peer Reviewer",
+      "organization": "Journal of High Energy Physics",
+      "date": "2025"
+    },
+    {
+      "position": "Invited Conference Peer Reviewer",
+      "organization": "NeurIPS",
+      "date": "2022, 2024"
+    },
+    {
+      "position": "Committee Member",
+      "organization": "UC Berkeley Physics Faculty Search",
+      "date": "2021 &mdash; 2024"
+    }
+  ]
 }

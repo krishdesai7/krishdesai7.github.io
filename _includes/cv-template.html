@@ -105,7 +105,7 @@
       <li class="cv-item">
         <div class="cv-item-header">
           <div class="cv-item-title">{{ work.position }}</div>
-          <div class="cv-item-date">{{ work.startDate }}{% if work.endDate %} - {{ work.endDate }}{% endif %}</div>
+          <div class="cv-item-date">{{ work.startDate | slice: 0, 7 }}{% if work.endDate %} &mdash; {{ work.endDate | slice: 0, 7 }}{% endif %}</div>
         </div>
         <div class="cv-item-content">
           <div class="cv-item-subtitle">{{ work.company }}</div>
@@ -150,7 +150,7 @@
   <div class="cv-section">
     <h2>Publications</h2>
     <ul class="cv-list">
-      {% for publication in cv.publications %}
+      {% for publication in cv.publications reversed %}
       <li class="cv-item">
         <div class="cv-item-header">
           <div class="cv-item-title">{{ publication.name }}</div>
@@ -178,7 +178,7 @@
   <div class="cv-section">
     <h2>Presentations</h2>
     <ul class="cv-list">
-      {% for talk in cv.presentations %}
+      {% for talk in cv.presentations reversed %}
       <li class="cv-item">
         <div class="cv-item-header">
           <div class="cv-item-title">{{ talk.name }}</div>
@@ -204,47 +204,42 @@
   <div class="cv-section">
     <h2>Teaching</h2>
     <ul class="cv-list">
-      {% for teaching in cv.teaching %}
+      {% for teaching in cv.teaching reversed %}
       <li class="cv-item">
-        <div class="cv-item-header">
-          <div class="cv-item-title">{{ teaching.course }}</div>
-          <div class="cv-item-date">{{ teaching.date | slice: 0, 4 }}</div>
-        </div>
         <div class="cv-item-content">
+          {% assign semesters = teaching.date | split: ", " %}
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.25em;">
+            <div class="cv-item-title">{{ teaching.course }}</div>
+            <div class="cv-item-date" style="font-weight: normal;">{{ semesters[0] }}</div>
+          </div>
+          {% if semesters.size > 1 %}
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.25em;">
+            <div class="cv-item-subtitle">{{ teaching.institution }}</div>
+            <div class="cv-item-date" style="font-weight: normal;">{{ semesters[1] }}</div>
+          </div>
+          {% else %}
           <div class="cv-item-subtitle">{{ teaching.institution }}</div>
+          {% endif %}
+          {% if semesters.size > 2 %}
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.25em;">
+            <div class="cv-item-detail">Role: {{ teaching.role }}</div>
+            <div class="cv-item-date" style="font-weight: normal;">{{ semesters[2] }}</div>
+          </div>
+          {% else %}
           {% if teaching.role %}
           <div class="cv-item-detail">Role: {{ teaching.role }}</div>
           {% endif %}
+          {% endif %}
+          {% for i in (3..100) %}
+            {% if semesters[i] %}
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.25em;">
+              <div></div>
+              <div class="cv-item-date" style="font-weight: normal;">{{ semesters[i] }}</div>
+            </div>
+            {% endif %}
+          {% endfor %}
           {% if teaching.description %}
           <div class="cv-item-detail">{{ teaching.description }}</div>
-          {% endif %}
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
-  
-  {% if cv.portfolio.size > 0 %}
-  <!-- Portfolio -->
-  <div class="cv-section">
-    <h2>Portfolio</h2>
-    <ul class="cv-list">
-      {% for item in cv.portfolio %}
-      <li class="cv-item">
-        <div class="cv-item-header">
-          <div class="cv-item-title">{{ item.name }}</div>
-          <div class="cv-item-date">{{ item.date | slice: 0, 4 }}</div>
-        </div>
-        <div class="cv-item-content">
-          <div class="cv-item-subtitle">{{ item.category | capitalize }}</div>
-          {% if item.description %}
-          <div class="cv-item-detail">{{ item.description }}</div>
-          {% endif %}
-          {% if item.url %}
-          <div class="cv-item-detail">
-            <a href="{{ item.url }}" target="_blank">View Project</a>
-          </div>
           {% endif %}
         </div>
       </li>
@@ -270,17 +265,44 @@
   </div>
   {% endif %}
   
-  {% if cv.interests.size > 0 %}
-  <!-- Interests -->
+  {% if cv.honors.size > 0 %}
+  <!-- Honors and Fellowships -->
   <div class="cv-section">
-    <h2>Interests</h2>
+    <h2>Honors and Fellowships</h2>
     <ul class="cv-list">
-      {% for interest in cv.interests %}
+      {% for honor in cv.honors %}
       <li class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">{{ honor.title }}</div>
+          <div class="cv-item-date">{{ honor.date }}</div>
+        </div>
         <div class="cv-item-content">
-          <div class="cv-item-title">{{ interest.name }}</div>
-          {% if interest.keywords.size > 0 %}
-          <div class="cv-item-detail">{{ interest.keywords | join: ", " }}</div>
+          <div class="cv-item-subtitle">{{ honor.organization }}</div>
+          {% if honor.description %}
+          <div class="cv-item-detail">{{ honor.description }}</div>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  
+  {% if cv.service.size > 0 %}
+  <!-- Service and Leadership -->
+  <div class="cv-section">
+    <h2>Service and Leadership</h2>
+    <ul class="cv-list">
+      {% for service in cv.service %}
+      <li class="cv-item">
+        <div class="cv-item-header">
+          <div class="cv-item-title">{{ service.position }}</div>
+          <div class="cv-item-date">{{ service.date }}</div>
+        </div>
+        <div class="cv-item-content">
+          <div class="cv-item-subtitle">{{ service.organization }}</div>
+          {% if service.description %}
+          <div class="cv-item-detail">{{ service.description }}</div>
           {% endif %}
         </div>
       </li>
