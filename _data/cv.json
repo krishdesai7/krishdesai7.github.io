@@ -1,14 +1,14 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
+    "name": "Krish Desai, PhD",
+    "email": "krishdesai7@gmail.com",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "",
+    "summary": "Currently employed at Lawrence Berkeley National Laboratory. Machine Learning Researcher",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
+      "city": "Berkeley, California",
       "countryCode": "US",
       "region": ""
     },
@@ -21,132 +21,300 @@
       {
         "network": "ORCID",
         "username": "",
-        "url": "http://orcid.org/yourorcidurl"
+        "url": "https://orcid.org/0000-0003-2559-8910"
+      },
+      {
+        "network": "ResearchGate",
+        "username": "",
+        "url": "https://www.researchgate.net/profile/Krish-Desai/"
       },
       {
         "network": "GitHub",
-        "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "username": "krishdesai7",
+        "url": "https://github.com/krishdesai7"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "krish-desai",
+        "url": "https://www.linkedin.com/in/krish-desai"
+      },
+      {
+        "network": "Twitter",
+        "username": "@krishdesai7",
+        "url": "https://twitter.com/@krishdesai7"
       }
     ]
   },
   "work": [],
-  "education": [
-    {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
-    }
-  ],
+  "education": [],
   "skills": [],
   "languages": [],
   "interests": [],
   "references": [],
   "publications": [
     {
-      "name": "Paper Title Number 1",
-      "publisher": "Journal 1",
-      "releaseDate": "2009-10-01",
-      "website": "http://academicpages.github.io/files/paper1.pdf",
-      "summary": "This paper is about the number 1. The number 2 is left for future work."
+      "name": "Pad\u00e9 Approximants and the Anharmonic Oscillator",
+      "publisher": "Yale University",
+      "releaseDate": "2020-05-20",
+      "website": "https://www.desai.ml/files/2-paper.pdf",
+      "summary": ""
     },
     {
-      "name": "Paper Title Number 2",
-      "publisher": "Journal 1",
-      "releaseDate": "2010-10-01",
-      "website": "http://academicpages.github.io/files/paper2.pdf",
-      "summary": "This paper is about the number 2. The number 3 is left for future work."
+      "name": "Symmetry Discovery with Deep Learning",
+      "publisher": "NeurIPS 2021",
+      "releaseDate": "2021-11-01",
+      "website": "https://www.desai.ml/files/3-paper.pdf",
+      "summary": ""
     },
     {
-      "name": "Paper Title Number 3",
-      "publisher": "Journal 1",
-      "releaseDate": "2015-10-01",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about the number 3. The number 4 is left for future work."
+      "name": "Oblivious points on translation surfaces",
+      "publisher": "Journal of Geometry",
+      "releaseDate": "2021-12-16",
+      "website": "https://www.desai.ml/files/1-paper.pdf",
+      "summary": ""
     },
     {
-      "name": "Paper Title Number 4",
-      "publisher": "GitHub Journal of Bugs",
-      "releaseDate": "2024-02-17",
-      "website": "http://academicpages.github.io/files/paper3.pdf",
-      "summary": "This paper is about fixing template issue #693."
+      "name": "SymmetryGAN",
+      "publisher": "Physical Review D",
+      "releaseDate": "2022-05-01",
+      "website": "https://www.desai.ml/files/4-paper.pdf",
+      "summary": ""
+    },
+    {
+      "name": "Deconvolving Detector Effects for Distribution Moments",
+      "publisher": "NeurIPS ML4PS",
+      "releaseDate": "2022-11-01",
+      "website": "https://www.desai.ml/files/5-paper.pdf",
+      "summary": ""
+    },
+    {
+      "name": "Multidimensional Deconvolution with Profiling",
+      "publisher": "NeurIPS ML4PS",
+      "releaseDate": "2024-11-01",
+      "website": "https://www.desai.ml/files/8-paper.pdf",
+      "summary": ""
+    },
+    {
+      "name": "Neural Posterior Unfolding",
+      "publisher": "NeurIPS ML4PS",
+      "releaseDate": "2024-11-01",
+      "website": "https://www.desai.ml/files/7-paper.pdf",
+      "summary": ""
+    },
+    {
+      "name": "Moment Unfolding",
+      "publisher": "Physical Review D",
+      "releaseDate": "2024-12-13",
+      "website": "https://www.desai.ml/files/6-paper.pdf",
+      "summary": ""
+    },
+    {
+      "name": "Unbinned Inference with Correlated Events",
+      "publisher": "arXiv",
+      "releaseDate": "2025-04-18",
+      "website": "https://www.desai.ml/files/9-paper.pdf",
+      "summary": ""
+    },
+    {
+      "name": "Machine Learning Methods for Cross Section Measurements",
+      "publisher": "University of California, Berkeley",
+      "releaseDate": "2025-08-15",
+      "website": "https://www.desai.ml/files/10-paper.pdf",
+      "summary": ""
     }
   ],
   "presentations": [
     {
-      "name": "Talk 1 on Relevant Topic in Your Field",
-      "event": "UC San Francisco, Department of Testing",
-      "date": "2012-03-01",
-      "location": "San Francisco, CA, USA",
+      "name": "Oblivious Points on Translation Surfaces",
+      "event": "Young Mathematicians Conference",
+      "date": "2019-07-01",
+      "location": "Columbus, OH",
       "description": ""
     },
     {
-      "name": "Tutorial 1 on Relevant Topic in Your Field",
-      "event": "UC-Berkeley Institute for Testing Science",
-      "date": "2013-03-01",
-      "location": "Berkeley, CA, USA",
+      "name": "Closed Geodesics on Translation Surfaces",
+      "event": "Massachusetts Undergraduate Research Conference",
+      "date": "2019-08-01",
+      "location": "Amherst, MA",
       "description": ""
     },
     {
-      "name": "Talk 2 on Relevant Topic in Your Field",
-      "event": "London School of Testing",
-      "date": "2014-02-01",
-      "location": "London, UK",
+      "name": "Symmetry Discovery using Machine Learning",
+      "event": "American Physical Society",
+      "date": "2021-04-01",
+      "location": "Virtual",
       "description": ""
     },
     {
-      "name": "Conference Proceeding talk 3 on Relevant Topic in Your Field",
-      "event": "Testing Institute of America 2014 Annual Conference",
-      "date": "2014-03-01",
-      "location": "Los Angeles, CA, USA",
+      "name": "Symmetry Discovery",
+      "event": "Lawrence Berkeley National Laboratory, Physics Division Seminar",
+      "date": "2021-04-01",
+      "location": "Virtual",
+      "description": ""
+    },
+    {
+      "name": "SymmetryGAN",
+      "event": "Machine Learning for Jets",
+      "date": "2021-07-01",
+      "location": "Heidelberg, Germany",
+      "description": ""
+    },
+    {
+      "name": "Symmetry Discovery and Deep Learning",
+      "event": "Clarifai Perceive Deep Learning AI Conference",
+      "date": "2021-10-01",
+      "location": "Virtual",
+      "description": ""
+    },
+    {
+      "name": "Introduction to Symmetry Discovery and Deep Learning",
+      "event": "Berkeley Compass Lecture",
+      "date": "2021-11-01",
+      "location": "Berkeley, CA",
+      "description": ""
+    },
+    {
+      "name": "Symmetry Discovery with Deep Learning",
+      "event": "Thirty-Fifth Annual Conference on Neural Information Processing Systems",
+      "date": "2021-12-01",
+      "location": "Virtual",
+      "description": ""
+    },
+    {
+      "name": "Moment Unfolding using Deep Learning",
+      "event": "American Physical Society",
+      "date": "2022-04-01",
+      "location": "New York, NY",
+      "description": ""
+    },
+    {
+      "name": "High Energy Physics Seminar",
+      "event": "Korea Institute for Advanced Study",
+      "date": "2022-06-01",
+      "location": "Seoul, South Korea",
+      "description": ""
+    },
+    {
+      "name": "Moment Unfolding with Deep Learning",
+      "event": "Machine Learning for Jets",
+      "date": "2022-11-01",
+      "location": "New Brunswick, NJ",
+      "description": ""
+    },
+    {
+      "name": "Deconvolving Detector Effects for Distribution Moments",
+      "event": "Thirty-Sixth Annual Conference on Neural Information Processing Systems",
+      "date": "2022-12-01",
+      "location": "New Orleans, USA",
+      "description": ""
+    },
+    {
+      "name": "Moment extraction using an unfolding protocol without binning",
+      "event": "PHY-STAT Unfolding Conference",
+      "date": "2024-06-01",
+      "location": "Paris, France",
+      "description": ""
+    },
+    {
+      "name": "CMS Seminar",
+      "event": "CERN",
+      "date": "2024-07-01",
+      "location": "Geneva, Switzerland",
+      "description": ""
+    },
+    {
+      "name": "Multidimensional Deconvolution with Profiling",
+      "event": "Thirty-Eighth Annual Conference on Neural Information Processing Systems",
+      "date": "2024-12-01",
+      "location": "Vancouver, Canada",
+      "description": ""
+    },
+    {
+      "name": "Neural Posterior Unfolding",
+      "event": "Thirty-Eighth Annual Conference on Neural Information Processing Systems",
+      "date": "2024-12-01",
+      "location": "Vancouver, Canada",
       "description": ""
     }
   ],
   "teaching": [
     {
-      "course": "Teaching experience 1",
-      "institution": "University 1, Department",
-      "date": "2014-01-01",
-      "role": "Undergraduate course",
+      "course": "Physics for Scientists and Engineers",
+      "institution": "University of California, Berkeley",
+      "date": "",
+      "role": "Associate Instructor",
       "description": ""
     },
     {
-      "course": "Teaching experience 2",
-      "institution": "University 1, Department",
-      "date": "2015-01-01",
-      "role": "Workshop",
+      "course": "Introductory Physics",
+      "institution": "University of California, Berkeley",
+      "date": "",
+      "role": "Head Associate Instructor",
+      "description": ""
+    },
+    {
+      "course": "Physics for Scientists and Engineers",
+      "institution": "University of California, Berkeley",
+      "date": "",
+      "role": "Associate Instructor",
+      "description": ""
+    },
+    {
+      "course": "Physics for Scientists and Engineers",
+      "institution": "University of California, Berkeley",
+      "date": "",
+      "role": "Associate Instructor",
+      "description": ""
+    },
+    {
+      "course": "Introduction to Computational Techniques in Physics",
+      "institution": "University of California, Berkeley",
+      "date": "",
+      "role": "Associate Instructor",
+      "description": ""
+    },
+    {
+      "course": "Data Science Applications in Physics",
+      "institution": "University of California, Berkeley",
+      "date": "",
+      "role": "Associate Instructor",
+      "description": ""
+    },
+    {
+      "course": "Introduction to Mathematical Physics",
+      "institution": "University of California, Berkeley",
+      "date": "",
+      "role": "Associate Instructor",
+      "description": ""
+    },
+    {
+      "course": "Introduction to Computational Techniques in Physics",
+      "institution": "University of California, Berkeley",
+      "date": "",
+      "role": "Associate Instructor",
+      "description": ""
+    },
+    {
+      "course": "Introduction to Computational Techniques in Physics",
+      "institution": "University of California, Berkeley",
+      "date": "",
+      "role": "Associate Instructor",
+      "description": ""
+    },
+    {
+      "course": "Data Science Applications in Physics",
+      "institution": "University of California, Berkeley",
+      "date": "",
+      "role": "Associate Instructor",
+      "description": ""
+    },
+    {
+      "course": "Introduction to Computational Techniques in Physics",
+      "institution": "University of California, Berkeley",
+      "date": "",
+      "role": "Associate Instructor",
       "description": ""
     }
   ],
-  "portfolio": [
-    {
-      "name": "Portfolio item number 1",
-      "category": "portfolio",
-      "date": "",
-      "url": "",
-      "description": "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-    }
-  ]
+  "portfolio": []
 }
