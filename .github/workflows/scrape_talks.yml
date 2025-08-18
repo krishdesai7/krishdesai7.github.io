@@ -5,7 +5,7 @@ on:
     paths:
       - 'talks/**'
       - '_talks/**'
-      - 'talkmap.ipynb'
+      - 'talkmap.py'
 
 permissions:
   contents: write
@@ -19,19 +19,15 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Install uv
+      uses: astral-sh/setup-uv@v6
+
     - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'  # Specify the Python version you need
+      run: uv sync
 
-    - name: Install dependencies
+    - name: Run talkmap script
       run: |
-        pip install jupyter pandas requests beautifulsoup4 geopy  # Add other dependencies as needed
-        pip install getorg --upgrade
-
-    - name: Run Jupyter Notebook
-      run: |
-        jupyter nbconvert --to notebook --execute talkmap.ipynb --output talkmap_out.ipynb
+        cd _talks && uv run ../talkmap.py && cd ..
 
     - name: Commit changes
       run: |
