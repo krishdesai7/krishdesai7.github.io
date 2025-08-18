@@ -10,9 +10,9 @@
 
 # ## Data format
 # 
-# The TSV needs to have the following columns: pub_date, title, venue, excerpt, citation, site_url, and paper_url, with a header at the top. 
+# The TSV needs to have the following columns: pub_date, title, venue, excerpt, citation, url_slug, paper_url, slides_url, and bibtex_url, with a header at the top. 
 # 
-# - `excerpt` and `paper_url` can be blank, but the others must have values. 
+# - `excerpt`, `paper_url`, `slides_url`, and `bibtex_url` can be blank, but the others must have values. 
 # - `pub_date` must be formatted as YYYY-MM-DD.
 # - `url_slug` will be the descriptive part of the .md file and the permalink URL for the page about the paper. The .md file will be `YYYY-MM-DD-[url_slug].md` and the permalink will be `https://[yourdomain]/publications/YYYY-MM-DD-[url_slug]`
 
@@ -84,8 +84,14 @@ for row, item in publications.iterrows():
     
     md += "\nvenue: '" + html_escape(item.venue) + "'"
     
+    if len(str(item.slides_url)) > 5:
+        md += "\nslidesurl: '" + item.slides_url + "'"
+    
     if len(str(item.paper_url)) > 5:
         md += "\npaperurl: '" + item.paper_url + "'"
+    
+    if len(str(item.bibtex_url)) > 5:
+        md += "\nbibtexurl: '" + item.bibtex_url + "'"
     
     md += "\ncitation: '" + html_escape(item.citation) + "'"
     
@@ -93,8 +99,14 @@ for row, item in publications.iterrows():
     
     ## Markdown description for individual page
     
+    if len(str(item.slides_url)) > 5:
+        md += "\n\n[Download slides here](" + item.slides_url + ")\n"
+    
     if len(str(item.paper_url)) > 5:
-        md += "\n\n<a href='" + item.paper_url + "'>Download paper here</a>\n" 
+        md += "\n\n[Download paper here](" + item.paper_url + ")\n" 
+    
+    if len(str(item.bibtex_url)) > 5:
+        md += "\n\n[Download BibTeX here](" + item.bibtex_url + ")\n"
         
     if len(str(item.excerpt)) > 5:
         md += "\n" + html_escape(item.excerpt) + "\n"

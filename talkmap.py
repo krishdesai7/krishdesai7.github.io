@@ -5,9 +5,9 @@
 # with geopy/Nominatim, and uses the getorg library to output data, HTML, and
 # Javascript for a standalone cluster map. This is functionally the same as the
 # #talkmap Jupyter notebook.
-import os
+import frontmatter
 import glob
-import yaml
+import getorg
 from geopy import Nominatim
 from geopy.exc import GeocoderTimedOut
 
@@ -16,7 +16,6 @@ TIMEOUT = 5
 
 # Collect the Markdown files
 g = glob.glob("*.md")
-print(f"Found {len(g)} talk files")
 
 # Prepare to geolocate
 geocoder = Nominatim(user_agent="academicpages.github.io")
@@ -27,11 +26,9 @@ title = ""
 
 # Perform geolocation
 for file in g:
-    # Read the file  
-    fm = frontmatter.Frontmatter()
-    with open(file, 'r', encoding='utf-8') as f:
-        content = f.read()
-    data = fm.read(content)[0]
+    # Read the file
+    data = frontmatter.load(file)
+    data = data.to_dict()
 
     # Press on if the location is not present
     if 'location' not in data:
@@ -55,27 +52,5 @@ for file in g:
         print(f"An unhandled exception occurred while processing input {location} with message {ex}")
 
 # Save the map
-# getorg has issues with ipyleaflet imports outside Jupyter environments
-# Use folium directly for map generation
-import folium
-from folium.plugins import MarkerCluster
-
-# Create a base map centered on world view
-m = folium.Map(location=[20, 0], zoom_start=2)
-
-# Add marker cluster
-marker_cluster = MarkerCluster().add_to(m)
-
-# Add markers for each location
-for description, location_data in location_dict.items():
-    if location_data:
-        folium.Marker(
-            location=[location_data.latitude, location_data.longitude],
-            popup=description,
-            tooltip=description
-        ).add_to(marker_cluster)
-
-# Save the map
-os.makedirs("talkmap", exist_ok=True)
-m.save("talkmap/map.html")
-print(f"Map saved to talkmap/map.html with {len(location_dict)} locations")
+m = getorg.orgmap.create_map_obj()
+getorg.orgmap.output_html_cluster_map(location_dict, folder_name="talkmap", hashed_usernames=False)
