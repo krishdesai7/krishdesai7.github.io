@@ -8,4 +8,4 @@ date: 2024-07-01
 location: "Geneva, Switzerland"
 ---
 
-[More information here](https://indico.cern.ch/event/1357638/#7-unfolding-with-ml-omnifold-t)
+[Talk details](https://indico.cern.ch/event/1357638/#7-unfolding-with-ml-omnifold-t)

@@ -27,18 +27,18 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "Machine Learning Researcher"
   location         : "Berkeley, California"
-  employer         : "Lawrence Berkeley National Laboratory"
+  employer         : "Lawrence Berkeley National Lab"
   uri              : "https://www.desai.ml" # URL
   email            : "krishdesai7@gmail.com" 
 
   # Academic websites
   academia         : # URL
   arxiv            : "http://arxiv.org/a/desai_k_1" # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?hl=en&user=StYT3XIAAAAJ"
   inspirehep       : "https://inspirehep.net/authors/1987978"
   orcid            : "https://orcid.org/0000-0003-2559-8910"
   semantic         : "https://www.semanticscholar.org/author/Krish-Desai/1885318652"
-  pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=desai+krish"
+  pubmed           : # "https://pubmed.ncbi.nlm.nih.gov/?term=desai+krish"
   researchgate     : "https://www.researchgate.net/profile/Krish-Desai/" # URL
   scopus           : # URL
 
@@ -51,14 +51,14 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : "@h4h5.bsky.social" # Replace this with you Bluesky username
+  bluesky          : "h4h5.bsky.social" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
   goodreads        : # Username
   google_plus      : # Username
   keybase          : # Username
-  instagram        : "@krishdesai7"
+  instagram        : "krishdesai7"
   lastfm           : # Username
   linkedin         : "krish-desai"
   mastodon         : # URL
