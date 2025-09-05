@@ -1,0 +1,363 @@
+/* ==========================================================================
+   REFINED LINK STYLING
+   Dotted borders, background hover effects, and no default blue
+   ========================================================================== */
+
+/* Base link styling - remove blue, add dotted border */
+a {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  
+  /* Remove default blue color */
+  &:link,
+  &:visited {
+    color: var(--global-text-color);
+  }
+  
+  /* Accessible focus state */
+  &:focus {
+    outline: 2px dotted var(--global-link-color);
+    outline-offset: 3px;
+    background: var(--global-hover-bg);
+  }
+  
+  /* Content links - dotted underline */
+  .page__content &:not(.btn):not(.pagination__item):not(.social-icon) {
+    color: var(--global-text-color);
+    border-bottom: 1.5px dotted var(--global-text-color-light);
+    padding-bottom: 1px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: var(--global-link-color);
+      border-bottom-color: var(--global-link-color);
+      border-bottom-style: solid;
+      background: var(--global-hover-bg);
+      padding: 2px 4px;
+      margin: -2px -4px;
+      border-radius: 2px;
+    }
+    
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+  
+  /* Remove underline animation from hover effects */
+  &:after {
+    display: none;
+  }
+}
+
+/* Navigation links - padded with expand on hover */
+.greedy-nav .visible-links {
+  li:not(:first-child) a {
+    position: relative;
+    padding: 0.6em 1.2em;
+    margin: 0 0.2em;
+    color: var(--global-masthead-link-color);
+    background: transparent;
+    border: 1.5px dotted transparent;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:before {
+      display: none; /* Remove arrow indicators */
+    }
+    
+    &:hover {
+      color: var(--global-text-color);
+      background: var(--global-hover-bg);
+      border-color: var(--global-border-color);
+      padding: 0.6em 1.5em;
+      transform: translateY(-2px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+    
+    &.current,
+    &[aria-current="page"] {
+      color: var(--global-link-color);
+      background: var(--global-hover-bg);
+      border-color: var(--global-link-color);
+      border-style: solid;
+    }
+  }
+}
+
+/* Breadcrumb links */
+.breadcrumbs {
+  a {
+    color: var(--global-text-color-light);
+    padding: 0.3em 0.6em;
+    border-bottom: 1.5px dotted transparent;
+    
+    &:hover {
+      color: var(--global-text-color);
+      background: var(--global-hover-bg);
+      border-bottom-color: var(--global-link-color);
+      border-radius: 2px;
+    }
+  }
+}
+
+/* Footer links */
+.page__footer {
+  a {
+    color: var(--global-text-color-light);
+    border-bottom: 1.5px dotted var(--global-border-color);
+    padding: 2px 0;
+    
+    &:hover {
+      color: var(--global-text-color);
+      border-bottom-style: solid;
+      border-bottom-color: var(--global-link-color);
+      background: var(--global-hover-bg);
+      padding: 2px 4px;
+      margin: 0 -4px;
+      border-radius: 2px;
+    }
+  }
+}
+
+/* Profile links - refined text links */
+.profile-links {
+  a {
+    display: inline-block;
+    width: 100%;
+    padding: 0.5em 0.8em;
+    margin: 0 -0.8em;
+    color: var(--global-text-color);
+    border-bottom: 1.5px dotted transparent;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    
+    &:before {
+      content: "→";
+      margin-right: 0.6em;
+      color: var(--global-text-color-light);
+      transition: all 0.3s ease;
+    }
+    
+    &:hover {
+      background: var(--global-hover-bg);
+      border-bottom-color: var(--global-link-color);
+      padding-left: 1.2em;
+      
+      &:before {
+        color: var(--global-link-color);
+        margin-right: 0.8em;
+      }
+    }
+  }
+}
+
+/* Archive item links */
+.archive__item {
+  a {
+    color: var(--global-text-color);
+    
+    &:hover {
+      color: var(--global-link-color);
+    }
+  }
+  
+  &-title {
+    a {
+      border-bottom: none;
+      
+      &:hover {
+        color: var(--global-link-color);
+        background: transparent;
+      }
+    }
+  }
+}
+
+/* Pagination links */
+.pagination {
+  li a {
+    color: var(--global-text-color-light);
+    border: 1.5px dotted var(--global-border-color);
+    transition: all 0.3s ease;
+    
+    &:hover:not(.current):not(.disabled) {
+      color: var(--global-text-color);
+      background: var(--global-hover-bg);
+      border-style: solid;
+      border-color: var(--global-link-color);
+      transform: translateY(-2px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    &.current {
+      color: white;
+      background: var(--global-link-color);
+      border-style: solid;
+      border-color: var(--global-link-color);
+    }
+    
+    &.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
+
+/* Button links - already styled, ensure consistency */
+.btn {
+  border: none !important;
+  color: white !important;
+  
+  &--inverse {
+    color: var(--global-text-color) !important;
+    border: 1.5px dotted var(--global-border-color) !important;
+    
+    &:hover {
+      border-style: solid !important;
+      border-color: var(--global-link-color) !important;
+      background: var(--global-hover-bg) !important;
+    }
+  }
+}
+
+/* TOC links */
+.toc__menu {
+  a {
+    padding: 0.4em 0.8em;
+    margin: 0.2em 0;
+    color: var(--global-text-color-light);
+    border-left: 2px dotted transparent;
+    border-bottom: none;
+    display: block;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: var(--global-text-color);
+      background: var(--global-hover-bg);
+      border-left-color: var(--global-link-color);
+      border-left-style: solid;
+      padding-left: 1.2em;
+    }
+    
+    &.active {
+      color: var(--global-link-color);
+      border-left-color: var(--global-link-color);
+      border-left-style: solid;
+      font-weight: 600;
+    }
+  }
+}
+
+/* Social/external links */
+a[target="_blank"] {
+  &:after {
+    content: " ↗";
+    font-size: 0.8em;
+    color: var(--global-text-color-light);
+    margin-left: 0.2em;
+  }
+}
+
+/* Email links */
+a[href^="mailto:"] {
+  &:before {
+    content: "✉ ";
+    margin-right: 0.3em;
+  }
+}
+
+/* Download links */
+a[download],
+a[href$=".pdf"],
+a[href$=".doc"],
+a[href$=".docx"] {
+  &:after {
+    content: " ↓";
+    margin-left: 0.3em;
+  }
+}
+
+/* Dark mode adjustments */
+html[data-theme="dark"] {
+  a {
+    &:link,
+    &:visited {
+      color: var(--global-text-color);
+    }
+  }
+  
+  .page__content a:not(.btn):not(.pagination__item) {
+    border-bottom-color: var(--global-text-color-light);
+    
+    &:hover {
+      background: var(--global-hover-bg);
+      border-bottom-color: var(--global-link-color);
+    }
+  }
+  
+  .greedy-nav .visible-links li:not(:first-child) a {
+    &:hover {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  .pagination li a:hover:not(.current):not(.disabled) {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Remove all old underline animations */
+a:before,
+a:after {
+  display: none !important;
+}
+
+/* Ensure no blue anywhere */
+a:link:not(.btn) {
+  color: inherit;
+}
+
+a:visited:not(.btn) {
+  color: var(--global-text-color);
+}
+
+/* Special handling for code links */
+code a,
+a code {
+  border-bottom: 1.5px dotted var(--global-link-color);
+  color: var(--global-code-text-color);
+  
+  &:hover {
+    background: var(--global-hover-bg);
+    padding: 2px;
+    margin: -2px;
+  }
+}
+
+/* Home profile quick links */
+.home-profile .quick-links {
+  a {
+    padding: 0.4em 0.8em;
+    margin: 0 0.2em;
+    color: var(--global-text-color);
+    border: 1.5px dotted var(--global-border-color);
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover {
+      color: var(--global-link-color);
+      background: var(--global-hover-bg);
+      border-color: var(--global-link-color);
+      border-style: solid;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
+}

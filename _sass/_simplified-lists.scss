@@ -1,0 +1,365 @@
+/* ==========================================================================
+   SIMPLIFIED LIST LAYOUTS
+   Minimal spacing, consistent gaps, proper indentation
+   ========================================================================== */
+
+/* Base list item spacing */
+.archive__item,
+.list__item {
+  padding: 0;
+  margin: 0 0 1.1ex 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  
+  /* Remove all dividers */
+  &:not(:last-child) {
+    border-bottom: none;
+  }
+  
+  /* No hover backgrounds */
+  &:hover {
+    background: transparent;
+  }
+}
+
+/* Consistent gap spacing */
+.archive {
+  .list__item {
+    margin-bottom: 2.2ex;  /* Double gap between major items */
+    padding: 0;
+  }
+}
+
+/* Archive titles - reduced spacing */
+.archive__item-title {
+  font-family: 'Cochineal', $serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0 0 0.55ex 0;  /* Half gap below title */
+  
+  a {
+    color: var(--global-text-color);
+    border-bottom: none;
+    
+    &:hover {
+      color: var(--global-link-color);
+    }
+  }
+}
+
+/* Metadata - monospace dates and technical details */
+.page__meta,
+.archive__item-meta {
+  font-family: 'Berkeley Mono', $monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--global-text-color-secondary);
+  margin: 0 0 0.55ex 0;
+  letter-spacing: -0.01em;
+  
+  /* Remove separators, use simple spacing */
+  span + span {
+    &:before {
+      content: none;
+    }
+    margin-left: 1.1ex;
+  }
+}
+
+/* Dates specifically */
+.archive__item-date,
+.page__date,
+time {
+  font-family: 'Berkeley Mono', $monospace;
+  font-size: 0.75rem;
+  color: var(--global-text-color-tertiary);
+  letter-spacing: -0.02em;
+}
+
+/* Venue/journal - use sans-serif */
+.archive__item-venue {
+  font-family: 'Heliotrope', $sans-serif;
+  font-size: 0.85rem;
+  font-style: normal;  /* Remove italic */
+  color: var(--global-text-color-secondary);
+  margin: 0 0 0.55ex 0;
+}
+
+/* Excerpt - indented */
+.archive__item-excerpt {
+  font-family: 'Cochineal', $serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--global-text-color-light);
+  margin: 0.55ex 0 0 2.2ex;  /* Indent by 2 gaps */
+}
+
+/* Nested content indentation */
+.archive__item-nested,
+.archive__item-details {
+  margin-left: 2.2ex;
+  margin-top: 0.55ex;
+}
+
+/* Archive subtitles - minimal style */
+.archive__subtitle {
+  font-family: 'Berkeley Mono', $monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--global-text-color-tertiary);
+  margin: 3.3ex 0 1.1ex 0;
+  padding: 0;
+  border: none;
+}
+
+/* Remove all pagination borders and excessive spacing */
+.pagination {
+  margin-top: 3.3ex;
+  padding: 0;
+  border: none;
+  
+  ul {
+    display: flex;
+    gap: 0.55ex;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  
+  li a {
+    font-family: 'Berkeley Mono', $monospace;
+    font-size: 0.8rem;
+    padding: 0.55ex 1.1ex;
+    background: transparent;
+    border: 1px solid var(--global-border-color-light);
+    
+    &:hover {
+      background: var(--global-hover-bg);
+      border-color: var(--global-link-color);
+    }
+    
+    &.current {
+      background: var(--global-text-color);
+      color: var(--global-bg-color);
+      border-color: var(--global-text-color);
+    }
+  }
+}
+
+/* Tags and categories - inline with monospace */
+.archive__item-tags,
+.page__taxonomy {
+  font-family: 'Berkeley Mono', $monospace;
+  font-size: 0.7rem;
+  margin: 0.55ex 0;
+  
+  a {
+    display: inline;
+    padding: 0.2ex 0.55ex;
+    margin: 0 0.55ex 0.55ex 0;
+    background: transparent;
+    border: 1px solid var(--global-border-color-light);
+    border-radius: 2px;
+    color: var(--global-text-color-secondary);
+    
+    &:hover {
+      border-color: var(--global-link-color);
+      color: var(--global-link-color);
+      background: transparent;
+    }
+  }
+}
+
+/* Publications list specific */
+.publications-list {
+  .list__item {
+    margin-bottom: 2.2ex;
+    
+    .archive__item-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.55ex;
+    }
+    
+    .archive__item-authors {
+      font-family: 'Heliotrope', $sans-serif;
+      font-size: 0.85rem;
+      color: var(--global-text-color-secondary);
+      margin: 0 0 0.55ex 0;
+    }
+    
+    .archive__item-venue {
+      margin-left: 2.2ex;
+    }
+    
+    .archive__item-meta {
+      display: inline-block;
+      margin-right: 1.1ex;
+    }
+  }
+}
+
+/* Talks list specific */
+.talks-list {
+  .list__item {
+    margin-bottom: 1.65ex;
+    
+    .archive__item-title {
+      font-size: 1.05rem;
+    }
+    
+    .archive__item-venue {
+      font-weight: 500;
+      color: var(--global-text-color);
+      margin-left: 0;
+    }
+    
+    .archive__item-location {
+      font-family: 'Berkeley Mono', $monospace;
+      font-size: 0.75rem;
+      color: var(--global-text-color-tertiary);
+      margin-left: 2.2ex;
+    }
+  }
+}
+
+/* Teaching list specific */
+.teaching-list {
+  .list__item {
+    margin-bottom: 1.65ex;
+    
+    .archive__item-title {
+      font-size: 1.05rem;
+      
+      .course-code {
+        font-family: 'Berkeley Mono', $monospace;
+        font-size: 0.85rem;
+        color: var(--global-text-color-secondary);
+        margin-right: 0.55ex;
+      }
+    }
+    
+    .archive__item-term {
+      font-family: 'Berkeley Mono', $monospace;
+      font-size: 0.75rem;
+      color: var(--global-text-color-tertiary);
+      margin: 0 0 0.55ex 0;
+    }
+  }
+}
+
+/* Blog posts list */
+.blog-list {
+  .list__item {
+    margin-bottom: 2.2ex;
+    
+    .archive__item-date {
+      display: inline-block;
+      margin-right: 1.1ex;
+    }
+    
+    .archive__item-excerpt {
+      margin-top: 0.55ex;
+      margin-left: 0;  /* No indent for blog excerpts */
+    }
+  }
+}
+
+/* Remove feature wrapper styling */
+.feature__wrapper {
+  border: none;
+  padding: 0;
+  margin: 0;
+  
+  .feature__item {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 2.2ex;
+  }
+}
+
+/* Grid view - simple columns */
+.grid__item {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 1.65ex;
+  
+  .archive__item {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .archive__item-title {
+    font-size: 0.95rem;
+  }
+  
+  .archive__item-excerpt {
+    display: none;  /* Hide excerpts in grid view */
+  }
+}
+
+/* Remove all teaser/image boxes */
+.archive__item-teaser {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  
+  img {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+/* Author info */
+.archive__item-author {
+  font-family: 'Heliotrope', $sans-serif;
+  font-size: 0.8rem;
+  color: var(--global-text-color-secondary);
+  margin: 0 0 0.55ex 0;
+  
+  /* Multiple authors */
+  span + span {
+    &:before {
+      content: ", ";
+    }
+  }
+}
+
+/* Technical details - course numbers, paper IDs, etc */
+.technical-detail,
+.paper-id,
+.course-number,
+.conference-code {
+  font-family: 'Berkeley Mono', $monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--global-text-color-secondary);
+  letter-spacing: -0.02em;
+}
+
+/* Reading time */
+.page__meta-readtime {
+  font-family: 'Berkeley Mono', $monospace;
+  font-size: 0.7rem;
+  color: var(--global-text-color-tertiary);
+}
+
+/* Remove all old spacing overrides */
+.page__content {
+  .archive__item-title {
+    margin-top: 0;
+  }
+  
+  .list__item {
+    padding: 0;
+    margin-bottom: 1.65ex;
+  }
+}

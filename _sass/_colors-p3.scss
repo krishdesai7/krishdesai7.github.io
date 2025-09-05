@@ -1,0 +1,102 @@
+/* ==========================================================================
+   DISPLAY-P3 COLOR SPACE SUPPORT
+   Provides richer, more vibrant colors for wide-gamut displays
+   ========================================================================== */
+
+/* Display-P3 colors for light mode */
+@supports (color: color(display-p3 1 0 0)) {
+  :root {
+    /* Enhanced terracotta accent with wider gamut */
+    --global-base-color-p3: color(display-p3 0.784 0.447 0.216);
+    --global-link-color-p3: color(display-p3 0.784 0.447 0.216);
+    --global-link-color-hover-p3: color(display-p3 0.549 0.31 0.153);
+    
+    /* Richer warm backgrounds */
+    --global-bg-color-p3: color(display-p3 0.984 0.973 0.957);
+    --global-hover-bg-p3: color(display-p3 0.992 0.929 0.843);
+    --global-footer-bg-color-p3: color(display-p3 0.988 0.961 0.922);
+    
+    /* Enhanced warm text colors */
+    --global-text-color-p3: color(display-p3 0.227 0.212 0.2);
+    --global-text-color-light-p3: color(display-p3 0.478 0.435 0.4);
+    --global-masthead-link-color-p3: color(display-p3 0.361 0.329 0.314);
+    
+    /* Code and borders with subtle warmth */
+    --global-code-background-color-p3: color(display-p3 0.984 0.969 0.949);
+    --global-border-color-p3: color(display-p3 0.937 0.918 0.902);
+  }
+  
+  /* Apply P3 colors with fallbacks */
+  :root {
+    --global-base-color: var(--global-base-color-p3, #c87137);
+    --global-link-color: var(--global-link-color-p3, #c87137);
+    --global-link-color-hover: var(--global-link-color-hover-p3, #8c4f27);
+    --global-bg-color: var(--global-bg-color-p3, #fbf8f4);
+    --global-hover-bg: var(--global-hover-bg-p3, #fdedd7);
+    --global-footer-bg-color: var(--global-footer-bg-color-p3, #fcf5eb);
+    --global-text-color: var(--global-text-color-p3, #3a3633);
+    --global-text-color-light: var(--global-text-color-light-p3, #7a6f66);
+    --global-masthead-link-color: var(--global-masthead-link-color-p3, #5c5450);
+    --global-code-background-color: var(--global-code-background-color-p3, #fbf7f2);
+    --global-border-color: var(--global-border-color-p3, #efeae6);
+  }
+  
+  /* Display-P3 colors for dark mode */
+  html[data-theme="dark"] {
+    /* Enhanced muted terracotta with depth */
+    --global-base-color-p3: color(display-p3 0.71 0.463 0.31);
+    --global-link-color-p3: color(display-p3 0.831 0.576 0.416);
+    --global-link-color-hover-p3: color(display-p3 0.91 0.651 0.478);
+    
+    /* Rich dark backgrounds with warm undertones */
+    --global-bg-color-p3: color(display-p3 0.071 0.071 0.071);
+    --global-hover-bg-p3: color(display-p3 0.165 0.137 0.118);
+    --global-footer-bg-color-p3: color(display-p3 0.102 0.094 0.086);
+    --global-code-background-color-p3: color(display-p3 0.145 0.133 0.125);
+    
+    /* Warm white text with enhanced contrast */
+    --global-text-color-p3: color(display-p3 0.961 0.941 0.91);
+    --global-text-color-light-p3: color(display-p3 0.659 0.616 0.58);
+    --global-masthead-link-color-p3: color(display-p3 0.961 0.941 0.91);
+    --global-masthead-link-color-hover-p3: color(display-p3 0.831 0.576 0.416);
+    
+    /* Subtle warm borders */
+    --global-border-color-p3: color(display-p3 0.239 0.22 0.2);
+    --global-dark-border-color-p3: color(display-p3 0.42 0.388 0.353);
+    --global-thead-color-p3: color(display-p3 0.145 0.133 0.125);
+  }
+  
+  html[data-theme="dark"] {
+    --global-base-color: var(--global-base-color-p3, #b5764f);
+    --global-link-color: var(--global-link-color-p3, #d4936a);
+    --global-link-color-hover: var(--global-link-color-hover-p3, #e8a67a);
+    --global-bg-color: var(--global-bg-color-p3, #121212);
+    --global-hover-bg: var(--global-hover-bg-p3, #2a231e);
+    --global-footer-bg-color: var(--global-footer-bg-color-p3, #1a1816);
+    --global-code-background-color: var(--global-code-background-color-p3, #252220);
+    --global-text-color: var(--global-text-color-p3, #f5f0e8);
+    --global-text-color-light: var(--global-text-color-light-p3, #a89d94);
+    --global-masthead-link-color: var(--global-masthead-link-color-p3, #f5f0e8);
+    --global-masthead-link-color-hover: var(--global-masthead-link-color-hover-p3, #d4936a);
+    --global-border-color: var(--global-border-color-p3, #3d3833);
+    --global-dark-border-color: var(--global-dark-border-color-p3, #6b635a);
+    --global-thead-color: var(--global-thead-color-p3, #252220);
+  }
+  
+  /* Enhanced button colors in P3 */
+  .btn--info {
+    background-color: color(display-p3 0.42 0.565 0.639);
+  }
+  
+  .btn--warning {
+    background-color: color(display-p3 0.878 0.616 0.216);
+  }
+  
+  .btn--success {
+    background-color: color(display-p3 0.482 0.647 0.365);
+  }
+  
+  .btn--danger {
+    background-color: color(display-p3 0.851 0.298 0.282);
+  }
+}

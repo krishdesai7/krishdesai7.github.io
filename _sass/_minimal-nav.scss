@@ -1,0 +1,238 @@
+/* ==========================================================================
+   MINIMAL NAVIGATION OVERRIDES
+   Clean, minimal horizontal navigation with refined typography
+   ========================================================================== */
+
+/* Simplified masthead with reduced height */
+.masthead {
+  padding: 0;
+  background: var(--global-bg-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--global-border-color);
+  
+  &__inner-wrap {
+    padding: 0.8em 2em;
+    max-width: 1280px;
+    
+    @media (max-width: 768px) {
+      padding: 0.6em 1em;
+    }
+  }
+}
+
+/* Minimal navigation layout */
+.greedy-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  .visible-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    
+    li {
+      display: inline-block;
+      
+      &:first-child {
+        margin-right: 2em;
+        
+        a {
+          font-size: 1.1em;
+          font-weight: 400;
+          text-transform: lowercase;
+          font-variant: small-caps;
+          letter-spacing: 0.15em;
+          color: var(--global-text-color);
+          padding: 0.5em 0;
+          
+          &:hover {
+            color: var(--global-link-color);
+            background: none;
+            
+            &:before {
+              transform: none;
+            }
+          }
+        }
+      }
+    }
+    
+    /* Regular navigation items */
+    li:not(:first-child) a {
+      position: relative;
+      padding: 0.6em 1em;
+      font-size: 0.85em;
+      font-weight: 400;
+      text-transform: lowercase;
+      letter-spacing: 0.05em;
+      color: var(--global-text-color-light);
+      border-radius: 4px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      
+      &:before {
+        display: none;
+      }
+      
+      &:hover {
+        color: var(--global-text-color);
+        background: var(--global-hover-bg);
+        padding: 0.6em 1.3em;
+        transform: translateY(-1px);
+      }
+      
+      &.current {
+        color: var(--global-link-color);
+        background: var(--global-hover-bg);
+      }
+    }
+  }
+  
+  /* Hide menu button by default */
+  button {
+    display: none;
+  }
+  
+  /* Hide hidden links dropdown */
+  .hidden-links {
+    display: none;
+  }
+}
+
+/* Dark mode adjustments */
+html[data-theme="dark"] {
+  .masthead {
+    background: rgba(18, 18, 18, 0.95);
+  }
+  
+  .greedy-nav .visible-links {
+    li:first-child a {
+      color: var(--global-text-color);
+      
+      &:hover {
+        color: var(--global-link-color);
+      }
+    }
+    
+    li:not(:first-child) a {
+      &:hover {
+        background: var(--global-hover-bg);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+      
+      &.current {
+        color: var(--global-link-color);
+        background: var(--global-hover-bg);
+      }
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .masthead__inner-wrap {
+    padding: 1em 1.5em;
+  }
+  
+  .greedy-nav {
+    .visible-links {
+      gap: 0.3em;
+      
+      li:first-child {
+        margin-right: 1em;
+        
+        a {
+          font-size: 1em;
+          letter-spacing: 0.1em;
+        }
+      }
+      
+      li:not(:first-child) a {
+        padding: 0.5em 0.8em;
+        font-size: 0.8em;
+        
+        &:hover {
+          padding: 0.5em 1em;
+        }
+      }
+    }
+  }
+}
+
+/* Ultra-minimal mode for very small screens */
+@media (max-width: 600px) {
+  .greedy-nav {
+    .visible-links {
+      li:not(:first-child) {
+        display: none;
+      }
+      
+      li:first-child {
+        margin-right: 0;
+      }
+    }
+    
+    /* Show menu button on small screens */
+    button {
+      display: block;
+      background: transparent;
+      border: 1px solid var(--global-border-color);
+      padding: 0.4em 0.8em;
+      font-size: 0.8em;
+      text-transform: lowercase;
+      letter-spacing: 0.05em;
+      color: var(--global-text-color-light);
+      
+      &:hover {
+        background: var(--global-hover-bg);
+        color: var(--global-text-color);
+      }
+    }
+    
+    /* Mobile dropdown menu */
+    .hidden-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 1em;
+      background: var(--global-bg-color);
+      border: 1px solid var(--global-border-color);
+      border-radius: 4px;
+      min-width: 180px;
+      
+      &.hidden {
+        display: none;
+      }
+      
+      &.visible {
+        display: block;
+      }
+      
+      li {
+        display: block;
+        border: none;
+        
+        a {
+          display: block;
+          padding: 0.8em 1.2em;
+          font-size: 0.85em;
+          text-transform: lowercase;
+          letter-spacing: 0.05em;
+          color: var(--global-text-color-light);
+          
+          &:hover {
+            background: var(--global-hover-bg);
+            color: var(--global-text-color);
+          }
+        }
+      }
+      
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

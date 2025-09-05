@@ -1,0 +1,14 @@
+{% comment %}
+Minimal Footer Include
+Usage: {% include footer-minimal.html %}
+{% endcomment %}
+
+<div class="page__footer-copyright">
+  <span>&copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.title }}</span>
+  <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
+  <a href="{{ '/terms/' | relative_url }}">Terms</a>
+  <a href="{{ '/sitemap/' | relative_url }}">Sitemap</a>
+  {% if site.author.email %}
+  <a href="mailto:{{ site.author.email }}">Contact</a>
+  {% endif %}
+</div>

@@ -1,0 +1,285 @@
+/* ==========================================================================
+   NO CLUTTER
+   Remove visual noise and unnecessary elements
+   ========================================================================== */
+
+/* Remove all Font Awesome icons */
+.fa,
+.fas,
+.far,
+.fab,
+.fal,
+.fad,
+i[class*="fa-"] {
+  display: none !important;
+}
+
+/* Remove social share buttons */
+.page__share,
+.social-share,
+.share-buttons,
+.social-icons,
+section.page__share {
+  display: none !important;
+}
+
+/* Remove breadcrumbs */
+.breadcrumbs,
+nav.breadcrumbs,
+.page__breadcrumbs {
+  display: none !important;
+}
+
+/* Remove pagination "Read more" links */
+.archive__item-readmore,
+a[rel="permalink"],
+.read-more,
+.more-link,
+.pagination__item--next,
+.pagination__item--previous {
+  display: none !important;
+}
+
+/* Simplify pagination - numbers only */
+.pagination {
+  margin-top: 2.2ex;
+  padding: 0;
+  border: none;
+  
+  /* Hide prev/next text */
+  .pagination--pager {
+    display: none !important;
+  }
+  
+  /* Keep only numbers */
+  ul {
+    display: flex;
+    gap: 0.55ex;
+    justify-content: center;
+    padding: 0;
+    
+    li {
+      &:first-child,
+      &:last-child {
+        /* Hide prev/next buttons */
+        &:not(.current) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* Remove comment sections */
+.comments,
+.page__comments,
+.page__comments-form,
+.page__comments-list,
+#disqus_thread,
+.fb-comments,
+.utterances,
+.giscus,
+.staticman,
+section[id*="comments"] {
+  display: none !important;
+}
+
+/* Remove related posts */
+.page__related,
+.related-posts,
+.related {
+  display: none !important;
+}
+
+/* Remove author profile from pages */
+.page__author,
+.author__avatar,
+.author__content,
+.author__urls,
+.sidebar__right {
+  display: none !important;
+}
+
+/* Remove taxonomy/tags sections */
+.page__taxonomy,
+.page__taxonomy-item,
+.taxonomy__section,
+.tag-cloud {
+  display: none !important;
+}
+
+/* Remove meta separators and icons */
+.page__meta {
+  .sep {
+    display: none;
+  }
+  
+  /* Remove reading time */
+  .page__meta-readtime {
+    display: none;
+  }
+}
+
+/* Remove TOC */
+.toc,
+.sidebar__toc,
+.toc__menu {
+  display: none !important;
+}
+
+/* Remove search */
+.search-content,
+.search__toggle,
+.search-icon {
+  display: none !important;
+}
+
+/* Remove skip links */
+.skip-links {
+  display: none !important;
+}
+
+/* Remove back to top button */
+.back-to-top,
+#back-to-top,
+.btn--top {
+  display: none !important;
+}
+
+/* Simplified footer */
+.page__footer {
+  padding: 1.1ex 0;
+  margin-top: 3.3ex;
+  background: transparent;
+  border-top: 1px solid var(--global-border-color-light);
+  
+  footer {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 1.1ex;
+    
+    @include breakpoint($large) {
+      padding: 0;
+    }
+  }
+}
+
+.page__footer-copyright {
+  font-family: 'Berkeley Mono', $monospace;
+  font-size: 0.7rem;
+  color: var(--global-text-color-tertiary);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  
+  /* Single line layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1ex;
+  flex-wrap: wrap;
+  
+  /* Links in footer */
+  a {
+    color: var(--global-text-color-secondary);
+    border-bottom: none;
+    padding: 0 0.55ex;
+    
+    &:hover {
+      color: var(--global-link-color);
+    }
+  }
+  
+  /* Separator */
+  span + a:before,
+  a + a:before {
+    content: "·";
+    margin-right: 1.1ex;
+    color: var(--global-text-color-tertiary);
+  }
+}
+
+/* Remove footer follow section */
+.page__footer-follow {
+  display: none !important;
+}
+
+/* Hide archive item excerpts on listing pages */
+.archive {
+  .archive__item-excerpt {
+    display: none;
+  }
+  
+  /* Show excerpts only on blog listing */
+  &.blog-list .archive__item-excerpt {
+    display: block;
+  }
+}
+
+/* Remove teaser images from archives */
+.archive__item-teaser {
+  display: none !important;
+}
+
+/* Hide venue/location in listings - show only in full view */
+.list__item {
+  .archive__item-venue,
+  .archive__item-location {
+    display: none;
+  }
+}
+
+/* Remove navigation arrows */
+.greedy-nav__toggle,
+.nav__toggle,
+.nav-arrows {
+  display: none !important;
+}
+
+/* Remove menu icon */
+.navicon {
+  display: none !important;
+}
+
+/* Clean up navigation - remove extra items */
+.greedy-nav {
+  .hidden-links {
+    display: none !important;
+  }
+  
+  /* Remove search and toggle buttons */
+  button {
+    display: none !important;
+  }
+}
+
+/* Remove sidebar completely */
+.sidebar {
+  display: none !important;
+}
+
+/* Adjust main content for no sidebar */
+.page {
+  @include breakpoint($large) {
+    padding-right: 0;
+    width: 100%;
+  }
+}
+
+/* Remove sticky sidebar */
+.sidebar__right.sticky {
+  display: none !important;
+}
+
+/* Hide print-only elements */
+.print-only {
+  display: none !important;
+}
+
+/* Remove video embeds from listings */
+.archive__item {
+  iframe,
+  video {
+    display: none;
+  }
+}
