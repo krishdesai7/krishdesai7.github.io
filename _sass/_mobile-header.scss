@@ -1,0 +1,117 @@
+/* ==========================================================================
+   MOBILE HEADER
+   KD initials and responsive site title
+   ========================================================================== */
+
+/* Mobile header with initials */
+.site-title {
+  font-family: 'Heliotrope', sans-serif;
+  font-weight: 500;
+  text-transform: lowercase;
+  letter-spacing: 0.05em;
+  color: var(--global-masthead-link-color);
+  
+  /* Full name container */
+  .site-name {
+    display: inline;
+    
+    @media (max-width: 45em) {
+      display: none;
+    }
+  }
+  
+  /* Mobile initials */
+  .site-initials {
+    display: none;
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    
+    @media (max-width: 45em) {
+      display: inline;
+    }
+  }
+  
+  /* No hover effects on mobile */
+  @media (max-width: 45em) {
+    &:hover {
+      background: transparent;
+      color: var(--global-masthead-link-color);
+    }
+  }
+}
+
+/* Masthead responsive adjustments */
+.masthead {
+  border-bottom: 1px solid var(--global-border-color);
+  
+  @media (max-width: 45em) {
+    padding: 0.75rem 1rem;
+    border-bottom-width: 2px;
+    
+    .masthead__inner-wrap {
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
+  @media (min-width: 45em) and (max-width: 60em) {
+    padding: 1rem 1.5rem;
+    
+    .masthead__inner-wrap {
+      padding: 0;
+    }
+  }
+  
+  @media (min-width: 60em) {
+    border-bottom: none;
+    padding: 1.5rem 0;
+    
+    .masthead__inner-wrap {
+      max-width: var(--content-max-width);
+      margin: 0 auto;
+    }
+  }
+}
+
+/* Navigation responsive */
+.greedy-nav {
+  @media (max-width: 45em) {
+    .visible-links {
+      display: flex;
+      gap: 0.25rem;
+      
+      /* Hide less important items on mobile */
+      li:nth-child(n+4) {
+        display: none;
+      }
+      
+      li a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        border: 1px solid var(--global-border-color);
+        border-radius: 3px;
+        
+        &:hover {
+          background: var(--global-hover-bg);
+          border-color: var(--global-link-color);
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 45em) and (max-width: 60em) {
+    .visible-links {
+      gap: 0.5rem;
+      
+      li a {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
