@@ -1,3 +1,6 @@
-<script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
+{% comment %}
+Minimal JavaScript - Only essential functionality
+{% endcomment %}
 
-{% include analytics.html %}
+<!-- Minimal JS - 2KB vs 100KB+ for full libraries -->
+<script src="{{ '/assets/js/minimal.js' | relative_url }}" defer></script>

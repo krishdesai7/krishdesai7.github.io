@@ -1,0 +1,445 @@
+/* ==========================================================================
+   MODERN CSS FEATURES
+   Custom properties, @supports, clamp(), aspect-ratio, and more
+   ========================================================================== */
+
+/* ==========================================================================
+   CSS CUSTOM PROPERTIES SYSTEM
+   ========================================================================== */
+
+:root {
+  /* Fluid typography with clamp() */
+  --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.25vw, 0.95rem);
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.15vw, 0.85rem);
+  --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.5rem);
+  --font-size-xl: clamp(1.5rem, 1.25rem + 1.25vw, 2rem);
+  --font-size-2xl: clamp(1.875rem, 1.5rem + 1.875vw, 2.5rem);
+  --font-size-3xl: clamp(2.25rem, 1.75rem + 2.5vw, 3rem);
+  
+  /* Fluid spacing with clamp() */
+  --spacing-xs: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
+  --spacing-sm: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+  --spacing-md: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+  --spacing-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+  --spacing-xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  --spacing-2xl: clamp(3rem, 2rem + 5vw, 4.5rem);
+  
+  /* Container widths */
+  --container-sm: min(100% - 2rem, 35rem);
+  --container-md: min(100% - 3rem, 45rem);
+  --container-lg: min(100% - 4rem, 60rem);
+  --container-xl: min(100% - 5rem, 75rem);
+  
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.75;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+  --transition-spring: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.15);
+  
+  /* Border radius */
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  
+  /* Z-index scale */
+  --z-base: 0;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* ==========================================================================
+   FLUID TYPOGRAPHY WITH CLAMP()
+   ========================================================================== */
+
+html {
+  font-size: 100%; /* Respect user preferences */
+}
+
+body {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+}
+
+h1, .h1 {
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-tight);
+  margin-block: var(--spacing-lg) var(--spacing-md);
+}
+
+h2, .h2 {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-tight);
+  margin-block: var(--spacing-lg) var(--spacing-md);
+}
+
+h3, .h3 {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-snug);
+  margin-block: var(--spacing-md) var(--spacing-sm);
+}
+
+h4, .h4 {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-snug);
+  margin-block: var(--spacing-md) var(--spacing-sm);
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  margin-block-end: var(--spacing-md);
+}
+
+small, .small {
+  font-size: var(--font-size-sm);
+}
+
+.tiny {
+  font-size: var(--font-size-xs);
+}
+
+/* Fluid container widths */
+.container {
+  width: var(--container-md);
+  margin-inline: auto;
+  padding-inline: var(--spacing-md);
+}
+
+.container-sm { width: var(--container-sm); }
+.container-lg { width: var(--container-lg); }
+.container-xl { width: var(--container-xl); }
+
+/* ==========================================================================
+   ASPECT RATIO FOR IMAGES AND MEDIA
+   ========================================================================== */
+
+/* Modern aspect-ratio property */
+@supports (aspect-ratio: 1) {
+  .aspect-square {
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  
+  .aspect-video {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+  
+  .aspect-4-3 {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  
+  .aspect-21-9 {
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
+  }
+  
+  /* Profile images */
+  .profile-image,
+  .home-profile__image img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Archive thumbnails */
+  .archive__item-teaser img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Fallback for browsers without aspect-ratio support */
+@supports not (aspect-ratio: 1) {
+  .aspect-square,
+  .aspect-video,
+  .aspect-4-3 {
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: "";
+      display: block;
+    }
+    
+    img, video, iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .aspect-square::before { padding-top: 100%; }
+  .aspect-video::before { padding-top: 56.25%; }
+  .aspect-4-3::before { padding-top: 75%; }
+  .aspect-21-9::before { padding-top: 42.857%; }
+}
+
+/* ==========================================================================
+   PROGRESSIVE ENHANCEMENT WITH @SUPPORTS
+   ========================================================================== */
+
+/* Grid layout enhancement */
+@supports (display: grid) {
+  .grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .profile-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-xl);
+    
+    @media (max-width: 45em) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+  }
+}
+
+/* Backdrop filter for frosted glass effect */
+@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+  .frosted {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  html[data-theme="dark"] .frosted {
+    background-color: rgba(18, 18, 18, 0.8);
+  }
+  
+  .masthead {
+    @media (min-width: 60em) {
+      position: sticky;
+      top: 0;
+      z-index: var(--z-sticky);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      background-color: rgba(var(--global-bg-color-rgb), 0.9);
+    }
+  }
+}
+
+/* Scroll snap for better mobile experience */
+@supports (scroll-snap-type: x mandatory) {
+  .scroll-snap-x {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    
+    > * {
+      scroll-snap-align: start;
+    }
+  }
+  
+  .quick-links {
+    @media (max-width: 45em) {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: var(--spacing-sm);
+      padding-block: var(--spacing-xs);
+      
+      a {
+        scroll-snap-align: start;
+        flex: 0 0 auto;
+      }
+    }
+  }
+}
+
+/* Container queries (when supported) */
+@supports (container-type: inline-size) {
+  .card-container {
+    container-type: inline-size;
+  }
+  
+  @container (min-width: 400px) {
+    .card {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: var(--spacing-md);
+    }
+  }
+}
+
+/* Logical properties for better internationalization */
+@supports (margin-inline: 1rem) {
+  .page__content {
+    margin-inline: auto;
+    padding-inline: var(--spacing-md);
+    padding-block: var(--spacing-xl);
+  }
+  
+  .archive__item {
+    margin-block-end: var(--spacing-lg);
+    padding-block: var(--spacing-md);
+  }
+}
+
+/* ==========================================================================
+   CSS CUSTOM PROPERTIES FOR THEMING
+   ========================================================================== */
+
+/* Convert RGB colors for use with opacity */
+:root {
+  --color-black-rgb: 58, 54, 51;
+  --color-white-rgb: 251, 248, 244;
+  --color-accent-rgb: 200, 113, 55;
+  
+  /* Dynamic theming properties */
+  --global-bg-color-rgb: var(--color-white-rgb);
+  --global-text-color-rgb: var(--color-black-rgb);
+  --global-accent-color-rgb: var(--color-accent-rgb);
+  
+  /* Alpha variations */
+  --global-bg-alpha-90: rgba(var(--global-bg-color-rgb), 0.9);
+  --global-bg-alpha-80: rgba(var(--global-bg-color-rgb), 0.8);
+  --global-text-alpha-70: rgba(var(--global-text-color-rgb), 0.7);
+  --global-text-alpha-50: rgba(var(--global-text-color-rgb), 0.5);
+  --global-accent-alpha-20: rgba(var(--global-accent-color-rgb), 0.2);
+}
+
+html[data-theme="dark"] {
+  --global-bg-color-rgb: 18, 18, 18;
+  --global-text-color-rgb: 245, 240, 232;
+  --global-accent-color-rgb: 212, 147, 106;
+}
+
+/* ==========================================================================
+   MODERN SELECTORS AND PSEUDO-CLASSES
+   ========================================================================== */
+
+/* :is() and :where() for better specificity control */
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: 'Heliotrope', sans-serif;
+  font-weight: var(--font-weight-medium, 500);
+}
+
+:is(.archive__item, .list__item) :is(h2, h3) {
+  margin-block-start: 0;
+}
+
+/* :has() selector will be supported in future browsers */
+/* For now, we'll use alternative approaches */
+
+/* Focus-visible for better accessibility */
+:focus-visible {
+  outline: 2px solid var(--global-accent-color);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ==========================================================================
+   MODERN LAYOUT TECHNIQUES
+   ========================================================================== */
+
+/* CSS Grid with subgrid (when supported) */
+@supports (grid-template-rows: subgrid) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    
+    .card {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 3;
+    }
+  }
+}
+
+/* Modern centering techniques */
+.center-content {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Scroll margin for anchor links */
+:target {
+  scroll-margin-top: var(--spacing-xl);
+}
+
+/* Smooth scrolling with respect to user preferences */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  :root {
+    --global-border-color: var(--global-text-color);
+  }
+  
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+  }
+}
+
+/* Print styles using modern CSS */
+@media print {
+  @page {
+    margin: 2cm;
+    size: A4;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+  
+  .no-print,
+  .masthead,
+  .page__footer,
+  .quick-links {
+    display: none !important;
+  }
+}
