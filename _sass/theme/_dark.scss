@@ -2,26 +2,34 @@
    DARK THEME
    ========================================================================== */
 
-/* Color codes used for the theme */
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
+/* Dark theme colors with warm undertones */
+$warm-black                 : #121212;  // Near-black with warmth
+$dark-surface               : #1a1816;  // Slightly elevated surface
+$dark-surface-2             : #252220;  // More elevated surface
+$warm-gray                  : #3d3833;  // Warm gray for borders
+$medium-gray                : #6b635a;  // Medium warm gray
+$light-gray                 : #a89d94;  // Light warm gray
+$dark-text-muted            : #9b8f82;  // Muted text for secondary content
+$dark-text-tertiary         : #7a7066;  // Even more muted for tertiary text
+$warm-white                 : #f5f0e8;  // Warm white for text
 
-$background                 : #474747;
-$background-light           : mix(#fff, $background, 80%);
-$background-lighter         : mix(#fff, $background, 90%);
-$text                       : #ffffff;
-$link                       : #0ea1c5;
-$link-dark                  : mix(#000, $link, 25%);
-$link-light                 : mix(#fff, $link, 25%);
+// Muted accent colors for dark mode
+$muted-terracotta           : #b5764f;  // Muted version of light mode accent
+$muted-accent-hover         : #935f3c;  // Darker hover state
+$muted-accent-bg            : #2a231e;  // Very subtle accent background
+
+// Link and interactive colors
+$link-color                 : #d4936a;  // Warm peach for links
+$link-hover                 : #e8a67a;  // Lighter on hover
+$link-visited               : #b5764f;  // Muted for visited
+$dark-border                : #3d3833;  // Border color for dark mode
 
 /* Color codes used for the site */
-$danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
+$danger-color               : #d94c48;
+$info-color                 : #6b8fa3;
+$notice-color               : $medium-gray;
+$success-color              : #7ba55d;
+$warning-color              : #e09d37;
 
 /* Other basic settings for the template */
 $border-radius              : 4px;
@@ -35,20 +43,21 @@ $sidebar-screen-min-width   : 1024px;
 
 /* Dark theme for the site */
 html[data-theme="dark"] {
-    --global-base-color                 : #{$background};
-    --global-bg-color                   : #{$background};
-    --global-footer-bg-color            : #{$background};
-    --global-border-color               : #{$light-gray};
-    --global-dark-border-color          : #{$background-light};
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
+    --global-base-color                 : #{$muted-terracotta};
+    --global-bg-color                   : #{$warm-black};
+    --global-footer-bg-color            : #{$dark-surface};
+    --global-border-color               : #{$warm-gray};
+    --global-dark-border-color          : #{$medium-gray};
+    --global-code-background-color      : #{$dark-surface-2};
+    --global-code-text-color            : #{$warm-white};
     --global-fig-caption-color          : #{$light-gray};
-    --global-link-color                 : #{$link};
-    --global-link-color-hover           : #{$link-dark};
-    --global-link-color-visited         : #{$link-light};
-    --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$background-light};
-    --global-text-color                 : #{$text};
+    --global-link-color                 : #{$link-color};
+    --global-link-color-hover           : #{$link-hover};
+    --global-link-color-visited         : #{$link-visited};
+    --global-masthead-link-color        : #{$warm-white};
+    --global-masthead-link-color-hover  : #{$link-color};
+    --global-text-color                 : #{$warm-white};
     --global-text-color-light           : #{$light-gray};
-    --global-thead-color                : #{$background-lighter};
+    --global-thead-color                : #{$dark-surface-2};
+    --global-hover-bg                   : #{$muted-accent-bg};
 }

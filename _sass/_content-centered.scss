@@ -1,0 +1,305 @@
+/* ==========================================================================
+   CONTENT-CENTERED LAYOUT
+   Optimal readability with generous margins and proper breakpoints
+   ========================================================================== */
+
+/* Override page container widths */
+.page {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  
+  @media (min-width: 640px) {
+    padding: 3rem 2rem;
+  }
+  
+  @media (min-width: 1024px) {
+    padding: 4rem 7.5rem;
+  }
+  
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  &__inner-wrap {
+    max-width: 45rem;
+    margin: 0 auto;
+  }
+  
+  /* Allow wider content for specific sections */
+  &__content {
+    > * {
+      max-width: 45rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Full width elements */
+    > figure,
+    > .highlight,
+    > pre,
+    > .notice,
+    > table,
+    > .archive,
+    > .feature__wrapper {
+      max-width: 65rem;
+    }
+    
+    /* Images can go edge-to-edge on mobile */
+    @media (max-width: 640px) {
+      > figure {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        max-width: calc(100% + 2rem);
+        
+        img {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+  
+  /* Hero and header sections */
+  &__hero,
+  &__lead {
+    max-width: 45rem;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+}
+
+/* Archive pages - wider layout */
+.archive {
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  
+  @media (min-width: 640px) {
+    padding: 3rem 2rem;
+  }
+  
+  @media (min-width: 1024px) {
+    padding: 4rem 0;
+  }
+  
+  .archive__subtitle {
+    max-width: 45rem;
+    margin: 0 auto 2rem;
+  }
+  
+  .entries-list {
+    max-width: 45rem;
+    margin: 0 auto;
+  }
+}
+
+/* Navigation - full width with centered content */
+.masthead {
+  &__inner-wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+    @media (min-width: 1024px) {
+      padding-left: 7.5rem;
+      padding-right: 7.5rem;
+    }
+    
+    @media (min-width: 1400px) {
+      max-width: 1400px;
+    }
+  }
+}
+
+/* Footer - centered content */
+.page__footer {
+  footer {
+    max-width: 45rem;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    
+    @media (min-width: 1024px) {
+      padding: 4rem 0;
+    }
+  }
+}
+
+/* Breadcrumbs - aligned with content */
+.breadcrumbs {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  
+  @media (min-width: 1024px) {
+    padding: 1rem 7.5rem;
+  }
+  
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+  }
+  
+  ol {
+    max-width: 45rem;
+    margin: 0 auto;
+  }
+}
+
+/* Pagination - centered */
+.pagination {
+  max-width: 45rem;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  
+  @media (min-width: 1024px) {
+    padding: 0;
+  }
+}
+
+/* Comments section */
+.page__comments {
+  max-width: 45rem;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--global-code-background-color);
+  border-radius: 4px;
+  
+  @media (min-width: 1024px) {
+    padding: 3rem;
+  }
+}
+
+/* Related posts */
+.page__related {
+  max-width: 65rem;
+  margin: 4rem auto;
+  padding: 2rem;
+  
+  @media (min-width: 1024px) {
+    padding: 0;
+  }
+  
+  h4 {
+    max-width: 45rem;
+    margin: 0 auto 2rem;
+  }
+  
+  .grid__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+}
+
+/* Sidebar layout (when needed) */
+.sidebar {
+  display: none; /* Hidden by default */
+  
+  &.sticky {
+    display: none; /* Ensure sidebar stays hidden */
+  }
+}
+
+/* TOC - floating on side for large screens */
+.toc {
+  @media (min-width: 1400px) {
+    position: fixed;
+    top: 100px;
+    right: 2rem;
+    width: 250px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+  
+  @media (min-width: 1600px) {
+    right: calc((100vw - 1400px) / 2 + 2rem);
+  }
+}
+
+/* Author profile - only on home */
+.author__avatar {
+  max-width: 150px;
+  margin: 0 auto 1rem;
+  
+  img {
+    border-radius: 50%;
+  }
+}
+
+.author__content {
+  text-align: center;
+  max-width: 45rem;
+  margin: 0 auto;
+}
+
+.author__urls-wrapper {
+  display: none; /* Hide by default */
+  
+  .home & {
+    display: block; /* Show only on homepage */
+  }
+}
+
+/* Breakpoint utilities */
+@media (max-width: 639px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Typography adjustments for optimal reading */
+.page__content {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  
+  p {
+    margin-bottom: 1.5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    
+    + * {
+      margin-top: 0;
+    }
+  }
+  
+  ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+  
+  blockquote {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    border-left-width: 3px;
+  }
+  
+  code {
+    padding: 0.2rem 0.4rem;
+  }
+  
+  pre {
+    padding: 1.5rem;
+    margin: 2rem 0;
+    overflow-x: auto;
+  }
+}

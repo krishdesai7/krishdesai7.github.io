@@ -1,0 +1,317 @@
+/* ==========================================================================
+   HIERARCHICAL TYPOGRAPHY SYSTEM
+   Consistent type scale and hierarchy across the site
+   ========================================================================== */
+
+/* Type scale variables */
+:root {
+  /* Base size is 1.1rem as set in _reset.scss */
+  --type-scale-ratio: 1.25;  /* Major third scale */
+  
+  /* Font sizes */
+  --type-size-xxxl: 2.488rem;   /* ~39.8px - Hero titles */
+  --type-size-xxl: 1.991rem;    /* ~31.8px - Page titles */
+  --type-size-xl: 1.593rem;     /* ~25.5px - Section headers */
+  --type-size-lg: 1.274rem;     /* ~20.4px - Subsection headers */
+  --type-size-md: 1.1rem;       /* Base size - Body text */
+  --type-size-sm: 0.95rem;      /* ~15.2px - Excerpts, descriptions */
+  --type-size-xs: 0.85rem;      /* ~13.6px - Metadata, captions */
+  --type-size-xxs: 0.75rem;     /* ~12px - Tiny text, badges */
+  
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+  
+  /* Font weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Letter spacing */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+}
+
+/* Primary headings - Article/Page titles */
+h1,
+.page__title {
+  font-family: 'Heliotrope', $sans-serif;
+  font-size: var(--type-size-xxl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--global-text-color);
+  margin: 0 0 1rem 0;
+  
+  @include breakpoint($small) {
+    font-size: calc(var(--type-size-xxl) * 0.85);
+  }
+}
+
+/* Secondary headings - Major sections */
+h2,
+.section__title {
+  font-family: 'Heliotrope', $sans-serif;
+  font-size: var(--type-size-xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--global-text-color);
+  margin: 2rem 0 1rem 0;
+  
+  @include breakpoint($small) {
+    font-size: calc(var(--type-size-xl) * 0.9);
+  }
+}
+
+/* Tertiary headings - Subsections */
+h3,
+.subsection__title {
+  font-family: 'Cochineal', $serif;
+  font-size: var(--type-size-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+  color: var(--global-text-color);
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+/* Quaternary headings */
+h4 {
+  font-family: 'Cochineal', $serif;
+  font-size: var(--type-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+  color: var(--global-text-color);
+  margin: 1.25rem 0 0.5rem 0;
+}
+
+/* Body text default */
+p,
+.page__content {
+  font-family: 'Cochineal', $serif;
+  font-size: var(--type-size-md);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--global-text-color);
+  margin: 0 0 1rem 0;
+  
+  /* Feature settings for better typography */
+  font-feature-settings: 'onum' 1, 'liga' 1, 'kern' 1;
+}
+
+/* Lead paragraph - intro text */
+.lead,
+.page__lead {
+  font-size: var(--type-size-lg);
+  line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-normal);
+  color: var(--global-text-color-light);
+  margin-bottom: 1.5rem;
+}
+
+/* Small text - captions, fine print */
+small,
+.small,
+figcaption {
+  font-family: 'Heliotrope', $sans-serif;
+  font-size: var(--type-size-xs);
+  line-height: var(--line-height-normal);
+  color: var(--global-text-color-secondary);
+}
+
+/* Metadata text hierarchy */
+.meta {
+  &--primary {
+    font-family: 'Heliotrope', $sans-serif;
+    font-size: var(--type-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--global-text-color-secondary);
+    letter-spacing: var(--letter-spacing-wide);
+  }
+  
+  &--secondary {
+    font-family: 'Heliotrope', $sans-serif;
+    font-size: var(--type-size-xs);
+    font-weight: var(--font-weight-normal);
+    color: var(--global-text-color-tertiary);
+    letter-spacing: var(--letter-spacing-wider);
+  }
+  
+  &--tertiary {
+    font-family: 'Heliotrope', $sans-serif;
+    font-size: var(--type-size-xxs);
+    font-weight: var(--font-weight-normal);
+    color: var(--global-text-color-tertiary);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-widest);
+  }
+}
+
+/* Labels and badges */
+.label,
+.badge {
+  font-family: 'Heliotrope', $sans-serif;
+  font-size: var(--type-size-xxs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-widest);
+  line-height: 1;
+}
+
+/* Navigation text */
+.nav__title,
+.nav-link {
+  font-family: 'Heliotrope', $sans-serif;
+  font-size: var(--type-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+/* Archive item titles hierarchy */
+.archive__item {
+  /* Main title */
+  &-title {
+    font-size: var(--type-size-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-snug);
+    
+    /* In list view */
+    .list__item & {
+      font-size: calc(var(--type-size-lg) * 1.1);
+    }
+    
+    /* In grid view */
+    .grid__item & {
+      font-size: var(--type-size-md);
+    }
+  }
+  
+  /* Subtitle/excerpt */
+  &-excerpt {
+    font-size: var(--type-size-sm);
+    line-height: var(--line-height-normal);
+    color: var(--global-text-color-light);
+  }
+  
+  /* Metadata */
+  &-meta {
+    font-family: 'Heliotrope', $sans-serif;
+    font-size: var(--type-size-xs);
+    font-weight: var(--font-weight-normal);
+    color: var(--global-text-color-secondary);
+    letter-spacing: var(--letter-spacing-wide);
+  }
+}
+
+/* Code blocks and inline code */
+code,
+pre {
+  font-family: 'Berkeley Mono', $monospace;
+  font-size: var(--type-size-xs);
+  line-height: var(--line-height-normal);
+}
+
+/* Inline code adjustment */
+p code,
+li code {
+  font-size: 0.9em;  /* Relative to parent */
+}
+
+/* Blockquotes */
+blockquote {
+  font-family: 'Cochineal', $serif;
+  font-size: var(--type-size-md);
+  font-style: italic;
+  line-height: var(--line-height-relaxed);
+  color: var(--global-text-color-light);
+  
+  cite {
+    font-family: 'Heliotrope', $sans-serif;
+    font-size: var(--type-size-sm);
+    font-style: normal;
+    font-weight: var(--font-weight-medium);
+    color: var(--global-text-color-secondary);
+    
+    &:before {
+      content: "— ";
+    }
+  }
+}
+
+/* Lists */
+ul,
+ol {
+  font-family: 'Cochineal', $serif;
+  font-size: var(--type-size-md);
+  line-height: var(--line-height-normal);
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Definition lists */
+dl {
+  dt {
+    font-family: 'Heliotrope', $sans-serif;
+    font-size: var(--type-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--global-text-color);
+    letter-spacing: var(--letter-spacing-wide);
+  }
+  
+  dd {
+    font-family: 'Cochineal', $serif;
+    font-size: var(--type-size-md);
+    color: var(--global-text-color-light);
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Tables */
+table {
+  th {
+    font-family: 'Heliotrope', $sans-serif;
+    font-size: var(--type-size-sm);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wider);
+    color: var(--global-text-color-secondary);
+  }
+  
+  td {
+    font-family: 'Cochineal', $serif;
+    font-size: var(--type-size-sm);
+    color: var(--global-text-color);
+  }
+}
+
+/* Responsive typography adjustments */
+@include breakpoint($medium) {
+  :root {
+    --type-size-xxxl: 2.888rem;
+    --type-size-xxl: 2.311rem;
+    --type-size-xl: 1.849rem;
+    --type-size-lg: 1.479rem;
+    --type-size-md: 1.2rem;
+  }
+}
+
+@include breakpoint($large) {
+  :root {
+    --type-size-xxxl: 3.247rem;
+    --type-size-xxl: 2.598rem;
+    --type-size-xl: 2.078rem;
+    --type-size-lg: 1.663rem;
+    --type-size-md: 1.2rem;
+  }
+}

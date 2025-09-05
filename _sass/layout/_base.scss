@@ -13,10 +13,11 @@ body {
   background-color: var(--global-bg-color);
 
   margin: 0;
-  padding: $masthead-height 0 0;
+  padding: 60px 0 0;
   padding-bottom: 9em;
   font-family: $global-font-family;
-  line-height: 1.5;
+  line-height: 1.35;
+  font-feature-settings: "onum" 1, "liga" 1, "clig" 1, "kern" 1;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -28,32 +29,39 @@ h1, h2, h3, h4, h5, h6 {
   margin: 2em 0 0.5em;
   line-height: 1.2;
   font-family: $header-font-family;
-  font-weight: bold;
+  font-weight: 600;
+  font-feature-settings: "liga" 1, "clig" 1, "kern" 1;
 }
 
 h1 {
   margin-top: 0;
   font-size: $type-size-3;
+  font-weight: 600;
 }
 
 h2 {
   font-size: $type-size-4;
+  font-weight: 600;
 }
 
 h3 {
   font-size: $type-size-5;
+  font-weight: 500;
 }
 
 h4 {
   font-size: $type-size-6;
+  font-weight: 500;
 }
 
 h5 {
   font-size: $type-size-6;
+  font-weight: 500;
 }
 
 h6 {
   font-size: $type-size-6;
+  font-weight: 500;
 }
 
 small, .small {
@@ -101,6 +109,7 @@ blockquote {
   padding-right: 1em;
   font-style: italic;
   border-left: 0.25em solid var(--global-border-color);
+  font-feature-settings: "onum" 1, "liga" 1, "clig" 1, "kern" 1;
 
   cite {
     font-style: italic;
@@ -129,6 +138,7 @@ a {
 
 tt, code, kbd, samp, pre {
   font-family: $monospace;
+  font-feature-settings: "liga" 0, "clig" 0;
 }
 
 pre {
@@ -251,6 +261,7 @@ figcaption {
   color: var(--global-fig-caption-color);
   font-family: $caption-font-family;
   font-size: $type-size-6;
+  font-feature-settings: "onum" 1, "liga" 1, "kern" 1;
 
   a {
     color: inherit;

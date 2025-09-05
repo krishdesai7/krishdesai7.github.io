@@ -36,3 +36,11 @@ td {
 tr, td, th {
   vertical-align: middle;
 }
+
+tbody tr {
+  transition: background-color 0.2s ease;
+  
+  &:hover {
+    background-color: var(--global-hover-bg);
+  }
+}
