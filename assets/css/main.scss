@@ -11,12 +11,17 @@
 @import
     "vendor/breakpoint/breakpoint",
 
+    "fonts",
     "themes",
     "theme/default",
     "theme/dark",
+    "colors-p3",
+    "theme-transition",
 
     "include/mixins",
     "vendor/susy/susy",
+    "modern-grid",
+    "content-centered",
 
     "layout/reset",
     "layout/base",
@@ -27,6 +32,13 @@
     "layout/notices",
     "layout/masthead",
     "layout/navigation",
+    "minimal-nav",
+    "responsive-title",
+    "refined-links",
+    "hover-effects",
+    "simplified-lists",
+    "typography-hierarchy",
+    "no-clutter",
     "layout/footer",
     "syntax",
 
@@ -35,9 +47,5 @@
     "layout/page",
     "layout/archive",
     "layout/sidebar",
-
-    "vendor/font-awesome/fontawesome",
-    "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands",
-    "vendor/magnific-popup/magnific-popup"
+    "profile-layout"
 ;

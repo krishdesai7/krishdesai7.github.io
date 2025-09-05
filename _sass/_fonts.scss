@@ -1,0 +1,112 @@
+/* ==========================================================================
+   CUSTOM FONT DECLARATIONS
+   ========================================================================== */
+
+/* Cochineal - Body Text */
+@font-face {
+  font-family: 'Cochineal';
+  src: url('../fonts/cochineal/otf/Cochineal-Roman.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cochineal';
+  src: url('../fonts/cochineal/otf/Cochineal-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cochineal';
+  src: url('../fonts/cochineal/otf/Cochineal-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cochineal';
+  src: url('../fonts/cochineal/otf/Cochineal-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Heliotrope - Headers and Navigation */
+@font-face {
+  font-family: 'Heliotrope';
+  src: url('../fonts/heliotrope/otf/heliotrope_3_regular.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heliotrope';
+  src: url('../fonts/heliotrope/otf/heliotrope_6_regular.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heliotrope';
+  src: url('../fonts/heliotrope/otf/heliotrope_8_italic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heliotrope Caps';
+  src: url('../fonts/heliotrope/otf/heliotrope_4_caps_regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heliotrope Caps';
+  src: url('../fonts/heliotrope/otf/heliotrope_8_caps_regular.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Berkeley Mono - Code Blocks */
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('../fonts/berkeley-mono/otf/BerkeleyMono-Regular.otf') format('opentype'),
+       url('../fonts/berkeley-mono/ttf/BerkeleyMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('../fonts/berkeley-mono/otf/BerkeleyMono-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('../fonts/berkeley-mono/otf/BerkeleyMono-Bold.otf') format('opentype'),
+       url('../fonts/berkeley-mono/ttf/BerkeleyMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('../fonts/berkeley-mono/otf/BerkeleyMono-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
