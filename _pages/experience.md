@@ -2,7 +2,7 @@
 layout: archive
 title: "Professional Experience"
 permalink: /experience/
-author_profile: true
+author_profile: false
 ---
 
 {% assign sorted_experience = site.experience | sort: 'date' | reverse %}

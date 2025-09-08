@@ -11,19 +11,37 @@
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
     
-    // Add theme toggle button to nav if needed
-    const nav = document.querySelector('.visible-links');
-    if (nav && !document.querySelector('.theme-toggle')) {
-      const toggleBtn = document.createElement('li');
-      toggleBtn.className = 'theme-toggle';
-      toggleBtn.innerHTML = '<button aria-label="Toggle theme">🌓</button>';
-      nav.appendChild(toggleBtn);
-      
+    // Update icon based on saved theme
+    const themeIcon = document.getElementById('theme-icon');
+    if (themeIcon) {
+      if (savedTheme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+      } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+      }
+    }
+    
+    // Add click handler to existing button
+    const toggleBtn = document.getElementById('theme-toggle');
+    if (toggleBtn) {
       toggleBtn.addEventListener('click', function() {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
+        
+        // Update icon
+        if (themeIcon) {
+          if (newTheme === 'dark') {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+          } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+          }
+        }
       });
     }
   }

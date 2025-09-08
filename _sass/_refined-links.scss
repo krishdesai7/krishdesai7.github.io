@@ -51,40 +51,6 @@ a {
   }
 }
 
-/* Navigation links - padded with expand on hover */
-.greedy-nav .visible-links {
-  li:not(:first-child) a {
-    position: relative;
-    padding: 0.6em 1.2em;
-    margin: 0 0.2em;
-    color: var(--global-masthead-link-color);
-    background: transparent;
-    border: 1.5px dotted transparent;
-    border-radius: 4px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    
-    &:before {
-      display: none; /* Remove arrow indicators */
-    }
-    
-    &:hover {
-      color: var(--global-text-color);
-      background: var(--global-hover-bg);
-      border-color: var(--global-border-color);
-      padding: 0.6em 1.5em;
-      transform: translateY(-2px);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-    
-    &.current,
-    &[aria-current="page"] {
-      color: var(--global-link-color);
-      background: var(--global-hover-bg);
-      border-color: var(--global-link-color);
-      border-style: solid;
-    }
-  }
-}
 
 /* Breadcrumb links */
 .breadcrumbs {
@@ -308,11 +274,6 @@ html[data-theme="dark"] {
   }
 }
 
-/* Remove all old underline animations */
-a:before,
-a:after {
-  display: none !important;
-}
 
 /* Ensure no blue anywhere */
 a:link:not(.btn) {
