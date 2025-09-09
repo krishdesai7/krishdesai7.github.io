@@ -396,8 +396,7 @@ h3.small-caps {
    ADDITIONAL REFINEMENTS
    ========================================================================== */
 
-/* Dropcaps for articles */
-.page__content > p:first-of-type:first-letter,
+/* Dropcaps for articles - Disabled for About page */
 .dropcap:first-letter {
   float: left;
   font-family: $serif-stack;
@@ -409,8 +408,7 @@ h3.small-caps {
 }
 
 /* Lead paragraph */
-.lead,
-.page__content > p:first-of-type {
+.lead {
   font-size: 1.25rem;
   line-height: 1.65;
   font-weight: 400;
