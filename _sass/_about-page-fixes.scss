@@ -119,18 +119,6 @@ html body {
   color: inherit;
 }
 
-// Justify all text content
-.page__content {
-  p, li, blockquote, div {
-    text-align: justify;
-    text-justify: inter-word;
-  }
-  
-  // Keep headings left-aligned
-  h1, h2, h3, h4, h5, h6 {
-    text-align: left;
-  }
-}
 
 // Fix author profile image
 .author__avatar img {
