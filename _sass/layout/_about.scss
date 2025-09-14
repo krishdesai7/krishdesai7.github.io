@@ -1,0 +1,44 @@
+.layout--about {
+    #main {
+        @include breakpoint($large) {
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* content | sidebar */
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2em;
+          }
+        }
+    
+    // Primary content
+  .page {
+    @include breakpoint($large) {
+      float: none;
+      margin: 0;
+      padding: 0;
+      width: auto;
+      max-width: 800px;
+    }
+  }
+  .page__title {
+    margin: 0.5em 0;
+    padding-top: 0.5em;
+    font-weight: 400;
+    font-size: 2.5em;
+    letter-spacing: 0;
+  }
+  .page__content {
+    h2 {
+      margin: 1.5em 0 0.5em;
+      padding-bottom: 0;
+      font-weight: 500;
+      font-size: 1.5em;
+    }
+    h3 {
+      margin: 1.2em 0 0.4em;
+      font-weight: 500;
+      font-size: 1.25em;
+    }
+  }
+}
+      
