@@ -28,7 +28,7 @@
 			// Set to false to disable all animations (zoom and spiderfy).
 			// If false, option animateAddingMarkers below has no effect.
 			// If L.DomUtil.TRANSITION is falsy, this option has no effect.
-			animate: true,
+			animate: false,
 
 			//Whether to animate adding markers after adding the MarkerClusterGroup to the map
 			// If you are adding individual markers set to true, if adding bulk markers leave false for massive performance gains.
@@ -1276,8 +1276,6 @@
 			this._forceLayout();
 			cluster._recursivelyBecomeVisible(bounds, newZoomLevel);
 
-			//TODO: Maybe use the transition timing stuff to make this more reliable
-			//When the animations are done, tidy up
 			this._enqueue(function () {
 
 				//This cluster stopped being a cluster before the timeout fired
@@ -2238,8 +2236,6 @@
 				// If the initial opacity of the spider leg is not 0 then it appears before the animation starts.
 				legOptions.opacity = 0;
 
-				// Add the class for CSS transitions.
-				legOptions.className = (legOptions.className || '') + ' leaflet-cluster-spider-leg';
 			} else {
 				// Make sure we have a defined opacity.
 				legOptions.opacity = finalLegOpacity;

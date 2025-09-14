@@ -37,9 +37,7 @@ tr, td, th {
   vertical-align: middle;
 }
 
-tbody tr {
-  transition: background-color 0.2s ease;
-  
+tbody tr {  
   &:hover {
     background-color: var(--global-hover-bg);
   }

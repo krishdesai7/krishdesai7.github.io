@@ -31,7 +31,6 @@ $warning-color              : #e09d37;
 /* Other basic settings for the template */
 $border-radius              : 4px;
 $box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$global-transition          : all 0.2s ease-in-out;
 $masthead-height            : 70px;
 $navicon-width              : 28px;
 $navicon-height             : 4px;
@@ -61,9 +60,7 @@ $sidebar-screen-min-width   : 1024px;
 
 a {
     text-decoration: none;
-    color: var(--global-link-color);
-    transition: color 0.2s ease;
-  
+    color: var(--global-link-color);  
     &:hover,
     &:focus {
       color: var(--global-link-color-hover);

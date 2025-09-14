@@ -14,10 +14,6 @@
   padding-left: 2em;
   padding-right: 2em;
   font-family: $sans-serif;
-  -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
-  -webkit-animation-delay: 0.30s;
-          animation-delay: 0.30s;
 
   @include breakpoint($large) {
     padding-left: 1em;
@@ -207,7 +203,6 @@
       color: var(--global-masthead-link-color);
       text-decoration: none;
       font-weight: 400;
-      transition: all 0.2s ease;
       position: relative;
       font-size: 0.9rem;
       text-transform: uppercase;
@@ -229,7 +224,6 @@
         background-size: 3px 1px;
         background-repeat: repeat-x;
         opacity: 0;
-        transition: opacity 0.2s ease;
       }
       
       &::before {
@@ -265,7 +259,6 @@
           cursor: pointer;
           padding: 0.25rem 0.5rem;
           font-size: 1rem;
-          transition: all 0.2s ease;
           position: relative;
           
           &::after {
@@ -279,7 +272,6 @@
             background-size: 3px 1px;
             background-repeat: repeat-x;
             opacity: 0;
-            transition: opacity 0.2s ease;
           }
           
           &:hover {
