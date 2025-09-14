@@ -118,11 +118,6 @@
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-twitter-square:before { content: unquote("\"#{ $fa-var-square-twitter }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook-square {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook-square:before { content: unquote("\"#{ $fa-var-square-facebook }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-gears:before { content: unquote("\"#{ $fa-var-gears }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-thumbs-o-up {
   font-family: 'Font Awesome 6 Free';
@@ -172,16 +167,6 @@
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook:before { content: unquote("\"#{ $fa-var-facebook-f }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook-f {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook-f:before { content: unquote("\"#{ $fa-var-facebook-f }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-github {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
@@ -240,25 +225,6 @@
 .#{$fa-css-prefix}.#{$fa-css-prefix}-navicon:before { content: unquote("\"#{ $fa-var-bars }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-reorder:before { content: unquote("\"#{ $fa-var-bars }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-magic:before { content: unquote("\"#{ $fa-var-wand-magic-sparkles }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pinterest {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pinterest-square {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pinterest-square:before { content: unquote("\"#{ $fa-var-square-pinterest }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus-square {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus-square:before { content: unquote("\"#{ $fa-var-square-google-plus }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus:before { content: unquote("\"#{ $fa-var-google-plus-g }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-money:before { content: unquote("\"#{ $fa-var-money-bill-1 }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-unsorted:before { content: unquote("\"#{ $fa-var-sort }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-sort-desc:before { content: unquote("\"#{ $fa-var-sort-down }\""); }
@@ -482,37 +448,16 @@
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-xing {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-xing-square {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-xing-square:before { content: unquote("\"#{ $fa-var-square-xing }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-youtube-play {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-youtube-play:before { content: unquote("\"#{ $fa-var-youtube }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-dropbox {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-stack-overflow {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-instagram {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-flickr {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-adn {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
@@ -525,15 +470,6 @@
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-bitbucket-square:before { content: unquote("\"#{ $fa-var-bitbucket }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-tumblr {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-tumblr-square {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-tumblr-square:before { content: unquote("\"#{ $fa-var-square-tumblr }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-long-arrow-down:before { content: unquote("\"#{ $fa-var-down-long }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-long-arrow-up:before { content: unquote("\"#{ $fa-var-up-long }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-long-arrow-left:before { content: unquote("\"#{ $fa-var-left-long }\""); }
@@ -554,53 +490,13 @@
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-dribbble {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-skype {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-foursquare {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-trello {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-gratipay {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-gittip {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-gittip:before { content: unquote("\"#{ $fa-var-gratipay }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sun-o {
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 400;
-}
+
 .#{$fa-css-prefix}.#{$fa-css-prefix}-sun-o:before { content: unquote("\"#{ $fa-var-sun }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-moon-o {
   font-family: 'Font Awesome 6 Free';
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-moon-o:before { content: unquote("\"#{ $fa-var-moon }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vk {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-weibo {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-renren {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-pagelines {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
@@ -634,11 +530,6 @@
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-dot-circle-o:before { content: unquote("\"#{ $fa-var-circle-dot }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vimeo-square {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vimeo-square:before { content: unquote("\"#{ $fa-var-square-vimeo }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-try:before { content: unquote("\"#{ $fa-var-turkish-lira-sign }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-turkish-lira:before { content: unquote("\"#{ $fa-var-turkish-lira-sign }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-plus-square-o {
@@ -650,21 +541,9 @@
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wordpress {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-openid {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-institution:before { content: unquote("\"#{ $fa-var-building-columns }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-bank:before { content: unquote("\"#{ $fa-var-building-columns }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-mortar-board:before { content: unquote("\"#{ $fa-var-graduation-cap }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yahoo {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-google {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
@@ -673,11 +552,6 @@
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-reddit-square {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-reddit-square:before { content: unquote("\"#{ $fa-var-square-reddit }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-stumbleupon-circle {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
@@ -730,18 +604,7 @@
 .#{$fa-css-prefix}.#{$fa-css-prefix}-steam-square:before { content: unquote("\"#{ $fa-var-square-steam }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-automobile:before { content: unquote("\"#{ $fa-var-car }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-cab:before { content: unquote("\"#{ $fa-var-taxi }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-spotify {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-deviantart {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-soundcloud {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
+
 .#{$fa-css-prefix}.#{$fa-css-prefix}-file-pdf-o {
   font-family: 'Font Awesome 6 Free';
   font-weight: 400;
@@ -812,18 +675,6 @@
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-file-code-o:before { content: unquote("\"#{ $fa-var-file-code }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vine {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-codepen {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-jsfiddle {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-life-bouy:before { content: unquote("\"#{ $fa-var-life-ring }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-life-buoy:before { content: unquote("\"#{ $fa-var-life-ring }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-life-saver:before { content: unquote("\"#{ $fa-var-life-ring }\""); }
@@ -861,37 +712,6 @@
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hacker-news {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-y-combinator-square {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-y-combinator-square:before { content: unquote("\"#{ $fa-var-hacker-news }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yc-square {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yc-square:before { content: unquote("\"#{ $fa-var-hacker-news }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-tencent-weibo {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-qq {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-weixin {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wechat {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wechat:before { content: unquote("\"#{ $fa-var-weixin }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-send:before { content: unquote("\"#{ $fa-var-paper-plane }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-paper-plane-o {
   font-family: 'Font Awesome 6 Free';
@@ -919,55 +739,11 @@
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-soccer-ball-o:before { content: unquote("\"#{ $fa-var-futbol }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-slideshare {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-twitch {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yelp {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-newspaper-o {
   font-family: 'Font Awesome 6 Free';
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-newspaper-o:before { content: unquote("\"#{ $fa-var-newspaper }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-paypal {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-wallet {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-visa {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-mastercard {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-discover {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-amex {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-paypal {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-stripe {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-bell-slash-o {
   font-family: 'Font Awesome 6 Free';
   font-weight: 400;
@@ -982,23 +758,6 @@
 .#{$fa-css-prefix}.#{$fa-css-prefix}-area-chart:before { content: unquote("\"#{ $fa-var-chart-area }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-pie-chart:before { content: unquote("\"#{ $fa-var-chart-pie }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-line-chart:before { content: unquote("\"#{ $fa-var-chart-line }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-lastfm {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-lastfm-square {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-lastfm-square:before { content: unquote("\"#{ $fa-var-square-lastfm }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-ioxhost {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-angellist {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-cc {
   font-family: 'Font Awesome 6 Free';
   font-weight: 400;
@@ -1007,93 +766,11 @@
 .#{$fa-css-prefix}.#{$fa-css-prefix}-ils:before { content: unquote("\"#{ $fa-var-shekel-sign }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-shekel:before { content: unquote("\"#{ $fa-var-shekel-sign }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-sheqel:before { content: unquote("\"#{ $fa-var-shekel-sign }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-buysellads {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-connectdevelop {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-dashcube {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-forumbee {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-leanpub {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-sellsy {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-shirtsinbulk {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-simplybuilt {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-skyatlas {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-diamond {
   font-family: 'Font Awesome 6 Free';
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-diamond:before { content: unquote("\"#{ $fa-var-gem }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-transgender:before { content: unquote("\"#{ $fa-var-mars-and-venus }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-intersex:before { content: unquote("\"#{ $fa-var-mars-and-venus }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-transgender-alt:before { content: unquote("\"#{ $fa-var-transgender }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook-official {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-facebook-official:before { content: unquote("\"#{ $fa-var-facebook }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pinterest-p {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-whatsapp {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-hotel:before { content: unquote("\"#{ $fa-var-bed }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-viacoin {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-medium {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-y-combinator {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yc {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yc:before { content: unquote("\"#{ $fa-var-y-combinator }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-optin-monster {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-opencart {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-expeditedssl {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-battery-4:before { content: unquote("\"#{ $fa-var-battery-full }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-battery:before { content: unquote("\"#{ $fa-var-battery-full }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-battery-3:before { content: unquote("\"#{ $fa-var-battery-three-quarters }\""); }
@@ -1114,10 +791,6 @@
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-sticky-note-o:before { content: unquote("\"#{ $fa-var-note-sticky }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-cc-jcb {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-cc-diners-club {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
@@ -1190,19 +863,6 @@
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-odnoklassniki {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-odnoklassniki-square {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-odnoklassniki-square:before { content: unquote("\"#{ $fa-var-square-odnoklassniki }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-get-pocket {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-wikipedia-w {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
@@ -1228,18 +888,6 @@
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-television:before { content: unquote("\"#{ $fa-var-tv }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-contao {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-500px {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-amazon {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-calendar-plus-o {
   font-family: 'Font Awesome 6 Free';
   font-weight: 400;
@@ -1271,57 +919,16 @@
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-commenting-o:before { content: unquote("\"#{ $fa-var-comment-dots }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-houzz {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vimeo {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-vimeo:before { content: unquote("\"#{ $fa-var-vimeo-v }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-black-tie {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-fonticons {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-reddit-alien {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-edge {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-credit-card-alt:before { content: unquote("\"#{ $fa-var-credit-card }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-codiepie {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-modx {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-fort-awesome {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-usb {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-product-hunt {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-mixcloud {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-scribd {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
@@ -1343,22 +950,6 @@
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-gitlab {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wpbeginner {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wpforms {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-envira {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-wheelchair-alt {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
@@ -1373,64 +964,7 @@
 .#{$fa-css-prefix}.#{$fa-css-prefix}-asl-interpreting:before { content: unquote("\"#{ $fa-var-hands-asl-interpreting }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-deafness:before { content: unquote("\"#{ $fa-var-ear-deaf }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-hard-of-hearing:before { content: unquote("\"#{ $fa-var-ear-deaf }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-glide {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-glide-g {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-signing:before { content: unquote("\"#{ $fa-var-hands }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-viadeo {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-viadeo-square {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-viadeo-square:before { content: unquote("\"#{ $fa-var-square-viadeo }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-snapchat {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-snapchat-ghost {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-snapchat-ghost:before { content: unquote("\"#{ $fa-var-snapchat }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-snapchat-square {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-snapchat-square:before { content: unquote("\"#{ $fa-var-square-snapchat }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-pied-piper {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-first-order {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-yoast {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-themeisle {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus-official {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus-official:before { content: unquote("\"#{ $fa-var-google-plus }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus-circle {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-google-plus-circle:before { content: unquote("\"#{ $fa-var-google-plus }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-font-awesome {
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
@@ -1450,14 +984,6 @@
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-envelope-open-o:before { content: unquote("\"#{ $fa-var-envelope-open }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-linode {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-address-book-o {
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-address-book-o:before { content: unquote("\"#{ $fa-var-address-book }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-vcard:before { content: unquote("\"#{ $fa-var-address-card }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-address-card-o {
@@ -1499,14 +1025,6 @@
   font-family: 'Font Awesome 6 Brands';
   font-weight: 400;
 }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-free-code-camp {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-telegram {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
 .#{$fa-css-prefix}.#{$fa-css-prefix}-thermometer-4:before { content: unquote("\"#{ $fa-var-temperature-full }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-thermometer:before { content: unquote("\"#{ $fa-var-temperature-full }\""); }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-thermometer-3:before { content: unquote("\"#{ $fa-var-temperature-three-quarters }\""); }
@@ -1534,45 +1052,3 @@
   font-weight: 400;
 }
 .#{$fa-css-prefix}.#{$fa-css-prefix}-times-rectangle-o:before { content: unquote("\"#{ $fa-var-rectangle-xmark }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-bandcamp {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-grav {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-etsy {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-imdb {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-ravelry {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-eercast {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-eercast:before { content: unquote("\"#{ $fa-var-sellcast }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-snowflake-o {
-  font-family: 'Font Awesome 6 Free';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-snowflake-o:before { content: unquote("\"#{ $fa-var-snowflake }\""); }
-.#{$fa-css-prefix}.#{$fa-css-prefix}-superpowers {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-wpexplorer {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}
-.#{$fa-css-prefix}.#{$fa-css-prefix}-meetup {
-  font-family: 'Font Awesome 6 Brands';
-  font-weight: 400;
-}

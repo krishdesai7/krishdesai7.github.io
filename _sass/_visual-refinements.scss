@@ -393,17 +393,6 @@ h3.small-caps {
    ADDITIONAL REFINEMENTS
    ========================================================================== */
 
-/* Dropcaps for articles - Disabled for About page */
-.dropcap:first-letter {
-  float: left;
-  font-family: $serif-stack;
-  font-size: 3.5rem;
-  line-height: 1;
-  font-weight: 700;
-  margin: 0 0.5rem 0 0;
-  color: var(--global-link-color);
-}
-
 /* Lead paragraph */
 .lead {
   font-size: 1.25rem;
