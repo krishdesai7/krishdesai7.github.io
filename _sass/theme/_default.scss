@@ -58,3 +58,23 @@ $sidebar-screen-min-width   : 1024px;
     --global-thead-color                : #{mix($warm-white, $accent-beige, 85%)};
     --global-hover-bg                   : #{$accent-beige};
 }
+
+a {
+    text-decoration: none;
+    color: var(--global-link-color);
+    transition: color 0.2s ease;
+  
+    &:hover,
+    &:focus {
+      color: var(--global-link-color-hover);
+      text-decoration: underline;
+    }
+  }
+  
+  // Keep buttons and nav links unadorned
+  a.btn,
+  .btn a,
+  .masthead .visible-links a,
+  .pagination a,
+  .page__share a,
+  .author__urls a { text-decoration: none; }

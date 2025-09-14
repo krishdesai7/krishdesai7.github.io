@@ -243,3 +243,35 @@
     }
   }
 }
+
+// Full-width archive content; sidebar hidden for archive layout
+.layout-archive {
+  .sidebar { display: none; }
+
+  .archive {
+    width: 100%;
+    max-width: 1200px; // site max
+    float: none;
+    margin: 0 auto;
+    padding: 0 2em;
+
+    // Items flow full-width without float skirmishes
+    .list__item {
+      width: 100%;
+      max-width: 100%;
+      float: none;
+      margin-right: 0;
+      padding-right: 0;
+
+      .archive__item {
+        width: 100%;
+        max-width: 100%;
+
+        p, h2, h3, div {
+          max-width: 100%;
+          word-wrap: break-word;
+        }
+      }
+    }
+  }
+}
