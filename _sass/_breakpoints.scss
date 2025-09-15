@@ -1,0 +1,56 @@
+/* Breakpoint variables */
+$small: 480px !default;
+$medium: 768px !default;
+$large: 1024px !default;
+$x-large: 1280px !default;
+
+/* Pure breakpoint mixins */
+@mixin mobile-only {
+  @media (max-width: #{$medium - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: $medium) and (max-width: #{$large - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: $large) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: $medium) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: $large) {
+    @content;
+  }
+}
+
+/* Utility classes for hiding/showing at breakpoints */
+@include mobile-only {
+  .mobile-hide { display: none !important; }
+}
+
+@include tablet-only {
+  .tablet-hide { display: none !important; }
+}
+
+@include desktop-only {
+  .desktop-hide { display: none !important; }
+  .desktop-only { display: block; }
+}
+
+/* Default hide desktop-only on smaller screens */
+.desktop-only {
+  @include mobile-only { display: none !important; }
+  @include tablet-only { display: none !important; }
+}

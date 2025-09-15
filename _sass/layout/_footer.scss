@@ -1,7 +1,3 @@
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
-
 .page__footer {
   @include clearfix;
   background-color: var(--global-footer-bg-color);
@@ -86,6 +82,36 @@
   .social-icons {
     a {
       white-space: nowrap;
+    }
+  }
+}
+
+/* Responsive footer styles */
+@include mobile-only {
+  .page__footer {
+    padding: 1rem;
+    
+    .page__footer-copyright {
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      
+      a {
+        padding: 0.25rem;
+      }
+    }
+  }
+}
+
+@include desktop-only {
+  .page__footer {
+    padding: 1.5rem 0;
+    
+    .page__footer-copyright {
+      max-width: var(--content-max-width);
+      margin: 0 auto;
+      padding: 0 2rem;
+      font-size: 0.8rem;
     }
   }
 }
