@@ -8,12 +8,6 @@ layout: default
   {% include page__hero.html %}
 {% endif %}
 
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
-
 <div id="main" role="main">
   {% include sidebar.html %}
 
@@ -92,7 +86,6 @@ layout: default
         {% endif %}
         {% include page__taxonomy.html %}
       </footer>
-      {% include post_pagination.html %}
     </div>
   </article>
 </div>
