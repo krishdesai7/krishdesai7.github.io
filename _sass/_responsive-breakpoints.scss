@@ -109,40 +109,6 @@ $desktop-min: 60em;     // 960px
     }
   }
   
-  /* Mobile profile */
-  .home-profile {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem 1rem;
-    
-    &__image {
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 1rem;
-    }
-    
-    &__content {
-      h1 {
-        font-size: 1.5rem;
-      }
-      
-      .tagline {
-        font-size: 0.875rem;
-      }
-      
-      .quick-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-        
-        a {
-          padding: 0.5rem 0.75rem;
-          min-width: 80px;
-        }
-      }
-    }
-  }
-  
   /* Mobile footer */
   .page__footer {
     padding: 1rem;
@@ -222,32 +188,6 @@ $desktop-min: 60em;     // 960px
     }
   }
   
-  /* Tablet profile */
-  .home-profile {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 1.5rem;
-    align-items: center;
-    padding: 2rem 1.5rem;
-    
-    &__image {
-      width: 150px;
-      height: 150px;
-    }
-    
-    &__content {
-      h1 {
-        font-size: 1.75rem;
-      }
-      
-      .quick-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-      }
-    }
-  }
-  
   /* Profile section for tablet */
   .profile-section {
     grid-template-columns: 1fr;
@@ -309,39 +249,6 @@ $desktop-min: 60em;     // 960px
   .page {
     padding-left: var(--content-margin-desktop);
     padding-right: var(--content-margin-desktop);
-  }
-  
-  /* Full profile layout */
-  .home-profile {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 2rem;
-    align-items: center;
-    padding: 3rem 0;
-    
-    &__image {
-      width: 200px;
-      height: 200px;
-    }
-    
-    &__content {
-      h1 {
-        font-size: 2rem;
-      }
-      
-      .tagline {
-        font-size: 1.125rem;
-      }
-      
-      .quick-links {
-        display: flex;
-        gap: 0.75rem;
-        
-        a {
-          padding: 0.5rem 1rem;
-        }
-      }
-    }
   }
   
   /* Two-column profile section */
