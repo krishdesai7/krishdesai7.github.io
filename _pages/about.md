@@ -1,12 +1,12 @@
 ---
 permalink: /about/
-title: "About"
-excerpt: "About me"
+layout: single
 author_profile: true
-redirect_from: 
+classes: layout--about
+redirect_from:
   - /about.html
 ---
-<div class="about-title">About</div>
+# About
 
 I am a machine learning researcher with a PhD in Physics from UC Berkeley (2025), specializing in the intersection of statistical inference and high energy physics. In my work at Lawrence Berkeley National Lab, I develop novel computational methods to extract fundamental physics insights from complex experimental data.
 
@@ -40,94 +40,4 @@ I remain committed to giving back to the academic community through peer review 
 
 ## Looking Forward
 
-<p>With my PhD completed in 2025, I'm excited about continuing to push the boundaries of what's possible at the intersection of physics and machine learning. Whether in academia or industry, my goal is to develop tools that enable new scientific discoveries and solve complex real-world problems.</p>
-
-<style>
-  .about-title {
-    font-weight: 200;
-    font-size: 2em;
-  }
-  
-  /* Force the layout directly on this page */
-  @media screen and (min-width: 925px) {
-    #main {
-      display: flex !important;
-      flex-direction: row-reverse !important;
-      gap: 2rem !important;
-      max-width: 1200px !important;
-      margin: 0 auto !important;
-      padding: 0 2em !important;
-      justify-content: center !important;
-      align-items: flex-start !important;
-    }
-    
-    #main .page {
-      flex: 1 1 auto !important;
-      max-width: 800px !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      width: auto !important;
-    }
-    
-    #main .sidebar {
-      flex: 0 0 280px !important;
-      width: 280px !important;
-      padding: 0 !important;
-      padding-top: 8.5em !important;
-      margin: 0 !important;
-    }
-    
-    /* Kill any padding that gets applied */
-    .page, .sidebar {
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-    }
-  }
-  
-  /* Override CSS variables */
-  :root {
-    --content-margin-desktop: 0 !important;
-    --content-margin-tablet: 0 !important;
-  }
-</style>
-
-<script>
-  // Force remove padding after page loads
-  document.addEventListener('DOMContentLoaded', function() {
-    const page = document.querySelector('.page');
-    const sidebar = document.querySelector('.sidebar');
-    const main = document.querySelector('#main');
-    
-    if (page) {
-      page.style.padding = '0';
-      page.style.paddingLeft = '0';
-      page.style.paddingRight = '0';
-      page.style.margin = '0';
-    }
-    
-    if (sidebar) {
-      sidebar.style.padding = '0';
-      sidebar.style.paddingTop = '8.5em';
-      sidebar.style.margin = '0';
-    }
-    
-    if (main && window.innerWidth >= 925) {
-      main.style.display = 'flex';
-      main.style.flexDirection = 'row-reverse';
-      main.style.gap = '2rem';
-      main.style.padding = '0 2em';
-    }
-  });
-  
-  // Also do it after a delay in case styles are applied late
-  setTimeout(function() {
-    const page = document.querySelector('.page');
-    if (page) {
-      page.style.padding = '0';
-      page.style.paddingLeft = '0';
-      page.style.paddingRight = '0';
-    }
-  }, 100);
-</script>
+With my PhD completed in 2025, I'm excited about continuing to push the boundaries of what's possible at the intersection of physics and machine learning. Whether in academia or industry, my goal is to develop tools that enable new scientific discoveries and solve complex real-world problems.

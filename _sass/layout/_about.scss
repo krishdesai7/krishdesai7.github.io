@@ -1,44 +1,45 @@
+/* About: main 2fr column for content, 1fr column for author profile */
 .layout--about {
-    #main {
-        @include breakpoint($large) {
-            display: grid;
-            grid-template-columns: 2fr 1fr; /* content | sidebar */
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2em;
-          }
-        }
-    
-    // Primary content
-  .page {
-    @include breakpoint($large) {
-      float: none;
-      margin: 0;
-      padding: 0;
-      width: auto;
-      max-width: 800px;
-    }
+  /* Grid container */
+  #main {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* content | profile */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
   }
+
+  /* Markdown body in column 1 */
+  .page__content { grid-column: 1; }
+
+  /* Author profile in column 2 */
+  .page__sidebar,
+  .sidebar { grid-column: 2; position: static; height: auto; overflow: visible; }
+
+  /* Typography nudges */
   .page__title {
-    margin: 0.5em 0;
-    padding-top: 0.5em;
+    margin: 0 0 0.75em;
     font-weight: 400;
-    font-size: 2.5em;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
     letter-spacing: 0;
   }
-  .page__content {
-    h2 {
-      margin: 1.5em 0 0.5em;
-      padding-bottom: 0;
-      font-weight: 500;
-      font-size: 1.5em;
-    }
-    h3 {
-      margin: 1.2em 0 0.4em;
-      font-weight: 500;
-      font-size: 1.25em;
-    }
+  .page__content h2 {
+    margin: 1.25em 0 0.5em;
+    font-weight: 500;
+    font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  }
+  .page__content h3 {
+    margin: 1em 0 0.4em;
+    font-weight: 500;
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  }
+
+  /* Mobile: stack, content first then profile */
+  @media (max-width: 900px) {
+    #main { grid-template-columns: 1fr; padding: 0 1rem; }
+    .page__content { grid-column: 1; }
+    .page__sidebar,
+    .sidebar { grid-column: 1; }
   }
 }
-      
