@@ -22,7 +22,7 @@ repository               : "krishdesai7/krishdesai7.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "assets/images/profile.png"
   name             : "Krish Desai, PhD"
   pronouns         : # example: "she/her"  
   bio              : "Machine Learning Researcher"
@@ -67,7 +67,7 @@ publication_category:
     title: 'Preprints'
 
 # Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+teaser                   :  # filename of teaser fallback teaser image: assets/images/500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : true

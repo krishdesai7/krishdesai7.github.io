@@ -36,8 +36,6 @@ Usage: {% include profile-section.html %}
       <div class="profile-image">
         {% if site.author.avatar %}
           <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
-        {% else %}
-          <img src="{{ '/assets/images/profile-placeholder.png' | relative_url }}" alt="Profile">
         {% endif %}
       </div>
       
