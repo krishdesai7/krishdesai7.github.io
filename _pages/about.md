@@ -1,6 +1,6 @@
 ---
 permalink: /about/
-layout: single
+layout: about
 author_profile: true
 classes: layout--about
 redirect_from:

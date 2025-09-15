@@ -1,45 +1,39 @@
-/* About: main 2fr column for content, 1fr column for author profile */
-.layout--about {
-  /* Grid container */
-  #main {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* content | profile */
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.about-layout {
+  display: grid;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  
+  @include mobile-only {
+    grid-template-columns: 1fr;
+    padding: 1rem;
   }
-
-  /* Markdown body in column 1 */
-  .page__content { grid-column: 1; }
-
-  /* Author profile in column 2 */
-  .page__sidebar,
-  .sidebar { grid-column: 2; position: static; height: auto; overflow: visible; }
-
-  /* Typography nudges */
-  .page__title {
-    margin: 0 0 0.75em;
-    font-weight: 400;
-    font-size: clamp(1.75rem, 3vw, 2.25rem);
-    letter-spacing: 0;
+  
+  @include tablet-only {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
   }
-  .page__content h2 {
-    margin: 1.25em 0 0.5em;
-    font-weight: 500;
-    font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  
+  @include desktop-only {
+    grid-template-columns: 2fr 1fr;
   }
-  .page__content h3 {
-    margin: 1em 0 0.4em;
-    font-weight: 500;
-    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  
+  .about-content {
+    min-width: 0; // Prevent grid blowout
   }
-
-  /* Mobile: stack, content first then profile */
-  @media (max-width: 900px) {
-    #main { grid-template-columns: 1fr; padding: 0 1rem; }
-    .page__content { grid-column: 1; }
-    .page__sidebar,
-    .sidebar { grid-column: 1; }
+  
+  .about-sidebar {
+    @include mobile-only {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--global-border-color);
+    }
+    
+    @include tablet-only {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--global-border-color);
+    }
   }
 }
