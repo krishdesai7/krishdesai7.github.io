@@ -35,12 +35,6 @@ related: false
         {% assign short_venue = t.venue %}
         {% if t.venue contains "Neural Information Processing Systems" %}
           {% assign short_venue = "NeurIPS" %}
-        {% elsif t.venue contains "International Conference on Machine Learning" %}
-          {% assign short_venue = "ICML" %}
-        {% elsif t.venue contains "Conference on Computer Vision and Pattern Recognition" %}
-          {% assign short_venue = "CVPR" %}
-        {% elsif t.venue contains "International Conference on Learning Representations" %}
-          {% assign short_venue = "ICLR" %}
         {% endif %}
         <p class="archive__item-meta">{% if short_venue %}{{ short_venue }}{% endif %}{% if t.date %}{% if short_venue %} | {% endif %}{{ t.date | date: "%B %Y" }}{% endif %}</p>
       </div>
