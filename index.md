@@ -5,10 +5,6 @@ title: "Krish Desai"
 author_profile: false
 classes: wide
 excerpt: "Machine learning for physics — unfolding, inference, and practical statistics."
-read_time: false
-comments: false
-share: false
-related: false
 ---
 
 {% include home-profile.html %}
