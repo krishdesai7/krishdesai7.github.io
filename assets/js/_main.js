@@ -27,13 +27,13 @@ let setTheme = (theme) => {
   if (use_theme === "dark") {
     $("html").attr("data-theme", "dark");
     $("#theme-icon")
-      .removeClass("fa-solid fa-sun")
-      .addClass("fa-solid fa-moon");
+      .removeClass("fa-solid fa-moon")
+      .addClass("fa-solid fa-sun");
   } else if (use_theme === "light") {
     $("html").removeAttr("data-theme");
     $("#theme-icon")
-      .removeClass("fa-solid fa-moon")
-      .addClass("fa-solid fa-sun");
+      .removeClass("fa-solid fa-sun")
+      .addClass("fa-solid fa-moon");
   }
 };
 

@@ -1,6 +1,3 @@
-/* ==========================================================================
-   MASTHEAD
-   ========================================================================== */
 
 .masthead {
   position: fixed;
@@ -18,7 +15,7 @@
     font-family: $nav-font-family;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     height: 100%;
 
     @include breakpoint($x-large) {
@@ -41,15 +38,23 @@
     display: flex;
     align-items: center;
     width: 100%;
+    flex-wrap: nowrap;
+    gap: 1rem;
   }
-  .masthead__menu ul > li:last-child {
-    margin-left: auto;            /* pushes it to the right edge */
-    margin-right: 1rem;           /* optional spacing from edge */
+  .masthead__menu ul > li {
+    list-style: none;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .masthead__menu ul > li:last-of-type {
+    margin-left: auto;
+    margin-right: 2rem;
   }
   
 .site-title {
   font-weight: 500;
-  font-variant: small-caps;
+  font-variant: normal;
   letter-spacing: 0.05em;
   font-size: 1.75rem;
   margin-top: 0;
@@ -62,20 +67,5 @@
     &:hover {
       color: var(--global-masthead-link-color-hover);
     }
-  }
-}
-
-.masthead__menu-item {
-  background-color: var(--global-bg-color);
-  display: inline-block;
-  list-style-type: none;
-  white-space: nowrap;
-  
-  &:not(:last-child) {
-    margin-right: 1rem;
-  }
-
-  &:last-child {
-    margin-left: 50em;
   }
 }
