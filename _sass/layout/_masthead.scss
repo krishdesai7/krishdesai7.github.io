@@ -5,21 +5,21 @@
 .masthead {
   position: fixed;
   background: var(--global-bg-color);
-  height: fit-content;
-  top: 0;
+  height: $masthead-height;
+  top: 1.5em;
+  bottom: 0;
   width: 100%;
   box-shadow: none;
-  border-bottom: 1px solid var(--global-border-color);
   z-index: 20;
 
   &__inner-wrap {
     @include container;
     @include clearfix;
-    padding: 1em 1em;
     font-family: $nav-font-family;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: 100%;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
@@ -28,7 +28,7 @@
     nav {
       z-index: 10;
       width: 100%;
-      margin-top: 0.5rem;
+      margin-top: 0;
     }
 
     a {
@@ -37,22 +37,23 @@
   }
 }
 
-.masthead__menu {
-
-  ul {
-    margin: 0;
-    padding: 0;
-    clear: both;
-    list-style-type: none;
+.masthead__menu ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
-}
-
+  .masthead__menu ul > li:last-child {
+    margin-left: auto;            /* pushes it to the right edge */
+    margin-right: 1rem;           /* optional spacing from edge */
+  }
+  
 .site-title {
   font-weight: 500;
   font-variant: small-caps;
   letter-spacing: 0.05em;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 0;
   
   a {
     color: var(--global-masthead-link-color);
@@ -71,11 +72,10 @@
   white-space: nowrap;
   
   &:not(:last-child) {
-    margin-right: 1.5rem;
+    margin-right: 1rem;
   }
 
-  &--lg {
-    padding-right: 2em;
-    font-weight: 700;
+  &:last-child {
+    margin-left: 50em;
   }
 }
