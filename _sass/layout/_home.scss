@@ -64,3 +64,21 @@
       }
     }
   }
+
+  .home-content-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 3rem;
+    
+    @include mobile-only {
+      grid-template-columns: 1fr;
+    }
+    
+    @include tablet-only {
+      grid-template-columns: 1fr;
+    }
+    
+    @include desktop-only {
+      grid-template-columns: 2fr 1fr;
+    }
+  }

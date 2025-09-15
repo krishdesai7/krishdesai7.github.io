@@ -9,8 +9,8 @@ excerpt: "Machine learning for physics — unfolding, inference, and practical s
 
 {% include home-profile.html %}
 
-<div class="grid__wrapper">
-  <div class="grid__item one-half">
+<div class="home-content-grid">
+  <div class="primary-column">
     <h3>Recent Publications</h3>
     {% assign pubs = site.publications | sort: 'date' | reverse %}
     {% for p in pubs limit:3 %}
@@ -22,7 +22,7 @@ excerpt: "Machine learning for physics — unfolding, inference, and practical s
     <p><a href="{{ '/publications/' | relative_url }}">See all publications ▶︎</a></p>
   </div>
 
-  <div class="grid__item one-half">
+  <div class="secondary-column">
     <h3>Recent Talks</h3>
     {% assign talks = site.talks | sort: 'date' | reverse %}
     {% for t in talks limit:3 %}
