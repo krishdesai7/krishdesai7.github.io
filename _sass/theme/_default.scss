@@ -56,6 +56,7 @@ $sidebar-screen-min-width   : 1024px;
     --global-text-color-light           : #{$medium-brown};
     --global-thead-color                : #{mix($warm-white, $accent-beige, 85%)};
     --global-hover-bg                   : #{$accent-beige};
+    --global-link-decoration-color      : #5b0000;
 }
 
 a {

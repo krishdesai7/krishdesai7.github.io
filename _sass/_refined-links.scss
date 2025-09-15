@@ -1,37 +1,10 @@
-@layer components, utilities; /* ensure this file is imported after theme vars */
+@layer components, utilities;
    :where(a) {
      color: var(--global-link-color);
-     text-decoration-thickness: from-font;
-     text-underline-offset: 0.12em;
-     text-decoration-skip-ink: auto;
-     transition: color 120ms ease;
-   }
-   :where(a):visited { color: var(--global-link-color-visited); }
-   :where(a):hover   { color: var(--global-link-color-hover); }
-   :where(a):focus-visible { outline: 2px dotted var(--global-link-color); outline-offset: 2px; }
-   
-   /* Content links */
-   .page__content :where(a):not(.btn):not([role="button"]) {
-     text-decoration-line: underline;
-     text-decoration-color: color-mix(in oklab, var(--global-link-color) 55%, transparent);
-   }
-   .page__content :where(a):hover {
-    text-decoration-line: underline;
-     text-decoration-color: var(--global-link-color-hover);
-   }
-    
-    /* Quiet links */
-   .link-muted { color: var(--global-text-color-light); }
-   .link-muted:hover { color: var(--global-link-color); }
-   
-   /* Plain links */
-   .link-plain { text-decoration: none !important; }
-   .link-plain:hover { text-decoration: underline; }
-   
-   /* Inside headings — thinner underline & bigger offset. */
-   :where(h1, h2, h3, h4, h5, h6) :where(a) {
-     text-underline-offset: 0.18em;
-     text-decoration-thickness: 0.06em;
+     text-decoration: underline;
+     text-decoration-style: dotted;
+     text-decoration-color: var(--global-link-decoration-color);
+     text-underline-offset: 0.24em;
    }
    
    /* Footer links — lighter tone, same interaction model. */
@@ -40,7 +13,7 @@
    }
    .page__footer :where(a):hover { color: var(--global-link-color); }
    
-   /* Reduced motion — decoration changes only, no transforms. */
+   /* Reduced motion — decoration changes only. */
    @media (prefers-reduced-motion: reduce) {
      :where(a) { transition: none; }
    }   
