@@ -63,11 +63,3 @@ $sidebar-screen-min-width   : 1024px;
     --global-selection-text-color       : #{$warm-white};
     --global-selection-bg-color         : #{$warm-black};
 }
-
-a {
-    color: var(--global-link-color);  
-    &:hover,
-    &:focus {
-      color: var(--global-link-color-hover);
-    }
-  }

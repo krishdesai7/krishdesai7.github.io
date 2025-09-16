@@ -5,13 +5,13 @@
      text-decoration-style: dotted;
      text-decoration-color: var(--global-link-decoration-color);
      text-underline-offset: 0.24em;
+     &:hover {
+      color: var(--global-link-color-hover);
+    }
+    &:visited {
+      color: var(--global-link-color-visited);
+    }
    }
-   
-   /* Footer links — lighter tone, same interaction model. */
-   .page__footer :where(a) {
-     color: var(--global-text-color-light);
-   }
-   .page__footer :where(a):hover { color: var(--global-link-color); }
    
    /* Reduced motion — decoration changes only. */
    @media (prefers-reduced-motion: reduce) {

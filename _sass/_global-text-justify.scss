@@ -1,8 +1,4 @@
-/* ==========================================================================
-   GLOBAL TEXT JUSTIFICATION
-   ========================================================================== */
 
-// Apply text justification to all content areas across all pages
 .page__content,
 .archive__item-excerpt,
 .archive__item-body,
@@ -19,11 +15,7 @@
   
   // Keep headings and certain elements left-aligned
   h1, h2, h3, h4, h5, h6,
-  .btn,
-  pre,
-  code,
-  table,
-  dt {
+  code {
     text-align: left;
   }
   
@@ -31,14 +23,5 @@
   .text-center,
   [style*="text-align: center"] {
     text-align: center !important;
-  }
-}
-
-// Also apply to sidebar content
-.sidebar__right,
-.author__bio {
-  p {
-    text-align: justify;
-    text-justify: inter-word;
   }
 }
