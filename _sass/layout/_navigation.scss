@@ -1,70 +1,41 @@
-/* Greedy navigation container */
 .greedy-nav {
-  position: relative;
-  background: var(--global-bg-color);
+  background: var(--global-footer-bg-color);
   font-family: $nav-font-family;
+  margin-top: 2.5rem!important;
 }
 
 /* Visible top‑level links */
 .greedy-nav .visible-links {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   gap: 1.5rem;
-  margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.greedy-nav .visible-links .masthead__menu-item:not(.theme-toggle) > a {
-  display: inline-block;
-  padding: 0.25rem 0;
-  font: 500 1rem/1.3 $nav-font-family;
-  font-variant: small-caps;
-  letter-spacing: 0.01em;
-  color: var(--global-masthead-link-color);
+.greedy-nav .visible-links .masthead__menu-item > a {
+  font-size: $font-size-16;
+  letter-spacing: 0.015em;
+  color: var(--global-nav-link-color);
   transition: color 0.2s ease, transform 0.2s ease;
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-color: var(--global-link-decoration-color);
-  text-underline-offset: 0.5em;
+  text-decoration-color: var(--global-nav-link-decoration-color);
+  text-underline-offset: 0.35em;
+  &:hover {
+    color: var(--global-nav-link-color-hover);
+  }
 }
 
-.greedy-nav .visible-links .masthead__menu-item:not(.theme-toggle) > a:hover {
-  color: var(--global-masthead-link-color-hover);
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: var(--global-link-decoration-color);
-  text-underline-offset: 0.5em;
-}
-
-.greedy-nav .visible-links .masthead__menu-item:not(.theme-toggle) > a[aria-current="page"],
-.greedy-nav .visible-links .masthead__menu-item:not(.theme-toggle) > a.current {
-  color: var(--global-link-color);
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: var(--global-link-decoration-color);
-  text-underline-offset: 0.5em;
-}
-
-.greedy-nav .visible-links .masthead__menu-item:not(.theme-toggle) > a:focus-visible {
-  outline: 2px dotted var(--global-link-color);
+.greedy-nav .visible-links .masthead__menu-item > a:focus-visible {
+  outline: 2px dotted var(--global-nav-link-color);
   outline-offset: 3px;
 }
 
-/* Theme toggle button */
 #theme-toggle {
-  width: auto;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
   background: transparent;
   border: none;
-  padding: 0.25rem;
-  color: var(--global-masthead-link-color-hover);
+  color: var(--global-nav-link-color-hover);
   transition: color 0.2s ease, transform 0.2s ease;
-  margin-left: auto;
 }
 
 #theme-toggle:hover {
@@ -75,7 +46,6 @@
 .greedy-nav .hidden-links {
   position: absolute;
   right: 0;
-  margin-top: 15px;
   padding: 5px;
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
@@ -97,7 +67,6 @@
 }
 
 .greedy-nav .hidden-links ul {
-  margin: 0;
   padding: 0;
   list-style: none;
 }

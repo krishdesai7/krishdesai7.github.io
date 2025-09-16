@@ -1,88 +1,21 @@
 .page__footer {
-  @include clearfix;
   background-color: var(--global-footer-bg-color);
   color: var(--global-text-color-light);
-
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
   width: 100%;
-  clear: both;
-
-  /* sticky footer fix start */
   position: absolute;
-  bottom: 0em;
-  height: auto;
-  /* sticky footer fix end */
-
-  margin-top: 3em;
+  height: auto;  
   border-top: 1px solid var(--global-dark-border-color);
+  font-family: $code-font-family;
 
   footer {
-    @include clearfix;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    max-width: 100%;
-    padding: 0 1em 1em;
-
-    @include breakpoint($x-large) {
-      max-width: $x-large;
-    }
+    padding: 0.5em 0 1em;
   }
 
   a {
-    color: inherit;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  .fas,
-  .fab,
-  .far,
-  .fal {
-    color: var(--global-text-color-light);
-  }
-}
-
-.page__footer-copyright {
-  font-family: $global-font-family;
-  font-size: $font-size-11;
-}
-
-.page__footer-follow {
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
-  li {
-    display: inline-block;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: $header-font-family;
-    font-size: $font-size-12;
-    text-transform: uppercase;
-  }
-
-  li + li:before {
-    content: "";
-    padding-right: 5px;
-  }
-
-  a {
-    padding-right: 10px;
-    font-weight: bold;
-  }
-
-  .social-icons {
-    a {
-      white-space: nowrap;
-    }
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--global-link-decoration-color);
+    text-underline-offset: 0.24em;
   }
 }
 
@@ -105,13 +38,12 @@
 
 @include desktop-only {
   .page__footer {
-    padding: 1.5rem 0;
+    padding: 0.5em 0;
     
     .page__footer-copyright {
       max-width: var(--content-max-width);
-      margin: 0 auto;
-      padding: 0 2rem;
-      font-size: 0.8rem;
+      padding: 0 5rem 0 5rem;
+      font-size: $font-size-10;
     }
   }
 }

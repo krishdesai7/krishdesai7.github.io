@@ -1,71 +1,34 @@
 
 .masthead {
-  position: fixed;
-  background: var(--global-bg-color);
-  height: $masthead-height;
-  top: 1.5em;
-  bottom: 0;
-  width: 100%;
-  box-shadow: none;
-  z-index: 20;
-
+  background: var(--global-footer-bg-color);
   &__inner-wrap {
-    @include container;
-    @include clearfix;
-    font-family: $nav-font-family;
-    display: flex;
     flex-direction: column;
     align-items: stretch;
-    height: 100%;
-
-    @include breakpoint($x-large) {
-      max-width: $x-large;
-    }
-
-    nav {
-      z-index: 10;
-      width: 100%;
-      margin-top: 0;
-    }
-
-    a {
-      text-decoration: none;
-    }
   }
 }
-
-.masthead__menu ul {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    flex-wrap: nowrap;
-    gap: 1rem;
-  }
-  .masthead__menu ul > li {
-    list-style: none;
-    flex: 0 0 auto;
-    white-space: nowrap;
-  }
-
-  .masthead__menu ul > li:last-of-type {
-    margin-left: auto;
-    margin-right: 2rem;
-  }
-  
+.masthead__menu ul > li:last-of-type {
+  margin-left: auto;
+  margin-right: 2rem;
+}
 .site-title {
-  font-weight: 500;
-  font-variant: normal;
-  letter-spacing: 0.05em;
-  font-size: 1.75rem;
+  font-size: clamp(32px, 6vw, 52px);
   margin-top: 0;
   margin-bottom: 0;
-  
-  a {
-    color: var(--global-masthead-link-color);
-    text-decoration: none;
-    
-    &:hover {
-      color: var(--global-masthead-link-color-hover);
-    }
+  margin-left: 0.15ch;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  font-synthesis-weight: none;
+  font-synthesis-style: none;
+  line-height: 1;
+  letter-spacing: 0.015em;
+  font-optical-sizing: auto;
+  color: var(--global-masthead-link-color);
+}
+a {
+  text-decoration: none;
+  &:hover {
+    color: var(--global-masthead-link-color-hover);
   }
 }
+

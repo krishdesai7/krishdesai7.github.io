@@ -89,7 +89,7 @@ td > code {
   padding-bottom: 0.1rem;
   font-size: $font-size-10;
   background: var(--global-code-background-color);
-  border: 1px solid var(--global-thread-color);
+  border: 1px solid var(--global-dark-border-color);
   border-radius: $border-radius;
   box-shadow: $box-shadow;
 
@@ -102,9 +102,7 @@ td > code {
 /* horizontal rule */
 
 hr.divider {
-    border: 0;
-    height: 2px;
-    background: var(--global-link-color-hover);
+    border: 1px solid var(--global-dark-border-color);
   }
 /* lists */
 
