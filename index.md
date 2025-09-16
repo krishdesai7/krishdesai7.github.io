@@ -7,7 +7,9 @@ classes: wide
 excerpt: "Machine learning for physics — unfolding, inference, and practical statistics."
 ---
 
-{% include home-profile.html %}
+<div class="home-profile__image">
+  <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+</div>
 
 <div class="home-content-grid">
   <div class="primary-column">

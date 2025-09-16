@@ -11,13 +11,13 @@
 {% assign group_items = __empty_array %}
 
 <!-- Map -->
-{% assign __names =  include.collection | map: include.field %}
+{% assign __names = include.collection | map: include.field %}
 
 <!-- Flatten -->
-{% assign __names =  __names | join: ',' | join: ',' | split: ',' %}
+{% assign __names = __names | join: ',' | join: ',' | split: ',' %}
 
 <!-- Uniq -->
-{% assign __names =  __names | sort %}
+{% assign __names = __names | sort %}
 {% for name in __names | sort %}
 
 <!-- If not equal to previous then it must be unique as sorted -->

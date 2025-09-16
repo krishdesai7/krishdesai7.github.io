@@ -1,102 +1,131 @@
 {% include base_path %}
 
 {% if page.author and site.data.authors[page.author] %}
-  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+{% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
 {% endif %}
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
 <div itemscope itemtype="http://schema.org/Person">
 
-  <div class="author__avatar">
-    {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
-    {% else %}
-    	<img src="{{ author.avatar | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
-    {% endif %}
-  </div>
+      <div class="author__avatar">
+            <img src="{{ author.avatar | relative_url }}" class="author__avatar" alt="{{ author.name }}"
+                  fetchpriority="high" />
+      </div>
 
-  <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
-    {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
-  </div>
+      <div class="author__content">
+            <h3 class="author__name">{{ author.name }}</h3>
+            {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
+            {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+      </div>
 
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      <!-- Font Awesome icons / Biographic information  -->
-      {% if author.location %}
-        <li class="author__desktop"><a href="https://www.google.com/maps/place/Berkeley,+CA/" target="_blank"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</a></li>
-      {% endif %}
-      {% if author.employer %}
-        <li class="author__desktop"><a href="https://www.lbl.gov" target="_blank"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</a></li>
-      {% endif %}
-      {% if author.uri %}
-        <li><a href="{{ author.uri }}" target="_blank"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
-      {% endif %}
-      {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
-      {% endif %}
-      <hr style="margin: 10px 0; border: none; border-top: 1px solid #e0e0e0;">
+      <div class="author__urls-wrapper">
+            <ul class="author__urls social-icons">
+                  {% if author.location %}
+                  <li class="author__desktop"><a href="https://www.google.com/maps/place/Berkeley,+CA/"
+                              target="_blank"><i
+                                    class="fa-sharp-duotone fa-regular fa-fw fa-map-location-dot icon-pad-right"
+                                    aria-hidden="true"></i>{{ author.location }}</a></li>
+                  {% endif %}
+                  {% if author.employer %}
+                  <li class="author__desktop"><a href="https://www.lbl.gov" target="_blank"><i
+                                    class="fa-sharp-duotone fa-regular fa-fw fa-building-columns icon-pad-right"
+                                    aria-hidden="true"></i>{{ author.employer }}</a></li>
+                  {% endif %}
+                  {% if author.uri %}
+                  <li><a href="{{ author.uri }}" target="_blank"><i
+                                    class="fa-duotone fa-solid fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{
+                              site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
+                  {% endif %}
+                  {% if author.email %}
+                  <li><a href="mailto:{{ author.email }}"><i
+                                    class="fa-sharp-duotone fa-regular fa-fw fa-envelope icon-pad-right"
+                                    aria-hidden="true"></i>{{
+                              site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
+                  {% endif %}
+                  <hr style="margin: 10px 0; border: none; border-top: 1px solid #e0e0e0;">
 
-      <!-- Font Awesome and Academicons icons / Academic websites -->
-      {% if author.academia %}
-        <li><a href="{{ author.academia }}"><i class="ai ai-academia ai-fw icon-pad-right" aria-hidden="true"></i>Academia</a></li>
-      {% endif %}
-      {% if author.arxiv %}
-        <li><a href="{{ author.arxiv }}" target="_blank"><i class="ai ai-arxiv ai-fw icon-pad-right"></i>arXiv</a></li>
-      {% endif %}      
-      {% if author.googlescholar %}
-        <li><a href="{{ author.googlescholar }}" target="_blank"><i class="ai ai-google-scholar ai-fw icon-pad-right"></i>Google Scholar</a></li>
-      {% endif %}
-      {% if author.semantic %}
-        <li><a href="{{ author.semantic }}" target="_blank"><i class="ai ai-semantic-scholar ai-fw icon-pad-right"></i>Semantic Scholar</a></li>
-      {% endif %}
-      {% if author.orcid %}
-        <li><a href="{{ author.orcid }}" target="_blank"><i class="ai ai-orcid ai-fw icon-pad-right"></i>ORCID</a></li>
-      {% endif %}
-      {% if author.pubmed %}
-        <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed ai-fw icon-pad-right"></i>PubMed</a></li>
-      {% endif %}                        
-      {% if author.researchgate %}
-        <li><a href="{{ author.researchgate }}" target="_blank"><i class="fab fa-fw fa-researchgate icon-pad-right" aria-hidden="true"></i>ResearchGate</a></li>
-      {% endif %}
-      {% if author.scopus %}
-        <li><a href="{{ author.scopus }}"><i class="ai ai-scopus ai-fw icon-pad-right"></i>Scopus</a></li>
-      {% endif %}
-      {% if author.inspirehep %}
-        <li><a href="{{ author.inspirehep }}" target="_blank"><i class="ai ai-inspire ai-fw icon-pad-right"></i>INSPIRE-HEP</a></li>
-      {% endif %}
-      <hr style="margin: 10px 0; border: none; border-top: 1px solid #e0e0e0;">
-      <!-- Font Awesome icons / Repositories and software development -->
-      {% if author.bitbucket %}
-        <li><a href="https://bitbucket.org/{{ author.bitbucket }}"><i class="fab fa-fw fa-bitbucket icon-pad-right" aria-hidden="true"></i>Bitbucket</a></li>
-      {% endif %}
-      {% if author.github %}
-        <li><a href="https://github.com/{{ author.github }}" target="_blank"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
-      {% endif %}
-      {% if author.stackoverflow %}
-        <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}"><i class="fab fa-fw fa-stack-overflow icon-pad-right" aria-hidden="true"></i>Stackoverflow</a></li>
-      {% endif %}      
+                  <!-- Font Awesome and Academicons icons / Academic websites -->
+                  {% if author.academia %}
+                  <li><a href="{{ author.academia }}"><i class="ai ai-academia ai-fw icon-pad-right"
+                                    aria-hidden="true"></i>Academia</a></li>
+                  {% endif %}
+                  {% if author.arxiv %}
+                  <li><a href="{{ author.arxiv }}" target="_blank"><i
+                                    class="ai ai-arxiv ai-fw icon-pad-right"></i>arXiv</a></li>
+                  {% endif %}
+                  {% if author.googlescholar %}
+                  <li><a href="{{ author.googlescholar }}" target="_blank"><i
+                                    class="ai ai-google-scholar icon-pad-right"></i>Google Scholar</a></li>
+                  {% endif %}
+                  {% if author.semantic %}
+                  <li><a href="{{ author.semantic }}" target="_blank"><i
+                                    class="ai ai-semantic-scholar ai-fw icon-pad-right"></i>Semantic Scholar</a></li>
+                  {% endif %}
+                  {% if author.orcid %}
+                  <li><a href="{{ author.orcid }}" target="_blank"><i
+                                    class="ai ai-orcid ai-fw icon-pad-right"></i>ORCID</a></li>
+                  {% endif %}
+                  {% if author.pubmed %}
+                  <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed ai-fw icon-pad-right"></i>PubMed</a></li>
+                  {% endif %}
+                  {% if author.researchgate %}
+                  <li><a href="{{ author.researchgate }}" target="_blank"><i
+                                    class="ai ai-researchgate ai-fw icon-pad-right"
+                                    aria-hidden="true"></i>ResearchGate</a></li>
+                  {% endif %}
+                  {% if author.scopus %}
+                  <li><a href="{{ author.scopus }}"><i class="ai ai-scopus ai-fw icon-pad-right"></i>Scopus</a></li>
+                  {% endif %}
+                  {% if author.inspirehep %}
+                  <li><a href="{{ author.inspirehep }}"><i
+                                    class="ai ai-inspire ai-fw icon-pad-right"></i>INSPIRE-HEP</a></li>
+                  {% endif %}
+                  <hr style="margin: 10px 0; border: none; border-top: 1px solid #e0e0e0;">
+                  <!-- Font Awesome icons / Repositories and software development -->
+                  {% if author.bitbucket %}
+                  <li><a href="https://bitbucket.org/{{ author.bitbucket }}"><i
+                                    class="fa-brands fa-fw fa-bitbucket icon-pad-right"
+                                    aria-hidden="true"></i>Bitbucket</a></li>
+                  {% endif %}
+                  {% if author.github %}
+                  <li><a href="https://github.com/{{ author.github }}" target="_blank"><i
+                                    class="fa-brands fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a>
+                  </li>
+                  {% endif %}
+                  {% if author.stackoverflow %}
+                  <li><a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}"><i
+                                    class="fab fa-fw fa-stack-overflow icon-pad-right"
+                                    aria-hidden="true"></i>Stackoverflow</a></li>
+                  {% endif %}
 
-      <!-- Font Awesome icons / Social media -->
-      {% if author.bluesky %}
-        <li><a href="https://bsky.app/profile/{{ author.bluesky }}" target="_blank"><i class="fab fa-fw fa-bluesky icon-pad-right" aria-hidden="true"></i>Bluesky</a></li>
-      {% endif %}
-      {% if author.instagram %}
-        <li><a href="https://instagram.com/{{ author.instagram }}" target="_blank"><i class="fab fa-fw fa-instagram icon-pad-right" aria-hidden="true"></i>Instagram</a></li>
-      {% endif %}      
-      {% if author.linkedin %}
-        <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}" target="_blank"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
-      {% endif %}      
-      {% if author.twitter %}
-        <li><a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>X/Twitter</a></li>
-      {% endif %}
-      {% if author.wikipedia %}
-        <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w icon-pad-right" aria-hidden="true"></i>Wikipedia</a></li>
-      {% endif %}                
-      {% if author.youtube %}
-        <li><a href="https://www.youtube.com/@{{ author.youtube }}"><i class="fab fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
-      {% endif %}
-    </ul>
-  </div>
+                  <!-- Font Awesome icons / Social media -->
+                  {% if author.bluesky %}
+                  <li><a href="https://bsky.app/profile/{{ author.bluesky }}" target="_blank"><i
+                                    class="fa-brands fa-fw fa-bluesky icon-pad-right" aria-hidden="true"></i>Bluesky</a></li>
+                  {% endif %}
+                  {% if author.instagram %}
+                  <li><a href="https://instagram.com/{{ author.instagram }}" target="_blank"><i
+                                    class="fa-brands fa-fw fa-instagram icon-pad-right" aria-hidden="true"></i>Instagram</a>
+                  </li>
+                  {% endif %}
+                  {% if author.linkedin %}
+                  <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}" target="_blank"><i
+                                    class="fa-brands fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a>
+                  </li>
+                  {% endif %}
+                  {% if author.twitter %}
+                  <li><a href="https://twitter.com/{{ author.twitter }}"><i
+                                    class="fa-brands fa-fw fa-x-twitter icon-pad-right" aria-hidden="true"></i>X/Twitter</a>
+                  </li>
+                  {% endif %}
+                  {% if author.wikipedia %}
+                  <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i
+                                    class="fa-brands fa-fw fa-wikipedia-w icon-pad-right" aria-hidden="true"></i>Wikipedia</a>
+                  </li>
+                  {% endif %}
+                  {% if author.youtube %}
+                  <li><a href="https://www.youtube.com/@{{ author.youtube }}"><i
+                                    class="fa-brands fa-fw fa-youtube icon-pad-right" aria-hidden="true"></i>YouTube</a></li>
+                  {% endif %}
+            </ul>
+      </div>
 </div>
