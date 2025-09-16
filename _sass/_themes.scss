@@ -7,6 +7,7 @@ $indent-var                 : 1.3em;
 
 $serif                      : "Cochineal", Georgia, serif;
 $sans-serif                 : "Heliotrope", -apple-system, sans-serif;
+$sans-serif-caps            : "Heliotrope Caps", -apple-system, sans-serif;
 $monospace                  : "Berkeley Mono", "SFMono-Regular", monospace;
 
 $font-size-40              : 2.441em;  // 1
@@ -19,6 +20,7 @@ $font-size-11              : 0.6875em; // 7
 $font-size-10              : 0.625em;  // 8
 
 $global-font-family         : $serif;
+$header-font-family-caps    : $sans-serif-caps;
 $header-font-family         : $sans-serif;
 $caption-font-family        : $serif;
 $nav-font-family            : $sans-serif;

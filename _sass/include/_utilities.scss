@@ -67,13 +67,3 @@
     .text-center { text-align: center; }
     .text-right  { text-align: right; }
   }
-  
-  hr.divider {
-    border: 0;
-    height: 2px;
-    background: #bbb;
-    margin: 2.5rem 0;
-  }
-  @media (prefers-color-scheme: dark) {
-    hr.divider { background: #666; }
-  }
