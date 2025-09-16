@@ -9,16 +9,16 @@
       <nav id="site-nav" class="greedy-nav">
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+          {% if link.url contains 'http' %}
+          {% assign domain = '' %}
+          {% else %}
+          {% assign domain = base_path %}
+          {% endif %}
+          <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
           <li class="masthead__menu-item theme-toggle">
             <button id="theme-toggle" aria-label="Toggle theme">
-              <i class="fa-solid fa-moon" id="theme-icon"></i>
+              <i class="fa-sharp-duotone fa-thin fa-moon" id="theme-icon"></i>
             </button>
           </li>
         </ul>
