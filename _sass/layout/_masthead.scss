@@ -1,6 +1,10 @@
 
 .masthead {
   background: var(--global-footer-bg-color);
+  border-bottom: 1px solid var(--global-dark-border-color);
+  // margin-top: -3rem;
+  // padding: 2.5em 0 1em;
+
   &__inner-wrap {
     flex-direction: column;
     align-items: stretch;
