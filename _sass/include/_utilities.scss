@@ -12,10 +12,9 @@
       clip: rect(0 0 0 0);
       clip-path: inset(50%);
       border: 0;
-      white-space: nowrap; /* avoid line breaks */
+      white-space: nowrap;
     }
   
-    /* Reveal when focused (skip links, etc.) */
     .visually-hidden.focusable:focus,
     .screen-reader-text:focus,
     .screen-reader-shortcut:focus {
@@ -25,7 +24,7 @@
       padding: 0.75rem 1rem;
       margin: 0;
       display: inline-block;
-      font: 700 1rem/1.2 "Heliotrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font: 700 1rem/1.2 $nav-font-family;
       color: var(--global-text-color);
       background: #fff;
       border-radius: var(--radius-sm, .375rem);
@@ -37,9 +36,8 @@
     .skip-link { position: fixed; z-index: 20; margin: 0; white-space: nowrap; }
     .skip-link li { list-style: none; height: 0; width: 0; }
   
-    /* Layout container — replaces old @include container(); */
     .wrapper {
-      max-width: 45rem; /* matches content width elsewhere */
+      max-width: 45rem;
       margin-left: auto; margin-right: auto;
       padding: 0 1rem;
     }
@@ -57,15 +55,10 @@
   
     /* Icon spacing helper used in author profile */
     .icon-pad-right { padding-right: 0.5em; }
-  
-    /* Footnotes — harmonize with theme variables */
-    .footnote,
-    .footnotes { color: var(--global-text-color-light);
-      font-family: "Cochineal", Georgia, serif; }
-        
-    /* Inline code tone-down in running text (kept tiny and neutral) */
+          
+    /* Inline code tone-down in running text */
     code, kbd, samp {
-      font-family: "Berkeley Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-family: $monospace;
       font-feature-settings: "liga" 0, "clig" 0;
       }
         
@@ -73,4 +66,14 @@
     .text-left   { text-align: left; }
     .text-center { text-align: center; }
     .text-right  { text-align: right; }
-  }  
+  }
+  
+  hr.divider {
+    border: 0;
+    height: 2px;
+    background: #bbb;
+    margin: 2.5rem 0;
+  }
+  @media (prefers-color-scheme: dark) {
+    hr.divider { background: #666; }
+  }

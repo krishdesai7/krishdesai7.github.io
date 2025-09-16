@@ -10,3 +10,4 @@ end
 
 gem 'github-pages'
 gem 'connection_pool'
+gem 'puma'

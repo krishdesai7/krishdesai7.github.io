@@ -60,16 +60,9 @@ $sidebar-screen-min-width   : 1024px;
 }
 
 a {
-    text-decoration: none;
     color: var(--global-link-color);  
     &:hover,
     &:focus {
       color: var(--global-link-color-hover);
-      text-decoration: underline;
     }
   }
-  
-  // Keep buttons and nav links unadorned
-  a.btn,
-  .btn a,
-  .author__urls a { text-decoration: none; }

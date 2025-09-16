@@ -19,10 +19,6 @@
     grid-template-columns: 2fr 1fr;
   }
   
-  .about-content {
-    min-width: 0; // Prevent grid blowout
-  }
-  
   .about-sidebar {
     @include mobile-only {
       margin-top: 2rem;

@@ -124,13 +124,6 @@ hr {
   }
 }
 
-/* Archive section separators */
-.archive__subtitle {
-  position: relative;
-  padding-bottom: var(--half-baseline);
-  margin-bottom: var(--baseline);
-}
-
 /* ==========================================================================
    BOX SHADOWS FOR PROFILE IMAGES
    ========================================================================== */
@@ -380,13 +373,6 @@ h3.small-caps {
   letter-spacing: 0.7pt;
   font-size: 0.75rem;
   font-weight: 500;
-}
-
-/* Archive subtitles */
-.archive__subtitle {
-  text-transform: uppercase;
-  letter-spacing: 0.7pt;
-  font-weight: 600;
 }
 
 /* ==========================================================================
