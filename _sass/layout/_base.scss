@@ -10,8 +10,6 @@ body {
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
 
-  margin: 0;
-  padding: $masthead-height 0 0;
   font-family: $global-font-family;
   line-height: 1.35;
   font-feature-settings: "onum" 1, "liga" 1, "clig" 1, "kern" 1;

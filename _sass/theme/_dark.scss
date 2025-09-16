@@ -19,7 +19,7 @@ $muted-accent-hover         : #935f3c;  // Darker hover state
 $muted-accent-bg            : #2a231e;  // Very subtle accent background
 
 // Link and interactive colors
-$link-color                 : #d4936a;  // Warm peach for links
+$link-color                 : $medium-gray;  
 $link-hover                 : #e8a67a;  // Lighter on hover
 $link-visited               : #b5764f;  // Muted for visited
 $dark-border                : #3d3833;  // Border color for dark mode
@@ -63,4 +63,6 @@ html[data-theme="dark"] {
     --global-nav-link-color             : #{$warm-white};
     --global-nav-link-color-hover       : #{$link-color};
     --global-nav-link-decoration-color  : #5b0000;
+    --global-selection-text-color       : #{$warm-black};
+    --global-selection-bg-color         : #{$muted-terracotta};
 }

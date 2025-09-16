@@ -2,8 +2,7 @@
 .masthead {
   background: var(--global-footer-bg-color);
   border-bottom: 1px solid var(--global-dark-border-color);
-  // margin-top: -3rem;
-  // padding: 2.5em 0 1em;
+  padding: $masthead-height $masthead-height 0;
 
   &__inner-wrap {
     flex-direction: column;
@@ -16,6 +15,7 @@
 }
 .site-title {
   font-size: clamp(32px, 6vw, 52px);
+  font-variant: small-caps;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 0.15ch;
