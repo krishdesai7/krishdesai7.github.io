@@ -1,14 +1,14 @@
 .page__footer {
   background-color: var(--global-footer-bg-color);
   color: var(--global-text-color-light);
-  width: 100%;
+  width: 99%;
   position: absolute;
   height: auto;  
   border-top: 1px solid var(--global-dark-border-color);
   font-family: $code-font-family;
 
   footer {
-    padding: 0.5em 0 1em;
+    padding: 0;
   }
 
   a {
@@ -22,7 +22,7 @@
 /* Responsive footer styles */
 @include mobile-only {
   .page__footer {
-    padding: 1rem;
+    padding: 0rem;
     
     .page__footer-copyright {
       flex-direction: column;
@@ -38,12 +38,11 @@
 
 @include desktop-only {
   .page__footer {
-    padding: 0.5em 0;
+    padding: 0;
     
     .page__footer-copyright {
-      max-width: var(--content-max-width);
-      padding: 0 5rem 0 5rem;
       font-size: $font-size-10;
+      padding: 5em 25em;
     }
   }
 }

@@ -7,12 +7,11 @@
 :root {
   --content-max-width: 45rem;  /* Optimal reading width */
   --content-wide-width: 65rem; /* For wider content when needed */
-  --page-max-width: 1280px;    /* Overall page container */
   
   /* Responsive margins */
   --content-margin-mobile: 1rem;
   --content-margin-tablet: 2rem;
-  --content-margin-desktop: 7.5rem;
+  --content-margin-desktop: 0rem;
   
   /* Grid gaps */
   --grid-gap: 2rem;
@@ -22,8 +21,6 @@
 /* Base Grid Container Mixin */
 @mixin grid-container {
   display: grid;
-  width: 100%;
-  max-width: var(--page-max-width);
   margin-left: auto;
   margin-right: auto;
   padding: 0 var(--content-margin-mobile);
@@ -31,23 +28,6 @@
   @media (min-width: 768px) {
     padding: 0 var(--content-margin-tablet);
   }
-  
-  @media (min-width: 1024px) {
-    padding: 0 var(--content-margin-desktop);
-  }
-}
-
-/* Content Container Mixin */
-@mixin content-container {
-  width: 100%;
-  max-width: var(--content-max-width);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Override old container mixin */
-@mixin container {
-  @include grid-container;
 }
 
 /* Main Layout Grid */
@@ -55,7 +35,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
   
   &__header {
     grid-column: 1;
@@ -65,16 +44,12 @@
   &__content {
     grid-column: 1;
     grid-row: 2;
-    @include content-container;
     padding: var(--grid-gap) var(--content-margin-mobile);
     
     @media (min-width: 768px) {
       padding: calc(var(--grid-gap) * 1.5) var(--content-margin-tablet);
     }
     
-    @media (min-width: 1024px) {
-      padding: calc(var(--grid-gap) * 2) 0;
-    }
   }
   
   &__footer {
@@ -85,7 +60,6 @@
 
 /* Page Content Container */
 .page {
-  @include content-container;
   
   &__inner-wrap {
     display: grid;
@@ -95,7 +69,6 @@
   
   &__content {
     grid-column: 1;
-    width: 100%;
     
     /* Ensure readable line length */
     p, li, blockquote {
@@ -104,7 +77,6 @@
     
     /* Full width for specific elements */
     figure, pre, table, .highlight {
-      max-width: none;
       margin-left: calc(-1 * var(--content-margin-mobile));
       margin-right: calc(-1 * var(--content-margin-mobile));
       padding-left: var(--content-margin-mobile);
@@ -138,7 +110,6 @@
 
 /* Archive Grid Layout */
 .archive {
-  @include content-container;
   
   &__grid {
     display: grid;
@@ -172,7 +143,6 @@
 
 /* List Layout */
 .list {
-  @include content-container;
   
   &__item {
     display: grid;
@@ -252,15 +222,11 @@
 .breadcrumbs {
   @include grid-container;
   
-  ol {
-    @include content-container;
-  }
 }
 
 /* Footer centered content */
 .page__footer {
   footer {
-    @include content-container;
     padding: var(--grid-gap) var(--content-margin-mobile);
     
     @media (min-width: 768px) {
