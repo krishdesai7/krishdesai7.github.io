@@ -9,6 +9,7 @@ html {
 body {
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
+  padding-bottom: 8rem; /* Space for the footer */
 
   font-family: $global-font-family;
   line-height: 1.35;

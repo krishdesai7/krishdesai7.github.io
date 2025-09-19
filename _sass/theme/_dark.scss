@@ -60,6 +60,7 @@ html[data-theme="dark"] {
     --global-thead-color                : #{$dark-surface-2};
     --global-hover-bg                   : #{$muted-accent-bg};
     --global-link-decoration-color      : #5b0000;
+    --global-link-decoration-color-hover : #{$link-hover};
     --global-nav-link-color             : #{$warm-white};
     --global-nav-link-color-hover       : #{$link-color};
     --global-nav-link-decoration-color  : #5b0000;

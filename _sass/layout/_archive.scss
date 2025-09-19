@@ -6,21 +6,12 @@
   @include breakpoint($large) {
     @include span(10 of 12 last);
     @include prefix(0.5 of 12);
-  }
-
-  a {
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    text-decoration-color: var(--global-link-decoration-color);
-    text-underline-offset: 0.24em;
-  }
+}
 }
 
 .archive__item-title {
-  margin-bottom: 0.25em;
-  font-family: $header-font-family;
-  font-size: $font-size-20;
-  font-weight: $weight-medium;
+  font-size: $font-size-16;
+  font-weight: $weight-semibold;
 }
 
 .archive__item-excerpt {
@@ -41,61 +32,9 @@
     padding-right: 0;
   }
 }
-
-.grid__item {
-  margin-bottom: 2em;
-}
-
 .archive__item-excerpt {
   display: block;
   font-size: $font-size-12;
-}
-
-.feature__wrapper {
-  @include clearfix();
-  margin-bottom: 2em;
-  border-bottom: 1px solid var(--global-border-color);
-}
-
-.feature__item {
-  margin-bottom: 2em;
-  font-size: $font-size-20;
-
-  &--left {
-    @include full();
-    font-size: $font-size-20;
-  }
-
-  &--right {
-    @include full();
-    font-size: $font-size-20;
-
-    @include breakpoint($small) {
-      text-align: right;
-    }
-  }
-
-  &--center {
-    @include full();
-    font-size: $font-size-20;
-
-    @include breakpoint($small) {
-      text-align: center;
-    }
-  }
-}
-
-// Full-width archive content; sidebar hidden for archive layout
-.layout-archive {
-      .archive__item {
-        width: 100%;
-        max-width: 100%;
-
-        p, h2, h3, div {
-          max-width: 100%;
-          word-wrap: break-word;
-        }
-      }
 }
 
 @include mobile-only {
@@ -110,10 +49,4 @@
       margin-left: 0;
     }
   }
-}
-
-.grid__wrapper {
-  display: grid;
-  gap: 2rem;
-  margin-bottom: 2rem;
 }

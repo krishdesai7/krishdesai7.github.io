@@ -51,7 +51,7 @@ excerpt: "Machine learning for physics — unfolding, inference, and practical s
         {% if t.venue contains "Neural Information Processing Systems" %}
           {% assign short_venue = "NeurIPS" %}
         {% endif %}
-        <p class="archive__item-meta">{% if short_venue %}{{ short_venue }}{% endif %}{% if t.date %}{% if short_venue %} | {% endif %}{{ t.date | date: "%B %Y" }}{% endif %}</p>
+        <p class="archive__item-meta">{% if short_venue %}{{ short_venue }}{% endif %}{% if t.date %}{% if short_venue %}, {% endif %}{{ t.date | date: "%B %Y" }}{% endif %}</p>
       </div>
     {% endfor %}
     <p><a href="{{ '/talks/' | relative_url }}">All talks ▶︎</a></p>
