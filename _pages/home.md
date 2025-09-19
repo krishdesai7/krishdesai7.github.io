@@ -1,14 +1,31 @@
 ---
 layout: single
 permalink: "/"
-title: "Krish Desai"
+title: ""
 author_profile: false
 classes: wide
 excerpt: "Machine learning for physics — unfolding, inference, and practical statistics."
 ---
 
-<div class="home-profile__image">
-  <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+<div class="home-profile">
+  <div class="home-profile__image">
+    <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+  </div>
+  <div class="home-profile__content">
+    <p>
+      <strong>Krish Desai</strong><br>
+      <br>
+      PhD, Physics<br>
+      University of California, Berkeley<br>
+      <br>
+      Machine Learning Researcher<br>
+      Lawrence Berkeley National Laboratory<br>
+      50-5048, 1 Cyclotron Road,<br>
+      Berkeley, CA 94720.<br>
+      <br>
+      <a href="mailto:krishdesai7@gmail.com">krishdesai7@gmail.com</a>
+    </p>
+  </div>
 </div>
 
 <div class="home-content-grid">

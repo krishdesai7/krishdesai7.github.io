@@ -22,15 +22,13 @@
    BOX SHADOWS FOR PROFILE IMAGES
    ========================================================================== */
 
-.profile-image,
-.home-profile__image {
+.profile-image {
   img {
-    border-radius: 50%;
     box-shadow: 
       6px 6px 0 0 var(--global-link-color),
       6px 6px 0 1px var(--global-border-color),
       12px 12px 20px rgba(0, 0, 0, 0.15);
-    
+
     &:hover {
       transform: translate(-2px, -2px);
       box-shadow: 
