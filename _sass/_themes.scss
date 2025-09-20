@@ -54,16 +54,16 @@ $right-sidebar-width-wide   : 0;
 :root {
 --arxiv-color                : #b31b1b;
 --googlescholar-color        : #4285f4;
---inspirehep-color           : #00ffff;
---orcid-color                : #a6ce39;
---semantic-color             : #ffff00;
+--inspirehep-color           : #0096FF;
+--orcid-color                : #A6CE39;
+--semantic-color             : #1857B6;
 --pubmed-color               : #28109e;
---researchgate-color         : var(--global-selection-bg-color);
+--researchgate-color         : #00CCBB;
 --scopus-color               : #ff8000;
 
 --bluesky-color              : #1184fe;
 --github-color               : #550f78;
---instagram-color            : #9c17a3;
+--instagram-color            : linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
 --linkedin-color             : #007bb6;
 --stackoverflow-color        : #fe7a15;
 --twitter-color              : var(--global-selection-bg-color);
