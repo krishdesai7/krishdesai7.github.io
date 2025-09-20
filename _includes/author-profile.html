@@ -22,23 +22,22 @@
                   {% if author.location %}
                   <li class="author__desktop"><a href="https://www.google.com/maps/place/{{ author.location }}/"
                               target="_blank"><i
-                                    class="fa-solid fa-map-location-dot icon-pad-right"
-                                    aria-hidden="true" style="color: #FF6B6B"></i>{{ author.location }}</a></li>
+                                    class="fa-solid fa-map-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}</a></li>
                   {% endif %}
                   {% if author.employer %}
                   <li class="author__desktop"><a href="https://www.lbl.gov" target="_blank"><i
                                     class="fa-solid fa-fw fa-building-columns icon-pad-right"
-                                    aria-hidden="true" style="color: #6C63FF"></i>{{ author.employer }}</a></li>
+                                    aria-hidden="true"></i>{{ author.employer }}</a></li>
                   {% endif %}
                   {% if author.uri %}
                   <li><a href="{{ author.uri }}" target="_blank"><i
-                                    class="fa-solid fa-fw fa-link icon-pad-right" aria-hidden="true" style="color: #4ECDC4"></i>{{
+                                    class="fa-solid fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{
                               site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
                   {% endif %}
                   {% if author.email %}
                   <li><a href="mailto:{{ author.email }}"><i
-                                    class="fa-sharp-duotone fa-regular fa-fw fa-envelope icon-pad-right"
-                                    aria-hidden="true" style="color: #FFD93D"></i>{{
+                                    class="fa-solid fa-fw fa-envelope icon-pad-right"
+                                    aria-hidden="true"></i>{{
                               site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
                   {% endif %}
                   <hr style="margin: 10px 0; border: none; border-top: 1px solid #e0e0e0;">
@@ -51,23 +50,23 @@
                   {% if author.arxiv %}
                   <li><a href="{{ author.arxiv }}" target="_blank"><i
                                     class="ai ai-arxiv ai-fw icon-pad-right"
-                                    aria-hidden="true" style="color: var(--arxiv-color)"></i>arXiv</a></li>
+                                    aria-hidden="true"></i>arXiv</a></li>
                   {% endif %}
                   {% if author.googlescholar %}
                   <li><a href="{{ author.googlescholar }}" target="_blank"><i
                                     class="ai ai-google-scholar icon-pad-right"
-                                    aria-hidden="true" style="color: var(--googlescholar-color)"></i>Google Scholar</a></li>
+                                    aria-hidden="true"></i>Google Scholar</a></li>
                   {% endif %}
                   {% if author.semantic %}
                   <li><a href="{{ author.semantic }}" target="_blank"><i
                                     class="ai ai-semantic-scholar ai-fw icon-pad-right"
-                                    aria-hidden="true" style="color: var(--semantic-color)">
+                                    aria-hidden="true"></i>
                               </i>Semantic Scholar</a></li>
                   {% endif %}
                   {% if author.orcid %}
                   <li><a href="{{ author.orcid }}" target="_blank"><i
                                     class="ai ai-orcid ai-fw icon-pad-right"
-                                    aria-hidden="true" style="color: var(--orcid-color)"></i>ORCID</a></li>
+                                    aria-hidden="true"></i>ORCID</a></li>
                   {% endif %}
                   {% if author.pubmed %}
                   <li><a href="{{ author.pubmed }}"><i class="ai ai-pubmed ai-fw icon-pad-right"></i>PubMed</a></li>
@@ -75,7 +74,7 @@
                   {% if author.researchgate %}
                   <li><a href="{{ author.researchgate }}" target="_blank"><i
                                     class="ai ai-researchgate ai-fw icon-pad-right"
-                                    aria-hidden="true" style="color: var(--researchgate-color)">
+                                    aria-hidden="true"></i>
                               </i>ResearchGate</a></li>
                   {% endif %}
                   {% if author.scopus %}
@@ -84,7 +83,7 @@
                   {% if author.inspirehep %}
                   <li><a href="{{ author.inspirehep }}"><i
                                     class="ai ai-inspire ai-fw icon-pad-right"
-                                    aria-hidden="true" style="color: var(--inspirehep-color)">
+                                    aria-hidden="true"></i>
                               </i>INSPIRE-HEP</a></li>
                   {% endif %}
                   <hr style="margin: 10px 0; border: none; border-top: 1px solid #e0e0e0;">
@@ -97,7 +96,7 @@
                   {% if author.github %}
                   <li><a href="https://github.com/{{ author.github }}" target="_blank"><i
                                     class="fa-brands fa-fw fa-github icon-pad-right"
-                                    aria-hidden="true" style="color: var(--github-color)"></i>GitHub</a>
+                                    aria-hidden="true"></i>GitHub</a>
                   </li>
                   {% endif %}
                   {% if author.stackoverflow %}
@@ -110,30 +109,27 @@
                   {% if author.bluesky %}
                   <li><a href="https://bsky.app/profile/{{ author.bluesky }}" target="_blank"><i
                                     class="fa-brands fa-fw fa-bluesky icon-pad-right"
-                                    aria-hidden="true" style="color: var(--bluesky-color)">
+                                    aria-hidden="true"></i>
                               </i>Bluesky</a></li>
                   {% endif %}
                   {% if author.instagram %}
                   <li><a href="https://instagram.com/{{ author.instagram }}" target="_blank"><i
                                     class="fa-brands fa-fw fa-instagram icon-pad-right"
-                                    aria-hidden="true" style="background: var(--instagram-color);
-                                    background-clip: text;
-                                    -webkit-background-clip: text;
-                                    -webkit-text-fill-color: transparent;">
+                                    aria-hidden="true">
                               </i>Instagram</a>
                   </li>
                   {% endif %}
                   {% if author.linkedin %}
                   <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}" target="_blank"><i
                                     class="fa-brands fa-fw fa-linkedin icon-pad-right"
-                                    aria-hidden="true" style="color: var(--linkedin-color)">
+                                    aria-hidden="true"></i>
                               </i>LinkedIn</a>
                   </li>
                   {% endif %}
                   {% if author.twitter %}
                   <li><a href="https://twitter.com/{{ author.twitter }}"><i
                                     class="fa-brands fa-fw fa-x-twitter icon-pad-right"
-                                    aria-hidden="true" style="color: var(--twitter-color)">
+                                    aria-hidden="true"></i>
                               </i>X/Twitter</a>
                   </li>
                   {% endif %}

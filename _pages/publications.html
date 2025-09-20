@@ -5,37 +5,33 @@ permalink: /publications/
 author_profile: false
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}" target="_blank">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
 <h2>Journal Articles</h2>
 {% for post in site.publications reversed %}
   {% if post.category == 'journals' %}
-    {% include archive-single.html %}
+    {% include publication-single.html %}
   {% endif %}
 {% endfor %}
 
 <h2>Theses</h2>
 {% for post in site.publications reversed %}
   {% if post.category == 'theses' %}
-    {% include archive-single.html %}
+    {% include publication-single.html %}
   {% endif %}
 {% endfor %}
 
 <h2>Conference Proceedings</h2>
 {% for post in site.publications reversed %}
   {% if post.category == 'conferences' %}
-    {% include archive-single.html %}
+    {% include publication-single.html %}
   {% endif %}
 {% endfor %}
 
 <h2>Preprints</h2>
 {% for post in site.publications reversed %}
   {% if post.category == 'preprints' %}
-    {% include archive-single.html %}
+    {% include publication-single.html %}
   {% endif %}
 {% endfor %}
 

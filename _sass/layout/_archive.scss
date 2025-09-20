@@ -1,19 +1,8 @@
-.archive {
-  @include breakpoint($medium) {
-    @include span(12 of 12);
-  }
-
-  @include breakpoint($large) {
-    @include span(10 of 12 last);
-    @include prefix(0.5 of 12);
-}
-}
-
 .archive__item-title {
+  font-family: $header-font-family-caps;
+  font-weight: $weight-regular;
   font-size: $font-size-16;
-  font-weight: $weight-semibold;
 }
-
 .archive__item-excerpt {
   margin-top: 0;
   font-size: $font-size-12;
