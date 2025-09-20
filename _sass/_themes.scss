@@ -51,19 +51,21 @@ $right-sidebar-width-wide   : 0;
 /* ==========================================================================
    BRAND COLORS
    ========================================================================== */
-$arxiv-color                : #b31b1b;
-$googlescholar-color        : #4285f4;
-$inspirehep-color           : #00ffff;
-$orcid-color                : #a6ce39;
-$semantic-color             : #ffff00;
-$pubmed-color               : #28109e;
-$researchgate-color         : var(--global-selection-bg-color);
-$scopus-color               : #ff8000;
+:root {
+--arxiv-color                : #b31b1b;
+--googlescholar-color        : #4285f4;
+--inspirehep-color           : #00ffff;
+--orcid-color                : #a6ce39;
+--semantic-color             : #ffff00;
+--pubmed-color               : #28109e;
+--researchgate-color         : var(--global-selection-bg-color);
+--scopus-color               : #ff8000;
 
-$bluesky-color              : #1184fe;
-$github-color               : #550f78;
-$instagram-color            : #9c17a3;
-$linkedin-color             : #007bb6;
-$stackoverflow-color        : #fe7a15;
-$twitter-color              : var(--global-selection-bg-color);
-$youtube-color              : #bb0000;
+--bluesky-color              : #1184fe;
+--github-color               : #550f78;
+--instagram-color            : #9c17a3;
+--linkedin-color             : #007bb6;
+--stackoverflow-color        : #fe7a15;
+--twitter-color              : var(--global-selection-bg-color);
+--youtube-color              : #bb0000;
+}
