@@ -31,6 +31,7 @@
 }
 a {
   text-decoration: none;
+  color: var(--global-masthead-link-color);
   &:hover {
     color: var(--global-masthead-link-color-hover);
   }

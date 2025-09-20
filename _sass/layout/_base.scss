@@ -1,6 +1,3 @@
-/* ==========================================================================
-   BASE ELEMENTS
-   ========================================================================== */
 html {
   position: relative;
   min-height: 100%;
@@ -9,15 +6,9 @@ html {
 body {
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
-  padding-bottom: 8rem; /* Space for the footer */
-
   font-family: $global-font-family;
   line-height: 1.35;
   font-feature-settings: "onum" 1, "liga" 1, "clig" 1, "kern" 1;
-
-  &.overflow--hidden {
-    overflow: hidden;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -105,27 +96,22 @@ hr.divider {
   }
 /* lists */
 
-ul li,
-ol li {
-  margin-bottom: var(--baseline);
-}
-li ul,
-li ol {
-  margin-top: var(--baseline);
-}
-
-/* Fix IE9 SVG bug */
-svg:not(:root) {
-  overflow: hidden;
-}
-
-  /* override white-space for nested lists */
-  ul li,
-  ol li {
-    margin-bottom: 0;
+ul {
+  list-style: none;
+  font-family: $header-font-family;
+  font-size: $font-size-12;
+  & li {
+    margin-bottom: var(--third-baseline);
   }
+}
 
-  li ul,
-  li ol {
-    margin-top: 0;
-  }
+:root {
+  /* Base line height unit for vertical rhythm */
+  --baseline: 1.65rem;
+  --quarter-baseline: calc(0.25*var(--baseline));
+  --third-baseline: calc(0.333*var(--baseline));
+  --half-baseline: calc(0.5*var(--baseline));
+  --one-and-half-baseline: calc(1.5*var(--baseline));
+  --double-baseline: calc(2*var(--baseline));
+  --triple-baseline: calc(3*var(--baseline));
+}

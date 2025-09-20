@@ -57,6 +57,7 @@ html[data-theme="dark"] {
     --global-masthead-link-color-hover  : #{$link-color};
     --global-text-color                 : #{$warm-white};
     --global-text-color-light           : #{$light-gray};
+    --global-text-color-light-hover     : #{$link-color};
     --global-thead-color                : #{$dark-surface-2};
     --global-hover-bg                   : #{$muted-accent-bg};
     --global-link-decoration-color      : #5b0000;

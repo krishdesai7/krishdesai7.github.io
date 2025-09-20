@@ -1,6 +1,5 @@
 .greedy-nav {
   background: var(--global-footer-bg-color);
-  font-family: $nav-font-family;
 }
 
 /* Visible top‑level links */
@@ -12,7 +11,8 @@
 }
 
 .greedy-nav .visible-links .masthead__menu-item > a {
-  font-size: $font-size-16;
+  font-size: $font-size-20;
+  font-family: $nav-font-family;
   letter-spacing: 0.015em;
   color: var(--global-nav-link-color);
   transition: color 0.2s ease, transform 0.2s ease;

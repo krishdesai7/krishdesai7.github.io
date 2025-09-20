@@ -4,19 +4,18 @@
   width: 99%;
   position: absolute;
   bottom: 0;
-  height: auto;  
   border-top: 1px solid var(--global-dark-border-color);
   font-family: $footer-font-family;
 
-  footer {
-    padding: 0;
-  }
-
   a {
+    color: var(--global-text-color-light);
     text-decoration: underline;
     text-decoration-style: dotted;
     text-decoration-color: var(--global-link-decoration-color);
     text-underline-offset: 0.24em;
+    &:hover {
+      color: var(--global-text-color-light-hover);
+    }
   }
 }
 
