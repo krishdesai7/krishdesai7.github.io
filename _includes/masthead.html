@@ -5,7 +5,7 @@
     <div class="site-title">
       <a href="{{ base_path }}/">{{ site.title }}</a>
     </div>
-    <div class="masthead__menu">
+    <div class="nav__menu">
       <nav id="site-nav" class="greedy-nav">
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}
@@ -14,9 +14,9 @@
           {% else %}
           {% assign domain = base_path %}
           {% endif %}
-          <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+          <li class="nav__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
-          <li class="masthead__menu-item theme-toggle">
+          <li class="nav__menu-item theme-toggle">
             <button id="theme-toggle" aria-label="Toggle theme">
               <i class="fa-sharp-duotone fa-thin fa-moon" id="theme-icon"></i>
             </button>

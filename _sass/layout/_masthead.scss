@@ -3,15 +3,6 @@
   background: var(--global-footer-bg-color);
   border-bottom: 1px solid var(--global-dark-border-color);
   padding: $masthead-height $masthead-height 0;
-
-  &__inner-wrap {
-    flex-direction: column;
-    align-items: stretch;
-  }
-}
-.masthead__menu ul > li:last-of-type {
-  margin-left: auto;
-  margin-right: 2rem;
 }
 .site-title {
   font-size: clamp(32px, 6vw, 52px);
@@ -28,12 +19,12 @@
   letter-spacing: 0.015em;
   font-optical-sizing: auto;
   color: var(--global-masthead-link-color);
-}
-a {
-  text-decoration: none;
-  color: var(--global-masthead-link-color);
-  &:hover {
-    color: var(--global-masthead-link-color-hover);
+  a {
+    text-decoration: none;
+    color: var(--global-masthead-link-color);
+    &:hover {
+      color: var(--global-masthead-link-color-hover);
+    }
   }
 }
 

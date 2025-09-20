@@ -38,7 +38,7 @@ excerpt: "Machine learning for physics — unfolding, inference, and practical s
         <p class="archive__item-meta">{% if p.venue %}{{ p.venue | escape }}{% endif %}{% if p.date %}{% if p.venue %}, {% endif %}{{ p.date | date: "%Y" }}{% endif %}</p>
       </div>
     {% endfor %}
-    <p><a href="{{ '/publications/' | relative_url }}">See all publications ▶︎</a></p>
+    <p><a href="{{ '/publications/' | relative_url }}">All publications <i class="fa-solid fa-chevron-right fa-fw aria-hidden=true" style="color: #4FBDBA;"></i></a></p>
   </div>
 
   <div class="secondary-column">
@@ -54,6 +54,6 @@ excerpt: "Machine learning for physics — unfolding, inference, and practical s
         <p class="archive__item-meta">{% if short_venue %}{{ short_venue }}{% endif %}{% if t.date %}{% if short_venue %}, {% endif %}{{ t.date | date: "%B %Y" }}{% endif %}</p>
       </div>
     {% endfor %}
-    <p><a href="{{ '/talks/' | relative_url }}">All talks ▶︎</a></p>
+    <p><a href="{{ '/talks/' | relative_url }}">All talks <i class="fa-solid fa-chevron-right fa-fw aria-hidden=true" style="color: #4FBDBA;"></i></a></p>
   </div>
 </div>

@@ -1,12 +1,12 @@
 <div class="page__footer-copyright">
   <span>&copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.title }}</span>
   {% if site.author.email %}
-  <a href="mailto:{{ site.author.email }}" style="margin-left: 1rem;"> <i
-      class="fa-sharp-duotone fa-regular fa-fw fa-envelope icon-pad-right"></i> Contact</a>
+  <a href="mailto:{{ site.author.email }}"> <i
+      class="fa-solid fa-fw fa-envelope"></i> Contact</a>
   {% endif %}
   {% if site.author.github %}
-  <a href="https://github.com/{{ site.author.github }}" style="margin-left: 1rem;"> <i
-      class="fa-brands fa-fw fa-github icon-pad-right"></i> GitHub</a>
+    <a href="https://github.com/{{ site.author.github }}"> <i
+      class="fa-brands fa-fw fa-github"></i> GitHub</a>
   {% endif %}
-  <a href="/sitemap/" style="margin-left: 1rem;"><i class="fa-sharp-duotone fa-solid fa-sitemap icon-pad-right"></i>Sitemap</a>
+  <a href="/sitemap/"><i class="fa-solid fa-sitemap"></i> Sitemap</a>
 </div>

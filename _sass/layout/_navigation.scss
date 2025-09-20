@@ -1,33 +1,19 @@
-.greedy-nav {
-  background: var(--global-footer-bg-color);
-}
-
-/* Visible top‑level links */
-.greedy-nav .visible-links {
+.visible-links {
   display: flex;
-  gap: 1.5rem;
-  padding: 0;
+  gap: var(--baseline);
   list-style: none;
 }
 
-.greedy-nav .visible-links .masthead__menu-item > a {
+.nav__menu-item > a {
   font-size: $font-size-20;
   font-family: $nav-font-family;
   letter-spacing: 0.015em;
   color: var(--global-nav-link-color);
   transition: color 0.2s ease, transform 0.2s ease;
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: var(--global-nav-link-decoration-color);
-  text-underline-offset: 0.35em;
-  &:hover {
-    color: var(--global-nav-link-color-hover);
-  }
 }
-
-.greedy-nav .visible-links .masthead__menu-item > a:focus-visible {
-  outline: 2px dotted var(--global-nav-link-color);
-  outline-offset: 3px;
+.nav__menu ul > li:last-of-type {
+  margin-left: auto;
+  margin-right: 2rem;
 }
 
 #theme-toggle {
@@ -36,64 +22,7 @@
   color: var(--global-nav-link-color-hover);
   transition: color 0.2s ease, transform 0.2s ease;
   font-size: $font-size-25;
-}
-
-#theme-toggle:hover {
-  color: #{$warning-color};
-}
-
-/* Hidden links dropdown (overflow from greedy nav) */
-.greedy-nav .hidden-links {
-  position: absolute;
-  right: 0;
-  padding: 5px;
-  border: 1px solid var(--global-border-color);
-  border-radius: $border-radius;
-  background: var(--global-bg-color);
-  box-shadow: 0 0 10px rgba(#000, 0.25);
-  z-index: 1000;
-}
-
-.greedy-nav .hidden-links::before {
-  position: absolute;
-  top: -10px;
-  right: 12px;
-  width: 0;
-  height: 0;
-  content: "";
-  border-style: solid;
-  border-width: 0 10px 10px 10px;
-  border-color: transparent transparent var(--global-border-color) transparent;
-}
-
-.greedy-nav .hidden-links ul {
-  padding: 0;
-  list-style: none;
-}
-
-.greedy-nav .hidden-links li {
-  display: block;
-  border-bottom: 1px solid var(--global-border-color);
-}
-
-.greedy-nav .hidden-links li:last-child {
-  border-bottom: 0;
-}
-
-.greedy-nav .hidden-links a {
-  display: block;
-  padding: 0.5em 1em;
-  color: var(--global-masthead-link-color);
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: var(--global-link-decoration-color);
-  text-underline-offset: 0.5em;
-}
-
-.greedy-nav .hidden-links a:hover {
-  color: var(--global-masthead-link-color-hover);
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: var(--global-link-decoration-color);
-  text-underline-offset: 0.5em;
+  &:hover {
+    color: #{$warning-color};
+  }
 }

@@ -2,7 +2,6 @@
 permalink: /about/
 layout: about
 author_profile: true
-classes: layout--about
 redirect_from:
   - /about.html
 ---
@@ -24,9 +23,14 @@ At Berkeley (2020-2025), working with Professor Benjamin Nachman at Lawrence Ber
 
 My research has resulted in several innovations that are advancing how we analyze particle collider data:
 
--  <span style="font-variant: small-caps;">Moment Unfolding:</span> Moment extraction using an unfolding protocol without binning. Developed a GAN-inspired approach to directly unfold distribution moments without histogram binning, enabling more precise theoretical comparisons.
-- SymmetryGAN: Symmetry Discovery with Deep Learning. Created a deep learning method to automatically discover symmetries in datasets, with applications ranging from particle physics to broader data science
-- Unbinned Inference with Correlated Events. Pioneered techniques for handling correlated events in machine learning inference, addressing a critical challenge in modern data analysis
+Moment Unfolding
+:   Moment extraction using an unfolding protocol without binning. Developed a GAN-inspired approach to directly unfold distribution moments without histogram binning, enabling more precise theoretical comparisons.
+
+SymmetryGAN
+:   Symmetry Discovery with Deep Learning. Created a deep learning method to automatically discover symmetries in datasets, with applications ranging from particle physics to broader data science
+
+Unbinned Inference with Correlated Events
+: Pioneered techniques for handling correlated events in machine learning inference, addressing a critical challenge in modern data analysis
 
 These contributions have been recognized through publications in top venues including NeurIPS (2021, 2022, 2024) and Physical Review D, along with invited talks at CERN, KIAS, and other international institutions. I was also elected to the Sigma Xi Scientific Research Honor Society (2025), recognizing excellence in scientific research.
 

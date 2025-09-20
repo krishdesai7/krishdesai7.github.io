@@ -2,8 +2,12 @@
   display: grid;
   gap: 2rem;
   margin: 0 auto;
-  padding: 2rem;
-  
+  dl dt {
+    font-variant: small-caps;
+    font-family: $header-font-family-caps;
+    padding-top: var(--third-baseline);
+    }
+
   @include mobile-only {
     grid-template-columns: 1fr;
     padding: 1rem;
@@ -17,18 +21,8 @@
   @include desktop-only {
     grid-template-columns: 2fr 1fr;
   }
-  
-  .about-sidebar {
-    @include mobile-only {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--global-border-color);
-    }
-    
-    @include tablet-only {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--global-border-color);
-    }
-  }
+}
+
+.author__avatar {
+  margin-top: var(--baseline);
 }
