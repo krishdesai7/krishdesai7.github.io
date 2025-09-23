@@ -8,6 +8,7 @@ venue: 'arXiv'
 paperurl: 'https://www.desai.ml/files/9-paper.pdf'
 bibtexurl: 'https://www.desai.ml/files/9-biblatex.bib'
 citation: 'Desai, K., Long, O., &amp; Nachman, B. (2025). Unbinned Inference with Correlated Events. arXiv:2504.14072.'
+authors: '<strong>Krish Desai</strong>, Owen Long, and Benjamin Nachman'
 ---
 ## Abstract
 

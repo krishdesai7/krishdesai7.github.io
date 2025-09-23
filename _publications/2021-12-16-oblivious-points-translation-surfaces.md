@@ -9,6 +9,7 @@ slidesurl: 'https://www.desai.ml/files/1-slides.pdf'
 paperurl: 'https://www.desai.ml/files/1-paper.pdf'
 bibtexurl: 'https://www.desai.ml/files/1-biblatex.bib'
 citation: 'Adelstein, I., Desai, K., Ji, A., &amp; Zdeblick, G. (2022). Oblivious points on translation surfaces. <i>Journal of Geometry</i>, 113(1), 6.'
+authors: 'Ian Adelstein, <strong>Krish Desai</strong>, Anthony Ji, and Grace Zdeblick'
 ---
 ## Abstract
 

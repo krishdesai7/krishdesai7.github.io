@@ -11,7 +11,7 @@
 <div class="publication-row">
   <div class="publication-date">
     <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
-      {{ post.date | date: "%Y %B %d" }}
+      {{ post.date | date: "%Y %b %d" }}
     </time>
   </div>
   <div class="publication-item" itemscope itemtype="{{ schema_type }}">
@@ -36,8 +36,18 @@
         <span class="publication-venue" itemprop="name">{{ post.venue }}</span>
     {% endcase %}
   </div>
+  {% if post.category != 'theses' %}
+    <div class="publication-authors">
+      {{ post.authors }}
+    </div>
+  {% endif %}
   <div class="publication-citation" itemprop="citation">
-    {{ post.citation }}
+    <div class="citation-block">
+      <code class="citation-text">{{ post.citation }}</code>
+      <button class="citation-copy-btn" onclick="copyToClipboard(this)" data-citation="{{ post.citation | escape }}">
+        <i class="fa-solid fa-copy"></i>
+      </button>
+    </div>
   </div>
 
   <div class="publication-links">

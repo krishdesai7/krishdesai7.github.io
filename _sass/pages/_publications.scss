@@ -1,22 +1,59 @@
 
 .publication-row {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 6fr;
+  padding-bottom: var(--baseline);
+  width: 90%;
 }
 
 .publication-title {
   margin-top: 0;
+  margin-bottom: var(--third-baseline);
 }
 
 .publication-meta {
   .publication-venue {
     font-style: italic;
   }
+  margin-bottom: var(--third-baseline);
+}
+
+.publication-authors {
+  font-size: $font-size-16;
+  margin-bottom: var(--third-baseline);
 }
 
 .publication-citation {
-  font-family: $code-font-family;
-  font-size: $font-size-12;
+  margin-bottom: var(--third-baseline);
+
+  .citation-block {
+    position: relative;
+    border: 1px solid var(--global-border-color);
+    padding: 0.75rem 0rem 0.75rem 0.5rem;
+  }
+
+  .citation-text {
+    font-family: $code-font-family;
+    font-size: $font-size-12;
+  }
+
+  .citation-copy-btn {
+    position: absolute;
+    right: 0.1rem;
+    top: 0.1rem;
+    border: 1px solid var(--global-border-color);
+    cursor: pointer;
+    transition: all 0.2s;
+    background: transparent;
+    color: var(--global-text-color);
+
+    &.copied {
+      color: var(--global-success-color);
+      .copy-text::after {
+        content: "d";
+      }
+    }
+  }
 }
 
 .publication-links {
