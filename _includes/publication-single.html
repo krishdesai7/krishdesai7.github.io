@@ -41,14 +41,17 @@
       {{ post.authors }}
     </div>
   {% endif %}
-  <div class="publication-citation" itemprop="citation">
-    <div class="citation-block">
-      <code class="citation-text">{{ post.citation }}</code>
-      <button class="citation-copy-btn" onclick="copyToClipboard(this)" data-citation="{{ post.citation | escape }}">
-        <i class="fa-solid fa-copy"></i>
-      </button>
+    <div class="publication-citation" itemprop="citation">
+      <div class="citation-block">
+        <div class="citation-header">
+          <span class="citation-label">Recommended Citation</span>
+          <button class="citation-copy-btn" onclick="copyToClipboard(this)" data-citation="{{ post.citation | escape }}">
+            <i class="fa-solid fa-copy"></i>
+          </button>
+        </div>
+        <code class="citation-text">{{ post.citation }}</code>
+      </div>
     </div>
-  </div>
 
   <div class="publication-links">
       <a href="{{ post.paperurl }}" target="_blank" rel="noopener">Paper</a>

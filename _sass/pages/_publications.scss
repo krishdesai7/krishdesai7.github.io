@@ -27,28 +27,50 @@
   margin-bottom: var(--third-baseline);
 
   .citation-block {
-    position: relative;
     border: 1px solid var(--global-border-color);
-    padding: 0.75rem 0rem 0.75rem 0.5rem;
+    overflow: hidden;
   }
 
-  .citation-text {
-    font-family: $code-font-family;
+  .citation-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--global-hover-bg);
+    border-bottom: 1px solid var(--global-border-color);
+    padding: 0 var(--half-baseline);
+  }
+
+  .citation-label {
+    font-family: $code-font-family;//$header-font-family-caps;
     font-size: $font-size-12;
   }
 
+  .citation-text {
+    display: block;
+    font-family: $header-font-family;
+    font-size: $font-size-14;
+    font-weight: $weight-light;
+    line-height: 1.65;
+    letter-spacing: 0.012em;
+    padding: var(--third-baseline) 0 var(--quarter-baseline) var(--third-baseline);
+  }
+
   .citation-copy-btn {
-    position: absolute;
-    right: 0.1rem;
-    top: 0.1rem;
     border: 1px solid var(--global-border-color);
     cursor: pointer;
     transition: all 0.2s;
     background: transparent;
     color: var(--global-text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem 0.55rem;
+    border-radius: 4px;
+    font-size: $font-size-12;
+    line-height: 1;
 
     &.copied {
-      color: var(--global-success-color);
+      color: var(--global-link-color-hover);
       .copy-text::after {
         content: "d";
       }

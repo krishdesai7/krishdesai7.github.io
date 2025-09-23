@@ -8,7 +8,7 @@ venue: 'Conference on Neural Information Processing Systems (NeurIPS), ML4PS Tra
 slidesurl: 'https://www.desai.ml/files/3-slides.pdf'
 paperurl: 'https://www.desai.ml/files/3-paper.pdf'
 bibtexurl: 'https://www.desai.ml/files/3-biblatex.bib'
-citation: 'Desai, K., Nachman, B., &amp; Thaler, J. (2021). Symmetry Discovery with Deep Learning. <i>NeurIPS</i> ML4PS 117 (2021)'
+citation: 'Desai, K., Nachman, B., and Thaler, J. (2021). Symmetry Discovery with Deep Learning. <i>NeurIPS</i> ML4PS 117 (2021)'
 authors: '<strong>Krish Desai</strong>, Benjamin Nachman, and Jesse Thaler'
 ---
 ## Abstract
