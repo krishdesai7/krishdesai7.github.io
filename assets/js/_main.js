@@ -4,27 +4,34 @@ window.copyToClipboard = function(btn) {
   const citation = btn.getAttribute('data-citation');
   const citationText = citation.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'");
 
-  navigator.clipboard.writeText(citationText).then(() => {
+  const markCopied = () => {
     btn.classList.add('copied');
     setTimeout(() => {
       btn.classList.remove('copied');
     }, 2000);
-  }).catch(err => {
-    // Fallback for older browsers
-    const textArea = document.createElement("textarea");
+  };
+
+  const fallbackCopy = () => {
+    const textArea = document.createElement('textarea');
     textArea.value = citationText;
-    textArea.style.position = "fixed";
-    textArea.style.left = "-999999px";
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
     document.body.appendChild(textArea);
+    textArea.focus();
     textArea.select();
     document.execCommand('copy');
     document.body.removeChild(textArea);
+  };
 
-    btn.classList.add('copied');
-    setTimeout(() => {
-      btn.classList.remove('copied');
-    }, 2000);
-  });
+  if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+    navigator.clipboard.writeText(citationText).then(markCopied).catch(() => {
+      fallbackCopy();
+      markCopied();
+    });
+  } else {
+    fallbackCopy();
+    markCopied();
+  }
 }
 
 $(document).ready(function(){
