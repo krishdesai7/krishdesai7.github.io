@@ -8,68 +8,44 @@
     {% assign schema_type = "https://schema.org/ScholarlyArticle" %}
 {% endif %}
 
-<div class="{{ include.type }}__item">
-    <article class="archive__item" itemscope itemtype="{{ schema_type }}">
-        <h2 class="archive__item-title" itemprop="name headline">
-            <a href="{{ base_path }}{{ post.url }}" rel="permalink" itemprop="url">{{ title }}</a>
-        </h2>
-        {% assign year_markup = "" %}
-        {% capture year_markup %}
-              <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
-                {{ post.date | date: "%Y" }}
-              </time>
-        {% endcapture %}
-        {% case post.category %}
-            {% when 'theses' %}
-                <span itemprop="publisher">{{ post.venue }}</span>
-            {% when 'preprints' %}
-                {% capture meta_publication %}
-                    Preprint
-                    <span itemprop="publisher">
-                        {{ post.venue }}
-                    </span>
-                {% endcapture %}
-            {% when 'conferences' %}
-              {% capture meta_publication %}
-                  Published in the proceedings of
-                  <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Event">
-                      <span itemprop="name">
-                          {{ post.venue }}
-                      </span>
-                  </span>
-                  , {{ year_markup }}
-              {% endcapture %}
-            {% else %}
-                {% capture meta_publication %}
-                    <span itemprop="name">
-                        {{ post.venue }}
-                    </span>
-                    , {{ year_markup }}
-                {% endcapture %}
-          {% endcase %}
-        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time>
-        {% assign meta_line = meta_publication %}
+<div class="publication-row">
+  <div class="publication-date">
+    <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+      {{ post.date | date: "%Y %B %d" }}
+    </time>
+  </div>
+  <div class="publication-item" itemscope itemtype="{{ schema_type }}">
+  <h3 class="publication-title" itemprop="name headline">
+    <a href="{{ base_path }}{{ post.url }}" rel="permalink" itemprop="url">{{ title }}</a>
+  </h3>
 
-        {% assign resource_links = "" | split: "" %}
-        {% capture paper_link %}<a href="{{ post.paperurl }}" target="_blank" rel="noopener">Paper</a>{% endcapture %}
-        {% assign resource_links = resource_links | push: paper_link %}
-        {% if post.slidesurl %}
-            {% capture slides_link %}<a href="{{ post.slidesurl }}" target="_blank" rel="noopener">Slides</a>{% endcapture %}
-            {% assign resource_links = resource_links | push: slides_link %}
+  <div class="publication-meta">
+    {% case post.category %}
+      {% when 'theses' %}
+        <span class="publication-venue" itemprop="publisher">{{ post.venue }}</span>
+      {% when 'preprints' %}
+        <span class="publication-type">Preprint</span>
+        {% if post.venue %}
+          <span class="publication-venue" itemprop="publisher">{{ post.venue }}</span>
         {% endif %}
-        {% capture bibtex_link %}<a href="{{ post.bibtexurl }}" target="_blank" rel="noopener">Bibtex</a>{% endcapture %}
-        {% assign resource_links = resource_links | push: bibtex_link %}
-        {% if resource_links.size > 0 %}
-          {% capture resource_markup %}{{ resource_links | join: " | " }}{% endcapture %}
-          {% assign resource_markup = resource_markup | strip %}
-        {% endif %}
+      {% when 'conferences' %}
+        <span class="publication-venue" itemprop="isPartOf" itemscope itemtype="https://schema.org/Event">
+          <span itemprop="name">{{ post.venue }}</span>
+        </span>
+      {% else %}
+        <span class="publication-venue" itemprop="name">{{ post.venue }}</span>
+    {% endcase %}
+  </div>
+  <div class="publication-citation" itemprop="citation">
+    {{ post.citation }}
+  </div>
 
-        <p class="archive__item-citation" itemprop="citation">
-            Recommended citation: {{ post.citation }}
-            {% if resource_markup %}
-                <br />
-                {{ resource_markup }}
-            {% endif %}
-        </p>
-    </article>
+  <div class="publication-links">
+      <a href="{{ post.paperurl }}" target="_blank" rel="noopener">Paper</a>
+    {% if post.slidesurl %}
+       • <a href="{{ post.slidesurl }}" target="_blank" rel="noopener">Slides</a>
+    {% endif %}
+      • <a href="{{ post.bibtexurl }}" target="_blank" rel="noopener">BibTeX</a>
+  </div>
+  </div>
 </div>

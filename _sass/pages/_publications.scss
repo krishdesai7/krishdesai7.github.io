@@ -1,0 +1,26 @@
+
+.publication-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.publication-title {
+  margin-top: 0;
+}
+
+.publication-meta {
+  .publication-venue {
+    font-style: italic;
+  }
+}
+
+.publication-citation {
+  font-family: $code-font-family;
+  font-size: $font-size-12;
+}
+
+.publication-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
