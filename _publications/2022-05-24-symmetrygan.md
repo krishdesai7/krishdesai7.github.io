@@ -3,8 +3,8 @@ layout: publication
 title: "SymmetryGAN"
 collection: publications
 category: journals
-permalink: /publication/2022-05-01-symmetrygan
-date: 2022-05-01
+permalink: /publication/2022-05-24-symmetrygan
+date: 2022-05-24
 venue: 'Physical Review D'
 paperurl: 'https://www.desai.ml/files/4-paper.pdf'
 bibtexurl: 'https://www.desai.ml/files/4-biblatex.bib'

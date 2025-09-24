@@ -2,13 +2,13 @@
 layout: publication
 title: "Unbinned Inference with Correlated Events"
 collection: publications
-category: preprints
-permalink: /publication/2025-04-18-unbinned-inference-correlated-events
-date: 2025-04-18
-venue: 'arXiv'
+category: journals
+permalink: /publication/2025-09-23-unbinned-inference-correlated-events
+date: 2025-09-23
+venue: 'European Physical Journal C (Accepted for publication)'
 paperurl: 'https://www.desai.ml/files/9-paper.pdf'
 bibtexurl: 'https://www.desai.ml/files/9-biblatex.bib'
-citation: 'Desai, K., Long, O., and Nachman, B. (2025). Unbinned Inference with Correlated Events. arXiv:2504.14072.'
+citation: 'Desai, K., Long, O., and Nachman, B. (2025). Unbinned Inference with Correlated Events. <i>European Physical Journal C</i> (Accepted for publication).'
 authors: '<strong>Krish Desai</strong>, Owen Long, and Benjamin Nachman'
 ---
 ## Abstract

@@ -3,8 +3,8 @@ layout: publication
 title: "Padé Approximants and the Anharmonic Oscillator"
 collection: publications
 category: theses
-permalink: /publication/2020-05-20-pade-approximants-anharmonic-oscillator
-date: 2020-05-20
+permalink: /publication/2020-04-20-pade-approximants-anharmonic-oscillator
+date: 2020-04-20
 venue: 'Yale University'
 paperurl: 'https://www.desai.ml/files/2-paper.pdf'
 bibtexurl: 'https://www.desai.ml/files/2-biblatex.bib'

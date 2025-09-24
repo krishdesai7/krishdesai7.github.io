@@ -77,16 +77,11 @@
     }
   }
 }
-.publication-link--bibtex {
-  .publication-link__text {
+
+// BibLaTeX link underline
+.publication-link--bibtex .publication-link__text {
   border-bottom: 1px dotted var(--global-link-decoration-color);
-  &:hover {
-    border-bottom-color: var(--global-link-color-hover);
-  }
-  &:visited {
-    border-bottom-color: var(--global-link-color-visited);
-  }
-}
+  padding-bottom: 0.04em;
 }
 
 .publication-links {

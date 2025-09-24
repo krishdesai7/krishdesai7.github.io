@@ -3,9 +3,9 @@ layout: publication
 title: "Symmetry Discovery with Deep Learning"
 collection: publications
 category: conferences
-permalink: /publication/2021-11-01-symmetry-discovery-deep-learning
-date: 2021-11-01
-venue: 'Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track'
+permalink: /publication/2021-12-13-symmetry-discovery-deep-learning
+date: 2021-12-13
+venue: 'Thirty-Fifth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track'
 slidesurl: 'https://www.desai.ml/files/3-slides.pdf'
 paperurl: 'https://www.desai.ml/files/3-paper.pdf'
 bibtexurl: 'https://www.desai.ml/files/3-biblatex.bib'

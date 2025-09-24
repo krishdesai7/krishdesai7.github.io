@@ -3,13 +3,13 @@ layout: publication
 title: "Deconvolving Detector Effects for Distribution Moments"
 collection: publications
 category: conferences
-permalink: /publication/2022-11-01-deconvolving-detector-effects
-date: 2022-11-01
-venue: 'Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track'
+permalink: /publication/2022-12-03-deconvolving-detector-effects
+date: 2022-12-03
+venue: 'Thirty-Sixth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track'
 slidesurl: 'https://www.desai.ml/files/5-slides.pdf'
 paperurl: 'https://www.desai.ml/files/5-paper.pdf'
 bibtexurl: 'https://www.desai.ml/files/5-biblatex.bib'
-citation: 'Desai, K., Nachman, B., and Thaler, J. (2022). Deconvolving Detector Effects for Distribution Moments. <i>NeurIPS</i> ML4PS, 43.'
+citation: 'Desai, K., Nachman, B., and Thaler, J. (2022). Deconvolving Detector Effects for Distribution Moments. <i>NeurIPS</i> ML4PS 43 (2022).'
 authors: '<strong>Krish Desai</strong>, Benjamin Nachman, and Jesse Thaler'
 ---
 ## Abstract

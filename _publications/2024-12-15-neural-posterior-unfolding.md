@@ -3,13 +3,13 @@ layout: publication
 title: "Neural Posterior Unfolding"
 collection: publications
 category: conferences
-permalink: /publication/2024-11-01-neural-posterior-unfolding
-date: 2024-11-01
-venue: 'Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track'
+permalink: /publication/2024-12-15-neural-posterior-unfolding
+date: 2024-12-15
+venue: 'Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track'
 slidesurl: 'https://www.desai.ml/files/7-slides.pdf'
 paperurl: 'https://www.desai.ml/files/7-paper.pdf'
 bibtexurl: 'https://www.desai.ml/files/7-biblatex.bib'
-citation: 'Acosta, F. T., Chan, J., Desai, K., Mikuni, V., Nachman, B., and Pan, J. (2024) Neural Posterior Unfolding. <i>NeurIPS</i> ML4PS (177).'
+citation: 'Acosta, F. T., Chan, J., Desai, K., Mikuni, V., Nachman, B., and Pan, J. (2024) Neural Posterior Unfolding. <i>NeurIPS</i> ML4PS 177 (2024).'
 authors: 'Fernando Torales Acosta, Jay Chan, <strong>Krish Desai</strong>, Vinicius Mikuni, Benjamin Nachman, and Jingjing Pan'
 ---
 ## Abstract
