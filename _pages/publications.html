@@ -38,14 +38,16 @@ author_profile: false
   </div>
 </section>
 
-<section class="publications-section">
-  <h2>Preprints</h2>
-  <div class="publications-grid">
-    {% for post in preprints %}
-      {% include publication-single.html %}
-    {% endfor %}
-  </div>
-</section>
+{% if preprints.size > 0 %}
+  <section class="publications-section">
+    <h2>Preprints</h2>
+    <div class="publications-grid">
+      {% for post in preprints %}
+        {% include publication-single.html %}
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
 
 
 

@@ -10,23 +10,66 @@ layout: default
     <meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">
   {% endif %}
   {% if page.date %}
-    <meta itemprop="datePublished" content="{{ page.date | date: " %B %d, %Y" }}">
+    <meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">
   {% endif %}
 
   <div class="page__inner-wrap">
-    <section class="page__content" itemprop="text">
-      <h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" |
-          remove: "</p>" }}</h1>
-      <p>{{ page.venue }}</p>
+    <h1 class="page__title" itemprop="headline">
+      {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
+    </h1>
+
+    <div class="talk-meta-single">
+      {% if page.type %}
+        <div class="talk-type-single">{{ page.type }}</div>
+      {% endif %}
+      {% if page.venue %}
+        <div class="talk-venue-single">{{ page.venue }}</div>
+      {% endif %}
       {% if page.date %}
-        <p class="page__date"><i class="fa-solid fa-calendar-day" aria-hidden="true"></i> <time
-          datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+        <div class="talk-date-single">
+          <i class="fa-solid fa-calendar-day" aria-hidden="true"></i>
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        </div>
       {% endif %}
-      <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ page.location }}</p>
-      {{ content }}
+      {% if page.location %}
+        <div class="talk-location-single">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          {{ page.location }}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="talk-links-single">
       {% if page.link %}
-        <a href="{{ page.link }}" target="_blank" rel="noopener noreferrer"></a>
+        <a href="{{ page.link }}" class="talk-link talk-link--details" target="_blank" rel="noopener">
+          <span class="talk-link__icon" aria-hidden="true">
+            <i class="fa-solid fa-external-link"></i>
+          </span>
+          <span class="talk-link__text">Talk Details</span>
+        </a>
       {% endif %}
+      {% if page.slidesurl %}
+        {% if page.link %}<span class="talk-link__separator" aria-hidden="true">•</span>{% endif %}
+        <a href="{{ page.slidesurl }}" class="talk-link talk-link--slides" target="_blank" rel="noopener">
+          <span class="talk-link__icon" aria-hidden="true">
+            {% include icons/ppt.svg %}
+          </span>
+          <span class="talk-link__text">Slides</span>
+        </a>
+      {% endif %}
+      {% if page.videourl %}
+        {% if page.link or page.slidesurl %}<span class="talk-link__separator" aria-hidden="true">•</span>{% endif %}
+        <a href="{{ page.videourl }}" class="talk-link talk-link--video" target="_blank" rel="noopener">
+          <span class="talk-link__icon" aria-hidden="true">
+            <i class="fa-solid fa-video"></i>
+          </span>
+          <span class="talk-link__text">Video</span>
+        </a>
+      {% endif %}
+    </div>
+
+    <section class="page__content" itemprop="text">
+      {{ content }}
     </section>
   </div>
 </div>

@@ -1,16 +1,31 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Talks and Presentations"
 permalink: /talks/
 author_profile: false
 ---
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
+
+{% include base_path %}
+{% assign talks_by_year = site.talks | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
+
+{% for year_group in talks_by_year %}
+  <section class="talks-section">
+    <h2>{{ year_group.name }}</h2>
+    <div class="talks-grid">
+      {% assign year_talks = year_group.items | sort: "date" | reverse %}
+      {% for post in year_talks %}
+        {% include talk-single.html %}
+      {% endfor %}
+    </div>
+  </section>
 {% endfor %}
 
-<hr class="divider" aria-hidden="true">
+<section class="talks-map-section">
+  <hr class="divider" aria-hidden="true">
 
-<p style="font-size: 1.2rem;">Here's a map of all the places I've given a talk!</p>
+  <h2>Talk Locations</h2>
+  <p style="font-size: 1.2rem;">Here's a map of all the places I've given a talk!</p>
 
-<iframe src="/talkmap/map.html" height="700" width="850" style="border:none;"></iframe>
+  <iframe src="/talkmap/map.html" height="700" width="850" style="border:none;"></iframe>
+</section>
 
