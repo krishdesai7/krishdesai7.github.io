@@ -7,6 +7,9 @@ author_profile: false
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<div class="teaching-grid">
+  {% assign teaching_sorted = site.teaching | sort: 'year' | reverse %}
+  {% for post in teaching_sorted %}
+    {% include teaching-single.html %}
+  {% endfor %}
+</div>

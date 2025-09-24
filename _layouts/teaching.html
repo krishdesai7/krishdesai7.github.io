@@ -1,0 +1,107 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% endif %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page teaching-single" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+
+    <div class="page__inner-wrap">
+      <header class="teaching-header">
+        <h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+      </header>
+
+      <div class="teaching-content" itemprop="text">
+        <div class="teaching-details">
+          <div class="teaching-meta">
+            <div class="teaching-meta-group">
+              <span class="meta-label">Course:</span>
+              <span class="meta-value">{{ page.course }}</span>
+            </div>
+
+            <div class="teaching-meta-group">
+              <span class="meta-label">Role:</span>
+              <span class="meta-value">{{ page.type }}</span>
+            </div>
+
+            <div class="teaching-meta-group">
+              <span class="meta-label">Term:</span>
+              <span class="meta-value">{{ page.semester }} {{ page.year }}</span>
+            </div>
+
+            <div class="teaching-meta-group">
+              <span class="meta-label">Institution:</span>
+              <span class="meta-value">{{ page.venue }}</span>
+            </div>
+
+            {% if page.location %}
+            <div class="teaching-meta-group">
+              <span class="meta-label">Location:</span>
+              <span class="meta-value">{{ page.location }}</span>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+
+        {% if content %}
+        <div class="teaching-description">
+          {{ content }}
+        </div>
+        {% endif %}
+
+        {% if page.materials %}
+        <div class="teaching-materials">
+          <h3>Course Materials</h3>
+          {{ page.materials | markdownify }}
+        </div>
+        {% endif %}
+
+        {% if page.responsibilities %}
+        <div class="teaching-responsibilities">
+          <h3>Responsibilities</h3>
+          {{ page.responsibilities | markdownify }}
+        </div>
+        {% endif %}
+      </div>
+
+      <footer>
+        {% if page.modified %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
+        {% elsif page.date %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+        {% endif %}
+      </footer>
+
+      {% if page.share %}{% include social-share.html %}{% endif %}
+
+      {% include post_pagination.html %}
+    </div>
+
+    {% if site.comments.provider and page.comments %}
+      {% include comments.html %}
+    {% endif %}
+  </article>
+
+  {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
+  {% if page.id and page.related and site.related_posts.size > 0 %}
+    <div class="page__related">
+      {% if site.data.ui-text[site.locale].related_label %}
+        <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
+      {% endif %}
+      <div class="grid__wrapper">
+        {% for post in site.related_posts limit:4 %}
+          {% include archive-single.html type="grid" %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</div>

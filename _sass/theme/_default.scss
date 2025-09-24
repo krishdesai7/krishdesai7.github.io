@@ -64,4 +64,5 @@ $sidebar-screen-min-width   : 1024px;
     --global-selection-text-color       : #{$warm-white};
     --global-selection-bg-color         : #{$warm-black};
     --global-selection-bg-color-hover    : #{lighten($warm-black, 10%)};
+    --header-footer-text-color            : #{$dark-brown};
 }

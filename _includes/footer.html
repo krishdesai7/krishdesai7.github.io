@@ -1,12 +1,16 @@
-<div class="page__footer-copyright">
-  <span>&copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.title }}</span>
-  {% if site.author.email %}
-  <a href="mailto:{{ site.author.email }}"> <i
-      class="fa-solid fa-fw fa-envelope icon-pad-right" aria-hidden="true" style="color: #4FBDBA"></i>Contact</a>
-  {% endif %}
-  {% if site.author.github %}
-    <a href="https://github.com/{{ site.author.github }}"> <i
-      class="fa-brands fa-fw fa-github icon-pad-right" aria-hidden="true" style="color: var(--github-color) ;"></i>GitHub</a>
-  {% endif %}
-  <a href="/sitemap/"><i class="fa-solid fa-fw fa-sitemap icon-pad-right" aria-hidden="true" style="color: #C87137"></i>  Sitemap</a>
+<div class="page__footer">
+  <span class="page__footer-copyright">
+    &copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.title }}
+  </span>
+  <div class="page__footer-links">
+    <a href="mailto:{{ site.author.email }}">
+      <i class="fa-solid fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Contact
+    </a>
+    <a href="https://github.com/{{ site.author.github }}">
+      <i class="fa-brands fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub
+    </a>
+    <a href="/sitemap/">
+      <i class="fa-solid fa-fw fa-sitemap icon-pad-right" aria-hidden="true"></i>Sitemap
+    </a>
+  </div>
 </div>

@@ -55,7 +55,7 @@
   color: var(--powerpoint-color);
 }
 
-.fa-map-location-dot {
+.fa-map-location-dot, .fa-location-dot {
     background: linear-gradient(135deg, #667eea 0%, #1b723e 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -75,6 +75,12 @@
   }
   .fa-envelope {
     background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .fa-calendar-day {
+    background: linear-gradient(135deg, #01030b 0%, #eee7e6 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -1,4 +1,5 @@
 ---
+layout: teaching
 title: "Introduction to Computational Techniques in Physics"
 collection: teaching
 type: "Associate Instructor"
