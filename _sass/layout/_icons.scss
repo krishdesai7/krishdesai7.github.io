@@ -1,0 +1,144 @@
+/* ==========================================================================
+   BRAND COLORS
+   ========================================================================== */
+   :root {
+    --arxiv-color                : #b31b1b;
+    --googlescholar-color        : #4285f4;
+    --inspirehep-color           : #0096FF;
+    --orcid-color                : #A6CE39;
+    --semantic-color             : #1857B6;
+    --pubmed-color               : #28109e;
+    --researchgate-color         : #00CCBB;
+    --scopus-color               : #ff8000;
+    
+    --bluesky-color              : #1184fe;
+    --github-color               : #550f78;
+    --instagram-color            : linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    --linkedin-color             : #007bb6;
+    --stackoverflow-color        : #fe7a15;
+    --twitter-color              : var(--global-text-color);
+    --youtube-color              : #bb0000;
+    --adobe-color                : #ff4b4b;
+    --biblatex-color             : #008080;
+    --powerpoint-color           : #D04423;
+    }
+    
+.icon-svg {
+  width: var(--baseline);
+  height: var(--baseline);
+  fill: currentColor;
+}
+
+.icon-pdf, .icon-bibtex, .icon-ppt{
+  display: inline-flex;
+  align-items: center;
+  width: $global-font-size;
+  height: $global-font-size;
+  justify-content: center;
+  background-color: transparent;
+  padding-right: 0.25rem;
+}
+
+.icon-pdf__paper, .icon-pdf__glyph, .icon-bibtex__accent{
+  fill: var(--global-text-color);
+}
+
+.icon-bibtex__paper {
+  fill: var(--biblatex-color);
+}
+
+.icon-pdf__accent {
+  fill: var(--adobe-color);
+}
+
+.fa-images {
+  color: var(--powerpoint-color);
+}
+
+.fa-map-location-dot {
+    background: linear-gradient(135deg, #667eea 0%, #1b723e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .fa-building-columns {
+    background: linear-gradient(135deg, #ceb0b0 0%, #f5a657 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .fa-link {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .fa-envelope {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .ai-academia {
+    color: var(--academia-color);
+  }
+  .ai-arxiv {
+    color: var(--arxiv-color);
+  }
+  .ai-google-scholar {
+    color: var(--googlescholar-color);
+  }
+  .ai-semantic-scholar {
+    color: var(--semantic-color);
+  }
+  .ai-orcid {
+    color: var(--orcid-color);
+  }
+  .ai-pubmed {
+    color: var(--pubmed-color);
+  }
+  .ai-researchgate {
+    color: var(--researchgate-color);
+  }
+  .ai-scopus {
+    color: var(--scopus-color);
+  }
+  .ai-inspire {
+    color: var(--inspirehep-color);
+  }
+  
+  .fa-bitbucket {
+    color: var(--bitbucket-color);
+  }
+  .fa-github {
+    color: var(--github-color);
+  }
+  .fa-stack-overflow {
+    color: var(--stackoverflow-color);
+  }
+  
+  .fa-bluesky {
+    color: var(--bluesky-color);
+  }
+  .fa-instagram {
+    color: var(--instagram-color);
+  }
+  .fa-linkedin {
+    color: var(--linkedin-color);
+  }
+  .fa-x-twitter {
+    color: var(--twitter-color);
+  }
+  .fa-wikipedia-w {
+    color: var(--wikipedia-color);
+  }
+  .fa-youtube {
+    color: var(--youtube-color);
+  }
+  .fa-instagram {
+    background: var(--instagram-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

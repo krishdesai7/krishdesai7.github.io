@@ -1,4 +1,5 @@
 ---
+layout: publication
 title: "Moment Unfolding"
 collection: publications
 category: journals

@@ -1,0 +1,111 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div id="main" role="main">
+  <div class="page__inner-wrap">
+    <header>
+      <h1 class="page__title" itemprop="headline">
+        {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
+      </h1>
+
+      <div class="publication-meta">
+        {% case page.category %}
+          {% when 'theses' %}
+            <span class="publication-venue" itemprop="publisher">{{ page.venue }}</span>
+          {% when 'preprints' %}
+            <span class="publication-type">Preprint</span>
+            {% if page.venue %}
+              <span class="publication-venue" itemprop="publisher">{{ page.venue }}</span>
+            {% endif %}
+          {% when 'conferences' %}
+            <span class="publication-venue" itemprop="isPartOf" itemscope itemtype="https://schema.org/Event">
+              <span itemprop="name">{{ page.venue }}</span>
+            </span>
+          {% else %}
+            <span class="publication-venue" itemprop="name">{{ page.venue }}</span>
+        {% endcase %}
+
+          <span class="publication-date">
+            • <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+              {{ page.date | date: "%B %d, %Y" }}
+            </time>
+          </span>
+      </div>
+
+      {% if page.category != 'theses' and page.authors %}
+        <div class="publication-authors">
+          {{ page.authors }}
+        </div>
+      {% endif %}
+    </header>
+
+    <div class="publication-citation" itemprop="citation">
+      <div class="citation-block">
+        <div class="citation-header">
+          <span class="citation-label">Recommended Citation</span>
+          <button class="citation-copy-btn" onclick="copyToClipboard(this)" data-citation="{{ page.citation | escape }}">
+            <i class="fa-solid fa-copy"></i>
+          </button>
+        </div>
+        <code class="citation-text">{{ page.citation }}</code>
+      </div>
+    </div>
+
+    <div class="publication-links">
+      {% if page.paperurl %}
+        <a href="{{ page.paperurl }}" class="publication-link publication-link--paper" target="_blank" rel="noopener">
+          <span class="publication-link__icon icon-pdf" aria-hidden="true">
+            {% include icons/pdf.svg %}
+          </span>
+          <span class="publication-link__text">PDF</span>
+        </a>
+      {% endif %}
+
+      {% if page.slidesurl %}
+        <span class="publication-link__separator" aria-hidden="true">•</span>
+        <a href="{{ page.slidesurl }}" class="publication-link publication-link--slides" target="_blank" rel="noopener">
+          <span class="publication-link__icon icon-ppt" aria-hidden="true">
+            {% include icons/ppt.svg %}
+          </span>
+          <span class="publication-link__text">Slides</span>
+        </a>
+      {% endif %}
+
+      {% if page.bibtexurl %}
+        <span class="publication-link__separator" aria-hidden="true">•</span>
+        <a href="javascript:void(0)" class="publication-link publication-link--bibtex" onclick="showBibtexModal('{{ page.bibtexurl }}')">
+          <span class="publication-link__icon icon-bibtex" aria-hidden="true">
+            {% include icons/biblatex-file.svg %}
+          </span>
+          <span class="publication-link__text">\(\Biblatex\)</span>
+        </a>
+      {% endif %}
+    </div>
+
+    <section class="page__content" itemprop="text">
+      {{ content }}
+    </section>
+  </div>
+</div>
+
+<!-- BibTeX Modal -->
+<div id="bibtex-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 class="modal-title">\[ \Biblatex \]</h3>
+      <button class="modal-close">&times;</button>
+    </div>
+    <div class="modal-body">
+      <pre id="bibtex-content"></pre>
+    </div>
+    <div class="modal-footer">
+      <button id="bibtex-download" class="btn btn-primary"><i class="fa-solid fa-chevron-down fa-fw icon-pad-right"
+          aria-hidden="true"></i>Download</button>
+      <button id="bibtex-copy" class="btn btn-secondary"><i class="fa-solid fa-copy fa-fw icon-pad-right"
+          aria-hidden="true"></i>Copy</button>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 ---
+layout: publication
 title: "Unbinned Inference with Correlated Events"
 collection: publications
 category: preprints

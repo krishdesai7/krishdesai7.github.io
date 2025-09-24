@@ -1,4 +1,5 @@
 ---
+layout: publication
 title: "Padé Approximants and the Anharmonic Oscillator"
 collection: publications
 category: theses

@@ -1,4 +1,5 @@
 ---
+layout: publication
 title: "Deconvolving Detector Effects for Distribution Moments"
 collection: publications
 category: conferences

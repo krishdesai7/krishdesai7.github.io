@@ -1,4 +1,5 @@
 ---
+layout: publication
 title: "Machine Learning Methods for Cross Section Measurements"
 collection: publications
 category: theses

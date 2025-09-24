@@ -1,0 +1,28 @@
+.about-layout {
+  display: grid;
+  gap: 2rem;
+  margin: 0 auto;
+  dl dt {
+    font-variant: small-caps;
+    font-family: $header-font-family-caps;
+    padding-top: var(--third-baseline);
+    }
+
+  @include mobile-only {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  @include tablet-only {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+  
+  @include desktop-only {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.author__avatar {
+  margin-top: var(--baseline);
+}

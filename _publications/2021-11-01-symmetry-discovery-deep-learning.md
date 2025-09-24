@@ -1,4 +1,5 @@
 ---
+layout: publication
 title: "Symmetry Discovery with Deep Learning"
 collection: publications
 category: conferences

@@ -37,7 +37,7 @@
     justify-content: space-between;
     background-color: var(--global-hover-bg);
     border-bottom: 1px solid var(--global-border-color);
-    padding: 0 var(--half-baseline);
+    padding: 0 0  0 var(--third-baseline);
   }
 
   .citation-label {
@@ -77,9 +77,35 @@
     }
   }
 }
+.publication-link--bibtex {
+  .publication-link__text {
+  border-bottom: 1px dotted var(--global-link-decoration-color);
+  &:hover {
+    border-bottom-color: var(--global-link-color-hover);
+  }
+  &:visited {
+    border-bottom-color: var(--global-link-color-visited);
+  }
+}
+}
 
 .publication-links {
   display: flex;
   gap: 0.5rem;
-  flex-wrap: wrap;
+  .publication-link {
+    display: inline-flex;
+  }
+}
+
+// Single publication page styles
+.page__inner-wrap {
+  > * {
+    padding-bottom: var(--baseline);
+  }
+  .publication-venue {
+    font-style: italic;
+  }
+  .publication-links {
+    border-bottom: 1px solid var(--global-border-color);
+  }
 }

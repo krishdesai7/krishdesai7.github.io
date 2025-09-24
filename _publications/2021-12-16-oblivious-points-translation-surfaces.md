@@ -1,4 +1,5 @@
 ---
+layout: publication
 title: "Oblivious points on translation surfaces"
 collection: publications
 category: journals

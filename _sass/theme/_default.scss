@@ -63,4 +63,5 @@ $sidebar-screen-min-width   : 1024px;
     --global-nav-link-decoration-color  : #5b0000;
     --global-selection-text-color       : #{$warm-white};
     --global-selection-bg-color         : #{$warm-black};
+    --global-selection-bg-color-hover    : #{lighten($warm-black, 10%)};
 }

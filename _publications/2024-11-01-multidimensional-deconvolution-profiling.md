@@ -1,4 +1,5 @@
 ---
+layout: publication
 title: "Multidimensional Deconvolution with Profiling"
 collection: publications
 category: conferences

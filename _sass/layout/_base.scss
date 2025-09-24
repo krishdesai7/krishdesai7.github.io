@@ -99,7 +99,9 @@ hr.divider {
 ul {
   list-style: none;
   font-family: $header-font-family;
-  font-size: $font-size-12;
+  font-size: $font-size-14;
+  overflow-x: visible;
+  text-wrap: nowrap;
   & li {
     margin-bottom: var(--third-baseline);
   }
@@ -111,7 +113,9 @@ ul {
   --quarter-baseline: calc(0.25*var(--baseline));
   --third-baseline: calc(0.333*var(--baseline));
   --half-baseline: calc(0.5*var(--baseline));
+  --three-quarters-baseline: calc(0.75*var(--baseline));
   --one-and-half-baseline: calc(1.5*var(--baseline));
   --double-baseline: calc(2*var(--baseline));
   --triple-baseline: calc(3*var(--baseline));
+  --quadruple-baseline: calc(4*var(--baseline));
 }

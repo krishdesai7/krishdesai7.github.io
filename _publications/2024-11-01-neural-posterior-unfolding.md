@@ -1,4 +1,5 @@
 ---
+layout: publication
 title: "Neural Posterior Unfolding"
 collection: publications
 category: conferences

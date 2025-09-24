@@ -54,11 +54,25 @@
     </div>
 
   <div class="publication-links">
-      <a href="{{ post.paperurl }}" target="_blank" rel="noopener">Paper</a>
+      <a href="{{ post.paperurl }}" class="publication-link publication-link--paper" target="_blank" rel="noopener">
+        <span class="publication-link__icon icon-pdf" aria-hidden="true">
+          {% include icons/pdf.svg %}
+        </span>
+        <span class="publication-link__text">PDF</span>
+      </a>
     {% if post.slidesurl %}
-       • <a href="{{ post.slidesurl }}" target="_blank" rel="noopener">Slides</a>
+      <span class="publication-link__separator" aria-hidden="true">•</span><span class="publication-link__icon icon-ppt" aria-hidden="true">
+        {% include icons/ppt.svg %}
+      </span>
+      <a href="{{ post.slidesurl }}" class="publication-link" target="_blank" rel="noopener">Slides</a>
     {% endif %}
-      • <a href="{{ post.bibtexurl }}" target="_blank" rel="noopener">BibTeX</a>
+      <span class="publication-link__separator" aria-hidden="true">•</span>
+      <a href="javascript:void(0)" class="publication-link publication-link--bibtex" onclick="showBibtexModal('{{ post.bibtexurl }}')">
+        <span class="publication-link__icon icon-bibtex" aria-hidden="true">
+          {% include icons/biblatex-file.svg %}
+        </span>
+        <span class="publication-link__text">\(\Biblatex\)</span>
+      </a>
   </div>
   </div>
 </div>

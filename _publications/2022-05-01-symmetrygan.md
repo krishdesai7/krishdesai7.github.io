@@ -1,4 +1,5 @@
 ---
+layout: publication
 title: "SymmetryGAN"
 collection: publications
 category: journals
