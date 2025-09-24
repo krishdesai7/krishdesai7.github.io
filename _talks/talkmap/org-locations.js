@@ -51,8 +51,8 @@ var addressPoints = [
   ],
   [
     "Moment extraction using an unfolding protocol without binning<br />PHY-STAT Unfolding Conference; Paris, France",
-    48.8534951,
-    2.3483915
+    48.8588897,
+    2.320041
   ],
   [
     "SymmetryGAN<br />Machine Learning for Jets; Heidelberg, Germany",
