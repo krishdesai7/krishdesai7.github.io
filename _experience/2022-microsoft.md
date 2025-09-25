@@ -7,6 +7,7 @@ venue: "Microsoft Research"
 date: 2022-05-01
 end_date: 2022-08-31
 location: "Cambridge, MA"
+logo: "/assets/images/experience/Microsoft_logo_(2012).svg"
 ---
 
 Conducted theoretical and computational research at Microsoft Research, advancing mathematical foundations of non-local field theory and its applications to optimization.

@@ -7,6 +7,7 @@ venue: "Purple Gaze Inc."
 date: 2020-05-01
 end_date: 2020-07-31
 location: "Amsterdam, Netherlands"
+logo: "/assets/images/experience/purple_gaze.png"
 ---
 
 Contributed to the development of advanced eye-tracking software at Purple Gaze Inc., building AI-driven algorithms and real-time image processing pipelines for production deployment.

@@ -9,22 +9,34 @@ author_profile: false
 
 {% for post in site.experience reversed %}
   <div class="experience-item">
-    <div class="experience-header">
-      <h3 class="experience-company">{{ post.venue }}, </h3>
-      <div class="experience-location">{{ post.location }}</div>
+    {% if post.logo %}
+    <div class="experience-logo">
+      {% if post.logo_dark %}
+        <img class="logo-light" src="{{ post.logo }}" alt="{{ post.venue }} logo" />
+        <img class="logo-dark" src="{{ post.logo_dark }}" alt="{{ post.venue }} logo" />
+      {% else %}
+        <img src="{{ post.logo }}" alt="{{ post.venue }} logo" />
+      {% endif %}
     </div>
-    <div class="experience-details">
-      <div class="experience-title">{{ post.title }}</div>
-      <div class="experience-dates">
-        {{ post.date | date: "%B %Y" }} &ndash; {% if post.end_date %}
-          {{ post.end_date | date: "%B %Y" }}
-        {% else %}
-          Present
-        {% endif %}
+    {% endif %}
+    <div class="experience-body">
+      <div class="experience-header">
+        <h3 class="experience-company">{{ post.venue }}, </h3>
+        <div class="experience-location">{{ post.location }}</div>
       </div>
-    </div>
-    <div class="experience-content">
-      {{ post.content }}
+      <div class="experience-details">
+        <div class="experience-title">{{ post.title }}</div>
+        <div class="experience-dates">
+          {{ post.date | date: "%B %Y" }} &ndash; {% if post.end_date %}
+            {{ post.end_date | date: "%B %Y" }}
+          {% else %}
+            Present
+          {% endif %}
+        </div>
+      </div>
+      <div class="experience-content">
+        {{ post.content }}
+      </div>
     </div>
   </div>
 {% endfor %}
