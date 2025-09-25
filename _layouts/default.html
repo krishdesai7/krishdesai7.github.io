@@ -14,12 +14,13 @@
     {% include masthead.html %}
 
     {{ content }}
-    </body>
 
-      <footer>
-        {% include footer.html %}
-      </footer>
+    <footer>
+      {% include footer.html %}
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
     <script src="{{ '/assets/js/main.min.js' | relative_url }}" type="module"></script>
+  </body>
 </html>

@@ -1,60 +1,29 @@
 {% include base_path %}
-
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
-<div class="teaching-item">
+<div class="teaching-row">
+  <div class="teaching-term">
+      {{ post.semester }} {{ post.year }}
+  </div>
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     <div class="teaching-content">
-      <h2 class="teaching-title" itemprop="headline">
-        {% if post.link %}
-          <a href="{{ post.link }}">{{ post.title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-        {% else %}
+      <h3 class="teaching-title" itemprop="headline">
           <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
-        {% endif %}
-      </h2>
-
+      </h3>
       <div class="teaching-details">
         <div class="teaching-metadata">
-          <span class="teaching-course">{{ post.course }}</span>
-          <span class="teaching-separator">•</span>
-          <span class="teaching-role">{{ post.type }}</span>
+          <div class="teaching-role">
+            {{ post.type }}
+          </div>
+          <div class="teaching-course">
+            {{ post.course }}
+          </div>
         </div>
 
         <div class="teaching-institution">
-          <i class="fas fa-university" aria-hidden="true"></i>
-          {{ post.venue }}{% if post.location %}, {{ post.location }}{% endif %}
+          {{ post.venue }}
         </div>
-
-        <div class="teaching-term">
-          <i class="far fa-calendar-alt" aria-hidden="true"></i>
-          {{ post.semester }} {{ post.year }}
+        <div class="teaching-materials">
+          {{ post.materials | markdownify }}
         </div>
-      </div>
-
-      {% if post.excerpt %}
-        <div class="teaching-excerpt" itemprop="description">
-          {{ post.excerpt | markdownify | strip_html | truncate: 200 }}
-        </div>
-      {% endif %}
-
-      {% if post.responsibilities %}
-        <div class="teaching-responsibilities">
-          <strong>Key Responsibilities:</strong>
-          {{ post.responsibilities | markdownify | strip_html | truncate: 150 }}
-        </div>
-      {% endif %}
-
-      <div class="teaching-actions">
-        <a href="{{ base_path }}{{ post.url }}" class="btn btn--primary btn--small">View Details</a>
-        {% if post.materials_link %}
-          <a href="{{ post.materials_link }}" class="btn btn--outline btn--small" target="_blank">
-            <i class="fas fa-external-link-alt"></i> Course Materials
-          </a>
-        {% endif %}
       </div>
     </div>
   </article>

@@ -6,9 +6,50 @@ author_profile: false
 ---
 
 {% include base_path %}
+{% assign teaching_posts = site.teaching %}
+{% assign semester_order = "Summer|Spring|Fall" | split: "|" %}
+{% assign academic_year_starts = "" | split: "" %}
+{% for post in teaching_posts %}
+  {% assign start_year = post.year %}
+  {% unless post.semester == "Fall" %}
+    {% assign start_year = start_year | minus: 1 %}
+  {% endunless %}
+  {% assign start_year_string = start_year | append: "" %}
+  {% unless academic_year_starts contains start_year_string %}
+    {% assign academic_year_starts = academic_year_starts | push: start_year_string %}
+  {% endunless %}
+{% endfor %}
+{% assign academic_year_starts = academic_year_starts | sort | reverse %}
+
 
 <div class="teaching-grid">
-  {% assign teaching_sorted = site.teaching | sort: 'year' | reverse %}
+  {% for start_year_string in academic_year_starts %}
+    {% assign start_year = start_year_string | plus: 0 %}
+    {% assign end_year = start_year | plus: 1 %}
+    <h2 class="academic-year">AY {{ start_year }} &ndash; {{ end_year }}</h2>
+    {% for semester in semester_order %}
+      {% for post in teaching_posts %}
+        {% assign post_start_year = post.year %}
+        {% unless post.semester == "Fall" %}
+          {% assign post_start_year = post_start_year | minus: 1 %}
+        {% endunless %}
+        {% if post_start_year == start_year and post.semester == semester %}
+          {% include teaching-single.html %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    {% for post in teaching_posts %}
+      {% assign post_start_year = post.year %}
+      {% unless post.semester == "Fall" %}
+        {% assign post_start_year = post_start_year | minus: 1 %}
+      {% endunless %}
+      {% unless semester_order contains post.semester %}
+        {% if post_start_year == start_year %}
+          {% include teaching-single.html %}
+        {% endif %}
+      {% endunless %}
+    {% endfor %}
+  {% endfor %}
   {% for post in teaching_sorted %}
     {% include teaching-single.html %}
   {% endfor %}
