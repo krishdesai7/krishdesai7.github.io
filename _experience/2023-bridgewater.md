@@ -7,6 +7,7 @@ venue: "Bridgewater Associates"
 date: 2023-06-01
 end_date: 2023-08-31
 location: "Westport, CT"
+logo: "/assets/images/experience/Bridgewater_Associates.svg"
 ---
 
 Worked on systematic trading research and execution at Bridgewater Associates, developing probabilistic models and strategic frameworks to optimize investment decisions.

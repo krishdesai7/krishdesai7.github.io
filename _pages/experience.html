@@ -8,5 +8,23 @@ author_profile: false
 {% include base_path %}
 
 {% for post in site.experience reversed %}
-  {% include archive-single.html %}
+  <div class="experience-item">
+    <div class="experience-header">
+      <h3 class="experience-company">{{ post.venue }}, </h3>
+      <div class="experience-location">{{ post.location }}</div>
+    </div>
+    <div class="experience-details">
+      <div class="experience-title">{{ post.title }}</div>
+      <div class="experience-dates">
+        {{ post.date | date: "%B %Y" }} &ndash; {% if post.end_date %}
+          {{ post.end_date | date: "%B %Y" }}
+        {% else %}
+          Present
+        {% endif %}
+      </div>
+    </div>
+    <div class="experience-content">
+      {{ post.content }}
+    </div>
+  </div>
 {% endfor %}

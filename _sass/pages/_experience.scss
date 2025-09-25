@@ -1,0 +1,32 @@
+.experience-item {
+  padding: 0 0 var(--baseline) 0;
+  border-bottom: 1px solid var(--global-border-color);
+  &:last-child {
+    border-bottom: none;
+  }
+}
+.experience-header {
+  display: flex;
+  align-items: baseline;
+  >.experience-company {
+    margin-right: var(--quarter-baseline);
+    font-family: $header-font-family-caps;
+    font-weight: $weight-regular;
+    font-size: $font-size-25;
+  }
+}
+
+.experience-details {
+  display: flex;
+  margin-bottom: var(--baseline);
+    font-size: $font-size-20;
+  > .experience-dates {
+    margin-left: auto;
+  }
+}
+
+.experience-content ul {
+  text-wrap: pretty;
+  gap: var(--baseline);
+  list-style: "– ";
+}
