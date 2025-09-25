@@ -141,22 +141,6 @@ $(document).ready(function(){
       closeBibtexModal();
     }
   });
-  
-  // Improved footer positioning
-  var bumpIt=function(){
-    $("body").css("margin-bottom",$(".page__footer").outerHeight(!0))
-  };
-  
-  // Delay initial bump to ensure content is rendered
-  setTimeout(bumpIt, 100);
-  
-  // Also bump when images load (they might change height)
-  $(window).on('load', bumpIt);
-  
-  var didResize=!1;
-  $(window).resize(function(){didResize=!0});
-  setInterval(function(){didResize&&(didResize=!1,bumpIt())},250);
-  
   $(".author__urls-wrapper button").on("click",function(){
     $(".author__urls").fadeToggle("fast",function(){});
     $(".author__urls-wrapper button").toggleClass("open")
