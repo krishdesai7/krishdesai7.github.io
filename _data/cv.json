@@ -127,6 +127,26 @@
       "language": "Gujarati",
     }
   ],
+  "awards": [
+    {
+      "title": "DeRose Prize for Outstanding Summer Research",
+      "date": "2019-08-01",
+      "awarder": "Yale University",
+      "summary": "Awarded for exceptional research in mathematics during summer undergraduate research program"
+    },
+    {
+      "title": "Phi Beta Kappa",
+      "date": "2020-05-01",
+      "awarder": "Yale University Chapter",
+      "summary": "Elected to the nation's oldest academic honor society"
+    },
+    {
+      "title": "Distinction in Mathematics and Physics",
+      "date": "2020-05-01",
+      "awarder": "Yale University",
+      "summary": "Graduated with distinction in both major fields of study"
+    }
+  ],
   "interests": [],
   "references": [],
   "publications": [

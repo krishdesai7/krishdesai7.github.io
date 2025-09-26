@@ -1,0 +1,183 @@
+---
+layout: archive
+title: "Curriculum Vitae"
+permalink: /cv/
+author_profile: false
+redirect_from:
+  - /cv.html
+---
+
+{% include base_path %}
+{% assign cv = site.data.cv %}
+
+<div class="cv-modern">
+  <!-- Header Section -->
+  <section class="cv-header">
+    <h1 class="cv-name">{{ cv.basics.name }}</h1>
+    <div class="cv-tagline">{{ cv.basics.summary }}</div>
+
+    <div class="cv-contact-grid">
+      {% if cv.basics.email %}
+      <div class="cv-contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>{{ cv.basics.email }}</span>
+      </div>
+      {% endif %}
+
+      {% if cv.basics.website %}
+      <div class="cv-contact-item">
+        <i class="fa-solid fa-globe"></i>
+        <a href="{{ cv.basics.website }}" target="_blank">{{ cv.basics.website | remove: "https://" | remove: "www." }}</a>
+      </div>
+      {% endif %}
+
+      {% if cv.basics.location %}
+      <div class="cv-contact-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>{{ cv.basics.location.city }}, {{ cv.basics.location.region }}</span>
+      </div>
+      {% endif %}
+
+      {% for profile in cv.basics.profiles %}
+      <div class="cv-contact-item">
+        {% case profile.network %}
+          {% when "GitHub" %}
+            <i class="fa-brands fa-github"></i>
+          {% when "LinkedIn" %}
+            <i class="fa-brands fa-linkedin"></i>
+          {% when "Google Scholar" %}
+            <i class="ai ai-google-scholar"></i>
+          {% when "ORCID" %}
+            <i class="ai ai-orcid"></i>
+          {% when "ResearchGate" %}
+            <i class="ai ai-researchgate"></i>
+          {% else %}
+            <i class="fa-solid fa-link"></i>
+        {% endcase %}
+        <a href="{{ profile.url }}" target="_blank">{{ profile.network }}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="cv-section">
+    <h2 class="cv-section-title">Education</h2>
+    <div class="cv-timeline">
+      {% for edu in cv.education %}
+      <div class="cv-timeline-item">
+        <div class="cv-timeline-marker"></div>
+        <div class="cv-timeline-content">
+          <div class="cv-item-header">
+            <h3 class="cv-item-title">{{ edu.area }}</h3>
+            <span class="cv-item-date">{{ edu.endDate }}</span>
+          </div>
+          <div class="cv-item-subtitle">{{ edu.institution }}</div>
+          {% if edu.gpa %}
+          <div class="cv-item-details">GPA: {{ edu.gpa }}</div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="cv-section">
+    <h2 class="cv-section-title">Professional Experience</h2>
+    <div class="cv-timeline">
+      {% for job in cv.work %}
+      <div class="cv-timeline-item">
+        <div class="cv-timeline-marker"></div>
+        <div class="cv-timeline-content">
+          <div class="cv-item-header">
+            <h3 class="cv-item-title">{{ job.position }}</h3>
+            <span class="cv-item-date">
+              {{ job.startDate | date: "%b %Y" }} &ndash;
+              {% if job.endDate %}
+                {{ job.endDate | date: "%b %Y" }}
+              {% else %}
+                Present
+              {% endif %}
+            </span>
+          </div>
+          <div class="cv-item-subtitle">{{ job.company }}</div>
+          <div class="cv-item-description">{{ job.summary }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section class="cv-section">
+    <h2 class="cv-section-title">Selected Publications</h2>
+    <div class="cv-publications">
+      <p class="cv-note">
+        For a complete list of publications, please visit the
+        <a href="{{ base_path }}/publications/">Publications</a> page.
+      </p>
+      <!-- We'll pull key publications from the publications collection -->
+      {% assign recent_pubs = site.publications | sort: 'date' | reverse | limit: 5 %}
+      {% for pub in recent_pubs %}
+      <div class="cv-publication-item">
+        <div class="cv-publication-title">{{ pub.title }}</div>
+        <div class="cv-publication-authors">{{ pub.authors }}</div>
+        <div class="cv-publication-venue">{{ pub.venue }}, {{ pub.date | date: "%Y" }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  {% if cv.skills %}
+  <section class="cv-section">
+    <h2 class="cv-section-title">Technical Skills</h2>
+    <div class="cv-skills-grid">
+      {% for skill_category in cv.skills %}
+      <div class="cv-skill-category">
+        <h3 class="cv-skill-title">{{ skill_category.name }}</h3>
+        <div class="cv-skill-tags">
+          {% for skill in skill_category.keywords %}
+          <span class="cv-skill-tag">{{ skill }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Awards Section -->
+  {% if cv.awards %}
+  <section class="cv-section">
+    <h2 class="cv-section-title">Awards & Honors</h2>
+    <div class="cv-awards">
+      {% for award in cv.awards %}
+      <div class="cv-award-item">
+        <div class="cv-item-header">
+          <h3 class="cv-item-title">{{ award.title }}</h3>
+          <span class="cv-item-date">{{ award.date | date: "%Y" }}</span>
+        </div>
+        <div class="cv-item-subtitle">{{ award.awarder }}</div>
+        {% if award.summary %}
+        <div class="cv-item-description">{{ award.summary }}</div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Download Section -->
+  <section class="cv-download">
+    <div class="cv-download-buttons">
+      <a href="{{ base_path }}/files/Resume.pdf" class="cv-button cv-button-primary">
+        <i class="fa-solid fa-download"></i> Download PDF Version
+      </a>
+      <a href="#" onclick="window.print(); return false;" class="cv-button cv-button-secondary">
+        <i class="fa-solid fa-print"></i> Print CV
+      </a>
+    </div>
+  </section>
+</div>

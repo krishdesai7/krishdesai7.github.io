@@ -15,7 +15,7 @@ main:
     url: /experience/
 
   - title: "CV"
-    url: /cv-json/
+    url: /cv/
   
   - title: "Contact"
     url: /contact/
