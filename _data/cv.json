@@ -384,9 +384,8 @@
     "Programming Languages": [
         "Python",
         "Julia",
-        "C",
-        "MATLAB"
-      ],
+        "C"
+    ],
     "Machine Learning": [
         "TensorFlow/Keras",
         "PyTorch",
@@ -394,26 +393,26 @@
         "Deep Learning",
         "Bayesian Methods",
         "Generative Models"
-      ],
+    ],
     "Data Science": [
         "Statistical Inference",
         "Bayesian Statistics",
-        "Monte Carlo Methods",
+        "Monte Carlo",
         "Unfolding",
         "Deconvolution"
-      ],
+    ],
     "Physics & Mathematics": [
         "Particle Physics",
         "Quantum Field Theory",
         "Stochastic Calculus",
         "Operator Theory",
         "Differential Geometry"
-      ],
+    ],
     "Computing": [
-        "High Performance Computing",
+        "HPC",
         "Git",
         "Docker"
-      ],
+    ],
     "Languages": [
       "English",
       "French",

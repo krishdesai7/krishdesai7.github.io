@@ -119,4 +119,22 @@ redirect_from:
       </div>
     </section>
   {% endfor %}
+
+  <section class="cv-skills">
+    <h2 class="cv-section-title">Skills</h2>
+    <div class="cv-grid-container">
+      {% for skill in cv.Skills %}
+        <div class="cv-grid-key">
+          {{ skill[0] }}
+        </div>
+        <div class="cv-grid-value">
+          <ul>
+          {% for skill in skill[1] %}
+            <li class="cv-skill-keyword">{{ skill }}</li>
+          {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
 </div>

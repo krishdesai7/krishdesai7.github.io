@@ -1,4 +1,6 @@
 .cv-modern {
+  margin: var(--baseline);
+
   .cv-header .cv-name {
     font-family: $header-font-family-caps;
     text-align: center;
@@ -33,6 +35,16 @@
       .cv-item-note, 
       .cv-item-links {
         padding-left: var(--baseline);
+      }
+      
+      ul {
+        font-family: $global-font-family;
+        font-size: $global-font-size;
+        margin: 0 0 var(--quarter-baseline) 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0 var(--baseline);
       }
     }
   }
