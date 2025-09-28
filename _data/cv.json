@@ -1,427 +1,424 @@
 {
   "basics": {
     "name": "Krish Desai, PhD",
-    "email": "krishdesai7 [at] gmail [dot] com",
-    "website": "https://www.desai.ml",
-    "summary": "PhD in Physics from University of California, Berkeley. Machine Learning Researcher at Lawrence Berkeley National Laboratory.",
-    "location": {
-      "address": "50-5048, Lawrence Berkeley National Laboratory, 1 Cyclotron Rd",
-      "postalCode": "94720",
-      "city": "Berkeley",
-      "countryCode": "US",
-      "region": "CA"
+    "contact": {
+      "Employment": {
+        "position": "Machine Learning Researcher",
+        "company": "Lawrence Berkeley National Laboratory",
+        "url": "https://www.lbl.gov"
+      },
+      "Address": {
+        "street1": "Lawrence Berkeley National Laboratory",
+        "street2": "1 Cyclotron Rd, 50-5048",
+        "city": "Berkeley",
+        "region": "CA",
+        "postalCode": "94720-8099",
+        "country": "United States"
+      },
+      "E-mail": "krishdesai7@gmail.com",
+      "Website": "https://www.desai.ml"
     },
-    "profiles": [
-      {
-        "network": "Google Scholar",
-        "username": "",
-        "url": "https://scholar.google.com/citations?hl=en&user=StYT3XIAAAAJ"
-      },
-      {
-        "network": "ORCID",
-        "username": "",
-        "url": "https://orcid.org/0000-0003-2559-8910"
-      },
-      {
-        "network": "ResearchGate",
-        "username": "",
-        "url": "https://www.researchgate.net/profile/Krish-Desai/"
-      },
-      {
-        "network": "GitHub",
-        "username": "krishdesai7",
-        "url": "https://github.com/krishdesai7"
-      },
-      {
-        "network": "LinkedIn",
-        "username": "krish-desai",
-        "url": "https://www.linkedin.com/in/krish-desai"
-      }
-    ]
+    "profiles": {
+      "Google Scholar": "https://scholar.google.com/citations?hl=en&user=StYT3XIAAAAJ",
+      "GitHub": "https://github.com/krishdesai7",
+      "LinkedIn": "https://www.linkedin.com/in/krish-desai"
+    }
   },
-  "work": [
-    {
-      "company": "Lawrence Berkeley National Laboratory",
-      "position": "Machine Learning Researcher",
-      "startDate": "2020-09-01",
-      "endDate": "2025-05-15",
-      "summary": "Research at the intersection of machine learning and high energy physics. Development of novel computational methods for analyzing particle physics data. Collaboration with international teams on ATLAS experiment data analysis."
+  "contents": {
+    "Education": {
+      "University of California, Berkeley": {
+        "startDate": "2020-08-01",
+        "endDate": "2025-08-01",
+        "degree": "Ph.D., Physics"
+      },
+      "Yale University": {
+        "degree": [
+          "M.S., Mathematics",
+          "B.S., Mathematics (Intensive)",
+          "B.S., Physics (Intensive)"
+        ],
+        "startDate": "2017-08-01",
+        "endDate": "2020-05-01"
+      }
     },
-    {
-      "company": "Bridgewater Associates",
-      "position": "Investment Analyst Intern",
-      "startDate": "2023-06-01",
-      "endDate": "2023-08-31",
-      "summary": "Systematic trading research and execution. Development of Bayesian Hierarchical Networks for market liquidity prediction and transaction cost minimization."
+    "Professional Experience": {
+      "Lawrence Berkeley National Laboratory": {
+        "position": "Machine Learning Researcher",
+        "startDate": "2020-09-01",
+        "endDate": "Present"
+      },
+      "Bridgewater Associates": {
+        "position": "Investment Analyst Intern",
+        "startDate": "2023-06-01",
+        "endDate": "2023-08-31"
+      },
+      "Microsoft Research": {
+        "position": "PhD Research Intern",
+        "startDate": "2022-05-01",
+        "endDate": "2022-08-31"
+      },
+      "University of California, Berkeley": {
+        "position": "Associate Instructor",
+        "startDate": "2020-08-01",
+        "endDate": "2024-12-31"
+      },
+      "Purple Gaze Inc.": {
+        "position": "Software Developer Intern",
+        "startDate": "2020-05-01",
+        "endDate": "2020-07-31"
+      },
+      "Yale University": {
+        "position": "Student Technology Coordinator",
+        "startDate": "2017-12-01",
+        "endDate": "2020-05-31"
+      }
     },
-    {
-      "company": "Microsoft Research",
-      "position": "PhD Research Intern",
-      "startDate": "2022-05-01",
-      "endDate": "2022-08-31",
-      "summary": "Theoretical and computational research on non-local field theory from matrix models. Collaboration with Jaron Lanier on applications to optimization problems."
+    "Publications": {
+      "Unbinned Inference with Correlated Events": {
+        "authors": "**Krish Desai**, Owen Long, and Benjamin Nachman",
+        "publisher": "European Physical Journal C (Accepted for publication)",
+        "date": "2025-09-23",
+        "pdf": "https://www.desai.ml/files/9-paper.pdf",
+        "bibtex": "https://www.desai.ml/files/9-biblatex.bib"
+      },
+      "Machine Learning Methods for Cross Section Measurements": {
+        "authors": "**Krish Desai**",
+        "publisher": "University of California, Berkeley",
+        "date": "2025-08-15",
+        "pdf": "https://www.desai.ml/files/10-paper.pdf",
+        "bibtex": "https://www.desai.ml/files/10-biblatex.bib",
+        "note": "PhD (Physics) Dissertation"
+      },
+      "Moment Unfolding using Deep Learning": {
+        "authors": "**Krish Desai**, Benjamin Nachman, and Jesse Thaler",
+        "publisher": "Physical Review D",
+        "date": "2024-12-13",
+        "pdf": "https://www.desai.ml/files/6-paper.pdf",
+        "bibtex": "https://www.desai.ml/files/6-biblatex.bib"
+      },
+      "Neural Posterior Unfolding": {
+        "authors": "Fernando Torales Acosta, Jay Chan, **Krish Desai**, Vinicius Mikuni, Benjamin Nachman, and Jingjing Pan",
+        "publisher": "Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
+        "date": "2024-12-15",
+        "pdf": "https://www.desai.ml/files/7-paper.pdf",
+        "bibtex": "https://www.desai.ml/files/7-biblatex.bib"
+      },
+      "Multidimensional Deconvolution with Profiling": {
+        "authors": "Huanbiao Zhu, **Krish Desai**, Mikael Kuusela, Vinicius Mikuni, Benjamin Nachman, and Larry Wasserman",
+        "publisher": "Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
+        "date": "2024-12-15",
+        "pdf": "https://www.desai.ml/files/8-paper.pdf",
+        "bibtex": "https://www.desai.ml/files/8-biblatex.bib"
+      },
+      "Deconvolving Detector Effects for Distribution Moments": {
+        "name": "Deconvolving Detector Effects for Distribution Moments",
+        "authors": "**Krish Desai**, Benjamin Nachman, and Jesse Thaler",
+        "publisher": "Thirty-Sixth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
+        "date": "2022-12-03",
+        "pdf": "https://www.desai.ml/files/5-paper.pdf",
+        "bibtex": "https://www.desai.ml/files/5-biblatex.bib"
+      },
+      "SymmetryGAN": {
+        "authors": "**Krish Desai**, Benjamin Nachman, and Jesse Thaler",
+        "publisher": "Physical Review D",
+        "date": "2022-05-24",
+        "pdf": "https://www.desai.ml/files/4-paper.pdf",
+        "bibtex": "https://www.desai.ml/files/4-biblatex.bib"
+      },
+      "Oblivious Points on Translation Surfaces": {
+        "authors": "Ian Adelstein, **Krish Desai**, Anthony Ji, and Grace Zdeblick",
+        "publisher": "Journal of Mathematical Physics",
+        "date": "2021-12-16",
+        "pdf": "https://www.desai.ml/files/1-paper.pdf",
+        "bibtex": "https://www.desai.ml/files/1-biblatex.bib"
+      },
+      "Symmetry Discovery with Deep Learning": {
+        "name": "Symmetry Discovery with Deep Learning",
+        "authors": "**Krish Desai**, Benjamin Nachman, and Jesse Thaler",
+        "publisher": "Thirty-Fifth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
+        "date": "2021-12-13",
+        "pdf": "https://www.desai.ml/files/3-paper.pdf",
+        "bibtex": "https://www.desai.ml/files/3-biblatex.bib"
+      },
+      "Padé Approximants and the Anharmonic Oscillator": {
+        "authors": "**Krish Desai**",
+        "publisher": "Yale University",
+        "date": "2020-05-20",
+        "pdf": "https://www.desai.ml/files/2-paper.pdf",
+        "bibtex": "https://www.desai.ml/files/2-biblatex.bib",
+        "note": "BS and MS (Mathematics, Intensive) Thesis"
+      }
     },
-    {
-      "company": "Purple Gaze Inc.",
-      "position": "Software Developer Intern",
-      "startDate": "2020-05-01",
-      "endDate": "2020-07-31",
-      "summary": "Development of AI-driven glint detection algorithms for eye-tracking software. Real-time image processing pipeline implementation in Python and C++."
+    "Honors &amp; Fellowships": {
+      "Full Member of Sigma Xi": {
+        "date": "2025",
+        "awarder": "Sigma Xi",
+        "note": "Election to the nation's oldest academic honor society"
+      },
+      "Howard L. Schultz Prize": {
+        "date": "2020",
+        "awarder": "Yale University",
+        "note": "The most outstanding graduating senior in physics"
+      },
+      "Distinction in Mathematics": {
+        "date": "2020",
+        "awarder": "Yale University"
+      },
+      "Distinction in Physics": {
+        "date": "2020",
+        "awarder": "Yale University"
+      },
+      "Lifetime Member of Sigma Pi Sigma": {
+        "date": "2020",
+        "awarder": "Sigma Pi Sigma",
+        "note": "Election to the national physics honor society"
+      },
+      "George J. Schulz Summer Fellowship": {
+        "date": "2020",
+        "awarder": "Yale University Chapter"
+      },
+      "Howard Robert Topol Fellowship": {
+        "date": "2019",
+        "awarder": "Yale University"
+      },
+      "James A. Helzer Fellowship": {
+        "date": "2018",
+        "awarder": "Yale University"
+      },
+      "SUMRY Fellowship": {
+        "date": "2018",
+        "awarder": "Yale University"
+      },
+      "Yale First-Year Research Fellowship": {
+        "date": "2018",
+        "awarder": "Yale University"
+      },
+      "Benjamin F. Barge Prize": {
+        "date": "2018",
+        "awarder": "Yale University",
+        "note": "Most outstanding first-year student in mathematics"
+      }
+    },
+
+    "Talks": {
+      "Machine Learning Methods for Cross Section Measurements": {
+        "event": "PhD Dissertation Defense",
+        "date": "2025-05-11",
+        "location": "Berkeley, CA"
+      },
+      "Multidimensional Deconvolution with Profiling": {
+        "event": "Thirty-Eighth Annual Conference on Neural Information Processing Systems",
+        "date": "2024-12-01",
+        "location": "Vancouver, Canada"
+      },
+      "Neural Posterior Unfolding": {
+        "event": "Thirty-Eighth Annual Conference on Neural Information Processing Systems",
+        "date": "2024-12-01",
+        "location": "Vancouver, Canada"
+      },
+      "CMS Seminar": {
+        "event": "CERN",
+        "date": "2024-07-01",
+        "location": "Geneva, Switzerland"
+      },
+      "Moment extraction using an unfolding protocol without binning": {
+        "event": "PHY-STAT Unfolding Conference",
+        "date": "2024-06-01",
+        "location": "Paris, France"
+      },
+      "Deconvolving Detector Effects for Distribution Moments": {
+        "event": "Thirty-Sixth Annual Conference on Neural Information Processing Systems",
+        "date": "2022-12-01",
+        "location": "New Orleans, USA"
+      },
+      "Moment Unfolding with Deep Learning": {
+        "event": "Machine Learning for Jets",
+        "date": "2022-11-01",
+        "location": "New Brunswick, NJ"
+      },
+      "High Energy Physics Seminar": {
+        "event": "Korea Institute for Advanced Study",
+        "date": "2022-06-01",
+        "location": "Seoul, South Korea"
+      },
+      "Moment Unfolding using Deep Learning": {
+        "event": "American Physical Society",
+        "date": "2022-04-01",
+        "location": "New York, NY"
+      },
+      "Symmetry Discovery with Deep Learning": {
+        "event": "Thirty-Fifth Annual Conference on Neural Information Processing Systems",
+        "date": "2021-12-01",
+        "location": "Virtual"
+      },
+      "Introduction to Symmetry Discovery and Deep Learning": {
+        "event": "Berkeley Compass Lecture",
+        "date": "2021-11-01",
+        "location": "Berkeley, CA"
+      },
+      "Symmetry Discovery and Deep Learning": {
+        "event": "Clarifai Perceive Deep Learning AI Conference",
+        "date": "2021-10-01",
+        "location": "Virtual"
+      },
+      "SymmetryGAN": {
+        "event": "Machine Learning for Jets",
+        "date": "2021-07-01",
+        "location": "Heidelberg, Germany"
+      },
+      "Symmetry Discovery using Machine Learning": {
+        "event": "American Physical Society",
+        "date": "2021-04-01",
+        "location": "Virtual"
+      },
+      "Symmetry Discovery": {
+        "event": "Lawrence Berkeley National Laboratory, Physics Division Seminar",
+        "date": "2021-04-01",
+        "location": "Virtual"
+      },
+      "Closed Geodesics on Translation Surfaces": {
+        "event": "Massachusetts Undergraduate Research Conference",
+        "date": "2019-08-01",
+        "location": "Amherst, MA"
+      },
+      "Oblivious Points on Translation Surfaces": {
+        "event": "Young Mathematicians Conference",
+        "date": "2019-07-01",
+        "location": "Columbus, OH"
+      }
+    },
+    "Teaching": {
+      "PHYSICS 88: Data Science Applications in Physics": {
+        "institution": "University of California, Berkeley",
+        "date": "Fall 2024",
+        "role": "Associate Instructor"  
+      },
+      "PHYSICS 77: Introduction to Computational Techniques in Physics": {
+        "institution": "University of California, Berkeley",
+        "date": "Fall 2024",
+        "role": "Associate Instructor"
+      },
+
+      "PHYSICS 77: Introduction to Computational Techniques in Physics ": {
+        "institution": "University of California, Berkeley",
+        "date": "Summer 2024",
+        "role": "Associate Instructor"
+      },
+      "PHYSICS 89: Introduction to Mathematical Physics": {
+        "institution": "University of California, Berkeley",
+        "date": "Fall 2023",
+        "role": "Associate Instructor"
+      },
+      "PHYSICS 77: Introduction to Computational Techniques in Physics  ": {
+        "institution": "University of California, Berkeley",
+        "date": "Summer 2023",
+        "role": "Associate Instructor"
+      },
+      "PHYSICS 88: Data Science Applications in Physics ": {
+        "institution": "University of California, Berkeley",
+        "date": "Fall 2022",
+        "role": "Associate Instructor"
+      },
+      "PHYSICS 77: Introduction to Computational Techniques in Physics   ": {
+        "institution": "University of California, Berkeley",
+        "date": "Fall 2022",
+        "role": "Associate Instructor"
+      },
+      "PHYSICS 8B: Introductory Physics": {
+        "institution": "University of California, Berkeley",
+        "date": "Spring 2022",
+        "role": "Head Associate Instructor"
+      },
+      "PHYSICS 7B: Physics for Scientists and Engineers": {
+        "institution": "University of California, Berkeley",
+        "date": "Summer 2021",
+        "role": "Associate Instructor"
+      },
+      "PHYSICS 7B: Physics for Scientists and Engineers ": {
+        "institution": "University of California, Berkeley",
+        "date": "Spring 2021",
+        "role": "Associate Instructor"
+      },
+      "PHYSICS 7B: Physics for Scientists and Engineers  ": {
+        "institution": "University of California, Berkeley",
+        "date": "Fall 2020",
+        "role": "Associate Instructor"
+      }
+    },
+    "Leadership &amp; Service": { 
+      "Invited Peer Reviewer": {
+        "institution": "Nature, Scientific Reports",
+        "date": "2025"
+      },
+      "Invited Peer Reviewer ": {
+        "institution": "Journal of High Energy Physics",
+        "date": "2025"
+      },
+      "Graduate Mentor": {
+        "institution": "Math and Physical Sciences Scholars, UC Berkeley",
+        "date": "2023-2025"
+      },
+      "Invited Peer Reviewer  ": {
+        "institution": "NeurIPS",
+        "date": "2022, 2024, 2025"
+      },
+      "Campus Affairs Vice President, and Rules Officer": {
+        "institution": "UC Berkeley Graduate Assembly",
+        "date": "2022-2024"
+      },
+      "Research Mentor": {
+        "institution": "UC Berkeley Physics Innovators Program",
+        "date": "2023"
+      },
+      "Committee Member": {
+        "institution": "UC Berkeley Physics Faculty Search",
+        "date": "2021 &ndash; 2024"
+      },
+      "Vice President": {
+        "institution": "Yale Political Union",
+        "date": "2018-2019"
+      }
     }
-  ],
-  "education": [
-    {
-      "institution": "University of California, Berkeley",
-      "area": "Ph.D. in Physics",
-      "endDate": "2020-08 &mdash; 2025-05"
-    },
-    {
-      "institution": "Yale University",
-      "area": "M.S. in Mathematics",
-      "endDate": "2017-08 &mdash; 2020-05"
-    },
-    {
-      "institution": "Yale University",
-      "area": "B.S. in Mathematics (Intensive) with Distinction",
-      "endDate": "2017-08 &mdash; 2020-05"
-    },
-    {
-      "institution": "Yale University",
-      "area": "B.S. in Physics (Intensive) with Distinction",
-      "endDate": "2017-08 &mdash; 2020-05"
-    }
-  ],
-  "skills": [
-    {
-      "name": "Programming Languages",
-      "keywords": ["Python", "Julia", "C", "MATLAB"]
-    },
-    {
-      "name": "Machine Learning",
-      "keywords": ["TensorFlow/Keras", "PyTorch", "scikit-learn", "Deep Learning", "Bayesian Methods", "Generative Models"]
-    },
-    {
-      "name": "Data Science",
-      "keywords": ["Statistical Inference", "Bayesian Statistics", "Monte Carlo Methods", "Unfolding", "Deconvolution"]
-    },
-    {
-      "name": "Physics & Mathematics",
-      "keywords": ["Particle Physics", "Quantum Field Theory", "Stochastic Calculus", "Operator Theory", "Differential Geometry"]
-    },
-    {
-      "name": "Computing",
-      "keywords": ["High Performance Computing", "Git", "Docker"]
-    }
-  ],
-  "languages": [
-    {
-      "language": "English",
-    },
-    {
-      "language": "French",
-    },
-    {
-      "language": "Hindi",
-    },
-    {
-      "language": "Gujarati",
-    }
-  ],
-  "awards": [
-    {
-      "title": "DeRose Prize for Outstanding Summer Research",
-      "date": "2019-08-01",
-      "awarder": "Yale University",
-      "summary": "Awarded for exceptional research in mathematics during summer undergraduate research program"
-    },
-    {
-      "title": "Phi Beta Kappa",
-      "date": "2020-05-01",
-      "awarder": "Yale University Chapter",
-      "summary": "Elected to the nation's oldest academic honor society"
-    },
-    {
-      "title": "Distinction in Mathematics and Physics",
-      "date": "2020-05-01",
-      "awarder": "Yale University",
-      "summary": "Graduated with distinction in both major fields of study"
-    }
-  ],
-  "interests": [],
-  "references": [],
-  "publications": [
-    {
-      "name": "Pad\u00e9 Approximants and the Anharmonic Oscillator",
-      "publisher": "Yale University",
-      "releaseDate": "2020-05-20",
-      "website": "https://www.desai.ml/files/2-paper.pdf",
-      "summary": ""
-    },
-    {
-      "name": "Symmetry Discovery with Deep Learning",
-      "publisher": "NeurIPS 2021",
-      "releaseDate": "2021-11-01",
-      "website": "https://www.desai.ml/files/3-paper.pdf",
-      "summary": ""
-    },
-    {
-      "name": "Oblivious points on translation surfaces",
-      "publisher": "Journal of Geometry",
-      "releaseDate": "2021-12-16",
-      "website": "https://www.desai.ml/files/1-paper.pdf",
-      "summary": ""
-    },
-    {
-      "name": "SymmetryGAN",
-      "publisher": "Physical Review D",
-      "releaseDate": "2022-05-01",
-      "website": "https://www.desai.ml/files/4-paper.pdf",
-      "summary": ""
-    },
-    {
-      "name": "Deconvolving Detector Effects for Distribution Moments",
-      "publisher": "NeurIPS ML4PS",
-      "releaseDate": "2022-11-01",
-      "website": "https://www.desai.ml/files/5-paper.pdf",
-      "summary": ""
-    },
-    {
-      "name": "Multidimensional Deconvolution with Profiling",
-      "publisher": "NeurIPS ML4PS",
-      "releaseDate": "2024-11-01",
-      "website": "https://www.desai.ml/files/8-paper.pdf",
-      "summary": ""
-    },
-    {
-      "name": "Neural Posterior Unfolding",
-      "publisher": "NeurIPS ML4PS",
-      "releaseDate": "2024-11-01",
-      "website": "https://www.desai.ml/files/7-paper.pdf",
-      "summary": ""
-    },
-    {
-      "name": "Moment Unfolding",
-      "publisher": "Physical Review D",
-      "releaseDate": "2024-12-13",
-      "website": "https://www.desai.ml/files/6-paper.pdf",
-      "summary": ""
-    },
-    {
-      "name": "Unbinned Inference with Correlated Events",
-      "publisher": "arXiv",
-      "releaseDate": "2025-04-18",
-      "website": "https://www.desai.ml/files/9-paper.pdf",
-      "summary": ""
-    },
-    {
-      "name": "Machine Learning Methods for Cross Section Measurements",
-      "publisher": "University of California, Berkeley",
-      "releaseDate": "2025-08-15",
-      "website": "https://www.desai.ml/files/10-paper.pdf",
-      "summary": ""
-    }
-  ],
-  "presentations": [
-    {
-      "name": "Oblivious Points on Translation Surfaces",
-      "event": "Young Mathematicians Conference",
-      "date": "2019-07-01",
-      "location": "Columbus, OH",
-      "description": ""
-    },
-    {
-      "name": "Closed Geodesics on Translation Surfaces",
-      "event": "Massachusetts Undergraduate Research Conference",
-      "date": "2019-08-01",
-      "location": "Amherst, MA",
-      "description": ""
-    },
-    {
-      "name": "Symmetry Discovery using Machine Learning",
-      "event": "American Physical Society",
-      "date": "2021-04-01",
-      "location": "Virtual",
-      "description": ""
-    },
-    {
-      "name": "Symmetry Discovery",
-      "event": "Lawrence Berkeley National Laboratory, Physics Division Seminar",
-      "date": "2021-04-01",
-      "location": "Virtual",
-      "description": ""
-    },
-    {
-      "name": "SymmetryGAN",
-      "event": "Machine Learning for Jets",
-      "date": "2021-07-01",
-      "location": "Heidelberg, Germany",
-      "description": ""
-    },
-    {
-      "name": "Symmetry Discovery and Deep Learning",
-      "event": "Clarifai Perceive Deep Learning AI Conference",
-      "date": "2021-10-01",
-      "location": "Virtual",
-      "description": ""
-    },
-    {
-      "name": "Introduction to Symmetry Discovery and Deep Learning",
-      "event": "Berkeley Compass Lecture",
-      "date": "2021-11-01",
-      "location": "Berkeley, CA",
-      "description": ""
-    },
-    {
-      "name": "Symmetry Discovery with Deep Learning",
-      "event": "Thirty-Fifth Annual Conference on Neural Information Processing Systems",
-      "date": "2021-12-01",
-      "location": "Virtual",
-      "description": ""
-    },
-    {
-      "name": "Moment Unfolding using Deep Learning",
-      "event": "American Physical Society",
-      "date": "2022-04-01",
-      "location": "New York, NY",
-      "description": ""
-    },
-    {
-      "name": "High Energy Physics Seminar",
-      "event": "Korea Institute for Advanced Study",
-      "date": "2022-06-01",
-      "location": "Seoul, South Korea",
-      "description": ""
-    },
-    {
-      "name": "Moment Unfolding with Deep Learning",
-      "event": "Machine Learning for Jets",
-      "date": "2022-11-01",
-      "location": "New Brunswick, NJ",
-      "description": ""
-    },
-    {
-      "name": "Deconvolving Detector Effects for Distribution Moments",
-      "event": "Thirty-Sixth Annual Conference on Neural Information Processing Systems",
-      "date": "2022-12-01",
-      "location": "New Orleans, USA",
-      "description": ""
-    },
-    {
-      "name": "Moment extraction using an unfolding protocol without binning",
-      "event": "PHY-STAT Unfolding Conference",
-      "date": "2024-06-01",
-      "location": "Paris, France",
-      "description": ""
-    },
-    {
-      "name": "CMS Seminar",
-      "event": "CERN",
-      "date": "2024-07-01",
-      "location": "Geneva, Switzerland",
-      "description": ""
-    },
-    {
-      "name": "Multidimensional Deconvolution with Profiling",
-      "event": "Thirty-Eighth Annual Conference on Neural Information Processing Systems",
-      "date": "2024-12-01",
-      "location": "Vancouver, Canada",
-      "description": ""
-    },
-    {
-      "name": "Neural Posterior Unfolding",
-      "event": "Thirty-Eighth Annual Conference on Neural Information Processing Systems",
-      "date": "2024-12-01",
-      "location": "Vancouver, Canada",
-      "description": ""
-    }
-  ],
-  "teaching": [
-    {
-      "course": "Physics for Scientists and Engineers",
-      "institution": "University of California, Berkeley",
-      "date": "Fall 2020, Spring 2021, Summer 2021",
-      "role": "Associate Instructor",
-      "description": ""
-    },
-    {
-      "course": "Introductory Physics",
-      "institution": "University of California, Berkeley",
-      "date": "Spring 2022",
-      "role": "Head Associate Instructor",
-      "description": ""
-    },
-    {
-      "course": "Introduction to Computational Techniques in Physics",
-      "institution": "University of California, Berkeley",
-      "date": "Fall 2022, Summer 2023, Summer 2024, Fall 2024",
-      "role": "Associate Instructor",
-      "description": ""
-    },
-    {
-      "course": "Data Science Applications in Physics",
-      "institution": "University of California, Berkeley",
-      "date": "Fall 2022, Fall 2024",
-      "role": "Associate Instructor",
-      "description": ""
-    },
-    {
-      "course": "Introduction to Mathematical Physics",
-      "institution": "University of California, Berkeley",
-      "date": "Fall 2023",
-      "role": "Associate Instructor",
-      "description": ""
-    }
-  ],
-  "honors": [
-    {
-      "title": "Election to Sigma Xi",
-      "organization": "Scientific Research Honor Society, Full Membership",
-      "date": "2025"
-    },
-    {
-      "title": "Election to Sigma Pi Sigma",
-      "organization": "Physics Honor Society, Lifetime Membership",
-      "date": "2021"
-    },
-    {
-      "title": "Howard L. Schultz Prize",
-      "organization": "Yale University",
-      "date": "2020",
-      "description": "The most outstanding graduating senior in physics at Yale"
-    },
-    {
-      "title": "George J. Schulz Summer Fellowship",
-      "organization": "Yale University",
-      "date": "2020",
-      "description": "Excellence in physical science research"
-    },
-    {
-      "title": "Howard Robert Topol Fellowship",
-      "organization": "Yale University",
-      "date": "2019",
-      "description": "Excellence in mathematical research"
-    }
-  ],
-  "service": [
-    {
-      "position": "Invited Journal Peer Reviewer",
-      "organization": "Nature, Scientific Reports",
-      "date": "2025"
-    },
-    {
-      "position": "Invited Journal Peer Reviewer",
-      "organization": "Journal of High Energy Physics",
-      "date": "2025"
-    },
-    {
-      "position": "Invited Conference Peer Reviewer",
-      "organization": "NeurIPS",
-      "date": "2022, 2024"
-    },
-    {
-      "position": "Committee Member",
-      "organization": "UC Berkeley Physics Faculty Search",
-      "date": "2021 &mdash; 2024"
-    }
-  ]
+  },
+  "Skills": {
+    "Programming Languages": [
+        "Python",
+        "Julia",
+        "C",
+        "MATLAB"
+      ],
+    "Machine Learning": [
+        "TensorFlow/Keras",
+        "PyTorch",
+        "scikit-learn",
+        "Deep Learning",
+        "Bayesian Methods",
+        "Generative Models"
+      ],
+    "Data Science": [
+        "Statistical Inference",
+        "Bayesian Statistics",
+        "Monte Carlo Methods",
+        "Unfolding",
+        "Deconvolution"
+      ],
+    "Physics & Mathematics": [
+        "Particle Physics",
+        "Quantum Field Theory",
+        "Stochastic Calculus",
+        "Operator Theory",
+        "Differential Geometry"
+      ],
+    "Computing": [
+        "High Performance Computing",
+        "Git",
+        "Docker"
+      ],
+    "Languages": [
+      "English",
+      "French",
+      "Hindi",
+      "Gujarati"
+    ]
+  }
 }
