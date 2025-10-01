@@ -40,7 +40,7 @@ $border-radius-single    : 4px;
 $border-radius-double    : 8px;
 $masthead-height         : 70px;
 
-/* Card shadow should never “paint” with link color */
+/* Card shadow */
 $box-shadow              : 8px 8px 0 0 var(--global-dark-border-color),
                            8px 8px 0 1px var(--global-border-color),
                            16px 16px 25px rgba(0, 0, 0, 0.18);
@@ -98,36 +98,36 @@ $parchment-200 : #eee6d2; /* selection bg */
 $parchment-400 : #e4d7b7; /* selection hover */
 
 /* ==========================================================================
-   Palette — Dark (Modern; unchanged)
+   Palette — Dark (Traditional)
    ========================================================================== */
 
-$slate-950   : #0a0d14; /* footer/emphasis */
-$slate-900   : #131720; /* main */
-$slate-850   : #1a1f2e; /* elevated */
-$slate-800   : #242b3d; /* hovers/code */
-$slate-750   : #2d3548;
-$slate-700   : #3d4556;
+/* Backgrounds (warm charcoals) */
+$charcoal-black : #181614;
+$warm-graphite : #201E1D;
+$olive-charcoal : #10110C;
+$coal-950     : #0f0e0c;  /* footer/emphasis */
+$coal-900     : #161412;  /* main */
+$coal-850     : #1c1a17;  /* elevated */
+$coal-800     : #22201c;  /* hovers/code */
 
-$slate-600   : #4b5468; /* border */
-$slate-500   : #6b7487;
+/* Borders (warm greys) */
+$soot-700     : #3a352f;
+$soot-600     : #4a4440;
 
-$slate-400   : #8b92a8; /* secondary text */
-$slate-300   : #a8afc3; /* tertiary text */
-$slate-200   : #c5cad7; /* muted text */
-$slate-100   : #e1e4eb; /* light text */
-$slate-50    : #f3f5f8; /* primary text */
+/* Text (warm off-whites) */
+$parchment-50 : #f3efe9;  /* primary text */
+$parchment-100: #e7e1d9;  /* light text */
+$parchment-300: #cfc7bd;  /* tertiary/muted */
 
-/* Dark accents */
-$cyan-500    : #06b6d4; /* link */
-$cyan-400    : #22d3ee; /* hover */
-$cyan-600    : #0891b2; /* visited */
-$cyan-300    : #67e8f9; /* bright accents */
+/* Links & accents */
+$sepia-500    : #6a5441;  /* link */
+$sepia-400    : #7a5f49;  /* hover */
+$sepia-600    : #5a4636;  /* visited */
 
-/* Shared warm accent (used in both themes as needed) */
+$terracotta-600 : #955a45; /* hover alt */
+$terracotta-700 : #814a38; /* pressed/active */
+
 $amber-400   : #fbbf24;
-$amber-500   : #f59e0b;
-$amber-600   : #d97706;
-$amber-700   : #b45309;
 
 /* ==========================================================================
    CSS Custom Properties
@@ -158,7 +158,7 @@ $amber-700   : #b45309;
   --global-masthead-link-color-hover : #{$ink-medium};
   --global-nav-link-color            : #{$ink-medium};
   --global-nav-link-color-hover      : #{$ink-muted};
-  --theme-toggle-hover-color         : #{$amber-600};
+  --theme-toggle-hover-color         : #{$oxblood-500};
 
   /* Code blocks */
   --global-code-background-color     : #{$paper-stone};
@@ -170,39 +170,39 @@ $amber-700   : #b45309;
   --global-selection-bg-color-hover  : #{$parchment-400};
 }
 
-/* Dark theme — Modern */
+/* Dark theme — Traditional */
 html[data-theme="dark"] {
-  /* Backgrounds */
-  --global-bg-color                  : #{$slate-900};
-  --global-footer-bg-color           : #{$slate-950};
-  --global-hover-bg                  : #{$slate-850};
-
-  /* Borders */
-  --global-border-color              : #{$slate-700};
-  --global-dark-border-color         : #{$slate-600};
-
-  /* Text */
-  --global-text-color                : #{$slate-50};
-  --global-text-color-light          : #{$slate-300};
-  --header-footer-text-color         : #{$slate-100};
-  --global-masthead-link-color       : #{$slate-50};
-
-  /* Links */
-  --global-link-color                : #{$cyan-500};
-  --global-link-color-hover          : #{$cyan-400};
-  --global-link-color-visited        : #{$cyan-600};
-  --global-link-decoration-color     : #{$cyan-600};
-  --global-masthead-link-color-hover : #{$cyan-400};
-  --global-nav-link-color            : #{$slate-200};
-  --global-nav-link-color-hover      : #{$cyan-400};
-  --theme-toggle-hover-color         : #{$amber-400};
-
-  /* Code blocks */
-  --global-code-background-color     : #{$slate-800};
-  --global-code-text-color           : #{$slate-100};
-
-  /* Selection */
-  --global-selection-text-color      : #{$slate-950};
-  --global-selection-bg-color        : #{$cyan-400};
-  --global-selection-bg-color-hover  : #{$cyan-300};
-}
+   /* Backgrounds */
+   --global-bg-color                  : #{$olive-charcoal};
+   --global-footer-bg-color           : #{$coal-950};
+   --global-hover-bg                  : #{$coal-850};
+ 
+   /* Borders */
+   --global-border-color              : #{$soot-700};
+   --global-dark-border-color         : #{$soot-600};
+ 
+   /* Text */
+   --global-text-color                : #{$parchment-50};
+   --global-text-color-light          : #{$parchment-300};
+   --header-footer-text-color         : #{$parchment-100};
+   --global-masthead-link-color       : #{$parchment-50};
+ 
+   /* Links (sepia/terracotta instead of cyan) */
+   --global-link-color                : #{$parchment-100};
+   --global-link-color-hover          : #{$terracotta-600};
+   --global-link-color-visited        : #{$parchment-300};
+   --global-link-decoration-color     : #{$oxblood-500};
+   --global-masthead-link-color-hover : #{$parchment-300};
+   --global-nav-link-color            : #{$parchment-300};
+   --global-nav-link-color-hover      : #{$sepia-400};
+   --theme-toggle-hover-color         : #{$amber-400};
+ 
+   /* Code blocks: warm paper-on-charcoal */
+   --global-code-background-color     : #{$coal-800};
+   --global-code-text-color           : #{$parchment-100};
+ 
+   /* Selection: muted “aged paper” glow, not neon */
+   --global-selection-text-color      : #{$coal-950};
+   --global-selection-bg-color        : #{$sepia-400};
+   --global-selection-bg-color-hover  : #{$terracotta-600};
+ }

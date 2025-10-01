@@ -4,8 +4,89 @@ html {
 }
 
 body {
+  --bg: var(--global-bg-color);
+  --rib: 2.8px;                /* width of each diagonal band */
+  --intensity: .02;
+
+  background-image:
+    /* diagonal set 1 */
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,var(--intensity)) 0 var(--rib),
+      rgba(0,0,0,0) var(--rib) calc(var(--rib) * 2)
+    ),
+    /* diagonal set 2 (counter-direction, offset) */
+    repeating-linear-gradient(
+      -45deg,
+      rgba(0,0,0,var(--intensity)) 0 var(--rib),
+      rgba(0,0,0,0) var(--rib) calc(var(--rib) * 2)
+    ),
+    /* micro grain */
+    radial-gradient(circle, rgba(255,255,255,.015) 1px, transparent 0.8px),
+    radial-gradient(circle, rgba(0,0,0,.015) 1px, transparent 0.8px),
+    /* base */
+    linear-gradient(var(--bg), var(--bg));
+  background-size:
+    auto, auto,
+    3px 3px, 3px 3px,
+    auto;
+  background-position:
+    0 0, 0 0,
+    0 0, 1.5px 1.5px,
+    0 0;
+  background-repeat:
+    repeat, repeat,
+    repeat, repeat,
+    no-repeat;
+  background-blend-mode:
+    soft-light, soft-light,
+    soft-light, soft-light,
+    normal;
+}
+/* LIGHT THEME: warm-ink gold weave */
+html:not([data-theme="dark"]) body {
+  --bg: var(--global-bg-color);
+  --rib: 3.2px;
+
+  /* Use your existing tokens if you prefer: amber-500 ≈ #f59e0b */
+  --gold: 42 92% 99%;
+  --gold-alpha-1: .22;  /* main diagonal */
+  --gold-alpha-2: .14;  /* counter diagonal */
+  --grain-alpha: .16;   /* micro grain strength */
+
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      hsl(var(--gold) / var(--gold-alpha-1)) 0 var(--rib),
+      transparent var(--rib) calc(var(--rib) * 2)
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      hsl(var(--gold) / var(--gold-alpha-2)) 0 var(--rib),
+      transparent var(--rib) calc(var(--rib) * 2)
+    ),
+    radial-gradient(circle, rgba(80,60,30,var(--grain-alpha)) 1px, transparent 1px),
+    linear-gradient(var(--bg), var(--bg));
+
+  background-size:
+    auto, auto, 3px 3px, auto;
+  background-position:
+    0 0, 0 0, 0 0, 0 0;
+  background-repeat:
+    repeat, repeat, repeat, no-repeat;
+
+  background-blend-mode:
+    soft-light, soft-light,
+    soft-light, soft-light,
+    normal;
+}
+
+
+
+
+
+body {
   color: var(--global-text-color);
-  background-color: var(--global-bg-color);
   font-family: $global-font-family;
   line-height: 1.35;
   font-feature-settings: "onum" 1, "liga" 1, "clig" 1, "kern" 1;

@@ -25,4 +25,12 @@
 
 .author__avatar {
   margin-top: var(--baseline);
+  img {
+    object-fit: cover;
+    box-shadow: $box-shadow;
+    &:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: $box-shadow;
+    }
+  }
 }
