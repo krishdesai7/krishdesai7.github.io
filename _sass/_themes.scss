@@ -59,87 +59,153 @@ $right-sidebar-width        : 0;
 $right-sidebar-width-wide   : 0;
 
 /* ==========================================================================
-   Colors
+   Colors - Light Mode Palette (Refined & Elegant)
    ========================================================================== */
-$deep-black                 : #1a1816;
-$orange-black               : #252220;
-$orange-brown               : #2a231e;
-$warm-black                 : #3a3633;
-$warm-gray                  : #3d3833;
-$dark-brown                 : #5c5450;
-$medium-gray                : #6b635a;
-$medium-brown               : #7a6f66;
-$light-brown                : #a89d94;
-$light-gray                 : #a89d94;
-$warm-orange                : #935f3c;
-$muted-terracotta           : #b5764f;
-$dark-orange                : #b5764f;
-$terracotta                 : #c87137;
-$warm-yellow                : #e09d37;
-$bright-orange              : #e8a67a;
-$beige                      : #fdedd7;
-$warm-white                 : #fbf8f4;
 
-/* Default light theme for the site */
+// Base paper tones - crisp but not harsh
+$paper-white                : #fdfcfa;  // Soft off-white, like premium paper
+$paper-cream                : #f8f6f3;  // Subtle cream undertone
+$paper-beige                : #f0ede8;  // Warm beige for elevation
+$paper-stone                : #e8e4de;  // Deeper stone for strong contrast
+
+// Text colors - rich and readable
+$ink-black                  : #1a1816;  // Deep charcoal, not pure black
+$ink-dark                   : #2d2a27;  // Primary text
+$ink-medium                 : #4a4642;  // Secondary text
+$ink-light                  : #6b6662;  // Tertiary text
+$ink-muted                  : #8b8682;  // De-emphasized text
+
+// Border colors - subtle but clear
+$border-light               : #e0dcd6;  // Subtle divisions
+$border-medium              : #d0cbc4;  // Standard borders
+$border-dark                : #b8b3ac;  // Emphasized borders
+
+// Accent colors - sophisticated and modern
+$cobalt-600                 : #0f62fe;  // Primary links - refined blue
+$cobalt-700                 : #0043ce;  // Link hover - deeper
+$cobalt-500                 : #4589ff;  // Visited links - lighter
+$cobalt-800                 : #002d9c;  // Dark variant
+
+// Secondary accents
+$amber-600                  : #d97706;  // Warm highlight (theme toggle)
+$amber-700                  : #b45309;  // Amber hover
+$amber-500                  : #f59e0b;  // Lighter amber
+
+// Selection and interactive elements
+$sky-200                    : #bae6fd;  // Soft selection background
+$sky-600                    : #0284c7;  // Selection emphasis
+
+/* ==========================================================================
+   Colors - Dark Mode Palette (Refined & Modern)
+   ========================================================================== */
+
+// Base backgrounds - rich slate tones
+$slate-950                  : #0a0d14;  // Deepest - for footer/emphasis
+$slate-900                  : #131720;  // Main background
+$slate-850                  : #1a1f2e;  // Slightly elevated
+$slate-800                  : #242b3d;  // Hover states, code blocks
+$slate-750                  : #2d3548;  // Elevated surfaces
+$slate-700                  : #3d4556;  // High elevation
+
+// Borders and dividers
+$slate-600                  : #4b5468;  // Primary borders
+$slate-500                  : #6b7487;  // Lighter borders
+
+// Text colors
+$slate-400                  : #8b92a8;  // Secondary text
+$slate-300                  : #a8afc3;  // Tertiary text
+$slate-200                  : #c5cad7;  // Muted text
+$slate-100                  : #e1e4eb;  // Light text
+$slate-50                   : #f3f5f8;  // Primary text
+
+// Accent colors - vibrant cyan/teal for modern feel
+$cyan-500                   : #06b6d4;  // Primary links
+$cyan-400                   : #22d3ee;  // Link hover - brighter
+$cyan-600                   : #0891b2;  // Visited links - deeper
+$cyan-300                   : #67e8f9;  // Bright accents
+
+// Secondary accent - amber for warmth
+$amber-400                  : #fbbf24;  // Theme toggle, warm highlights
+$amber-500                  : #f59e0b;  // Hover state
+
+// Alternative accents for variety
+$violet-400                 : #a78bfa;  // Alternative accent
+$emerald-400                : #34d399;  // Success states
+
+/* Default light theme - Refined & Elegant */
 :root {
-   --global-bg-color                   : #{$warm-white};
-   --global-footer-bg-color            : #{mix($warm-white, $beige, 70%)};
-   --global-hover-bg                   : #{$beige};
+   // Backgrounds - layered paper aesthetic
+   --global-bg-color                   : #{$paper-white};
+   --global-footer-bg-color            : #{$paper-cream};
+   --global-hover-bg                   : #{$paper-beige};
 
-   --global-border-color               : #{mix($warm-white, $light-brown, 85%)};
-   --global-dark-border-color          : #{$light-brown};
+   // Borders - subtle but clear
+   --global-border-color               : #{$border-light};
+   --global-dark-border-color          : #{$border-dark};
 
-   --global-text-color                 : #{$warm-black};
-   --global-text-color-light           : #{$medium-brown};
-   --header-footer-text-color          : #{$dark-brown};
-   --global-masthead-link-color        : #{$dark-brown};
-   --global-masthead-link-color-hover  : #{$warm-black};
+   // Text - rich and readable hierarchy
+   --global-text-color                 : #{$ink-dark};
+   --global-text-color-light           : #{$ink-light};
+   --header-footer-text-color          : #{$ink-medium};
+   --global-masthead-link-color        : #{$ink-dark};
+   --global-masthead-link-color-hover  : #{$cobalt-600};
 
-   --global-link-color                 : #{$terracotta};
-   --global-link-color-hover           : #{darken($terracotta, 15%)};
-   --global-link-color-visited         : #{mix($terracotta, $dark-brown, 50%)};
-   --global-link-decoration-color      : #{$terracotta};
-   --theme-toggle-hover-color          : #{$warm-yellow};
+   // Links - sophisticated blue instead of orange
+   --global-link-color                 : #{$cobalt-600};
+   --global-link-color-hover           : #{$cobalt-700};
+   --global-link-color-visited         : #{$cobalt-500};
+   --global-link-decoration-color      : #{$cobalt-500};
+   --theme-toggle-hover-color          : #{$amber-600};
 
-   --global-nav-link-color             : #{$dark-brown};
-   --global-nav-link-color-hover       : #{$warm-black};
+   // Navigation
+   --global-nav-link-color             : #{$ink-medium};
+   --global-nav-link-color-hover       : #{$cobalt-600};
 
-   --global-code-background-color      : #{mix($warm-white, $beige, 92%)};
-   --global-code-text-color            : #{$warm-black};
+   // Code blocks - subtle contrast
+   --global-code-background-color      : #{$paper-stone};
+   --global-code-text-color            : #{$ink-dark};
 
-   --global-selection-text-color       : #{$warm-white};
-   --global-selection-bg-color         : #{$warm-black};
-   --global-selection-bg-color-hover   : #{lighten($warm-black, 10%)};
+   // Selection - clear but not harsh
+   --global-selection-text-color       : #{$ink-black};
+   --global-selection-bg-color         : #{$sky-200};
+   --global-selection-bg-color-hover   : #{$sky-600};
 }
 
-/* Dark theme for the site */
+/* Dark theme for the site - Modern & Refined */
 html[data-theme="dark"] {
-   --global-bg-color                   : #{$warm-black};
-   --global-footer-bg-color            : #{$deep-black};
-   --global-hover-bg                   : #{$orange-brown};
+   // Backgrounds - layered depth
+   --global-bg-color                   : #{$slate-900};
+   --global-footer-bg-color            : #{$slate-950};
+   --global-hover-bg                   : #{$slate-850};
 
-   --global-border-color               : #{$warm-gray};
-   --global-dark-border-color          : #{$medium-gray};
+   // Borders - subtle but clear
+   --global-border-color               : #{$slate-700};
+   --global-dark-border-color          : #{$slate-600};
 
-   --global-text-color                 : #{$warm-white};
-   --global-text-color-light           : #{$light-gray};
-   --header-footer-text-color          : #{$warm-white};
-   --global-masthead-link-color        : #{$warm-white};
-   --global-masthead-link-color-hover  : #{$medium-gray};
+   // Text - high contrast for readability
+   --global-text-color                 : #{$slate-50};
+   --global-text-color-light           : #{$slate-300};
+   --header-footer-text-color          : #{$slate-100};
+   --global-masthead-link-color        : #{$slate-50};
+   --global-masthead-link-color-hover  : #{$cyan-400};
 
-   --global-link-color                 : #{$medium-gray};
-   --global-link-color-hover           : #{$bright-orange};
-   --global-link-color-visited         : #{$dark-orange};
-   --global-link-decoration-color      : #{$warm-gray};
-   --theme-toggle-hover-color          : #{$warm-yellow};
+   // Links - vibrant cyan for modern aesthetic
+   --global-link-color                 : #{$cyan-500};
+   --global-link-color-hover           : #{$cyan-400};
+   --global-link-color-visited         : #{$cyan-600};
+   --global-link-decoration-color      : #{$cyan-600};
+   --theme-toggle-hover-color          : #{$amber-400};
 
-   --global-nav-link-color             : #{$warm-white};
-   --global-nav-link-color-hover       : #{$medium-gray};
+   // Navigation
+   --global-nav-link-color             : #{$slate-200};
+   --global-nav-link-color-hover       : #{$cyan-400};
 
-   --global-code-background-color      : #{$orange-black};
-   --global-code-text-color            : #{$warm-white};
+   // Code blocks - distinct but not jarring
+   --global-code-background-color      : #{$slate-800};
+   --global-code-text-color            : #{$slate-100};
 
-   --global-selection-text-color       : #{$warm-black};
-   --global-selection-bg-color         : #{$muted-terracotta};
-   --global-selection-bg-color-hover   : #{$warm-orange};
+   // Selection - vibrant but readable
+   --global-selection-text-color       : #{$slate-950};
+   --global-selection-bg-color         : #{$cyan-400};
+   --global-selection-bg-color-hover   : #{$cyan-300};
 }
