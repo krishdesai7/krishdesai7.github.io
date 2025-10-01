@@ -107,13 +107,9 @@
 }
 
 .btn-secondary {
-  background-color: transparent;
+  background-color: var(--global-selection-text-color);
   color: var(--global-selection-bg-color);
-  border: 2px solid var(--global-dark-border-color);
-
-  &:hover {
-    background-color: var(--global-hover-bg);
-  }
+  border: 2px solid var(--global-border-color);
 }
 /* Animations */
 @keyframes fadeIn {

@@ -42,6 +42,9 @@
   letter-spacing: 0.015em;
   color: var(--global-nav-link-color);
   transition: color 0.2s ease, transform 0.2s ease;
+  &:hover {
+    color: var(--global-nav-link-color-hover);
+  }
 }
 .nav__menu ul > li:last-of-type {
   margin-left: auto;
@@ -51,7 +54,7 @@
 #theme-toggle {
   background: transparent;
   border: none;
-  color: var(--global-nav-link-color-hover);
+  color: var(--global-nav-link-color);
   transition: color 0.2s ease, transform 0.2s ease;
   font-size: $font-size-20;
   &:hover {

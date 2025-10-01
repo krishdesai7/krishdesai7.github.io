@@ -5,11 +5,11 @@ a {
   text-decoration-style: dotted;
   text-decoration-color: var(--global-link-decoration-color);
   text-underline-offset: 0.24em;
-  &:hover {
-    color: var(--global-link-color-hover);
-  }
   &:visited {
     color: var(--global-link-color-visited);
+  }
+  &:hover {
+    color: var(--global-link-color-hover);
   }
 }
 

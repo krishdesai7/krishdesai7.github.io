@@ -1,54 +1,60 @@
+/* ==========================================================================
+   Typography & Core
+   ========================================================================== */
+
 /* Used to set the size for <em> */
-$doc-font-size              : 16;
+$doc-font-size      : 16;
 
 /* Paragraph indention */
-$paragraph-indent           : true;
-$indent-var                 : 1.3em;
+$paragraph-indent   : true;
+$indent-var         : 1.3em;
 
-$serif                      : "Cochineal", Georgia, serif;
-$sans-serif                 : "Heliotrope", -apple-system, sans-serif;
-$sans-serif-caps            : "Heliotrope Caps", -apple-system, sans-serif;
-$monospace                  : "Berkeley Mono", "SFMono-Regular", monospace;
+$serif              : "Cochineal", Georgia, serif;
+$sans-serif         : "Heliotrope", -apple-system, sans-serif;
+$sans-serif-caps    : "Heliotrope Caps", -apple-system, sans-serif;
+$monospace          : "Berkeley Mono", "SFMono-Regular", monospace;
 
-$font-size-40              : 2.441em;  // 1
-$font-size-32              : 1.953em;  // 2
-$font-size-25              : 1.563em;  // 3
-$font-size-20              : 1.25em;   // 4
-$font-size-16              : 1em;      // 5
-$font-size-14              : 0.875em;  // 5.5
-$font-size-12              : 0.75em;   // 6
-$font-size-11              : 0.6875em; // 7
-$font-size-10              : 0.625em;  // 8
+$font-size-40       : 2.441em;  // 1
+$font-size-32       : 1.953em;  // 2
+$font-size-25       : 1.563em;  // 3
+$font-size-20       : 1.25em;   // 4
+$font-size-16       : 1em;      // 5
+$font-size-14       : 0.875em;  // 5.5
+$font-size-12       : 0.75em;   // 6
+$font-size-11       : 0.6875em; // 7
+$font-size-10       : 0.625em;  // 8
 
-$global-font-family         : $serif;
-$header-font-family-caps    : $sans-serif-caps;
-$header-font-family         : $sans-serif;
-$caption-font-family        : $serif;
-$nav-font-family            : $sans-serif-caps;
-$code-font-family           : $monospace;
-$footer-font-family         : $monospace;
-$button-font-family         : $sans-serif;
+$global-font-family      : $serif;
+$header-font-family-caps : $sans-serif-caps;
+$header-font-family      : $sans-serif;
+$caption-font-family     : $serif;
+$nav-font-family         : $sans-serif-caps;
+$code-font-family        : $monospace;
+$footer-font-family      : $monospace;
+$button-font-family      : $sans-serif;
 
-$global-font-size         : $font-size-16;
+$global-font-size        : $font-size-16;
 
 /* Other basic settings for the template */
-$border-radius-single              : 4px;
-$border-radius-double              : 8px;
-$box-shadow                        : 8px 8px 0 0 var(--global-link-color),
-                                       8px 8px 0 1px var(--global-border-color),
-                                       16px 16px 25px rgba(0, 0, 0, 0.2);
-$masthead-height                   : 70px;
+$border-radius-single    : 4px;
+$border-radius-double    : 8px;
+$masthead-height         : 70px;
+
+/* Card shadow should never “paint” with link color */
+$box-shadow              : 8px 8px 0 0 var(--global-dark-border-color),
+                           8px 8px 0 1px var(--global-border-color),
+                           16px 16px 25px rgba(0, 0, 0, 0.18);
 
 /* ==========================================================================
    Breakpoints
    ========================================================================== */
 
 @include breakpoint-set("to ems", true);
-$small                      : 600px !default;
-$medium                     : 768px !default;
-$medium-wide                : 900px !default;
-$large                      : 925px !default;
-$x-large                    : 1280px !default;
+$small        : 600px !default;
+$medium       : 768px !default;
+$medium-wide  : 900px !default;
+$large        : 925px !default;
+$x-large      : 1280px !default;
 
 /* ==========================================================================
    Grid
@@ -59,153 +65,144 @@ $right-sidebar-width        : 0;
 $right-sidebar-width-wide   : 0;
 
 /* ==========================================================================
-   Colors - Light Mode Palette (Refined & Elegant)
+   Palette — Light (Traditional)
    ========================================================================== */
 
-// Base paper tones - crisp but not harsh
-$paper-white                : #fdfcfa;  // Soft off-white, like premium paper
-$paper-cream                : #f8f6f3;  // Subtle cream undertone
-$paper-beige                : #f0ede8;  // Warm beige for elevation
-$paper-stone                : #e8e4de;  // Deeper stone for strong contrast
+/* Paper tones */
+$paper-white   : #fdfcfa; /* Soft off-white, premium paper */
+$paper-cream   : #f8f6f3; /* Subtle cream undertone */
+$paper-beige   : #f0ede8; /* Warm beige for elevation */
+$paper-stone   : #e8e4de; /* Deeper stone for strong contrast */
 
-// Text colors - rich and readable
-$ink-black                  : #1a1816;  // Deep charcoal, not pure black
-$ink-dark                   : #2d2a27;  // Primary text
-$ink-medium                 : #4a4642;  // Secondary text
-$ink-light                  : #6b6662;  // Tertiary text
-$ink-muted                  : #8b8682;  // De-emphasized text
+/* Text */
+$ink-black     : #1a1816; /* Deep charcoal */
+$ink-dark      : #2d2a27; /* Primary text */
+$ink-medium    : #4a4642; /* Secondary text */
+$ink-light     : #6b6662; /* Tertiary */
+$ink-muted     : #8b8682; /* De-emphasized */
 
-// Border colors - subtle but clear
-$border-light               : #e0dcd6;  // Subtle divisions
-$border-medium              : #d0cbc4;  // Standard borders
-$border-dark                : #b8b3ac;  // Emphasized borders
+/* Borders */
+$border-light  : #e0dcd6;
+$border-medium : #d0cbc4;
+$border-dark   : #b8b3ac;
 
-// Accent colors - sophisticated and modern
-$cobalt-600                 : #0f62fe;  // Primary links - refined blue
-$cobalt-700                 : #0043ce;  // Link hover - deeper
-$cobalt-500                 : #4589ff;  // Visited links - lighter
-$cobalt-800                 : #002d9c;  // Dark variant
+/* Accents */
+$sepia-600     : #5a4636; /* link */
+$sepia-700     : #3f2e23; /* hover */
+$oxblood-500   : #6a4a8a; /* link decoration: dusky purple */
+$terracotta-600 : #955a45; /* muted terracotta (hover) */
+$terracotta-700 : #814a38; /* pressed/active */
 
-// Secondary accents
-$amber-600                  : #d97706;  // Warm highlight (theme toggle)
-$amber-700                  : #b45309;  // Amber hover
-$amber-500                  : #f59e0b;  // Lighter amber
-
-// Selection and interactive elements
-$sky-200                    : #bae6fd;  // Soft selection background
-$sky-600                    : #0284c7;  // Selection emphasis
+/* Selection */
+$parchment-200 : #eee6d2; /* selection bg */
+$parchment-400 : #e4d7b7; /* selection hover */
 
 /* ==========================================================================
-   Colors - Dark Mode Palette (Refined & Modern)
+   Palette — Dark (Modern; unchanged)
    ========================================================================== */
 
-// Base backgrounds - rich slate tones
-$slate-950                  : #0a0d14;  // Deepest - for footer/emphasis
-$slate-900                  : #131720;  // Main background
-$slate-850                  : #1a1f2e;  // Slightly elevated
-$slate-800                  : #242b3d;  // Hover states, code blocks
-$slate-750                  : #2d3548;  // Elevated surfaces
-$slate-700                  : #3d4556;  // High elevation
+$slate-950   : #0a0d14; /* footer/emphasis */
+$slate-900   : #131720; /* main */
+$slate-850   : #1a1f2e; /* elevated */
+$slate-800   : #242b3d; /* hovers/code */
+$slate-750   : #2d3548;
+$slate-700   : #3d4556;
 
-// Borders and dividers
-$slate-600                  : #4b5468;  // Primary borders
-$slate-500                  : #6b7487;  // Lighter borders
+$slate-600   : #4b5468; /* border */
+$slate-500   : #6b7487;
 
-// Text colors
-$slate-400                  : #8b92a8;  // Secondary text
-$slate-300                  : #a8afc3;  // Tertiary text
-$slate-200                  : #c5cad7;  // Muted text
-$slate-100                  : #e1e4eb;  // Light text
-$slate-50                   : #f3f5f8;  // Primary text
+$slate-400   : #8b92a8; /* secondary text */
+$slate-300   : #a8afc3; /* tertiary text */
+$slate-200   : #c5cad7; /* muted text */
+$slate-100   : #e1e4eb; /* light text */
+$slate-50    : #f3f5f8; /* primary text */
 
-// Accent colors - vibrant cyan/teal for modern feel
-$cyan-500                   : #06b6d4;  // Primary links
-$cyan-400                   : #22d3ee;  // Link hover - brighter
-$cyan-600                   : #0891b2;  // Visited links - deeper
-$cyan-300                   : #67e8f9;  // Bright accents
+/* Dark accents */
+$cyan-500    : #06b6d4; /* link */
+$cyan-400    : #22d3ee; /* hover */
+$cyan-600    : #0891b2; /* visited */
+$cyan-300    : #67e8f9; /* bright accents */
 
-// Secondary accent - amber for warmth
-$amber-400                  : #fbbf24;  // Theme toggle, warm highlights
-$amber-500                  : #f59e0b;  // Hover state
+/* Shared warm accent (used in both themes as needed) */
+$amber-400   : #fbbf24;
+$amber-500   : #f59e0b;
+$amber-600   : #d97706;
+$amber-700   : #b45309;
 
-// Alternative accents for variety
-$violet-400                 : #a78bfa;  // Alternative accent
-$emerald-400                : #34d399;  // Success states
+/* ==========================================================================
+   CSS Custom Properties
+   ========================================================================== */
 
-/* Default light theme - Refined & Elegant */
+/* Light theme — Traditional */
 :root {
-   // Backgrounds - layered paper aesthetic
-   --global-bg-color                   : #{$paper-white};
-   --global-footer-bg-color            : #{$paper-cream};
-   --global-hover-bg                   : #{$paper-beige};
+  /* Backgrounds */
+  --global-bg-color                  : #{$paper-white};
+  --global-footer-bg-color           : #{$paper-cream};
+  --global-hover-bg                  : #{$paper-beige};
 
-   // Borders - subtle but clear
-   --global-border-color               : #{$border-light};
-   --global-dark-border-color          : #{$border-dark};
+  /* Borders */
+  --global-border-color              : #{$border-light};
+  --global-dark-border-color         : #{$border-dark};
 
-   // Text - rich and readable hierarchy
-   --global-text-color                 : #{$ink-dark};
-   --global-text-color-light           : #{$ink-light};
-   --header-footer-text-color          : #{$ink-medium};
-   --global-masthead-link-color        : #{$ink-dark};
-   --global-masthead-link-color-hover  : #{$cobalt-600};
+  /* Text */
+  --global-text-color                : #{$ink-dark};
+  --global-text-color-light          : #{$ink-light};
+  --header-footer-text-color         : #{$ink-medium};
+  --global-masthead-link-color       : #{$ink-dark};
 
-   // Links - sophisticated blue instead of orange
-   --global-link-color                 : #{$cobalt-600};
-   --global-link-color-hover           : #{$cobalt-700};
-   --global-link-color-visited         : #{$cobalt-500};
-   --global-link-decoration-color      : #{$cobalt-500};
-   --theme-toggle-hover-color          : #{$amber-600};
+  /* Links */
+  --global-link-color                : #{$sepia-600};
+  --global-link-color-hover          : #{$terracotta-600};
+  --global-link-color-visited        : #{$sepia-700};
+  --global-link-decoration-color     : #{$oxblood-500};
+  --global-masthead-link-color-hover : #{$ink-medium};
+  --global-nav-link-color            : #{$ink-medium};
+  --global-nav-link-color-hover      : #{$ink-muted};
+  --theme-toggle-hover-color         : #{$amber-600};
 
-   // Navigation
-   --global-nav-link-color             : #{$ink-medium};
-   --global-nav-link-color-hover       : #{$cobalt-600};
+  /* Code blocks */
+  --global-code-background-color     : #{$paper-stone};
+  --global-code-text-color           : #{$ink-dark};
 
-   // Code blocks - subtle contrast
-   --global-code-background-color      : #{$paper-stone};
-   --global-code-text-color            : #{$ink-dark};
-
-   // Selection - clear but not harsh
-   --global-selection-text-color       : #{$ink-black};
-   --global-selection-bg-color         : #{$sky-200};
-   --global-selection-bg-color-hover   : #{$sky-600};
+  /* Selection */
+  --global-selection-text-color      : #{$ink-black};
+  --global-selection-bg-color        : #{$parchment-200};
+  --global-selection-bg-color-hover  : #{$parchment-400};
 }
 
-/* Dark theme for the site - Modern & Refined */
+/* Dark theme — Modern */
 html[data-theme="dark"] {
-   // Backgrounds - layered depth
-   --global-bg-color                   : #{$slate-900};
-   --global-footer-bg-color            : #{$slate-950};
-   --global-hover-bg                   : #{$slate-850};
+  /* Backgrounds */
+  --global-bg-color                  : #{$slate-900};
+  --global-footer-bg-color           : #{$slate-950};
+  --global-hover-bg                  : #{$slate-850};
 
-   // Borders - subtle but clear
-   --global-border-color               : #{$slate-700};
-   --global-dark-border-color          : #{$slate-600};
+  /* Borders */
+  --global-border-color              : #{$slate-700};
+  --global-dark-border-color         : #{$slate-600};
 
-   // Text - high contrast for readability
-   --global-text-color                 : #{$slate-50};
-   --global-text-color-light           : #{$slate-300};
-   --header-footer-text-color          : #{$slate-100};
-   --global-masthead-link-color        : #{$slate-50};
-   --global-masthead-link-color-hover  : #{$cyan-400};
+  /* Text */
+  --global-text-color                : #{$slate-50};
+  --global-text-color-light          : #{$slate-300};
+  --header-footer-text-color         : #{$slate-100};
+  --global-masthead-link-color       : #{$slate-50};
 
-   // Links - vibrant cyan for modern aesthetic
-   --global-link-color                 : #{$cyan-500};
-   --global-link-color-hover           : #{$cyan-400};
-   --global-link-color-visited         : #{$cyan-600};
-   --global-link-decoration-color      : #{$cyan-600};
-   --theme-toggle-hover-color          : #{$amber-400};
+  /* Links */
+  --global-link-color                : #{$cyan-500};
+  --global-link-color-hover          : #{$cyan-400};
+  --global-link-color-visited        : #{$cyan-600};
+  --global-link-decoration-color     : #{$cyan-600};
+  --global-masthead-link-color-hover : #{$cyan-400};
+  --global-nav-link-color            : #{$slate-200};
+  --global-nav-link-color-hover      : #{$cyan-400};
+  --theme-toggle-hover-color         : #{$amber-400};
 
-   // Navigation
-   --global-nav-link-color             : #{$slate-200};
-   --global-nav-link-color-hover       : #{$cyan-400};
+  /* Code blocks */
+  --global-code-background-color     : #{$slate-800};
+  --global-code-text-color           : #{$slate-100};
 
-   // Code blocks - distinct but not jarring
-   --global-code-background-color      : #{$slate-800};
-   --global-code-text-color            : #{$slate-100};
-
-   // Selection - vibrant but readable
-   --global-selection-text-color       : #{$slate-950};
-   --global-selection-bg-color         : #{$cyan-400};
-   --global-selection-bg-color-hover   : #{$cyan-300};
+  /* Selection */
+  --global-selection-text-color      : #{$slate-950};
+  --global-selection-bg-color        : #{$cyan-400};
+  --global-selection-bg-color-hover  : #{$cyan-300};
 }
