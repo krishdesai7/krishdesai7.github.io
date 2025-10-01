@@ -34,3 +34,31 @@ a {
     text-align: center !important;
   }
 }
+
+#main {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  
+}
+
+.page__content {
+  p {
+    /* sibling indentation*/
+    @if $paragraph-indent == true {
+      & + p {
+        text-indent: $indent-var;
+        margin-top: -($indent-var);
+      }
+    }
+  }
+}
+
+/* Grid Variables */
+:root {
+  --content-max-width: 45rem;
+}
+
+/* Base Grid Container Mixin */
+@mixin grid-container {
+  display: grid;
+}

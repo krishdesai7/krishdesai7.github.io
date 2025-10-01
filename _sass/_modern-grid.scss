@@ -1,9 +1,0 @@
-/* Grid Variables */
-:root {
-  --content-max-width: 45rem;
-}
-
-/* Base Grid Container Mixin */
-@mixin grid-container {
-  display: grid;
-}
