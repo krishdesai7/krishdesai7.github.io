@@ -9,7 +9,7 @@ venue: 'Thirty-Eighth Annual Conference on Neural Information Processing Systems
 slidesurl: 'https://www.desai.ml/files/8-slides.pdf'
 paperurl: 'https://www.desai.ml/files/8-paper.pdf'
 bibtexurl: 'https://www.desai.ml/files/8-biblatex.bib'
-citation: 'Zhu, H., Desai, K., Kuusela, M., Mikuni, V., Nachman, B., and Wasserman, L (2024) Multidimensional Deconvolution with Profiling. <i>NeurIPS</i> ML4PS 150 (2024).'
+citation: 'Zhu, H., Desai, K., Kuusela, M., Mikuni, V., Nachman, B., and Wasserman, L. Multidimensional Deconvolution with Profiling. <i>NeurIPS</i> ML4PS 150 (2024).'
 authors: 'Huanbiao Zhu, <strong>Krish Desai</strong>, Mikael Kuusela, Vinicius Mikuni, Benjamin Nachman, and Larry Wasserman'
 ---
 ## Abstract

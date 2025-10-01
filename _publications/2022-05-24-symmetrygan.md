@@ -8,7 +8,7 @@ date: 2022-05-24
 venue: 'Physical Review D'
 paperurl: 'https://www.desai.ml/files/4-paper.pdf'
 bibtexurl: 'https://www.desai.ml/files/4-biblatex.bib'
-citation: 'Desai, K., Nachman, B., and Thaler, J. (2022). SymmetryGAN. <i>Physical Review D</i>, 105(9), 096031.'
+citation: 'Desai, K., Nachman, B., and Thaler, J. SymmetryGAN. <i>Physical Review D</i>, 105(9), 096031 (2022).'
 authors: '<strong>Krish Desai</strong>, Benjamin Nachman, and Jesse Thaler'
 ---
 ## Abstract

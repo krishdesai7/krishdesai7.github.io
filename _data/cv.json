@@ -76,10 +76,17 @@
     "Publications": {
       "Unbinned Inference with Correlated Events": {
         "authors": "**Krish Desai**, Owen Long, and Benjamin Nachman",
-        "publisher": "European Physical Journal C (Accepted for publication)",
-        "date": "2025-09-23",
+        "publisher": "European Physical Journal C",
+        "date": "2025-10-01",
         "pdf": "https://www.desai.ml/files/9-paper.pdf",
         "bibtex": "https://www.desai.ml/files/9-biblatex.bib"
+      },
+      "Neural Posterior Unfolding (Preprint)": {
+        "authors": "Fernando Torales Acosta, Jay Chan, **Krish Desai**, Vinicius Mikuni, Benjamin Nachman, and Jingjing Pan",
+        "publisher": "arXiv:2509.06370",
+        "date": "2025-09-08",
+        "pdf": "https://www.desai.ml/files/11-paper.pdf",
+        "bibtex": "https://www.desai.ml/files/11-biblatex.bib"
       },
       "Machine Learning Methods for Cross Section Measurements": {
         "authors": "**Krish Desai**",
