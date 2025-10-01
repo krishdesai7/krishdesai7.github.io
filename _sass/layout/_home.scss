@@ -10,17 +10,12 @@
         width: 330px;
         height: 330px;
         object-fit: cover;
-        box-shadow: 
-          6px 6px 0 0 var(--global-link-color),
-          6px 6px 0 1px var(--global-border-color),
-          12px 12px 20px rgba(0, 0, 0, 0.15);
+        box-shadow: $box-shadow;
         filter: grayscale(100%);
         &:hover {
           transform: translate(-2px, -2px);
-          box-shadow: 
-            8px 8px 0 0 var(--global-link-color),
-            8px 8px 0 1px var(--global-border-color),
-            16px 16px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: $box-shadow;
+
           filter: grayscale(100%);
         }
       }

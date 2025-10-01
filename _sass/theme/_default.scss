@@ -1,68 +1,25 @@
-/* ==========================================================================
-   DEFAULT THEME
-   ========================================================================== */
-
-/* Color codes used for the theme */
-$warm-black                 : #3a3633;
-$dark-brown                 : #5c5450;
-$medium-brown               : #7a6f66;
-$light-brown                : #a89d94;
-$warm-gray                  : #8b8178;
-$warm-gray-light            : #a49990;
-$warm-white                 : #fbf8f4;
-$accent-beige               : #fdedd7;
-$accent-color               : #c87137;  // Warm terracotta accent
-
-/* Legacy variables for compatibility */
-$gray                       : $medium-brown;
-$dark-gray                  : $dark-brown;
-$darker-gray                : $warm-black;
-$light-gray                 : $light-brown;
-$lighter-gray               : mix($warm-white, $medium-brown, 90%);
-
-/* Color codes used for the site */
-$primary-color              : $accent-color;
-$danger-color               : #d94c48;
-$info-color                 : #6b8fa3;
-$notice-color               : $medium-brown;
-$success-color              : #7ba55d;
-$warning-color              : #e09d37;
-
-/* Other basic settings for the template */
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$masthead-height            : 70px;
-$navicon-width              : 28px;
-$navicon-height             : 4px;
-$sidebar-link-max-width     : 250px;
-$sidebar-screen-min-width   : 1024px;
-
 /* Default light theme for the site */
 :root {
-    --global-base-color                 : #{$accent-color};
     --global-bg-color                   : #{$warm-white};
-    --global-footer-bg-color            : #{mix($warm-white, $accent-beige, 70%)};
+    --global-footer-bg-color            : #{mix($warm-white, $beige, 70%)};
     --global-border-color               : #{mix($warm-white, $light-brown, 85%)};
     --global-dark-border-color          : #{$light-brown};
-    --global-code-background-color      : #{mix($warm-white, $accent-beige, 92%)};
+    --global-code-background-color      : #{mix($warm-white, $beige, 92%)};
     --global-code-text-color            : #{$warm-black};
-    --global-fig-caption-color          : #{$medium-brown};
-    --global-link-color                 : #{$accent-color};
-    --global-link-color-hover           : #{darken($accent-color, 15%)};
-    --global-link-color-visited         : #{mix($accent-color, $dark-brown, 50%)};  
+    --global-link-color                 : #{$terracotta};
+    --global-link-color-hover           : #{darken($terracotta, 15%)};
+    --global-link-color-visited         : #{mix($terracotta, $dark-brown, 50%)};  
     --global-masthead-link-color        : #{$dark-brown};
     --global-masthead-link-color-hover  : #{$warm-black};    
     --global-text-color                 : #{$warm-black};
     --global-text-color-light           : #{$medium-brown};
-    --global-text-color-light-hover     : #{$success-color};
-    --global-thread-color                : #{mix($warm-white, $accent-beige, 85%)};
-    --global-hover-bg                   : #{$accent-beige};
-    --global-link-decoration-color      : #5b0000;
+    --global-hover-bg                   : #{$beige};
+    --global-link-decoration-color      : #{$terracotta};
     --global-nav-link-color             : #{$dark-brown};
     --global-nav-link-color-hover       : #{$warm-black};
-    --global-nav-link-decoration-color  : #5b0000;
     --global-selection-text-color       : #{$warm-white};
     --global-selection-bg-color         : #{$warm-black};
     --global-selection-bg-color-hover    : #{lighten($warm-black, 10%)};
     --header-footer-text-color            : #{$dark-brown};
+    --theme-toggle-hover-color            : #{$warm-yellow};
 }

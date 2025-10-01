@@ -30,12 +30,6 @@ audio:not([controls]) {
   display: none;
 }
 
-/* Apply focus state */
-
-a:focus {
-  @extend %tab-focus;
-}
-
 /* Remove outline from links */
 
 a:hover,

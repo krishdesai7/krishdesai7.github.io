@@ -80,7 +80,7 @@ td > code {
   font-size: $font-size-10;
   background: var(--global-code-background-color);
   border: 1px solid var(--global-dark-border-color);
-  border-radius: $border-radius;
+  border-radius: $border-radius-single;
   box-shadow: $box-shadow;
 
   &:before, &:after {

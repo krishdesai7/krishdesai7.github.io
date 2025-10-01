@@ -31,6 +31,14 @@ $button-font-family         : $sans-serif;
 
 $global-font-size         : $font-size-16;
 
+/* Other basic settings for the template */
+$border-radius-single              : 4px;
+$border-radius-double              : 8px;
+$box-shadow                        : 8px 8px 0 0 var(--global-link-color),
+                                       8px 8px 0 1px var(--global-border-color),
+                                       16px 16px 25px rgba(0, 0, 0, 0.2);
+$masthead-height                   : 70px;
+
 /* ==========================================================================
    Breakpoints
    ========================================================================== */
@@ -49,3 +57,25 @@ $x-large                    : 1280px !default;
 $right-sidebar-width-narrow : 0;
 $right-sidebar-width        : 0;
 $right-sidebar-width-wide   : 0;
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+$warm-black                 : #3a3633;
+$dark-brown                 : #5c5450;
+$medium-brown               : #7a6f66;
+$light-brown                : #a89d94;
+$warm-white                 : #fbf8f4;
+$warm-yellow                : #e09d37;
+$beige                      : #fdedd7;
+$terracotta                 : #c87137;
+$deep-black                 : #1a1816;
+$orange-black               : #252220;
+$warm-gray                  : #3d3833;
+$medium-gray                : #6b635a;
+$light-gray                 : #a89d94;
+$muted-terracotta           : #b5764f;
+$warm-orange                : #935f3c;
+$orange-brown               : #2a231e;
+$bright-orange              : #e8a67a;
+$dark-orange                : #b5764f;

@@ -38,8 +38,8 @@
 .mfp-image-holder .mfp-content img {
   display: block;
   height: auto;
-  border-radius: var(--radius-md, 0.5rem);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  border-radius: $border-radius-single;
+  box-shadow: $box-shadow;
 }
 
 /* Iframe type */
@@ -52,7 +52,7 @@
   position: absolute;
   inset: 0;
   border: 0;
-  border-radius: var(--radius-md, 0.5rem);
+  border-radius: $border-radius-single;
   background: var(--global-bg-color);
 }
 
