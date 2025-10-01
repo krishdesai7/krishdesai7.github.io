@@ -84,50 +84,62 @@ $warm-white                 : #fbf8f4;
 :root {
    --global-bg-color                   : #{$warm-white};
    --global-footer-bg-color            : #{mix($warm-white, $beige, 70%)};
+   --global-hover-bg                   : #{$beige};
+
    --global-border-color               : #{mix($warm-white, $light-brown, 85%)};
    --global-dark-border-color          : #{$light-brown};
-   --global-code-background-color      : #{mix($warm-white, $beige, 92%)};
-   --global-code-text-color            : #{$warm-black};
-   --global-link-color                 : #{$terracotta};
-   --global-link-color-hover           : #{darken($terracotta, 15%)};
-   --global-link-color-visited         : #{mix($terracotta, $dark-brown, 50%)};  
-   --global-masthead-link-color        : #{$dark-brown};
-   --global-masthead-link-color-hover  : #{$warm-black};    
+
    --global-text-color                 : #{$warm-black};
    --global-text-color-light           : #{$medium-brown};
-   --global-hover-bg                   : #{$beige};
+   --header-footer-text-color          : #{$dark-brown};
+   --global-masthead-link-color        : #{$dark-brown};
+   --global-masthead-link-color-hover  : #{$warm-black};
+
+   --global-link-color                 : #{$terracotta};
+   --global-link-color-hover           : #{darken($terracotta, 15%)};
+   --global-link-color-visited         : #{mix($terracotta, $dark-brown, 50%)};
    --global-link-decoration-color      : #{$terracotta};
+   --theme-toggle-hover-color          : #{$warm-yellow};
+
    --global-nav-link-color             : #{$dark-brown};
    --global-nav-link-color-hover       : #{$warm-black};
+
+   --global-code-background-color      : #{mix($warm-white, $beige, 92%)};
+   --global-code-text-color            : #{$warm-black};
+
    --global-selection-text-color       : #{$warm-white};
    --global-selection-bg-color         : #{$warm-black};
-   --global-selection-bg-color-hover    : #{lighten($warm-black, 10%)};
-   --header-footer-text-color            : #{$dark-brown};
-   --theme-toggle-hover-color            : #{$warm-yellow};
+   --global-selection-bg-color-hover   : #{lighten($warm-black, 10%)};
 }
 
 /* Dark theme for the site */
 html[data-theme="dark"] {
    --global-bg-color                   : #{$warm-black};
    --global-footer-bg-color            : #{$deep-black};
+   --global-hover-bg                   : #{$orange-brown};
+
    --global-border-color               : #{$warm-gray};
    --global-dark-border-color          : #{$medium-gray};
-   --global-code-background-color      : #{$orange-black};
-   --global-code-text-color            : #{$warm-white};
+
+   --global-text-color                 : #{$warm-white};
+   --global-text-color-light           : #{$light-gray};
+   --header-footer-text-color          : #{$warm-white};
+   --global-masthead-link-color        : #{$warm-white};
+   --global-masthead-link-color-hover  : #{$medium-gray};
+
    --global-link-color                 : #{$medium-gray};
    --global-link-color-hover           : #{$bright-orange};
    --global-link-color-visited         : #{$dark-orange};
-   --global-masthead-link-color        : #{$warm-white};
-   --global-masthead-link-color-hover  : #{$medium-gray};
-   --global-text-color                 : #{$warm-white};
-   --global-text-color-light           : #{$light-gray};
-   --global-hover-bg                   : #{$orange-brown};
    --global-link-decoration-color      : #{$warm-gray};
+   --theme-toggle-hover-color          : #{$warm-yellow};
+
    --global-nav-link-color             : #{$warm-white};
    --global-nav-link-color-hover       : #{$medium-gray};
+
+   --global-code-background-color      : #{$orange-black};
+   --global-code-text-color            : #{$warm-white};
+
    --global-selection-text-color       : #{$warm-black};
    --global-selection-bg-color         : #{$muted-terracotta};
-   --global-selection-bg-color-hover    : #{$warm-orange};
-   --header-footer-text-color            : #{$warm-white};
-   --theme-toggle-hover-color            : #{$warm-yellow};
+   --global-selection-bg-color-hover   : #{$warm-orange};
 }
