@@ -80,7 +80,15 @@ layout: default
           <span class="publication-link__icon icon-bibtex" aria-hidden="true">
             {% include icons/biblatex-file.svg %}
           </span>
-          <span class="publication-link__text">\(\Biblatex\)</span>
+          <span class="publication-link__text-biblatex">\(\Biblatex\)</span>
+        </a>
+      {% endif %}
+
+      {% if page.code %}
+        <span class="publication-link__separator" aria-hidden="true">•</span>
+        <a href="{{ page.code }}" class="publication-link" target="_blank" rel="noopener">
+          <i class="fa-brands fa-fw fa-github icon-pad-right" aria-hidden="true"></i>
+          <span class="publication-link__text">Code</span>
         </a>
       {% endif %}
     </div>

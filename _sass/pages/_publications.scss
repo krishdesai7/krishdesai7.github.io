@@ -79,7 +79,7 @@
 }
 
 // BibLaTeX link underline
-.publication-link--bibtex .publication-link__text {
+.publication-link__text-biblatex {
   border-bottom: 1px dotted var(--global-link-decoration-color);
   padding-bottom: 0.04em;
 }
@@ -89,6 +89,14 @@
   gap: 0.5rem;
   .publication-link {
     display: inline-flex;
+    text-decoration: none;
+    
+    .publication-link__text {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-decoration-color: var(--global-link-decoration-color);
+      text-underline-offset: 0.24em;
+    }
   }
 }
 
@@ -99,8 +107,5 @@
   }
   .publication-venue {
     font-style: italic;
-  }
-  .publication-links {
-    border-bottom: 1px solid var(--global-border-color);
   }
 }

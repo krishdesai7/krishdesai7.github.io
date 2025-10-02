@@ -15,10 +15,10 @@ from geopy.exc import GeocoderTimedOut
 TIMEOUT = 5
 
 # Collect the Markdown files
-g = glob.glob("*.md")
+g = glob.glob("_talks/*.md")
 
 # Prepare to geolocate
-geocoder = Nominatim(user_agent="academicpages.github.io")
+geocoder = Nominatim(user_agent="https://www.desai.ml")
 location_dict = {}
 location = ""
 permalink = ""
@@ -38,6 +38,8 @@ for file in g:
     title = data['title'].strip()
     venue = data['venue'].strip()
     location = data['location'].strip()
+    if location.lower() in ['virtual', 'online', 'remote']:
+        continue
     description = f"{title}<br />{venue}; {location}"
 
     # Geocode the location and report the status
@@ -54,3 +56,24 @@ for file in g:
 # Save the map
 m = getorg.orgmap.create_map_obj()
 getorg.orgmap.output_html_cluster_map(location_dict, folder_name="talkmap", hashed_usernames=False)
+
+# Clean up the HTML file
+html_file = "talkmap/map.html"
+with open(html_file, 'r') as f:
+    html_content = f.read()
+
+# Remove the instruction span
+html_content = html_content.replace(
+    '<span>Mouse over a cluster to see the bounds of its children and click a cluster to zoom to those bounds</span>',
+    ''
+)
+
+# Change the title
+html_content = html_content.replace(
+    '<title>Leaflet debug page</title>',
+    ''
+)
+
+# Write the cleaned HTML back
+with open(html_file, 'w') as f:
+    f.write(html_content)

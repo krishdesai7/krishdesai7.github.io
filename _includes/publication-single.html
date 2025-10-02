@@ -60,18 +60,21 @@
         </span>
         <span class="publication-link__text">PDF</span>
       </a>
-    {% if post.slidesurl %}
-      <span class="publication-link__separator" aria-hidden="true">•</span><span class="publication-link__icon icon-ppt" aria-hidden="true">
-        {% include icons/ppt.svg %}
-      </span>
-      <a href="{{ post.slidesurl }}" class="publication-link" target="_blank" rel="noopener">Slides</a>
-    {% endif %}
+      {% if post.slidesurl %}
+        <span class="publication-link__separator" aria-hidden="true">•</span>
+        <a href="{{ post.slidesurl }}" class="publication-link publication-link--slides" target="_blank" rel="noopener">
+          <span class="publication-link__icon icon-ppt" aria-hidden="true">
+            {% include icons/ppt.svg %}
+          </span>
+          <span class="publication-link__text">Slides</span>
+        </a>
+      {% endif %}
       <span class="publication-link__separator" aria-hidden="true">•</span>
       <a href="javascript:void(0)" class="publication-link publication-link--bibtex" onclick="showBibtexModal('{{ post.bibtexurl }}')">
         <span class="publication-link__icon icon-bibtex" aria-hidden="true">
           {% include icons/biblatex-file.svg %}
         </span>
-        <span class="publication-link__text">\(\Biblatex\)</span>
+        <span class="publication-link__text-biblatex">\(\Biblatex\)</span>
       </a>
     {% if post.code %}
       <span class="publication-link__separator" aria-hidden="true">•</span>

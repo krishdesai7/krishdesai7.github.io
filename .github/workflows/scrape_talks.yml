@@ -27,7 +27,7 @@ jobs:
 
     - name: Run talkmap script
       run: |
-        cd _talks && uv run ../talkmap.py && cd ..
+        uv run talkmap.py
 
     - name: Commit changes
       run: |
