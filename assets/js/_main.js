@@ -1,16 +1,18 @@
 // ===== THEME =====
 (function () {
   const html = document.documentElement;
-  const icon = document.getElementById('theme-icon');
 
   function setTheme(mode) {
-    const next = mode || localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const icon = document.getElementById('theme-icon');
+    const next = mode || localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
     if (next === 'dark') {
       html.setAttribute('data-theme', 'dark');
-      icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); 
+      if (icon) { icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
     } else {
       html.removeAttribute('data-theme');
-      icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); 
+      if (icon) { icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); }
     }
   }
 
@@ -26,7 +28,7 @@
     const toggleBtn = document.getElementById('theme-toggle');
     if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
 
-    // Honor OS theme changes unless user explicitly chose a theme
+    // Respect OS changes unless the user pinned a choice
     matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
       if (!localStorage.getItem('theme')) setTheme(e.matches ? 'dark' : 'light');
     });
