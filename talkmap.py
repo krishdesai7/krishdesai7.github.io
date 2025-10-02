@@ -1,46 +1,47 @@
-# Leaflet cluster map of talk locations
-#
-# Run this from the _talks/ directory, which contains .md files of all your
-# talks. This scrapes the location YAML field from each .md file, geolocates it
-# with geopy/Nominatim, and uses the getorg library to output data, HTML, and
-# Javascript for a standalone cluster map. This is functionally the same as the
-# #talkmap Jupyter notebook.
+import io
+import sys
 import frontmatter
 import glob
-import getorg
+import re
+from pathlib import Path
+
+# Suppress output from getorg
+old_stdout = sys.stdout
+sys.stdout = io.StringIO()
+import getorg.orgmap
+sys.stdout = old_stdout
+
+from typing import Final
 from geopy import Nominatim
 from geopy.exc import GeocoderTimedOut
 
-# Set the default timeout, in seconds
-TIMEOUT = 5
+TIMEOUT : Final[int] = 5
 
 # Collect the Markdown files
-g = glob.glob("_talks/*.md")
+g : list[str] = glob.glob("_talks/*.md")
 
-# Prepare to geolocate
-geocoder = Nominatim(user_agent="https://www.desai.ml")
-location_dict = {}
-location = ""
-permalink = ""
-title = ""
+# user_agent sends contact information to Nominatim
+geocoder : Nominatim = Nominatim(user_agent="https://www.desai.ml")
+location_dict : dict[str, tuple[float, float]] = {}
+location : str = ""
+permalink : str = ""
+title : str = ""
 
-# Perform geolocation
+# Geolocation
 for file in g:
-    # Read the file
-    data = frontmatter.load(file)
-    data = data.to_dict()
-
-    # Press on if the location is not present
-    if 'location' not in data:
+    file_header : dict[str, str] = frontmatter.load(file).to_dict()
+    if 'location' not in file_header:
         continue
 
-    # Prepare the description
-    title = data['title'].strip()
-    venue = data['venue'].strip()
-    location = data['location'].strip()
-    if location.lower() in ['virtual', 'online', 'remote']:
+    title = file_header['title'].strip()
+    venue = file_header['venue'].strip()
+    if "Neural" in venue:
+        venue = f"{venue.split('Annual')[0]} NeurIPS"
+    location = file_header['location'].strip()
+    if location.casefold() in ['virtual', 'online', 'remote']:
+        print(f"Skipping {title} : {location}")
         continue
-    description = f"{title}<br />{venue}; {location}"
+    description = f"{title}<br />{venue}<br />{location}"
 
     # Geocode the location and report the status
     try:
@@ -54,26 +55,15 @@ for file in g:
         print(f"An unhandled exception occurred while processing input {location} with message {ex}")
 
 # Save the map
-m = getorg.orgmap.create_map_obj()
 getorg.orgmap.output_html_cluster_map(location_dict, folder_name="talkmap", hashed_usernames=False)
 
 # Clean up the HTML file
-html_file = "talkmap/map.html"
+html_file : Path = Path("talkmap/map.html")
 with open(html_file, 'r') as f:
-    html_content = f.read()
+    html_content : str = f.read()
 
-# Remove the instruction span
-html_content = html_content.replace(
-    '<span>Mouse over a cluster to see the bounds of its children and click a cluster to zoom to those bounds</span>',
-    ''
-)
-
-# Change the title
-html_content = html_content.replace(
-    '<title>Leaflet debug page</title>',
-    ''
-)
-
-# Write the cleaned HTML back
+html_content = re.sub(r"<span>Mouse.*?bounds</span>", "", html_content)
+html_content = re.sub(r"<title>Leaflet debug page</title>", "", html_content)
+html_content = re.sub(r"attribution.*?2012'", "", html_content)
 with open(html_file, 'w') as f:
     f.write(html_content)
