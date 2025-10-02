@@ -1,13 +1,9 @@
 source 'https://rubygems.org'
 
-group :jekyll_plugins do
-  gem 'jekyll'
-  gem 'jekyll-sitemap'
-  gem 'jekyll-redirect-from'
-  gem 'jemoji'
-  gem 'webrick'
-end
+gem 'github-pages', group: :jekyll_plugins
 
-gem 'github-pages'
-gem 'connection_pool'
-gem 'puma'
+group :development do
+  gem 'webrick'
+  gem 'connection_pool'
+  gem 'puma'
+end
