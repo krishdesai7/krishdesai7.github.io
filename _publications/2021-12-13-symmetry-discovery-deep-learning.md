@@ -11,6 +11,7 @@ paperurl: 'https://www.desai.ml/files/symmetry-discovery-deep-learning-paper.pdf
 bibtexurl: 'https://www.desai.ml/files/symmetry-discovery-deep-learning-biblatex.bib'
 citation: 'Desai, K., Nachman, B., and Thaler, J. Symmetry Discovery with Deep Learning. <i>NeurIPS</i> ML4PS 117 (2021)'
 authors: '<strong>Krish Desai</strong>, Benjamin Nachman, and Jesse Thaler'
+code: 'https://github.com/hep-lbdl/symmetrydiscovery'
 ---
 ## Abstract
 
