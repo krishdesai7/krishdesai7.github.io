@@ -1,6 +1,29 @@
 <meta charset="utf-8">
 {% include base_path %}
 {% include seo.html %}
+<!-- Blocking script to prevent dark mode flash - must run before CSS loads -->
+<script>
+  (function() {
+    // Get theme from localStorage
+    const theme = localStorage.getItem('theme');
+    const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    
+    // Determine which theme to apply
+    let appliedTheme;
+    if (theme === 'dark' || theme === 'light') {
+      appliedTheme = theme;
+    } else if (theme === 'system' || !theme) {
+      appliedTheme = browserPref;
+    } else {
+      appliedTheme = 'light';
+    }
+    
+    // Apply theme immediately by setting data-theme attribute
+    if (appliedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
