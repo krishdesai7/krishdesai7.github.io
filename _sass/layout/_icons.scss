@@ -18,9 +18,9 @@
     --stackoverflow-color        : #fe7a15;
     --twitter-color              : var(--global-text-color);
     --youtube-color              : #bb0000;
-    --adobe-color                : #ff4b4b;
-    --biblatex-color             : #008080;
-    --powerpoint-color           : #D04423;
+    --adobe-color                : #ff4b4b99;
+    --biblatex-color             : #00808099;
+    --powerpoint-color           : #D0442399;
     }
     
 .icon-svg {
@@ -39,7 +39,9 @@
   padding-right: 0.25rem;
 }
 
-.icon-pdf__paper, .icon-pdf__glyph, .icon-bibtex__accent{
+.icon-pdf__paper,
+.icon-pdf__glyph,
+.icon-bibtex__accent {
   fill: var(--global-text-color);
 }
 
