@@ -13,8 +13,9 @@ a {
   }
   &:focus,
   &:focus-visible {
-    outline: 2px dotted var(--global-link-color);
+    outline: 1px dotted var(--global-link-decoration-color);
     outline-offset: 2px;
+    text-decoration: none;
   }
 }
 
