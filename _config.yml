@@ -6,23 +6,17 @@ title_separator          : "-"
 name                     : &name "Krish Desai, PhD"
 description              : &description "Machine Learning Researcher"
 url                      : "https://www.desai.ml"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "krishdesai7/krishdesai7.github.io"
 
-# Sidebar content
-# Additional customization in _includes/author-profile.html
 author:
-  # Biographic information
   avatar           : "assets/images/profile.png"
   name             : "Krish Desai, PhD"
-  pronouns         : # example: "she/her"  
   bio              : "Machine Learning Researcher"
   location         : "Berkeley, California"
   employer         : "Lawrence Berkeley National Lab"
   uri              : "https://www.desai.ml" # URL
   email            : "krishdesai7@gmail.com" 
 
-  # Academic websites
   academia         : # URL
   arxiv            : "http://arxiv.org/a/desai_k_1"
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=StYT3XIAAAAJ"
@@ -33,12 +27,10 @@ author:
   researchgate     : "https://www.researchgate.net/profile/Krish-Desai/"
   scopus           : # URL
 
-  # Repositories and software development
   bitbucket        : # Username
   github           : "krishdesai7"
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
-  # Social media
   bluesky          : "h4h5.bsky.social"
   instagram        : "krishdesai7"
   linkedin         : "krish-desai"
@@ -46,7 +38,7 @@ author:
   wikipedia        : # Username
   youtube          : # Username
 
-# Publication Category - The following the list of publication categories and their headings
+# Publication Categories
 publication_category:
   theses:
     title: 'Theses'
@@ -57,31 +49,17 @@ publication_category:
   preprints:
     title: 'Preprints'
 
-# Site Settings
-teaser                   :  # filename of teaser fallback teaser image: assets/images/500x300.png"
-breadcrumbs              : false # true, false (default)
-words_per_minute         : 160
-future                   : true
-talkmap_link             : true      #change to true to add link to talkmap on talks page
-
-# SEO Related
+# SEO
 google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
-
-
-# Social Sharing
-twitter:
-  username               : &twitter
 
 # Analytics
 analytics:
   provider: "google-analytics-4"
   google:
     tracking_id: "G-RMHJJ7H3MC"
-
-
 
 # Reading Files
 include:
@@ -121,14 +99,12 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-
 # Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
-
 
 # Markdown Processing
 kramdown:
@@ -140,7 +116,6 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-
 
 # These settings control the types of collections used by the template
 collections:
@@ -156,7 +131,6 @@ collections:
   experience:
     output: true
     permalink: /:collection/:path/
-
 
 # These settings control how pages and collections are included in the site
 defaults:
@@ -196,19 +170,14 @@ defaults:
       layout: single
       author_profile: true
 
-
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
+  style: compressed
 
 # Outputting
 permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
+timezone: America/Los_Angeles
 
 # Plugins
 plugins:
@@ -226,35 +195,9 @@ whitelist:
   - jekyll-redirect-from
   - jemoji
 
-
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
   path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
 
 # HTML Compression
 # - http://jch.penibelst.de/
