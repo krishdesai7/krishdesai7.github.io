@@ -15,23 +15,6 @@
       white-space: nowrap;
     }
   
-    .visually-hidden.focusable:focus,
-    .screen-reader-text:focus,
-    .screen-reader-shortcut:focus {
-      position: static;
-      clip: auto; clip-path: none;
-      width: auto; height: auto;
-      padding: 0.75rem 1rem;
-      margin: 0;
-      display: inline-block;
-      font: 700 1rem/1.2 $nav-font-family;
-      color: var(--global-text-color);
-      background: #fff;
-      border-radius: $border-radius-single;
-      box-shadow: $box-shadow;
-      z-index: 10000;
-    }
-  
     /* Skip-link list container (fixed so it's predictable) */
     .skip-link { position: fixed; z-index: 20; margin: 0; white-space: nowrap; }
     .skip-link li { list-style: none; height: 0; width: 0; }

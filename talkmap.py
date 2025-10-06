@@ -65,5 +65,10 @@ with open(html_file, 'r') as f:
 html_content = re.sub(r"<span>Mouse.*?bounds</span>", "", html_content)
 html_content = re.sub(r"<title>Leaflet debug page</title>", "", html_content)
 html_content = re.sub(r"attribution.*?2012'", "", html_content)
+html_content = re.sub(
+    "http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
+    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer",
+    html_content,
+)
 with open(html_file, 'w') as f:
     f.write(html_content)

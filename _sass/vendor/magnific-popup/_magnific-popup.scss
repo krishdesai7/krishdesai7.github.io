@@ -82,7 +82,3 @@
   .mfp-bg, .mfp-close, .mfp-arrow { transition: none; }
   .mfp-preloader::after { animation: none; }
 }
-
-/* Accessibility tweaks */
-.mfp-hide { display: none; }
-.mfp-content:focus { outline: none; }

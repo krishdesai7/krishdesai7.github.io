@@ -11,6 +11,11 @@ a {
   &:hover {
     color: var(--global-link-color-hover);
   }
+  &:focus,
+  &:focus-visible {
+    outline: 2px dotted var(--global-link-color);
+    outline-offset: 2px;
+  }
 }
 
 /* Global text justify */
