@@ -19,21 +19,21 @@ author:
   email            : "krishdesai7@gmail.com" 
 
   academia         : # URL
-  arxiv            : "http://arxiv.org/a/desai_k_1"
-  googlescholar    : "https://scholar.google.com/citations?hl=en&user=StYT3XIAAAAJ"
-  inspirehep       : "https://inspirehep.net/authors/1987978"
-  orcid            : "https://orcid.org/0000-0003-2559-8910"
-  semantic         : "https://www.semanticscholar.org/author/Krish-Desai/1885318652"
+  arxiv            : "desai_k_1"
+  googlescholar    : "StYT3XIAAAAJ"
+  inspirehep       : "1987978"
+  orcid            : "0000-0003-2559-8910"
+  semantic         : "1885318652"
   pubmed           : # "https://pubmed.ncbi.nlm.nih.gov/?term=desai+krish"
-  researchgate     : "https://www.researchgate.net/profile/Krish-Desai/"
+  researchgate     : "Krish-Desai"
   scopus           : # URL
 
   bitbucket        : # Username
-  github           : "krishdesai7"
+  github           : "@krishdesai7"
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
-  bluesky          : "h4h5.bsky.social"
-  instagram        : "krishdesai7"
+  bluesky          : "@h4h5.bsky.social"
+  instagram        : "@krishdesai7"
   linkedin         : "krish-desai"
   twitter          : "@krishdesai7"
   wikipedia        : # Username

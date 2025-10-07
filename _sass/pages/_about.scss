@@ -22,9 +22,44 @@
   dt {
     padding-bottom: var(--quarter-baseline);
   }
+  dd {
+    a {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      color: var(--global-text-color);
+      font-family: $sans-serif;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: var(--global-link-color-hover);
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+      }
+    }
+  }
   hr.divider {
     grid-column: 1 / -1;
     margin: var(--quarter-baseline);
+  }
+  .user-id {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.1rem 0.45rem;
+    border: 1px solid var(--global-border-color);
+    border-radius: $border-radius-double;
+    font-family: $sans-serif-caps;
+    font-size: 0.75em;
+    letter-spacing: 0.08em;
+    color: var(--global-text-color-light);
+    background: rgba(248, 246, 243, 0.6);
+    text-transform: uppercase;
+  }
+  dd a:hover .user-id,
+  dd a:focus .user-id {
+    color: var(--global-link-color-hover);
+    border-color: var(--global-link-color-hover);
   }
 }
 

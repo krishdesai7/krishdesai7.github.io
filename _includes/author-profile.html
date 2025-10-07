@@ -53,64 +53,65 @@
             {% if author.academia %}
                   <dt><i class="ai ai-academia ai-fw" aria-hidden="true"></i>
                   <dd class="author__desktop">
-                        <a href="{{ author.academia }}" target="_blank">
-                              Academia
+                        <a href="https://www.academia.edu/{{ author.academia }}" target="_blank">
+                              Academia <span class="user-id">{{ author.academia }}</span>
                         </a>
             {% endif %}
             {% if author.arxiv %}
                   <dt><i class="ai ai-arxiv ai-fw" aria-hidden="true"></i>
             <dd class="author__desktop">
-                  <a href="{{ author.arxiv }}" target="_blank">
-                        arXiv
+                  <a href="http://arxiv.org/a/{{ author.arxiv }}" target="_blank">
+                        arXiv <span class="user-id">{{ author.arxiv }}</span>
                   </a>
             {% endif %}
             {% if author.googlescholar %}
                   <dt><i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i>
                   <dd class="author__desktop">
-                        <a href="{{ author.googlescholar }}" target="_blank">
-                              Google Scholar
+                        <a href="https://scholar.google.com/citations?hl=en&user={{ author.googlescholar }}" target="_blank">
+                              Google Scholar <span class="user-id">{{ author.googlescholar }}</span>
                         </a>
             {% endif %}
             {% if author.semantic %}
                   <dt><i class="ai ai-semantic-scholar ai-fw" aria-hidden="true"></i>
                   <dd class="author__desktop">
-                        <a href="{{ author.semantic }}" target="_blank">
-                              Semantic Scholar
+                        <a href="https://www.semanticscholar.org/author/{{ author.semantic }}" target="_blank">
+                              Semantic Scholar <span class="user-id">{{ author.semantic }}</span>
                         </a>
             {% endif %}
             {% if author.orcid %}
                   <dt><i class="ai ai-orcid ai-fw" aria-hidden="true"></i>
                   <dd class="author__desktop">
-                        <a href="{{ author.orcid }}" target="_blank">
-                              ORCID
+                        <a href="https://orcid.org/{{ author.orcid }}" target="_blank">
+                              ORCID <span class="user-id">{{ author.orcid }}</span>
                         </a>
             {% endif %}
             {% if author.pubmed %}
                   <dt><i class="ai ai-pubmed ai-fw" aria-hidden="true"></i>
                   <dd class="author__desktop">
-                        <a href="{{ author.pubmed }}">
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/?term={{ author.pubmed }}">
+                              PubMed <span class="user-id">{{ author.pubmed }}</span>
                               PubMed
                         </a>
             {% endif %}
             {% if author.researchgate %}
             <dt><i class="ai ai-researchgate ai-fw" aria-hidden="true"></i>
             <dd class="author__desktop">
-                  <a href="{{ author.researchgate }}" target="_blank">
-                        ResearchGate
+                  <a href="https://www.researchgate.net/profile/{{ author.researchgate }}" target="_blank">
+                        ResearchGate <span class="user-id">{{ author.researchgate }}</span>
                   </a>
             {% endif %}
             {% if author.scopus %}
                   <dt><i class="ai ai-scopus ai-fw" aria-hidden="true"></i>
                   <dd class="author__desktop">
-                        <a href="{{ author.scopus }}">
-                              Scopus
+                        <a href="https://www.scopus.com/authid/detail.uri?authorId={{ author.scopus }}">
+                              Scopus <span class="user-id">{{ author.scopus }}</span>
                         </a>
             {% endif %}
             {% if author.inspirehep %}
             <dt><i class="ai ai-inspire ai-fw" aria-hidden="true"></i>
             <dd class="author__desktop">
-                  <a href="{{ author.inspirehep }}">
-                        INSPIRE-HEP
+                  <a href="https://inspirehep.net/authors/{{ author.inspirehep }}" target="_blank">
+                        INSPIRE-HEP <span class="user-id">{{ author.inspirehep }}</span>
                   </a>
             </dd>
             {% endif %}
@@ -119,22 +120,22 @@
             {% if author.bitbucket %}
             <dt><i class="fa-brands fa-fw fa-bitbucket" aria-hidden="true"></i>
             <dd class="author__desktop">
-                  <a href="https://bitbucket.org/{{ author.bitbucket }}">
-                        Bitbucket
+                  <a href="https://bitbucket.org/{{ author.bitbucket }}" target="_blank">
+                        Bitbucket <span class="user-id">{{ author.bitbucket }}</span>
                   </a>
             {% endif %}
             {% if author.github %}
             <dt><i class="fa-brands fa-fw fa-github" aria-hidden="true"></i>
             <dd class="author__desktop">
-                  <a href="https://github.com/{{ author.github }}" target="_blank">
-                        GitHub
+                  <a href="https://github.com/{{ author.github | remove: '@' }}" target="_blank">
+                        GitHub <span class="user-id">{{ author.github }}</span>
                   </a>
             {% endif %}
             {% if author.stackoverflow %}
             <dt><i class="fa-brands fa-fw fa-stack-overflow" aria-hidden="true"></i>
             <dd class="author__desktop">
                   <a href="https://www.stackoverflow.com/users/{{ author.stackoverflow }}">
-                        Stackoverflow
+                        Stackoverflow <span class="user-id">{{ author.stackoverflow }}</span>
                   </a>
             {% endif %}
 
@@ -143,42 +144,42 @@
             <dt><i class="fa-brands fa-fw fa-linkedin" aria-hidden="true"></i>
             <dd class="author__desktop">
                   <a href="https://www.linkedin.com/in/{{ author.linkedin }}" target="_blank">
-                        LinkedIn
+                        LinkedIn <span class="user-id">{{ author.linkedin }}</span>
                   </a>
             {% endif %}
             {% if author.bluesky %}
             <dt><i class="fa-brands fa-fw fa-bluesky" aria-hidden="true"></i>
             <dd class="author__desktop">
-                  <a href="https://bsky.app/profile/{{ author.bluesky }}" target="_blank">
-                        Bluesky
+                  <a href="https://bsky.app/profile/{{ author.bluesky | remove: '@' }}" target="_blank">
+                        Bluesky <span class="user-id">{{ author.bluesky }}</span>
                   </a>
             {% endif %}
             {% if author.instagram %}
             <dt><i class="fa-brands fa-fw fa-instagram" aria-hidden="true"></i>
             <dd class="author__desktop">
-                  <a href="https://instagram.com/{{ author.instagram }}" target="_blank">
-                        Instagram
+                  <a href="https://instagram.com/{{ author.instagram | remove: '@' }}" target="_blank">
+                        Instagram <span class="user-id">{{ author.instagram }}</span>
                   </a>
             {% endif %}
             {% if author.twitter %}
             <dt><i class="fa-brands fa-fw fa-x-twitter" aria-hidden="true"></i>
             <dd class="author__desktop">
-                  <a href="https://twitter.com/{{ author.twitter }}">
-                        X/Twitter
+                  <a href="https://twitter.com/{{ author.twitter }}" target="_blank">
+                        X/Twitter <span class="user-id">{{ author.twitter }}</span>
                   </a>
             {% endif %}
             {% if author.wikipedia %}
             <dt><i class="fa-brands fa-fw fa-wikipedia-w" aria-hidden="true"></i>
             <dd class="author__desktop">
-                  <a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}">
-                        Wikipedia
+                  <a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}" target="_blank">
+                        Wikipedia <span class="user-id">{{ author.wikipedia }}</span>
                   </a>
             {% endif %}
             {% if author.youtube %}
             <dt><i class="fa-brands fa-fw fa-youtube" aria-hidden="true"></i>
             <dd class="author__desktop">
-                  <a href="https://www.youtube.com/@{{ author.youtube }}">
-                        YouTube
+                  <a href="https://www.youtube.com/{{ author.youtube }}" target="_blank">
+                        YouTube <span class="user-id">{{ author.youtube }}</span>
                   </a>
             {% endif %}
       </dl>
