@@ -68,10 +68,8 @@
   border: 2px solid var(--global-dark-border-color);
   border-radius: $border-radius-double;
   padding: var(--quarter-baseline);
-  margin: 0;
-  white-space: pre-wrap;
-  word-wrap: break-word;
   color: var(--global-code-text-color);
+  margin: 0;
 }
 
 .modal-footer {

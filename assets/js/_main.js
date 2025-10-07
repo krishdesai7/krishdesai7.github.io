@@ -76,8 +76,13 @@ window.copyToClipboard = async function (btn) {
 let currentBiblatexUrl = '';
 let currentBiblatexContent = '';
 
+function formatBiblatexForDisplay(content) {
+  // Prevent breaks between the assignment operator and opening brace so the URL stays attached.
+  return content.replace(/ = \{/g, ' =\u00a0{');
+}
+
 window.showBiblatexModal = async function (biblatexUrl) {
-  const modal = document.getElementById('bibla  tex-modal');
+  const modal = document.getElementById('biblatex-modal');
   const contentEl = document.getElementById('biblatex-content');
   if (!modal || !contentEl) return;
 
@@ -86,7 +91,7 @@ window.showBiblatexModal = async function (biblatexUrl) {
   try {
     const res = await fetch(biblatexUrl);
     currentBiblatexContent = await res.text();
-    contentEl.textContent = currentBiblatexContent;
+    contentEl.textContent = formatBiblatexForDisplay(currentBiblatexContent);
   } catch (err) {
     currentBiblatexContent = '';
     contentEl.textContent = 'Error loading BibLaTeX content';
