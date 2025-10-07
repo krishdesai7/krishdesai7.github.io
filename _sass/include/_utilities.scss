@@ -39,11 +39,7 @@
     /* Icon spacing helper used in author profile */
     .icon-pad-right { padding-right: 0.5em; }
           
-    /* Inline code tone-down in running text */
-    code, kbd, samp {
-      font-family: $monospace;
-      font-feature-settings: "liga" 0, "clig" 0;
-      }
+
         
     /* Minimal utility text alignment */
     .text-left   { text-align: left; }

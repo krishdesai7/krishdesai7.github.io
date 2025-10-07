@@ -1,42 +1,7 @@
-/* ==========================================================================
-   Typography & Core
-   ========================================================================== */
 
-/* Used to set the size for <em> */
-$doc-font-size      : 16;
-
-
-$paragraph-indent   : true;
-$indent-var         : 1.3em;
-
-$serif              : "Cochineal", Georgia, serif;
-$sans-serif         : "Heliotrope", -apple-system, sans-serif;
-$sans-serif-caps    : "Heliotrope Caps", -apple-system, sans-serif;
-$monospace          : "Berkeley Mono", "SFMono-Regular", monospace;
-
-$font-size-40       : 2.441em;  // 1
-$font-size-32       : 1.953em;  // 2
-$font-size-25       : 1.563em;  // 3
-$font-size-20       : 1.25em;   // 4
-$font-size-18       : 1.125em;  // 4.5
-$font-size-16       : 1em;      // 5
-$font-size-14       : 0.875em;  // 5.5
-$font-size-12       : 0.75em;   // 6
-$font-size-11       : 0.6875em; // 7
-$font-size-10       : 0.625em;  // 8
-
-$global-font-family      : $serif;
-$header-font-family-caps : $sans-serif-caps;
-$header-font-family      : $sans-serif;
-$caption-font-family     : $serif;
-$nav-font-family         : $sans-serif-caps;
-$code-font-family        : $monospace;
-$footer-font-family      : $monospace;
-$button-font-family      : $sans-serif;
-
-$global-font-size        : $font-size-16;
-
-/* Other basic settings for the template */
+/* Typographic settings for the template */
+$paragraph-indent        : true;
+$indent-var              : 1.3em;
 $border-radius-single    : 4px;
 $border-radius-double    : 8px;
 $masthead-height         : 70px;
@@ -45,17 +10,6 @@ $masthead-height         : 70px;
 $box-shadow              : 8px 8px 0 0 var(--global-dark-border-color),
                            8px 8px 0 1px var(--global-border-color),
                            16px 16px 25px rgba(0, 0, 0, 0.18);
-
-/* ==========================================================================
-   Breakpoints
-   ========================================================================== */
-
-@include breakpoint-set("to ems", true);
-$small        : 600px !default;
-$medium       : 768px !default;
-$medium-wide  : 900px !default;
-$large        : 925px !default;
-$x-large      : 1280px !default;
 
 /* ==========================================================================
    Grid

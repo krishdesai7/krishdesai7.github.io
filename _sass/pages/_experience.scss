@@ -1,3 +1,5 @@
+@use "../design/" as *;
+
 .experience-item {
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -82,27 +84,6 @@ html[data-theme="dark"] {
 
     .logo-dark {
       display: block;
-    }
-  }
-}
-
-@media (max-width: $small) {
-  .experience-item {
-    grid-template-columns: 1fr;
-    gap: var(--half-baseline);
-  }
-
-  .experience-logo {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto var(--half-baseline) auto;
-  }
-
-  .experience-details {
-    flex-direction: column;
-    > .experience-dates {
-      margin-left: 0;
-      margin-top: var(--quarter-baseline);
     }
   }
 }

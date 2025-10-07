@@ -3,7 +3,7 @@
    em function
    ========================================================================== */
 
-@function em($target, $context: $doc-font-size) {
+@function em($target, $context: $global-font-size) {
   @return ($target / $context) * 1em;
 }
 

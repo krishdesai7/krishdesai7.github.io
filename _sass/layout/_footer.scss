@@ -1,3 +1,5 @@
+@use "../design/" as *;
+
 .page__footer {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); /* left | center | right */

@@ -1,3 +1,5 @@
+@use "../design/" as *;
+
 .talks-grid {
   margin-top: var(--baseline);
 }

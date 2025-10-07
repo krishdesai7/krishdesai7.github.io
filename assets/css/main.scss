@@ -1,29 +1,24 @@
 ---
 ---
-@import
-    "vendor/breakpoint/breakpoint",
+@use "design/" as *;
+@use "fonts" as *;
+@use "themes" as *;
+@use "breakpoints" as *;
+@use "include/mixins" as *;
 
-    "fonts",
-    "themes",
-    "breakpoints",
-    
-    "include/mixins",
-    "vendor/susy/susy",
-    "layout/global",
-    "layout/reset",
-    "layout/base",
-
-    "include/utilities",
-    "layout/masthead",
-    "layout/home",
-    "layout/footer",
-
-    "pages/about",
-    "layout/icons",
-    "pages/publications",
-    "pages/talks",
-    "pages/teaching",
-    "pages/experience",
-    "pages/cv",
-    "modal"
-;
+/* These mostly emit CSS; using them without a namespace is fine */
+@use "layout/global";
+@use "layout/reset";
+@use "layout/base";
+@use "include/utilities";
+@use "layout/masthead";
+@use "layout/home";
+@use "layout/footer";
+@use "pages/about";
+@use "layout/icons";
+@use "pages/publications";
+@use "pages/talks";
+@use "pages/teaching";
+@use "pages/experience";
+@use "pages/cv";
+@use "modal";

@@ -1,3 +1,44 @@
+// Font families
+
+$serif              : "Cochineal", Georgia, serif;
+$sans-serif         : "Heliotrope", -apple-system, sans-serif;
+$sans-serif-caps    : "Heliotrope Caps", -apple-system, sans-serif;
+$monospace          : "Berkeley Mono", "SFMono-Regular", monospace;
+
+$global-font-family      : $serif;
+$header-font-family-caps : $sans-serif-caps;
+$header-font-family      : $sans-serif;
+$caption-font-family     : $serif;
+$nav-font-family         : $sans-serif-caps;
+$code-font-family        : $monospace;
+$biblatex-font-family    : $monospace;
+$footer-font-family      : $monospace;
+$button-font-family      : $sans-serif;
+
+
+// Font sizes
+@use 'sass:math';
+$global-font-size: 1rem !default;   // 16px root = 1rem
+$type-scale-ratio: 1.25 !default;
+
+// Returns base * ratio^steps
+@function ms($steps) {
+  @return $global-font-size * math.pow($type-scale-ratio, $steps);
+}
+
+$font-size-40: ms(4);
+$font-size-32: ms(3);
+$font-size-25: ms(2);
+$font-size-20: ms(1);
+$font-size-18: ms(0.5);
+$font-size-16: ms(0);
+$font-size-14: ms(-0.5);
+$font-size-12: ms(-1);
+$font-size-11: ms(-1.25);
+$font-size-10: ms(-1.5);
+
+// Font weights
+
 $weight-light: 300;
 $weight-regular: 400;
 $weight-medium: 500;
@@ -6,177 +47,188 @@ $weight-bold: 700;
 $weight-black: 800;
 $weight-all: 100 900;
 
-/* ---------------------------
-   Cochineal — body text
-   --------------------------- */
-   @font-face {
-    font-family: 'Cochineal';
-    src: url('/assets/fonts/cochineal/woff2/Cochineal-Roman.woff2') format('woff2');
-    font-weight: $weight-regular;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Cochineal';
-    src: url('/assets/fonts/cochineal/woff2/Cochineal-Italic.woff2') format('woff2');
-    font-weight: $weight-regular;
-    font-style: italic;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Cochineal';
-    src: url('/assets/fonts/cochineal/woff2/Cochineal-Bold.woff2') format('woff2');
-    font-weight: $weight-bold;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Cochineal';
-    src: url('/assets/fonts/cochineal/woff2/Cochineal-BoldItalic.woff2') format('woff2');
-    font-weight: $weight-bold;
-    font-style: italic;
-    font-display: swap;
-  }
-  /* ---------------------------
-     Heliotrope — headers/nav
-     --------------------------- */
-  @font-face {
-    font-family: 'Heliotrope';
-    src: url('/assets/fonts/heliotrope/woff2/heliotrope_3_regular.woff2') format('woff2');
-    font-weight: $weight-light;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Heliotrope';
-    src: url('/assets/fonts/heliotrope/woff2/heliotrope_4_regular.woff2') format('woff2');
-    font-weight: $weight-regular;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Heliotrope';
-    src: url('/assets/fonts/heliotrope/woff2/heliotrope_6_regular.woff2') format('woff2');
-    font-weight: $weight-semibold;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Heliotrope';
-    src: url('/assets/fonts/heliotrope/woff2/heliotrope_8_regular.woff2') format('woff2');
-    font-weight: $weight-black;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Heliotrope';
-    src: url('/assets/fonts/heliotrope/woff2/heliotrope_3_italic.woff2') format('woff2');
-    font-weight: $weight-light;
-    font-style: italic;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Heliotrope';
-    src: url('/assets/fonts/heliotrope/woff2/heliotrope_4_italic.woff2') format('woff2');
-    font-weight: $weight-regular;
-    font-style: italic;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Heliotrope';
-    src: url('/assets/fonts/heliotrope/woff2/heliotrope_6_italic.woff2') format('woff2');
-    font-weight: $weight-semibold;
-    font-style: italic;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Heliotrope';
-    src: url('/assets/fonts/heliotrope/woff2/heliotrope_8_italic.woff2') format('woff2');
-    font-weight: $weight-black;
-    font-style: italic;
-    font-display: swap;
-  }
+/* -----------------------------------------
+    Font face imports
+   ----------------------------------------- */
+
+// Cochineal — body text
+
+@font-face {
+  font-family: 'Cochineal';
+  src: url('/assets/fonts/cochineal/woff2/Cochineal-Roman.woff2') format('woff2');
+  font-weight: $weight-regular;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cochineal';
+  src: url('/assets/fonts/cochineal/woff2/Cochineal-Italic.woff2') format('woff2');
+  font-weight: $weight-regular;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cochineal';
+  src: url('/assets/fonts/cochineal/woff2/Cochineal-Bold.woff2') format('woff2');
+  font-weight: $weight-bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cochineal';
+  src: url('/assets/fonts/cochineal/woff2/Cochineal-BoldItalic.woff2') format('woff2');
+  font-weight: $weight-bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+// Heliotrope — headers/nav
+
+@font-face {
+  font-family: 'Heliotrope';
+  src: url('/assets/fonts/heliotrope/woff2/heliotrope_3_regular.woff2') format('woff2');
+  font-weight: $weight-light;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Heliotrope';
+  src: url('/assets/fonts/heliotrope/woff2/heliotrope_4_regular.woff2') format('woff2');
+  font-weight: $weight-regular;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Heliotrope';
+  src: url('/assets/fonts/heliotrope/woff2/heliotrope_6_regular.woff2') format('woff2');
+  font-weight: $weight-semibold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Heliotrope';
+  src: url('/assets/fonts/heliotrope/woff2/heliotrope_8_regular.woff2') format('woff2');
+  font-weight: $weight-black;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Heliotrope';
+  src: url('/assets/fonts/heliotrope/woff2/heliotrope_3_italic.woff2') format('woff2');
+  font-weight: $weight-light;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Heliotrope';
+  src: url('/assets/fonts/heliotrope/woff2/heliotrope_4_italic.woff2') format('woff2');
+  font-weight: $weight-regular;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Heliotrope';
+  src: url('/assets/fonts/heliotrope/woff2/heliotrope_6_italic.woff2') format('woff2');
+  font-weight: $weight-semibold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Heliotrope';
+  src: url('/assets/fonts/heliotrope/woff2/heliotrope_8_italic.woff2') format('woff2');
+  font-weight: $weight-black;
+  font-style: italic;
+  font-display: swap;
+}
   
-  /* Small caps cuts as their own family for easy targeting */
-  @font-face {
-    font-family: 'Heliotrope Caps';
-    src: url('/assets/fonts/heliotrope/woff2/heliotrope_4_caps_regular.woff2') format('woff2');
-    font-weight: $weight-regular;
-    font-style: normal;
-    font-variant: small-caps;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Heliotrope Caps';
-    src: url('/assets/fonts/heliotrope/woff2/heliotrope_8_caps_regular.woff2') format('woff2');
-    font-weight: $weight-black;
-    font-style: normal;
-    font-variant: small-caps;
-    font-display: swap;
-  }
+/* Small caps cuts as their own family for easy targeting */
+@font-face {
+  font-family: 'Heliotrope Caps';
+  src: url('/assets/fonts/heliotrope/woff2/heliotrope_4_caps_regular.woff2') format('woff2');
+  font-weight: $weight-regular;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Heliotrope Caps';
+  src: url('/assets/fonts/heliotrope/woff2/heliotrope_8_caps_regular.woff2') format('woff2');
+  font-weight: $weight-black;
+  font-style: normal;
+  font-display: swap;
+}
   
-  /* ---------------------------
-     Berkeley Mono — monospace
-     --------------------------- */
-  
-  /* Variable (normal) */
-  @font-face {
-    font-family: 'Berkeley Mono';
-    src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMonoVariable-Regular.woff2') format('woff2');
-    font-weight: $weight-all; /* wide range; the font will clamp internally */
-    font-style: normal;
-    font-display: swap;
+// Berkeley Mono — monospace
+
+/* Variable (normal) */
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMonoVariable-Regular.woff2') format('woff2');
+  font-weight: $weight-all; /* wide range; the font will clamp internally */
+  font-style: normal;
+  font-display: swap;
+}
+/* Variable (italic) */
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMonoVariable-Italic.woff2') format('woff2');
+  font-weight: $weight-all;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Static fallbacks (ensure exact matches for common weights/styles) */
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMono-Regular.woff2') format('woff2');
+  font-weight: $weight-regular;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMono-Italic.woff2') format('woff2');
+  font-weight: $weight-regular;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMono-Bold.woff2') format('woff2');
+  font-weight: $weight-bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMono-BoldItalic.woff2') format('woff2');
+  font-weight: $weight-bold;
+  font-style: italic;
+  font-display: swap;
+}
+/* Optional oblique faces (you have them; only include if you’ll use font-style: oblique) */
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMono-Oblique.woff2') format('woff2');
+  font-weight: $weight-regular;
+  font-style: oblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMono-Bold-Oblique.woff2') format('woff2');
+  font-weight: $weight-bold;
+  font-style: oblique;
+  font-display: swap;
+}
+
+/* -----------------------------------------
+   Global typography overrides (anti-synthesis)
+   Keeps browsers from fabricating small-caps/italic/bold,
+   ----------------------------------------- */
+@layer overrides {
+  :root, html, body {
+    font-synthesis: none;                       /* no fake bold/italic/small-caps */
+    font-variant-caps: normal;                  /* do not auto-enable small-caps */
+    font-feature-settings: "smcp" 0, "c2sc" 0;  /* keep OT small-caps off by default */
   }
-  /* Variable (italic) */
-  @font-face {
-    font-family: 'Berkeley Mono';
-    src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMonoVariable-Italic.woff2') format('woff2');
-    font-weight: $weight-all;
-    font-style: italic;
-    font-display: swap;
-  }
-  
-  /* Static fallbacks (ensure exact matches for common weights/styles) */
-  @font-face {
-    font-family: 'Berkeley Mono';
-    src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMono-Regular.woff2') format('woff2');
-    font-weight: $weight-regular;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Berkeley Mono';
-    src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMono-Italic.woff2') format('woff2');
-    font-weight: $weight-regular;
-    font-style: italic;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Berkeley Mono';
-    src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMono-Bold.woff2') format('woff2');
-    font-weight: $weight-bold;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Berkeley Mono';
-    src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMono-BoldItalic.woff2') format('woff2');
-    font-weight: $weight-bold;
-    font-style: italic;
-    font-display: swap;
-  }
-  /* Optional oblique faces (you have them; only include if you’ll use font-style: oblique) */
-  @font-face {
-    font-family: 'Berkeley Mono';
-    src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMono-Oblique.woff2') format('woff2');
-    font-weight: $weight-regular;
-    font-style: oblique;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Berkeley Mono';
-    src: url('/assets/fonts/berkeley-mono/woff2/BerkeleyMono-Bold-Oblique.woff2') format('woff2');
-    font-weight: $weight-bold;
-    font-style: oblique;
-    font-display: swap;
-  }
+}
