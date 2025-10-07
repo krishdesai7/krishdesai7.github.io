@@ -22,18 +22,3 @@
   display: flex;
   gap: var(--half-baseline);
 }
-
-/* Responsive footer styles */
-@include mobile-only {
-  .page__footer {
-    grid-template-columns: 1fr;
-    row-gap: var(--half-baseline);
-    justify-items: center;
-    text-align: center;
-    padding: var(--half-baseline);
-
-    .page__footer-links {
-      justify-self: center;
-    }
-  }
-}

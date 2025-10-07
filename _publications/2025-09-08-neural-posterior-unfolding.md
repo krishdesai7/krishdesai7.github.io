@@ -7,7 +7,7 @@ permalink: /publication/2025-09-08-neural-posterior-unfolding
 date: 2025-09-08
 venue: 'arXiv:2509.06370'
 paperurl: 'https://www.desai.ml/files/neural-posterior-unfolding-preprint-paper.pdf'
-bibtexurl: 'https://www.desai.ml/files/neural-posterior-unfolding-preprint-biblatex.bib'
+biblatexurl: 'https://www.desai.ml/files/neural-posterior-unfolding-preprint-biblatex.bib'
 citation: 'Desai, K. Neural Posterior Unfolding. <i>arXiv:2509.06370</i> (2025).'
 authors: 'Fernando Torales Acosta, Jay Chan, <strong>Krish Desai</strong>, Vinicius Mikuni, Benjamin Nachman, Jingjing Pan, Francesco Rubbo'
 code: 'https://github.com/jp2555/NPU'

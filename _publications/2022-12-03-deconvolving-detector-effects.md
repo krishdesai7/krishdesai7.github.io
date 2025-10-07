@@ -8,7 +8,7 @@ date: 2022-12-03
 venue: 'Thirty-Sixth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track'
 slidesurl: 'https://www.desai.ml/files/deconvolving-detector-effects-distribution-moments-slides.pdf'
 paperurl: 'https://www.desai.ml/files/deconvolving-detector-effects-distribution-moments-paper.pdf'
-bibtexurl: 'https://www.desai.ml/files/deconvolving-detector-effects-distribution-moments-biblatex.bib'
+biblatexurl: 'https://www.desai.ml/files/deconvolving-detector-effects-distribution-moments-biblatex.bib'
 citation: 'Desai, K., Nachman, B., and Thaler, J. Deconvolving Detector Effects for Distribution Moments. <i>NeurIPS</i> ML4PS 43 (2022).'
 authors: '<strong>Krish Desai</strong>, Benjamin Nachman, and Jesse Thaler'
 code: 'https://github.com/HEP-GAN/MomentUnfolding'

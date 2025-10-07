@@ -59,9 +59,19 @@
 
 .experience-content ul {
   text-wrap: pretty;
-  gap: var(--baseline);
-  list-style: "– ";
+  list-style: none;
+  li {
+    position: relative;
+    padding-left: var(--baseline);
+    &::before {
+      content: "\2012";
+      position: absolute;
+      left: 0;
+    }
+  }
 }
+
+
 
 // Dark mode logo switching
 html[data-theme="dark"] {

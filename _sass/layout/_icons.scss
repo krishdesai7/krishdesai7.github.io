@@ -29,7 +29,7 @@
   fill: currentColor;
 }
 
-.icon-pdf, .icon-bibtex, .icon-ppt{
+.icon-pdf, .icon-biblatex, .icon-ppt{
   display: inline-flex;
   align-items: center;
   width: $global-font-size;
@@ -41,11 +41,11 @@
 
 .icon-pdf__paper,
 .icon-pdf__glyph,
-.icon-bibtex__accent {
+.icon-biblatex__accent {
   fill: var(--global-text-color);
 }
 
-.icon-bibtex__paper {
+.icon-biblatex__paper {
   fill: var(--biblatex-color);
 }
 

@@ -27,6 +27,11 @@
 .teaching-materials ul {
     display: flex;
     gap: var(--baseline);
+    margin: 0;
+    padding: 0;
+    li:first-child {
+      list-style: none;
+    }
 }
 
 // Singel course page
@@ -41,7 +46,6 @@
       grid-column: 1;
       justify-self: end;
     }
-
     .meta-value {
       grid-column: 2;
       margin: 0;
@@ -51,6 +55,9 @@
         gap: var(--baseline);
         margin: 0;
         padding: 0;
+        li:first-child {
+          list-style: none;
+        }
       }
     }
   }

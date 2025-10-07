@@ -3,6 +3,7 @@ locale                   : "en-US"
 site_theme               : "default"
 title                    : "Krish Desai"
 title_separator          : "-"
+baseurl                  : ""
 name                     : &name "Krish Desai, PhD"
 description              : &description "Machine Learning Researcher"
 url                      : "https://www.desai.ml"
@@ -54,6 +55,7 @@ google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
+twitter.username         : "krishdesai7"
 
 # Analytics
 analytics:

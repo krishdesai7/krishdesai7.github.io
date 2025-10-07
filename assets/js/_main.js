@@ -72,39 +72,39 @@ window.copyToClipboard = async function (btn) {
   markCopied(btn, 1000);
 };
 
-// ===== BIBTEX MODAL =====
-let currentBibtexUrl = '';
-let currentBibtexContent = '';
+// ===== BIBLATEX MODAL =====
+let currentBiblatexUrl = '';
+let currentBiblatexContent = '';
 
-window.showBibtexModal = async function (bibtexUrl) {
-  const modal = document.getElementById('bibtex-modal');
-  const contentEl = document.getElementById('bibtex-content');
+window.showBiblatexModal = async function (biblatexUrl) {
+  const modal = document.getElementById('bibla  tex-modal');
+  const contentEl = document.getElementById('biblatex-content');
   if (!modal || !contentEl) return;
 
-  currentBibtexUrl = bibtexUrl;
+  currentBiblatexUrl = biblatexUrl;
 
   try {
-    const res = await fetch(bibtexUrl);
-    currentBibtexContent = await res.text();
-    contentEl.textContent = currentBibtexContent;
+    const res = await fetch(biblatexUrl);
+    currentBiblatexContent = await res.text();
+    contentEl.textContent = currentBiblatexContent;
   } catch (err) {
-    currentBibtexContent = '';
-    contentEl.textContent = 'Error loading BibTeX content';
-    console.error('Error fetching BibTeX:', err);
+    currentBiblatexContent = '';
+    contentEl.textContent = 'Error loading BibLaTeX content';
+    console.error('Error fetching BibLaTeX:', err);
   }
 
   modal.classList.add('show');
 };
 
-function closeBibtexModal() {
-  const modal = document.getElementById('bibtex-modal');
+function closeBiblatexModal() {
+  const modal = document.getElementById('biblatex-modal');
   if (modal) modal.classList.remove('show');
 }
 
-function downloadBibtex() {
-  if (!currentBibtexContent) return;
-  const filename = (currentBibtexUrl?.split('/')?.pop()) || 'citation.bib';
-  const blob = new Blob([currentBibtexContent], { type: 'text/plain' });
+function downloadBiblatex() {
+  if (!currentBiblatexContent) return;
+  const filename = (currentBiblatexUrl?.split('/')?.pop()) || 'citation.bib';
+  const blob = new Blob([currentBiblatexContent], { type: 'text/plain' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
@@ -118,27 +118,27 @@ function downloadBibtex() {
 window.addEventListener('DOMContentLoaded', () => {
   // Modal buttons
   const btnClose = document.querySelector('.modal-close');
-  const btnDownload = document.getElementById('bibtex-download');
-  const btnCopy = document.getElementById('bibtex-copy');
-  const modal = document.getElementById('bibtex-modal');
+  const btnDownload = document.getElementById('biblatex-download');
+  const btnCopy = document.getElementById('biblatex-copy');
+  const modal = document.getElementById('biblatex-modal');
 
-  if (btnClose) btnClose.addEventListener('click', closeBibtexModal);
-  if (btnDownload) btnDownload.addEventListener('click', downloadBibtex);
+  if (btnClose) btnClose.addEventListener('click', closeBiblatexModal);
+  if (btnDownload) btnDownload.addEventListener('click', downloadBiblatex);
   if (btnCopy) btnCopy.addEventListener('click', async () => {
-    if (!currentBibtexContent) return;
-    await copyText(currentBibtexContent);
+    if (!currentBiblatexContent) return;
+    await copyText(currentBiblatexContent);
     markCopied(btnCopy, 2000);
   });
 
   // Close when clicking backdrop
   if (modal) {
     modal.addEventListener('click', e => {
-      if (e.target === modal) closeBibtexModal();
+      if (e.target === modal) closeBiblatexModal();
     });
   }
 
   // Close with Escape
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeBibtexModal();
+    if (e.key === 'Escape') closeBiblatexModal();
   });
 });

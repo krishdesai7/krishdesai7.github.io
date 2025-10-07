@@ -43,47 +43,6 @@ body {
     soft-light, soft-light,
     normal;
 }
-/* LIGHT THEME: warm-ink gold weave */
-html:not([data-theme="dark"]) body {
-  --bg: var(--global-bg-color);
-  --rib: 3.2px;
-
-  /* Use your existing tokens if you prefer: amber-500 ≈ #f59e0b */
-  --gold: 42 92% 99%;
-  --gold-alpha-1: .22;  /* main diagonal */
-  --gold-alpha-2: .14;  /* counter diagonal */
-  --grain-alpha: .16;   /* micro grain strength */
-
-  background-image:
-    repeating-linear-gradient(
-      45deg,
-      hsl(var(--gold) / var(--gold-alpha-1)) 0 var(--rib),
-      transparent var(--rib) calc(var(--rib) * 2)
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      hsl(var(--gold) / var(--gold-alpha-2)) 0 var(--rib),
-      transparent var(--rib) calc(var(--rib) * 2)
-    ),
-    radial-gradient(circle, rgba(80,60,30,var(--grain-alpha)) 1px, transparent 1px),
-    linear-gradient(var(--bg), var(--bg));
-
-  background-size:
-    auto, auto, 3px 3px, auto;
-  background-position:
-    0 0, 0 0, 0 0, 0 0;
-  background-repeat:
-    repeat, repeat, repeat, no-repeat;
-
-  background-blend-mode:
-    soft-light, soft-light,
-    soft-light, soft-light,
-    normal;
-}
-
-
-
-
 
 body {
   color: var(--global-text-color);
@@ -173,20 +132,8 @@ td > code {
 /* horizontal rule */
 
 hr.divider {
-    border: 1px solid var(--global-dark-border-color);
+    border: 0.5px solid var(--global-border-color);
   }
-/* lists */
-
-ul {
-  list-style: none;
-  font-family: $header-font-family;
-  font-size: $font-size-14;
-  overflow-x: visible;
-  text-wrap: nowrap;
-  & li {
-    margin-bottom: var(--third-baseline);
-  }
-}
 
 :root {
   /* Base line height unit for vertical rhythm */

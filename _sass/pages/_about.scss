@@ -1,5 +1,6 @@
 .about-layout {
   display: grid;
+  grid-template-columns: 2fr 1fr;
   gap: 2rem;
   margin: 0 auto;
   dl dt {
@@ -7,19 +8,23 @@
     font-family: $header-font-family-caps;
     padding-top: var(--third-baseline);
     }
+}
 
-  @include mobile-only {
-    grid-template-columns: 1fr;
-    padding: 1rem;
+.author__urls {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--quarter-baseline);
+  dt, dd {
+    margin: 0;
+    text-wrap: nowrap;
   }
-  
-  @include tablet-only {
-    grid-template-columns: 1fr;
-    padding: 1.5rem;
+  dt {
+    padding-bottom: var(--quarter-baseline);
   }
-  
-  @include desktop-only {
-    grid-template-columns: 2fr 1fr;
+  hr.divider {
+    grid-column: 1 / -1;
+    margin: var(--quarter-baseline);
   }
 }
 
@@ -33,4 +38,9 @@
       box-shadow: $box-shadow;
     }
   }
+}
+
+.author__content .author__bio {
+  margin: 0;
+  padding: 0;
 }

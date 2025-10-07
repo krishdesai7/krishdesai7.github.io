@@ -79,21 +79,21 @@
         "publisher": "European Physical Journal C",
         "date": "2025-10-01",
         "pdf": "https://www.desai.ml/files/unbinned-inference-with-correlated-events-paper.pdf",
-        "bibtex": "https://www.desai.ml/files/unbinned-inference-with-correlated-events-biblatex.bib"
+        "biblatex": "https://www.desai.ml/files/unbinned-inference-with-correlated-events-biblatex.bib"
       },
       "Neural Posterior Unfolding (Preprint)": {
         "authors": "Fernando Torales Acosta, Jay Chan, **Krish Desai**, Vinicius Mikuni, Benjamin Nachman, and Jingjing Pan",
         "publisher": "arXiv:2509.06370",
         "date": "2025-09-08",
         "pdf": "https://www.desai.ml/files/neural-posterior-unfolding-preprint-paper.pdf",
-        "bibtex": "https://www.desai.ml/files/neural-posterior-unfolding-preprint-biblatex.bib"
+        "biblatex": "https://www.desai.ml/files/neural-posterior-unfolding-preprint-biblatex.bib"
       },
       "Machine Learning Methods for Cross Section Measurements": {
         "authors": "**Krish Desai**",
         "publisher": "University of California, Berkeley",
         "date": "2025-08-15",
         "pdf": "https://www.desai.ml/files/machine-learning-methods-for-cross-section-measurements-paper.pdf",
-        "bibtex": "https://www.desai.ml/files/machine-learning-methods-for-cross-section-measurements-biblatex.bib",
+        "biblatex": "https://www.desai.ml/files/machine-learning-methods-for-cross-section-measurements-biblatex.bib",
         "note": "PhD (Physics) Dissertation"
       },
       "Moment Unfolding using Deep Learning": {
@@ -101,21 +101,21 @@
         "publisher": "Physical Review D",
         "date": "2024-12-13",
         "pdf": "https://www.desai.ml/files/moment-unfolding-using-deep-learning-paper.pdf",
-        "bibtex": "https://www.desai.ml/files/moment-unfolding-using-deep-learning-biblatex.bib"
+        "biblatex": "https://www.desai.ml/files/moment-unfolding-using-deep-learning-biblatex.bib"
       },
       "Neural Posterior Unfolding": {
         "authors": "Fernando Torales Acosta, Jay Chan, **Krish Desai**, Vinicius Mikuni, Benjamin Nachman, and Jingjing Pan",
         "publisher": "Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
         "date": "2024-12-15",
         "pdf": "https://www.desai.ml/files/neural-posterior-unfolding-neurips-paper.pdf",
-        "bibtex": "https://www.desai.ml/files/neural-posterior-unfolding-neurips-biblatex.bib"
+        "biblatex": "https://www.desai.ml/files/neural-posterior-unfolding-neurips-biblatex.bib"
       },
       "Multidimensional Deconvolution with Profiling": {
         "authors": "Huanbiao Zhu, **Krish Desai**, Mikael Kuusela, Vinicius Mikuni, Benjamin Nachman, and Larry Wasserman",
         "publisher": "Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
         "date": "2024-12-15",
         "pdf": "https://www.desai.ml/files/multidimensional-deconvolution-with-profiling-paper.pdf",
-        "bibtex": "https://www.desai.ml/files/multidimensional-deconvolution-with-profiling-biblatex.bib"
+        "biblatex": "https://www.desai.ml/files/multidimensional-deconvolution-with-profiling-biblatex.bib"
       },
       "Deconvolving Detector Effects for Distribution Moments": {
         "name": "Deconvolving Detector Effects for Distribution Moments",
@@ -123,21 +123,21 @@
         "publisher": "Thirty-Sixth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
         "date": "2022-12-03",
         "pdf": "https://www.desai.ml/files/deconvolving-detector-effects-distribution-moments-paper.pdf",
-        "bibtex": "https://www.desai.ml/files/deconvolving-detector-effects-distribution-moments-biblatex.bib"
+        "biblatex": "https://www.desai.ml/files/deconvolving-detector-effects-distribution-moments-biblatex.bib"
       },
       "SymmetryGAN": {
         "authors": "**Krish Desai**, Benjamin Nachman, and Jesse Thaler",
         "publisher": "Physical Review D",
         "date": "2022-05-24",
         "pdf": "https://www.desai.ml/files/symmetrygan-paper.pdf",
-        "bibtex": "https://www.desai.ml/files/symmetrygan-biblatex.bib"
+        "biblatex": "https://www.desai.ml/files/symmetrygan-biblatex.bib"
       },
       "Oblivious Points on Translation Surfaces": {
         "authors": "Ian Adelstein, **Krish Desai**, Anthony Ji, and Grace Zdeblick",
         "publisher": "Journal of Mathematical Physics",
         "date": "2021-12-16",
         "pdf": "https://www.desai.ml/files/oblivious-points-translation-surfaces-paper.pdf",
-        "bibtex": "https://www.desai.ml/files/oblivious-points-translation-surfaces-biblatex.bib"
+        "biblatex": "https://www.desai.ml/files/oblivious-points-translation-surfaces-biblatex.bib"
       },
       "Symmetry Discovery with Deep Learning": {
         "name": "Symmetry Discovery with Deep Learning",
@@ -145,14 +145,14 @@
         "publisher": "Thirty-Fifth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
         "date": "2021-12-13",
         "pdf": "https://www.desai.ml/files/symmetry-discovery-deep-learning-paper.pdf",
-        "bibtex": "https://www.desai.ml/files/symmetry-discovery-deep-learning-biblatex.bib"
+        "biblatex": "https://www.desai.ml/files/symmetry-discovery-deep-learning-biblatex.bib"
       },
       "Padé Approximants and the Anharmonic Oscillator": {
         "authors": "**Krish Desai**",
         "publisher": "Yale University",
         "date": "2020-05-20",
         "pdf": "https://www.desai.ml/files/pade-approximants-anharmonic-oscillator-paper.pdf",
-        "bibtex": "https://www.desai.ml/files/pade-approximants-anharmonic-oscillator-biblatex.bib",
+        "biblatex": "https://www.desai.ml/files/pade-approximants-anharmonic-oscillator-biblatex.bib",
         "note": "BS and MS (Mathematics, Intensive) Thesis"
       }
     },

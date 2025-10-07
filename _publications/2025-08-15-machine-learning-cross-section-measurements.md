@@ -7,7 +7,7 @@ permalink: /publication/2025-08-15-machine-learning-cross-section-measurements
 date: 2025-08-15
 venue: 'University of California, Berkeley'
 paperurl: 'https://www.desai.ml/files/machine-learning-methods-for-cross-section-measurements-paper.pdf'
-bibtexurl: 'https://www.desai.ml/files/machine-learning-methods-for-cross-section-measurements-biblatex.bib'
+biblatexurl: 'https://www.desai.ml/files/machine-learning-methods-for-cross-section-measurements-biblatex.bib'
 citation: 'Desai, Krish. Machine Learning Methods for Cross Section Measurements. <i>University of California, Berkeley</i>. (2025) PhD Physics Dissertation.'
 authors: '<strong>Krish Desai</strong>'
 ---
