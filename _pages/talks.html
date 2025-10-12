@@ -4,8 +4,6 @@ title: Talks and Presentations
 permalink: /talks/
 author_profile: false
 ---
-
-{% include base_path %}
 {% assign talks_by_year = site.talks | group_by_exp: "post", "post.date | date: '%Y'" | sort: "name" | reverse %}
 
 {% for year_group in talks_by_year %}

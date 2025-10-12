@@ -1,4 +1,3 @@
-{% include base_path %}
 {% assign title = post.title %}
 {% assign schema_type = "https://schema.org/CreativeWork" %}
 
@@ -16,7 +15,7 @@
   </div>
   <div class="publication-item" itemscope itemtype="{{ schema_type }}">
   <h3 class="publication-title" itemprop="name headline">
-    <a href="{{ base_path }}{{ post.url }}" rel="permalink" itemprop="url">{{ title }}</a>
+    <a href="{{ post.url | relative_url }}" rel="permalink" itemprop="url">{{ title }}</a>
   </h3>
 
   <div class="publication-meta">
@@ -41,17 +40,18 @@
       {{ post.authors }}
     </div>
   {% endif %}
-    <div class="publication-citation" itemprop="citation">
-      <div class="citation-block">
-        <div class="citation-header">
-          <span class="citation-label">Recommended Citation</span>
-          <button class="citation-copy-btn" onclick="copyToClipboard(this)" data-citation="{{ post.citation | escape }}">
-            <i class="fa-solid fa-copy"></i>
-          </button>
-        </div>
-        <code class="citation-text">{{ post.citation }}</code>
+  
+  <div class="publication-citation" itemprop="citation">
+    <div class="citation-block">
+      <div class="citation-header">
+        <span class="citation-label">Recommended Citation</span>
+        <button class="citation-copy-btn" onclick="copyToClipboard(this)" data-citation="{{ post.citation | escape }}">
+          <i class="fa-solid fa-copy fa-fw"></i>
+        </button>
       </div>
+      <code class="citation-text">{{ post.citation }}</code>
     </div>
+  </div>
 
   <div class="publication-links">
       <a href="{{ post.paperurl }}" class="publication-link publication-link--paper" target="_blank" rel="noopener">

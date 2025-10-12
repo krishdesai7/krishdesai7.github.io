@@ -1,4 +1,3 @@
-{% include base_path %}
 <div class="teaching-row">
   <div class="teaching-term">
       {{ post.semester }} {{ post.year }}
@@ -6,7 +5,7 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     <div class="teaching-content">
       <h3 class="teaching-title" itemprop="headline">
-          <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+          <a href="{{ post.url | relative_url }}" rel="permalink">{{ post.title }}</a>
       </h3>
       <div class="teaching-details">
         <div class="teaching-metadata">

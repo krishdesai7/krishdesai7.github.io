@@ -1,5 +1,4 @@
 <meta charset="utf-8">
-{% include base_path %}
 {% include seo.html %}
 <!-- Blocking script to prevent dark mode flash - must run before CSS loads -->
 <script>
@@ -51,5 +50,5 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
+<link rel="stylesheet" href="{{'/assets/css/main.css' | relative_url}}">
 <meta http-equiv="cleartype" content="on">

@@ -6,8 +6,6 @@ author_profile: false
 redirect_from:
 - /cv.html
 ---
-
-{% include base_path %}
 {% assign cv = site.data.cv %}
 
 <div class="cv-modern">
@@ -130,7 +128,7 @@ redirect_from:
         <div class="cv-grid-value">
           <ul>
           {% for skill in skill[1] %}
-            <li class="cv-skill-keyword">{{ skill }}</li>
+            <li class="cv-skill-keyword">{{ skill }}
           {% endfor %}
           </ul>
         </div>
