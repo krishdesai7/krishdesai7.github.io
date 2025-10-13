@@ -1,14 +1,11 @@
 ---
 layout: default
 ---
+<!-- Layout for page corresponding to individual talks -->
 <div id="main" role="main">
   <meta itemprop="headline" content="{{ page.title }}">
   <meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">
-
   <div class="page__inner-wrap">
-    <h1 class="page__title" itemprop="headline">
-      {{ page.title }}
-    </h1>
     <div class="talk-meta-single">
         <div class="talk-type-single">{{ page.type }}</div>
         <div class="talk-venue-single">{{ page.venue }}</div>
