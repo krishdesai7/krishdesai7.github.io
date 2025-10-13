@@ -7,4 +7,5 @@ venue: "Young Mathematicians Conference"
 date: 2019-08-09
 location: "Columbus, OH"
 link: https://ymc.math.osu.edu/2019/program.php
+layout: talk
 ---

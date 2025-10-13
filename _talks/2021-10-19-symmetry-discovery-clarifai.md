@@ -7,4 +7,5 @@ venue: "Clarifai Perceive Deep Learning AI Conference"
 date: 2021-10-19
 location: "Virtual"
 link: https://www.accelevents.com/e/clarifaiperceive2021?sessionId=213791&pastSession=true#agenda
+layout: talk
 ---
