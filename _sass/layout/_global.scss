@@ -42,11 +42,16 @@ a {
     text-align: center !important;
   }
 }
+/* Grid Variables */
+:root {
+  --content-base-max-width: 45rem;
+  --content-width-scale: 1;             /* default: no scaling, can be overridden in layout files */
+  --content-max-width: calc(var(--content-base-max-width) * var(--content-width-scale));
+}
 
 #main {
   max-width: var(--content-max-width);
   margin: 0 auto;
-  
 }
 
 @if design.$paragraph-indent == true {
@@ -55,12 +60,6 @@ a {
       margin-top: -(design.$indent-var);
     }
 }
-
-/* Grid Variables */
-:root {
-  --content-max-width: 45rem;
-}
-
 /* Base Grid Container Mixin */
 @mixin grid-container {
   display: grid;

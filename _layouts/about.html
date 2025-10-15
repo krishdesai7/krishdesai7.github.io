@@ -1,13 +1,16 @@
 ---
 layout: default
 ---
+<style>
+  :root {
+    --content-width-scale: 4/3;
+  }
+</style>
+
 <div id="main" role="main">
   <div class="about-layout">
     <meta itemprop="headline" content="{{ page.title }}">
     <div class="page__inner-wrap">
-      <h1 class="page__title" itemprop="headline">
-        {{ page.title }}
-      </h1>
       <section class="page__content" itemprop="text">
         {{ content }}
       </section>

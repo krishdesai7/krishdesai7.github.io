@@ -7,4 +7,5 @@ venue: "Korea Institute for Advanced Study"
 date: 2022-06-30
 location: "Seoul, South Korea"
 link: https://indico.kias.re.kr/event/126/
+layout: talk
 ---

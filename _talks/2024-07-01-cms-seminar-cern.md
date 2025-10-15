@@ -7,4 +7,5 @@ venue: "CERN"
 date: 2024-07-01
 location: "Geneva, Switzerland"
 link: https://indico.cern.ch/event/1357638/#7-unfolding-with-ml-omnifold-t
+layout: talk
 ---
