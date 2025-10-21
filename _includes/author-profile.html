@@ -28,22 +28,30 @@
             <dt><i class="fa-solid fa-map-location-dot fa-fw" aria-hidden="true"></i>
             <dd class="author__desktop">
                   <a href="https://www.google.com/maps/place/{{ author.location }}/" target="_blank" rel="noopener">
-                        {{ author.location }}
+                        <span class="user-name">
+                              {{ author.location }}
+                        </span>
                   </a>
             <dt><i class="fa-solid fa-fw fa-building-columns" aria-hidden="true"></i>
             <dd class="author__desktop">
                   <a href="https://www.lbl.gov" target="_blank" rel="noopener">
-                        {{ author.employer }}
+                        <span class="user-name">
+                              {{ author.employer }}
+                        </span>
                   </a>
             <dt><i class="fa-solid fa-fw fa-link" aria-hidden="true"></i>
             <dd class="author__desktop">
                   <a href="{{ author.uri }}">
-                        Website
+                        <span class="user-name">
+                              Website
+                        </span>
                   </a>
             <dt><i class="fa-solid fa-fw fa-envelope" aria-hidden="true"></i>
             <dd class="author__desktop">
                   <a href="mailto:{{ author.email }}" target="_blank">
-                        E-mail
+                        <span class="user-name">
+                              E-mail
+                        </span>
                   </a>
             </dd>
             <hr class="divider" aria-hidden="true">

@@ -6,7 +6,7 @@
   padding: $masthead-height $masthead-height 0;
 }
 .site-title {
-  font-size: clamp(32px, 6vw, 52px);
+  font-size: clamp($font-size-20, calc($font-size-20 + 2vw), $font-size-40);
   font-variant: small-caps;
   margin-top: 0;
   margin-bottom: 0;

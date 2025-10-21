@@ -138,7 +138,7 @@ hr.divider {
 
 :root {
   /* Base line height unit for vertical rhythm */
-  --baseline: 1.65rem;
+  --baseline: calc(1.65 * #{$font-size-16});
   --quarter-baseline: calc(0.25*var(--baseline));
   --third-baseline: calc(0.333*var(--baseline));
   --half-baseline: calc(0.5*var(--baseline));
