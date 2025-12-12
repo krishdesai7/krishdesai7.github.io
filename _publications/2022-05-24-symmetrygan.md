@@ -11,6 +11,7 @@ biblatexurl: 'https://www.desai.ml/files/symmetrygan-biblatex.bib'
 citation: 'Desai, K., Nachman, B., and Thaler, J. SymmetryGAN. <i>Physical Review D</i>, 105(9), 096031 (2022).'
 authors: '<strong>Krish Desai</strong>, Benjamin Nachman, and Jesse Thaler'
 code: 'https://github.com/hep-lbdl/symmetrygan'
+doi: 10.1103/PhysRevD.105.096031
 ---
 ## Abstract
 

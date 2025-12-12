@@ -83,6 +83,54 @@
         <span class="publication-link__text">Code</span>
       </a>
     {% endif %}
+    {% assign has_extra_links = post.doi or post.url or post.arxiv or post.scix or post.inspirehep %}
+    {% if has_extra_links %}
+      <span class="publication-link__separator" aria-hidden="true">•</span>
+      <details class="publication-extra-links">
+        <summary class="publication-extra-summary">
+          <i class="fa-solid fa-angle-down fa-fw icon-pad-right" aria-hidden="true"></i>
+          <span class="publication-summary__text">Additional Links</span>
+        </summary>
+        <div class="publication-extra-body">
+          <ul class="publication-extra-list">
+            {% if post.doi %}
+              <li>
+                <i class="ai ai-doi ai-fw icon-pad-right" aria-hidden="true"></i>
+                <a href="https://doi.org/{{ post.doi }}" target="_blank" rel="noopener">
+                  {{ post.doi }}
+                </a>
+            {% elsif post.url %}
+              <li>
+                <i class="fa-solid fa-link fa-fw icon-pad-right" aria-hidden="true"></i>
+                <a href="{{ post.url }}" target="_blank" rel="noopener">
+                  URL
+                </a>
+            {% endif %}
+            {% if post.arxiv %}
+              <li>
+                <i class="ai ai-arxiv ai-fw icon-pad-right" aria-hidden="true"></i>
+                <a href="https://arxiv.org/abs/{{ post.arxiv }}" target="_blank" rel="noopener">
+                  arXiv:{{ post.arxiv }}
+                </a>
+            {% endif %}
+            {% if post.scix %}
+              <li>
+                <i class="ai ai-ads ai-fw icon-pad-right" aria-hidden="true"></i>
+                <a href="https://scixplorer.org/abs/{{ post.scix }}" target="_blank" rel="noopener">
+                  scix:{{ post.scix }}
+                </a>
+            {% endif %}
+            {% if post.inspirehep %}
+              <li>
+                <i class="ai ai-inspire ai-fw icon-pad-right" aria-hidden="true"></i>
+                <a href="https://inspirehep.net/literature/{{ post.inspirehep }}" target="_blank" rel="noopener">
+                  InspireHEP:{{ post.inspirehep }}
+                </a>
+            {% endif %}
+          </ul>
+      </div>
+    </details>
+  {% endif %}
   </div>
   </div>
 </div>

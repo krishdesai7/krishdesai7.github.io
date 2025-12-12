@@ -12,6 +12,7 @@ biblatexurl: 'https://www.desai.ml/files/neural-posterior-unfolding-neurips-bibl
 citation: 'Acosta, F. T., Chan, J., Desai, K., Mikuni, V., Nachman, B., and Pan, J. Neural Posterior Unfolding. <i>NeurIPS</i> ML4PS 177 (2024).'
 authors: 'Fernando Torales Acosta, Jay Chan, <strong>Krish Desai</strong>, Vinicius Mikuni, Benjamin Nachman, and Jingjing Pan'
 code: 'https://github.com/jp2555/NPU'
+doi: 10.48550/arXiv.2509.06370
 ---
 ## Abstract
 

@@ -8,6 +8,7 @@ date: 2020-04-20
 venue: 'Yale University'
 paperurl: 'https://www.desai.ml/files/pade-approximants-anharmonic-oscillator-paper.pdf'
 biblatexurl: 'https://www.desai.ml/files/pade-approximants-anharmonic-oscillator-biblatex.bib'
+doi: 10.13140/RG.2.2.28201.71528
 citation: 'Desai, Krish. Padé Approximants and the Anharmonic Oscillator. <i>Yale University</i>. (2020) MS and BS (Mathematics, Intensive) Thesis.'
 authors: '<strong>Krish Desai</strong>'
 ---

@@ -11,6 +11,7 @@ biblatexurl: 'https://www.desai.ml/files/moment-unfolding-using-deep-learning-bi
 citation: 'Desai, K., Nachman, B., and Thaler, J. Moment extraction using an unfolding protocol without binning. <i>Physical Review D</i>, 110(11), 116013 (2024).'
 authors: '<strong>Krish Desai</strong>, Benjamin Nachman, and Jesse Thaler'
 code: 'https://github.com/HEP-GAN/MomentUnfolding'
+doi: 10.1103/PhysRevD.110.116013
 ---
 ## Abstract
 

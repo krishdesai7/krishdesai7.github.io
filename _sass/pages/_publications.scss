@@ -88,6 +88,24 @@
 .publication-links {
   display: flex;
   gap: 0.5rem;
+
+  .publication-extra-summary {
+    list-style: none;
+    cursor: pointer;
+
+    .publication-summary__text {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-decoration-color: var(--global-link-decoration-color);
+      text-underline-offset: 0.24em;
+    }
+  }
+
+  .publication-extra-summary::marker,
+  .publication-extra-summary::-webkit-details-marker {
+    content: "";
+  }
+
   .publication-link {
     display: inline-flex;
     text-decoration: none;

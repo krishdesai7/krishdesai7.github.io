@@ -11,6 +11,7 @@ paperurl: 'https://www.desai.ml/files/oblivious-points-translation-surfaces-pape
 biblatexurl: 'https://www.desai.ml/files/oblivious-points-translation-surfaces-biblatex.bib'
 citation: 'Adelstein, I., Desai, K., Ji, A., and Zdeblick, G. Oblivious points on translation surfaces. <i>Journal of Geometry</i>, 113(1), 6 (2022).'
 authors: 'Ian Adelstein, <strong>Krish Desai</strong>, Anthony Ji, and Grace Zdeblick'
+doi: 10.1007/s00022-021-00620-4
 ---
 ## Abstract
 
