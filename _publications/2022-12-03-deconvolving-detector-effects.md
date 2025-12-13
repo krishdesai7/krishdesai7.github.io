@@ -15,7 +15,7 @@ code: 'https://github.com/HEP-GAN/MomentUnfolding'
 doi: 10.5281/zenodo.17189987
 arxiv: 2407.11284
 scix: 2022APS..APRK08004D
-inpsirehep: 2859282
+inspirehep: 2859282
 ---
 ## Abstract
 
