@@ -46,7 +46,7 @@ excerpt: "Machine learning for physics — unfolding, inference, and practical s
     {% for p in pubs limit:3 %}
       <div class="archive__item">
         <h4 class="archive__item-title">
-          <a href="{{ p.paperurl | default: p.url | relative_url }}">
+          <a href="{{ p.url | relative_url }}">
             {{ p.title | escape }}
           </a>
         </h4>
