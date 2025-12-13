@@ -9,13 +9,14 @@ venue: 'Thirty-Fifth Annual Conference on Neural Information Processing Systems 
 slidesurl: 'https://www.desai.ml/files/symmetry-discovery-deep-learning-slides.pdf'
 paperurl: 'https://www.desai.ml/files/symmetry-discovery-deep-learning-paper.pdf'
 biblatexurl: 'https://www.desai.ml/files/symmetry-discovery-deep-learning-biblatex.bib'
-citation: 'Desai, K., Nachman, B., and Thaler, J. Symmetry Discovery with Deep Learning. <i>NeurIPS</i> ML4PS 117 (2021)'
+citation: 'Desai, K., Nachman, B., and Thaler, J. "Symmetry Discovery with Deep Learning". <i>NeurIPS</i> ML4PS 117 (2021)'
 authors: '<strong>Krish Desai</strong>, Benjamin Nachman, and Jesse Thaler'
 code: 'https://github.com/hep-lbdl/symmetrydiscovery'
 doi: 10.5281/zenodo.17189852
 arxiv: 2112.05722
 scix: 2021APS..APRK17005D
-inspirehep: 1987978
+inspirehep: 1987977
+researchgate: 386873879_Symmetry_Discovery_with_Deep_Learning
 ---
 ## Abstract
 

@@ -13,6 +13,7 @@ authors: 'Emi Soroka, Tanmay Chopra, <strong>Krish Desai</strong>, and Sanjay La
 doi: 10.48550/arXiv.2511.03047
 arxiv: 2511.03047
 scix: 2025arXiv251103047S
+researchgate: 397321829_Unsupervised_Evaluation_of_Multi-Turn_Objective-Driven_Interactions
 ---
 ## Abstract
 

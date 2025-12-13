@@ -15,6 +15,7 @@ doi: 10.1140/epjc/s10052-025-14835-1
 arxiv: 2504.14072
 scix: 2025EPJC...85.1089D
 inspirehep: 2914074
+researchgate: 396102194_Unbinned_inference_with_correlated_events
 ---
 ## Abstract
 

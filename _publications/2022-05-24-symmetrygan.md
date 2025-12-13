@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: "SymmetryGAN"
+title: "SymmetryGAN: Symmetry Discovery with Deep Learning"
 collection: publications
 category: journals
 permalink: /publication/2022-05-24-symmetrygan
@@ -8,13 +8,14 @@ date: 2022-05-24
 venue: 'Physical Review D'
 paperurl: 'https://www.desai.ml/files/symmetrygan-paper.pdf'
 biblatexurl: 'https://www.desai.ml/files/symmetrygan-biblatex.bib'
-citation: 'Desai, K., Nachman, B., and Thaler, J. SymmetryGAN. <i>Physical Review D</i>, 105(9), 096031 (2022).'
+citation: 'Desai, K., Nachman, B., and Thaler, J. "SymmetryGAN: Symmetry Discovery with Deep Learning". <i>Physical Review D</i>, 105(9), 096031 (2022).'
 authors: '<strong>Krish Desai</strong>, Benjamin Nachman, and Jesse Thaler'
 code: 'https://github.com/hep-lbdl/symmetrygan'
 doi: 10.1103/PhysRevD.105.096031
 arxiv: 2112.05722
 scix: 2022PhRvD.105i6031D
-inspirehep: 1987978
+inspirehep: 1987977
+researchgate: 360892153_Symmetry_discovery_with_deep_learning
 ---
 ## Abstract
 

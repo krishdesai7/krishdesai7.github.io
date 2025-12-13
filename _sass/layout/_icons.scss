@@ -12,6 +12,8 @@
     --pubmed-color               : #28109e;
     --researchgate-color         : #00CCBB;
     --scopus-color               : #ff8000;
+    --doi-color                  : #f0b941;
+    --scixcolor                  : linear-gradient(135deg, #66ea78, #8a499e, #1421b3);
     
     --bluesky-color              : #1184fe;
     --github-color               : #550f78;
@@ -23,6 +25,9 @@
     --adobe-color                : #ff4b4b99;
     --biblatex-color             : #00808099;
     --powerpoint-color           : #D0442399;
+    --location-color             : linear-gradient(135deg, #667eea 0%, #1b723e 100%);
+    --employer-color             : linear-gradient(135deg, #ceb0b0 0%, #f5a657 100%);
+    --link-color                 : linear-gradient(135deg, #4facfe 0%, $terracotta-600 100%);
     }
     
 .icon-svg {
@@ -64,19 +69,19 @@
 }
 
 .fa-map-location-dot, .fa-location-dot {
-    background: linear-gradient(135deg, #667eea 0%, #1b723e 100%);
+    background: var(--location-color);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .fa-building-columns {
-    background: linear-gradient(135deg, #ceb0b0 0%, #f5a657 100%);
+    background: var(--employer-color);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .fa-link {
-    background: linear-gradient(135deg, #4facfe 0%, $terracotta-600 100%);
+    background: var(--link-color);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -126,6 +131,16 @@
   }
   .ai-inspire {
     color: var(--inspirehep-color);
+  }
+  .ai-doi {
+    color: var(--doi-color);
+  }
+
+  .ai-ads {
+    background: var(--scixcolor);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   
   .fa-bitbucket {
