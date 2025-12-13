@@ -11,6 +11,8 @@ biblatexurl: 'https://www.desai.ml/files/machine-learning-methods-for-cross-sect
 citation: 'Desai, Krish. Machine Learning Methods for Cross Section Measurements. <i>University of California, Berkeley</i>. (2025) PhD Physics Dissertation.'
 authors: '<strong>Krish Desai</strong>'
 url: https://www.proquest.com/dissertations-theses/machine-learning-methods-cross-section/docview/3256604408/se-2
+isbn: 9798293893348
+inspirehep: 3071064
 ---
 ## Abstract
 

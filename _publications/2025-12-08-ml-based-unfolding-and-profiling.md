@@ -11,6 +11,9 @@ biblatexurl: 'https://www.desai.ml/files/ml-based-unfolding-and-profiling-prepri
 citation: 'Zhu, H., Desai, K., Kuusela, M., Mikuni, V., Nachman, B., and Wasserman, L. Machine Learning-based Unfolding for Cross Section Measurements in the Presence of Nuisance Parameters. <i>arXiv:2512.07074</i> (2025).'
 authors: 'Huanbiao Zhu, <strong>Krish Desai</strong>, Mikael Kuusela, Vinicius Mikuni, Benjamin Nachman, and Larry Wasserman'
 doi: 10.48550/arXiv.2512.07074
+arxiv: 2512.07074
+scix: 2025arXiv251207074Z
+inspirehep: 3090314
 ---
 ## Abstract
 

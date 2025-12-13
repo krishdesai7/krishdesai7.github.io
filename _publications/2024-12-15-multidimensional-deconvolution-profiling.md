@@ -12,6 +12,9 @@ biblatexurl: 'https://www.desai.ml/files/multidimensional-deconvolution-with-pro
 citation: 'Zhu, H., Desai, K., Kuusela, M., Mikuni, V., Nachman, B., and Wasserman, L. Multidimensional Deconvolution with Profiling. <i>NeurIPS</i> ML4PS 150 (2024).'
 authors: 'Huanbiao Zhu, <strong>Krish Desai</strong>, Mikael Kuusela, Vinicius Mikuni, Benjamin Nachman, and Larry Wasserman'
 doi: 10.48550/arXiv.2409.10421
+arxiv: 2409.10421
+scix: 2024arXiv240910421Z
+inspirehep: 2828828
 ---
 ## Abstract
 

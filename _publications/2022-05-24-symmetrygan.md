@@ -12,6 +12,9 @@ citation: 'Desai, K., Nachman, B., and Thaler, J. SymmetryGAN. <i>Physical Revie
 authors: '<strong>Krish Desai</strong>, Benjamin Nachman, and Jesse Thaler'
 code: 'https://github.com/hep-lbdl/symmetrygan'
 doi: 10.1103/PhysRevD.105.096031
+arxiv: 2112.05722
+scix: 2022PhRvD.105i6031D
+inspirehep: 1987978
 ---
 ## Abstract
 

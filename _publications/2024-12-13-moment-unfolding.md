@@ -12,6 +12,9 @@ citation: 'Desai, K., Nachman, B., and Thaler, J. Moment extraction using an unf
 authors: '<strong>Krish Desai</strong>, Benjamin Nachman, and Jesse Thaler'
 code: 'https://github.com/HEP-GAN/MomentUnfolding'
 doi: 10.1103/PhysRevD.110.116013
+arxiv: 2407.11284
+scix: 2024PhRvD.110k6013D
+inspirehep: 2859282
 ---
 ## Abstract
 

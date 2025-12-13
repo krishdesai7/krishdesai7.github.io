@@ -13,6 +13,9 @@ citation: 'Acosta, F. T., Chan, J., Desai, K., Mikuni, V., Nachman, B., and Pan,
 authors: 'Fernando Torales Acosta, Jay Chan, <strong>Krish Desai</strong>, Vinicius Mikuni, Benjamin Nachman, and Jingjing Pan'
 code: 'https://github.com/jp2555/NPU'
 doi: 10.48550/arXiv.2509.06370
+arxiv: 2509.06370
+scix: 2025arXiv250906370T
+inspirehep: 2967396
 ---
 ## Abstract
 

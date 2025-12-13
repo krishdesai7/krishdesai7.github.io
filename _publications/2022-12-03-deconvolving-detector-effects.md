@@ -13,6 +13,9 @@ citation: 'Desai, K., Nachman, B., and Thaler, J. Deconvolving Detector Effects 
 authors: '<strong>Krish Desai</strong>, Benjamin Nachman, and Jesse Thaler'
 code: 'https://github.com/HEP-GAN/MomentUnfolding'
 doi: 10.5281/zenodo.17189987
+arxiv: 2407.11284
+scix: 2022APS..APRK08004D
+inpsirehep: 2859282
 ---
 ## Abstract
 

@@ -13,6 +13,9 @@ citation: 'Desai, K., Nachman, B., and Thaler, J. Symmetry Discovery with Deep L
 authors: '<strong>Krish Desai</strong>, Benjamin Nachman, and Jesse Thaler'
 code: 'https://github.com/hep-lbdl/symmetrydiscovery'
 doi: 10.5281/zenodo.17189852
+arxiv: 2112.05722
+scix: 2021APS..APRK17005D
+inspirehep: 1987978
 ---
 ## Abstract
 
