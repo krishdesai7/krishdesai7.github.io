@@ -148,3 +148,7 @@ hr.divider {
   --triple-baseline: calc(3*var(--baseline));
   --quadruple-baseline: calc(4*var(--baseline));
 }
+
+.sc {
+  font-variant: small-caps;
+}

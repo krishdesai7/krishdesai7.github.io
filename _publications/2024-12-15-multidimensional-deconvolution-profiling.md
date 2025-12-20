@@ -16,6 +16,7 @@ arxiv: 2409.10421
 scix: 2024arXiv240910421Z
 inspirehep: 2828828
 researchgate: 386874127_Multidimensional_Deconvolution_with_Profiling
+code: https://github.com/richardzhs/ProfileOmnifold
 ---
 ## Abstract
 

@@ -83,45 +83,38 @@
         <span class="publication-link__text">Code</span>
       </a>
     {% endif %}
-    {% assign external_link = post.external_url | default: post.external_link %}
-    {% if external_link == nil and post.url and post.url contains '://' %}
-      {% assign external_link = post.url %}
-    {% endif %}
-    {% assign has_extra_links = post.doi or external_link or post.arxiv or post.scix or post.inspirehep or post.researchgate %}
-    {% if has_extra_links %}
-      <div class="publication-extra-icons" aria-label="Additional links">
-        {% if post.doi %}
-          <a href="https://doi.org/{{ post.doi }}" class="publication-link" target="_blank" rel="noopener" aria-label="DOI">
-            <i class="ai ai-doi ai-fw" aria-hidden="true"></i>
-          </a>
-        {% endif %}
-        {% if external_link %}
-          <a href="{{ external_link }}" class="publication-link" target="_blank" rel="noopener" aria-label="Link">
-            <i class="fa-solid fa-link fa-fw" aria-hidden="true"></i>
-          </a>
-        {% endif %}
-        {% if post.arxiv %}
-          <a href="https://arxiv.org/abs/{{ post.arxiv }}" class="publication-link" target="_blank" rel="noopener" aria-label="arXiv">
-            <i class="ai ai-arxiv ai-fw" aria-hidden="true"></i>
-          </a>
-        {% endif %}
-        {% if post.scix %}
-          <a href="https://scixplorer.org/abs/{{ post.scix }}" class="publication-link" target="_blank" rel="noopener" aria-label="SciX">
-            <i class="ai ai-ads ai-fw" aria-hidden="true"></i>
-          </a>
-        {% endif %}
-        {% if post.inspirehep %}
-          <a href="https://inspirehep.net/literature/{{ post.inspirehep }}" class="publication-link" target="_blank" rel="noopener" aria-label="InspireHEP">
-            <i class="ai ai-inspire ai-fw" aria-hidden="true"></i>
-          </a>
-        {% endif %}
-        {% if post.researchgate %}
-          <a href="https://www.researchgate.net/profile/{{ post.researchgate }}" class="publication-link" target="_blank" rel="noopener" aria-label="ResearchGate">
-            <i class="ai ai-researchgate ai-fw" aria-hidden="true"></i>
-          </a>
-        {% endif %}
-      </div>
-    {% endif %}
+    <div class="publication-extra-icons" aria-label="Additional links">
+      {% if post.doi %}
+        <a href="https://doi.org/{{ post.doi }}" class="publication-link" target="_blank" rel="noopener" aria-label="DOI">
+          <i class="ai ai-doi ai-fw" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if post.proquest %}
+        <a href="{{ post.proquest }}" class="publication-link" target="_blank" rel="noopener" aria-label="ProQuest">
+          <i class="fa-solid fa-link fa-fw" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if post.arxiv %}
+        <a href="https://arxiv.org/abs/{{ post.arxiv }}" class="publication-link" target="_blank" rel="noopener" aria-label="arXiv">
+          <i class="ai ai-arxiv ai-fw" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if post.scix %}
+        <a href="https://scixplorer.org/abs/{{ post.scix }}" class="publication-link" target="_blank" rel="noopener" aria-label="SciX">
+          <i class="ai ai-ads ai-fw" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if post.inspirehep %}
+        <a href="https://inspirehep.net/literature/{{ post.inspirehep }}" class="publication-link" target="_blank" rel="noopener" aria-label="InspireHEP">
+          <i class="ai ai-inspire ai-fw" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if post.researchgate %}
+        <a href="https://www.researchgate.net/profile/{{ post.researchgate }}" class="publication-link" target="_blank" rel="noopener" aria-label="ResearchGate">
+          <i class="ai ai-researchgate ai-fw" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+    </div>
   </div>
   </div>
 </div>
