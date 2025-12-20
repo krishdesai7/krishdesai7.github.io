@@ -14,107 +14,34 @@
     </time>
   </div>
   <div class="publication-item" itemscope itemtype="{{ schema_type }}">
-  <h3 class="publication-title" itemprop="name headline">
-    <a href="{{ post.url | relative_url }}" rel="permalink" itemprop="url">{{ title }}</a>
-  </h3>
+    <h3 class="publication-title" itemprop="name headline">
+      <a href="{{ post.url | relative_url }}" rel="permalink" itemprop="url">{{ title }}</a>
+    </h3>
 
-  <div class="publication-meta">
-    {% case post.category %}
-      {% when 'theses' %}
-        <span class="publication-venue" itemprop="publisher">{{ post.venue }}</span>
-      {% when 'preprints' %}
-        <span class="publication-type">Preprint</span>
-        {% if post.venue %}
+    <div class="publication-meta">
+      {% case post.category %}
+        {% when 'theses' %}
           <span class="publication-venue" itemprop="publisher">{{ post.venue }}</span>
-        {% endif %}
-      {% when 'conferences' %}
-        <span class="publication-venue" itemprop="isPartOf" itemscope itemtype="https://schema.org/Event">
-          <span itemprop="name">{{ post.venue }}</span>
-        </span>
-      {% else %}
-        <span class="publication-venue" itemprop="name">{{ post.venue }}</span>
-    {% endcase %}
-  </div>
-  {% if post.category != 'theses' %}
-    <div class="publication-authors">
-      {{ post.authors }}
-    </div>
-  {% endif %}
-  
-  <div class="publication-citation" itemprop="citation">
-    <div class="citation-block">
-      <div class="citation-header">
-        <span class="citation-label">Recommended Citation</span>
-        <button class="citation-copy-btn" onclick="copyToClipboard(this)" data-citation="{{ post.citation | escape }}">
-          <i class="fa-solid fa-copy fa-fw"></i>
-        </button>
-      </div>
-      <code class="citation-text">{{ post.citation }}</code>
-    </div>
-  </div>
-
-  <div class="publication-links">
-      <a href="{{ post.paperurl }}" class="publication-link publication-link--paper" target="_blank" rel="noopener">
-        <span class="publication-link__icon icon-pdf" aria-hidden="true">
-          {% include icons/pdf.svg %}
-        </span>
-        <span class="publication-link__text">PDF</span>
-      </a>
-      {% if post.slidesurl %}
-        <span class="publication-link__separator" aria-hidden="true">•</span>
-        <a href="{{ post.slidesurl }}" class="publication-link publication-link--slides" target="_blank" rel="noopener">
-          <span class="publication-link__icon icon-ppt" aria-hidden="true">
-            {% include icons/ppt.svg %}
+        {% when 'preprints' %}
+          <span class="publication-type">Preprint</span>
+          {% if post.venue %}
+            <span class="publication-venue" itemprop="publisher">{{ post.venue }}</span>
+          {% endif %}
+        {% when 'conferences' %}
+          <span class="publication-venue" itemprop="isPartOf" itemscope itemtype="https://schema.org/Event">
+            <span itemprop="name">{{ post.venue }}</span>
           </span>
-          <span class="publication-link__text">Slides</span>
-        </a>
-      {% endif %}
-      <span class="publication-link__separator" aria-hidden="true">•</span>
-      <a href="javascript:void(0)" class="publication-link publication-link--biblatex" onclick="showBiblatexModal('{{ post.biblatexurl }}')">
-        <span class="publication-link__icon icon-biblatex" aria-hidden="true">
-          {% include icons/biblatex-file.svg %}
-        </span>
-        <span class="publication-link__text-biblatex">\(\Biblatex\)</span>
-      </a>
-    {% if post.code %}
-      <span class="publication-link__separator" aria-hidden="true">•</span>
-      <a href="{{ post.code }}" class="publication-link" target="_blank" rel="noopener">
-        <i class="fa-brands fa-fw fa-github icon-pad-right" aria-hidden="true"></i>
-        <span class="publication-link__text">Code</span>
-      </a>
-    {% endif %}
-    <div class="publication-extra-icons" aria-label="Additional links">
-      {% if post.doi %}
-        <a href="https://doi.org/{{ post.doi }}" class="publication-link" target="_blank" rel="noopener" aria-label="DOI">
-          <i class="ai ai-doi ai-fw" aria-hidden="true"></i>
-        </a>
-      {% endif %}
-      {% if post.proquest %}
-        <a href="{{ post.proquest }}" class="publication-link" target="_blank" rel="noopener" aria-label="ProQuest">
-          <i class="fa-solid fa-link fa-fw" aria-hidden="true"></i>
-        </a>
-      {% endif %}
-      {% if post.arxiv %}
-        <a href="https://arxiv.org/abs/{{ post.arxiv }}" class="publication-link" target="_blank" rel="noopener" aria-label="arXiv">
-          <i class="ai ai-arxiv ai-fw" aria-hidden="true"></i>
-        </a>
-      {% endif %}
-      {% if post.scix %}
-        <a href="https://scixplorer.org/abs/{{ post.scix }}" class="publication-link" target="_blank" rel="noopener" aria-label="SciX">
-          <i class="ai ai-ads ai-fw" aria-hidden="true"></i>
-        </a>
-      {% endif %}
-      {% if post.inspirehep %}
-        <a href="https://inspirehep.net/literature/{{ post.inspirehep }}" class="publication-link" target="_blank" rel="noopener" aria-label="InspireHEP">
-          <i class="ai ai-inspire ai-fw" aria-hidden="true"></i>
-        </a>
-      {% endif %}
-      {% if post.researchgate %}
-        <a href="https://www.researchgate.net/profile/{{ post.researchgate }}" class="publication-link" target="_blank" rel="noopener" aria-label="ResearchGate">
-          <i class="ai ai-researchgate ai-fw" aria-hidden="true"></i>
-        </a>
-      {% endif %}
+        {% else %}
+          <span class="publication-venue" itemprop="name">{{ post.venue }}</span>
+      {% endcase %}
     </div>
-  </div>
+    {% if post.category != 'theses' %}
+      <div class="publication-authors">
+        {{ post.authors }}
+      </div>
+    {% endif %}
+
+    {% include publication-links.html pub=post %}
+    
   </div>
 </div>

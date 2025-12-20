@@ -27,7 +27,7 @@
     --powerpoint-color           : #D0442399;
     --location-color             : linear-gradient(135deg, #667eea 0%, #1b723e 100%);
     --employer-color             : linear-gradient(135deg, #ceb0b0 0%, #f5a657 100%);
-    --link-color                 : linear-gradient(135deg, #4facfe 0%, $terracotta-600 100%);
+    --link-color                 : linear-gradient(135deg, #4facfe 0%, #{$terracotta-600} 100%);
     }
     
 .icon-svg {

@@ -1,0 +1,87 @@
+<div class="publication-citation" itemprop="citation">
+  <div class="citation-block">
+    <div class="citation-header">
+      <span class="citation-label">
+        Recommended Citation
+      </span>
+      <button class="citation-copy-btn" onclick="copyToClipboard(this)" data-citation="{{ include.pub.citation | escape }}">
+        <i class="fa-solid fa-copy"></i>
+      </button>
+    </div>
+    <code class="citation-text">
+      {{ include.pub.citation }}
+    </code>
+  </div>
+</div>
+
+<div class="publication-links">
+    {% if include.pub.paperurl %}
+      <a href="{{ include.pub.paperurl }}" class="publication-link publication-link--paper" target="_blank" rel="noopener">
+        <span class="publication-link__icon icon-pdf" aria-hidden="true">
+          {% include icons/pdf.svg %}
+        </span>
+        <span class="publication-link__text">PDF</span>
+      </a>
+    {% endif %}
+  
+    {% if include.pub.slidesurl %}
+      <span class="publication-link__separator" aria-hidden="true">•</span>
+      <a href="{{ include.pub.slidesurl }}" class="publication-link publication-link--slides" target="_blank" rel="noopener">
+        <span class="publication-link__icon icon-ppt" aria-hidden="true">
+          {% include icons/ppt.svg %}
+        </span>
+        <span class="publication-link__text">Slides</span>
+      </a>
+    {% endif %}
+  
+    {% if include.pub.biblatexurl %}
+      <span class="publication-link__separator" aria-hidden="true">•</span>
+      <a href="javascript:void(0)" class="publication-link publication-link--biblatex" onclick="showBiblatexModal('{{ include.pub.biblatexurl }}')">
+        <span class="publication-link__icon icon-biblatex" aria-hidden="true">
+          {% include icons/biblatex-file.svg %}
+        </span>
+        <span class="publication-link__text-biblatex">\(\Biblatex\)</span>
+      </a>
+    {% endif %}
+  
+    {% if include.pub.code %}
+      <span class="publication-link__separator" aria-hidden="true">•</span>
+      <a href="{{ include.pub.code }}" class="publication-link" target="_blank" rel="noopener">
+        <i class="fa-brands fa-fw fa-github icon-pad-right" aria-hidden="true"></i>
+        <span class="publication-link__text">Code</span>
+      </a>
+    {% endif %}
+  
+    <div class="publication-extra-icons" aria-label="Additional links">
+      {% if include.pub.doi %}
+        <a href="https://doi.org/{{ include.pub.doi }}" class="publication-link" target="_blank" rel="noopener" aria-label="DOI">
+          <i class="ai ai-doi ai-fw" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if include.pub.proquest %}
+        <a href="{{ include.pub.proquest }}" class="publication-link" target="_blank" rel="noopener" aria-label="ProQuest">
+          <i class="fa-solid fa-link fa-fw" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if include.pub.arxiv %}
+        <a href="https://arxiv.org/abs/{{ include.pub.arxiv }}" class="publication-link" target="_blank" rel="noopener" aria-label="arXiv">
+          <i class="ai ai-arxiv ai-fw" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if include.pub.scix %}
+        <a href="https://scixplorer.org/abs/{{ include.pub.scix }}" class="publication-link" target="_blank" rel="noopener" aria-label="SciX">
+          <i class="ai ai-ads ai-fw" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if include.pub.inspirehep %}
+        <a href="https://inspirehep.net/literature/{{ include.pub.inspirehep }}" class="publication-link" target="_blank" rel="noopener" aria-label="InspireHEP">
+          <i class="ai ai-inspire ai-fw" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if include.pub.researchgate %}
+        <a href="https://www.researchgate.net/profile/{{ include.pub.researchgate }}" class="publication-link" target="_blank" rel="noopener" aria-label="ResearchGate">
+          <i class="ai ai-researchgate ai-fw" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+    </div>
+  </div>

@@ -8,18 +8,28 @@ layout: default
       <div class="publication-meta">
         {% case page.category %}
           {% when 'theses' %}
-            <span class="publication-venue" itemprop="publisher">{{ page.venue }}</span>
+            <span class="publication-venue" itemprop="publisher">
+              {{ page.venue }}
+            </span>
           {% when 'preprints' %}
-            <span class="publication-type">Preprint</span>
+            <span class="publication-type">
+              Preprint
+            </span>
             {% if page.venue %}
-              <span class="publication-venue" itemprop="publisher">{{ page.venue }}</span>
+              <span class="publication-venue" itemprop="publisher">
+                {{ page.venue }}
+              </span>
             {% endif %}
           {% when 'conferences' %}
             <span class="publication-venue" itemprop="isPartOf" itemscope itemtype="https://schema.org/Event">
-              <span itemprop="name">{{ page.venue }}</span>
+              <span itemprop="name">
+                {{ page.venue }}
+              </span>
             </span>
           {% else %}
-            <span class="publication-venue" itemprop="name">{{ page.venue }}</span>
+            <span class="publication-venue" itemprop="name">
+              {{ page.venue }}
+            </span>
         {% endcase %}
 
           <span class="publication-date">
@@ -36,57 +46,8 @@ layout: default
       {% endif %}
     </header>
 
-    <div class="publication-citation" itemprop="citation">
-      <div class="citation-block">
-        <div class="citation-header">
-          <span class="citation-label">Recommended Citation</span>
-          <button class="citation-copy-btn" onclick="copyToClipboard(this)" data-citation="{{ page.citation | escape }}">
-            <i class="fa-solid fa-copy"></i>
-          </button>
-        </div>
-        <code class="citation-text">{{ page.citation }}</code>
-      </div>
-    </div>
-
-    <div class="publication-links">
-      {% if page.paperurl %}
-        <a href="{{ page.paperurl }}" class="publication-link publication-link--paper" target="_blank" rel="noopener">
-          <span class="publication-link__icon icon-pdf" aria-hidden="true">
-            {% include icons/pdf.svg %}
-          </span>
-          <span class="publication-link__text">PDF</span>
-        </a>
-      {% endif %}
-
-      {% if page.slidesurl %}
-        <span class="publication-link__separator" aria-hidden="true">•</span>
-        <a href="{{ page.slidesurl }}" class="publication-link publication-link--slides" target="_blank" rel="noopener">
-          <span class="publication-link__icon icon-ppt" aria-hidden="true">
-            {% include icons/ppt.svg %}
-          </span>
-          <span class="publication-link__text">Slides</span>
-        </a>
-      {% endif %}
-
-      {% if page.biblatexurl %}
-        <span class="publication-link__separator" aria-hidden="true">•</span>
-        <a href="javascript:void(0)" class="publication-link publication-link--biblatex" onclick="showBiblatexModal('{{ page.biblatexurl }}')">
-          <span class="publication-link__icon icon-biblatex" aria-hidden="true">
-            {% include icons/biblatex-file.svg %}
-          </span>
-          <span class="publication-link__text-biblatex">\(\Biblatex\)</span>
-        </a>
-      {% endif %}
-
-      {% if page.code %}
-        <span class="publication-link__separator" aria-hidden="true">•</span>
-        <a href="{{ page.code }}" class="publication-link" target="_blank" rel="noopener">
-          <i class="fa-brands fa-fw fa-github icon-pad-right" aria-hidden="true"></i>
-          <span class="publication-link__text">Code</span>
-        </a>
-      {% endif %}
-    </div>
-
+    {% include publication-links.html pub=page %}
+    
     <section class="page__content" itemprop="text">
       {{ content }}
     </section>
