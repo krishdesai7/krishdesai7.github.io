@@ -146,3 +146,31 @@ redirect_from:
     </div>
   </section>
 </div>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
+<script>
+  document.getElementById('download-cv-btn').addEventListener('click', function () {
+    var btn = this;
+    btn.disabled = true;
+    btn.style.opacity = '0.5';
+    var element = document.querySelector('.cv-modern');
+    var buttons = element.querySelector('.cv-buttons');
+    buttons.style.display = 'none';
+    html2pdf()
+      .set({
+        margin: [10, 10, 10, 10],
+        filename: '{{ cv.basics.name | replace: " ", "_" }}_CV.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+      })
+      .from(element)
+      .save()
+      .then(function () {
+        buttons.style.display = '';
+        btn.disabled = false;
+        btn.style.opacity = '';
+      });
+  });
+</script>
