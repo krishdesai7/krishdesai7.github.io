@@ -51,65 +51,65 @@ redirect_from:
       <div class="cv-grid-container">
         {% for row in section[1] %}
           <div class="cv-grid-key">
-            {% if row[1].startDate %}
-              {{ row[1].startDate | date: "%B %Y" }} &ndash; {{ row[1].endDate | date: "%B %Y" }}
-            {% elsif row[1].date.size == 10 %}
-              {{ row[1].date | date: "%B %Y" }}
+            {% if row.startDate %}
+              {{ row.startDate | date: "%B %Y" }} &ndash; {{ row.endDate | date: "%B %Y" }}
+            {% elsif row.date.size == 10 %}
+              {{ row.date | date: "%B %Y" }}
             {% else %}
-              {{ row[1].date }}
+              {{ row.date }}
             {% endif %}
           </div>
           <div class="cv-grid-value">
-            <div class="cv-item-institution">{{ row[0] }}</div>
+            <div class="cv-item-institution">{{ row.name }}</div>
             {% case section[0] %}
               {% when "Education" %}
-                {% for degree in row[1].degree %}
+                {% for degree in row.degree %}
                   <div class="cv-item-title">
                     {{ degree }}
                   </div>
                 {% endfor %}
               {% when "Professional Experience" %}
                 <div class="cv-item-title">
-                  {{ row[1].position }}
+                  {{ row.position }}
                 </div>
               {% when "Publications" %}
                 <div class="cv-item-authors">
-                  {{ row[1].authors | markdownify }}
+                  {{ row.authors | markdownify }}
                 </div>
                 <div class="cv-item-title">
-                  {{ row[1].publisher }}
+                  {{ row.publisher }}
                 </div>
                 <div class="cv-item-note">
-                  {{ row[1].note }}
+                  {{ row.note }}
                 </div>
                 <div class="cv-item-links">
-                  <a href="{{ row[1].pdf }}" target="_blank" rel="noopener">PDF</a>
-                  <a href="{{ row[1].biblatex }}" target="_blank" rel="noopener" class="publication-link__text-biblatex">\(\Biblatex\)</a>
+                  <a href="{{ row.pdf }}" target="_blank" rel="noopener">PDF</a>
+                  <a href="{{ row.biblatex }}" target="_blank" rel="noopener" class="publication-link__text-biblatex">\(\Biblatex\)</a>
                 </div>
               {% when "Honors &amp; Fellowships" %}
                 <div class="cv-item-title">
-                  {{ row[1].awarder }}
+                  {{ row.awarder }}
                 </div>
                 <div class="cv-item-note">
-                  {{ row[1].note }}
+                  {{ row.note }}
                 </div>
               {% when "Talks" %}
                 <div class="cv-item-title">
-                  {{ row[1].event }}
+                  {{ row.event }}
                 </div>
                 <div class="cv-item-note">
-                  {{ row[1].location }}
+                  {{ row.location }}
                 </div>
               {% when "Teaching" %}
                 <div class="cv-item-title">
-                  {{ row[1].role }}
+                  {{ row.role }}
                 </div>
                 <div class="cv-item-note">
-                  {{ row[1].institution }}
+                  {{ row.institution }}
                 </div>
               {% when "Leadership &amp; Service" %}
                 <div class="cv-item-note">
-                  {{ row[1].institution }}
+                  {{ row.institution }}
                 </div>
             {% endcase %}
           </div>

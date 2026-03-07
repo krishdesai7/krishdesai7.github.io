@@ -11,6 +11,7 @@ biblatexurl: 'https://www.desai.ml/files/pade-approximants-anharmonic-oscillator
 doi: 10.13140/RG.2.2.28201.71528
 citation: 'Desai, Krish. "Padé Approximants and the Anharmonic Oscillator". <i>Yale University</i>. (2020) MS and BS (Mathematics, Intensive) Thesis.'
 authors: '<strong>Krish Desai</strong>'
+note: 'BS and MS (Mathematics, Intensive) Thesis'
 researchgate: 393471709_PADE_APPROXIMANTS_AND_THE_ANHARMONIC_OSCILLATOR
 ---
 ## Abstract
