@@ -11,6 +11,16 @@ redirect_from:
 <div class="cv-modern">
   <section class="cv-header">
     <h1 class="cv-name">{{ cv.basics.name }}</h1>
+    <div class="cv-buttons">
+      <a href="{{ '/files/Resume.pdf' | relative_url }}" target="_blank" rel="noopener" class="cv-btn">
+        <i class="fa-sharp-duotone fa-regular fa-file-user fa-fw" aria-hidden="true"></i>
+        Resume
+      </a>
+      <button onclick="window.print()" class="cv-btn">
+        <i class="fa-sharp-duotone fa-regular fa-download fa-fw" aria-hidden="true"></i>
+        Download CV
+      </button>
+    </div>
     <div class="cv-grid-container">
       {% for contact in cv.basics.contact %}
         <div class="cv-grid-key">
