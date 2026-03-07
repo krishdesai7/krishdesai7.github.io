@@ -10,16 +10,16 @@ layout: default
         <div class="talk-type-single">{{ page.type }}</div>
         <div class="talk-venue-single">{{ page.venue }}</div>
         <div class="talk-date-single">
-          <i class="fa-solid fa-calendar-day fa-fw pad-icon-right" aria-hidden="true"></i>
+          <i class="fa-graphite fa-thin fa-calendar fa-fw pad-icon-right" aria-hidden="true"></i>
           <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
         </div>
         <div class="talk-location-single">
-          <i class="fa-solid fa-location-dot fa-fw pad-icon-right" aria-hidden="true"></i>
+          <i class="fa-slab-press fa-regular fa-location-dot fa-fw pad-icon-right" aria-hidden="true"></i>
           {{ page.location }}
         </div>
         {% if page.link %}
           <div class="talk-link-single">
-            <i class="fa-regular fa-link fa-fw pad-icon-right" aria-hidden="true"></i>
+            <i class="fa-sharp fa-regular fa-link fa-fw pad-icon-right" aria-hidden="true"></i>
             <a href="{{ page.link }}" class="talk-link talk-link--details" target="_blank" rel="noopener">
               <span class="talk-link__text">Link</span>
             </a>

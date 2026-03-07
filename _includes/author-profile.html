@@ -25,28 +25,28 @@
       </div>
 
       <dl class="author__urls social-icons">
-            <dt><i class="fa-solid fa-map-location-dot fa-fw" aria-hidden="true"></i>
+            <dt><i class="fa-sharp-duotone fa-light fa-map-location-dot fa-fw" aria-hidden="true"></i>
             <dd class="author__desktop">
                   <a href="https://www.google.com/maps/place/{{ author.location }}/" target="_blank" rel="noopener">
                         <span class="user-name">
                               {{ author.location }}
                         </span>
                   </a>
-            <dt><i class="fa-solid fa-fw fa-building-columns" aria-hidden="true"></i>
+            <dt><i class="fa-sharp fa-regular fa-landmark fa-fw icon-pad-right" aria-hidden="true"></i>
             <dd class="author__desktop">
                   <a href="https://www.lbl.gov" target="_blank" rel="noopener">
                         <span class="user-name">
                               {{ author.employer }}
                         </span>
                   </a>
-            <dt><i class="fa-solid fa-fw fa-link" aria-hidden="true"></i>
+            <dt><i class="fa-sharp fa-regular fa-link fa-fw" aria-hidden="true"></i>
             <dd class="author__desktop">
                   <a href="{{ author.uri }}">
                         <span class="user-name">
                               Website
                         </span>
                   </a>
-            <dt><i class="fa-solid fa-fw fa-envelope" aria-hidden="true"></i>
+            <dt><i class="fa-sharp fa-light fa-fw fa-envelope" aria-hidden="true"></i>
             <dd class="author__desktop">
                   <a href="mailto:{{ author.email }}" target="_blank">
                         <span class="user-name">
@@ -89,7 +89,7 @@
                         </a>
             {% endif %}
             {% if author.orcid %}
-                  <dt><i class="ai ai-orcid ai-fw" aria-hidden="true"></i>
+                  <dt><i class="fa-brands fa-fw fa-orcid" aria-hidden="true"></i>
                   <dd class="author__desktop">
                         <a href="https://orcid.org/{{ author.orcid }}" target="_blank" rel="noopener noreferrer">
                               <span class="user-name">ORCID</span>
@@ -159,7 +159,7 @@
 
             <!-- Social media -->
             {% if author.linkedin %}
-            <dt><i class="fa-brands fa-fw fa-linkedin" aria-hidden="true"></i>
+            <dt><i class="fa-brands fa-fw fa-square-linkedin" aria-hidden="true"></i>
             <dd class="author__desktop">
                   <a href="https://www.linkedin.com/in/{{ author.linkedin }}" target="_blank" rel="noopener noreferrer">
                         <span class="user-name">LinkedIn</span>

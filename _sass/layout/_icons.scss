@@ -28,14 +28,14 @@
     --location-color             : linear-gradient(135deg, #667eea 0%, #1b723e 100%);
     --employer-color             : linear-gradient(135deg, #ceb0b0 0%, #f5a657 100%);
     --link-color                 : linear-gradient(135deg, #4facfe 0%, #{$terracotta-600} 100%);
-    }
+    --copy-color                 : #80624d8e;
+  }
     
 .icon-svg {
   width: var(--baseline);
   height: var(--baseline);
   fill: currentColor;
 }
-
 .icon-pdf, .icon-biblatex, .icon-ppt{
   display: inline-flex;
   align-items: center;
@@ -74,7 +74,7 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .fa-building-columns {
+  .fa-landmark {
     background: var(--employer-color);
     -webkit-background-clip: text;
     background-clip: text;
@@ -92,7 +92,7 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .fa-calendar-day {
+  .fa-calendar-day, .fa-calendar {
     background: linear-gradient(135deg, #01030b 0%, #eee7e6 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -117,7 +117,7 @@
   .ai-semantic-scholar {
     color: var(--semantic-color);
   }
-  .ai-orcid {
+  .fa-orcid {
     color: var(--orcid-color);
   }
   .ai-pubmed {
@@ -159,7 +159,7 @@
   .fa-instagram {
     color: var(--instagram-color);
   }
-  .fa-linkedin {
+  .fa-square-linkedin {
     color: var(--linkedin-color);
   }
   .fa-x-twitter {

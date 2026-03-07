@@ -4,8 +4,10 @@
       <span class="citation-label">
         Recommended Citation
       </span>
-      <button class="citation-copy-btn" onclick="copyToClipboard(this)" data-citation="{{ include.pub.citation | escape }}">
-        <i class="fa-solid fa-copy"></i>
+      <button class="citation-copy-btn" onclick="copyToClipboard(this)" 
+        data-citation="{{ include.pub.citation | escape }}"
+        aria-label="Copy citation">
+        <i class="fa-sharp fa-regular fa-clone-plus fa-fw" aria-hidden="true"></i>
       </button>
     </div>
     <code class="citation-text">
@@ -60,7 +62,7 @@
       {% endif %}
       {% if include.pub.proquest %}
         <a href="{{ include.pub.proquest }}" class="publication-link" target="_blank" rel="noopener" aria-label="ProQuest">
-          <i class="fa-solid fa-link fa-fw" aria-hidden="true"></i>
+          <i class="fa-sharp fa-light fa-link fa-fw" aria-hidden="true"></i>
         </a>
       {% endif %}
       {% if include.pub.arxiv %}
