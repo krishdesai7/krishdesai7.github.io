@@ -68,42 +68,42 @@
   color: $terracotta-600;
 }
 
-.fa-map-location-dot, .fa-location-dot {
-    background: var(--location-color);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .fa-landmark {
-    background: var(--employer-color);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .fa-link {
-    background: var(--link-color);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .fa-envelope {
-    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+// .fa-map-location-dot, .fa-location-dot {
+//     background: var(--location-color);
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//   }
+//   .fa-landmark {
+//     background: var(--employer-color);
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//   }
+//   .fa-link {
+//     background: var(--link-color);
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//   }
+//   .fa-envelope {
+//     background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+//     -webkit-background-clip: text;
+//     background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//   }
   .fa-calendar-day, .fa-calendar {
     background: linear-gradient(135deg, #01030b 0%, #eee7e6 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .fa-sitemap {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  // .fa-sitemap {
+  //   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  //   -webkit-background-clip: text;
+  //   background-clip: text;
+  //   -webkit-text-fill-color: transparent;
+  // }
   
   .ai-academia {
     color: var(--academia-color);
