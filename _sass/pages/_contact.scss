@@ -1,7 +1,7 @@
 @use "../design/" as *;
 
 
-dl {
+.contact-info {
     font-size: $font-size-20;
     margin: calc(-1 * var(--baseline)) var(--double-baseline) var(--double-baseline) var(--double-baseline);
     dt {
