@@ -27,14 +27,16 @@
   })();
 </script>
 
-<!-- Font Awesome (critical - render blocking) -->
-<link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/all.min.css' | relative_url}}">
-<!-- Font Awesome variant styles (deferred - not needed for initial render) -->
+<!-- Preload critical body font -->
+<link rel="preload" href="{{'/assets/fonts/cochineal/woff2/Cochineal-Roman.woff2' | relative_url}}" as="font" type="font/woff2" crossorigin>
+<!-- Font Awesome (deferred - icons are not needed for initial text render) -->
+<link rel="preload" href="{{'/assets/fonts/font-awesome/css/all.min.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="preload" href="{{'/assets/fonts/font-awesome/css/sharp-duotone-regular.min.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="preload" href="{{'/assets/fonts/font-awesome/css/duotone-regular.min.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="preload" href="{{'/assets/fonts/font-awesome/css/slab-press-regular.min.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="preload" href="{{'/assets/fonts/font-awesome/css/graphite-thin.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
+  <link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/all.min.css' | relative_url}}">
   <link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/sharp-duotone-regular.min.css' | relative_url}}">
   <link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/duotone-regular.min.css' | relative_url}}">
   <link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/slab-press-regular.min.css' | relative_url}}">

@@ -8,7 +8,7 @@
             <picture>
                   <source srcset="{{ author.avatar | replace: '.png', '.webp' | relative_url }}" type="image/webp">
                   <img src="{{ author.avatar | relative_url }}" class="author__avatar" alt="{{ author.name }}"
-                        fetchpriority="high"
+                        width="210" height="211" fetchpriority="high"
                   />
             </picture>
       </div>
