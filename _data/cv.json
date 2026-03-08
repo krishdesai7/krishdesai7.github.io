@@ -112,20 +112,20 @@
                 "note": "PhD (Physics) Dissertation"
             },
             {
-                "name": "Multidimensional Deconvolution with Profiling",
-                "authors": "Huanbiao Zhu, **Krish Desai**, Mikael Kuusela, Vinicius Mikuni, Benjamin Nachman, and Larry Wasserman",
-                "publisher": "Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
-                "date": "2024-12-15",
-                "pdf": "https://www.desai.ml/files/multidimensional-deconvolution-with-profiling-paper.pdf",
-                "biblatex": "https://www.desai.ml/files/multidimensional-deconvolution-with-profiling-biblatex.bib"
-            },
-            {
                 "name": "Neural Posterior Unfolding",
                 "authors": "Fernando Torales Acosta, Jay Chan, **Krish Desai**, Vinicius Mikuni, Benjamin Nachman, and Jingjing Pan",
                 "publisher": "Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
                 "date": "2024-12-15",
                 "pdf": "https://www.desai.ml/files/neural-posterior-unfolding-neurips-paper.pdf",
                 "biblatex": "https://www.desai.ml/files/neural-posterior-unfolding-neurips-biblatex.bib"
+            },
+            {
+                "name": "Multidimensional Deconvolution with Profiling",
+                "authors": "Huanbiao Zhu, **Krish Desai**, Mikael Kuusela, Vinicius Mikuni, Benjamin Nachman, and Larry Wasserman",
+                "publisher": "Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
+                "date": "2024-12-15",
+                "pdf": "https://www.desai.ml/files/multidimensional-deconvolution-with-profiling-paper.pdf",
+                "biblatex": "https://www.desai.ml/files/multidimensional-deconvolution-with-profiling-biblatex.bib"
             },
             {
                 "name": "Moment Unfolding: Moment extraction using an unfolding protocol without binning",
@@ -240,13 +240,13 @@
         ],
         "Talks": [
             {
-                "name": "Neural Posterior Unfolding",
+                "name": "Multidimensional Deconvolution with Profiling",
                 "event": "Thirty-Eighth Annual Conference on Neural Information Processing Systems",
                 "date": "2024-12-15",
                 "location": "Vancouver, Canada"
             },
             {
-                "name": "Multidimensional Deconvolution with Profiling",
+                "name": "Neural Posterior Unfolding",
                 "event": "Thirty-Eighth Annual Conference on Neural Information Processing Systems",
                 "date": "2024-12-15",
                 "location": "Vancouver, Canada"
@@ -338,13 +338,13 @@
         ],
         "Teaching": [
             {
-                "name": "PHYSICS 77: Introduction to Computational Techniques in Physics",
+                "name": "PHYSICS 88: Data Science Applications in Physics",
                 "institution": "University of California, Berkeley",
                 "date": "Fall 2024",
                 "role": "Associate Instructor"
             },
             {
-                "name": "PHYSICS 88: Data Science Applications in Physics",
+                "name": "PHYSICS 77: Introduction to Computational Techniques in Physics",
                 "institution": "University of California, Berkeley",
                 "date": "Fall 2024",
                 "role": "Associate Instructor"
