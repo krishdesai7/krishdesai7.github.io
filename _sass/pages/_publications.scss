@@ -125,5 +125,16 @@
   .publication-row {
     grid-template-columns: 1fr;
     width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .publication-links {
+    flex-wrap: wrap;
+  }
+
+  .publication-citation .citation-text {
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
