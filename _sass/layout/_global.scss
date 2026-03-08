@@ -52,6 +52,7 @@ a {
 #main {
   max-width: var(--content-max-width);
   margin: 0 auto;
+  padding-top: var(--baseline);
 }
 
 @if design.$paragraph-indent == true {
