@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use or build on this website repository, please cite it using the metadata below."
+title: "krishdesai7.github.io"
+type: software
+authors:
+  - family-names: "Desai"
+    given-names: "Krish"
+repository-code: "https://github.com/krishdesai7/krishdesai7.github.io"
+url: "https://github.com/krishdesai7/krishdesai7.github.io"
+abstract: "Source repository for Krish Desai's academic website, including site content, publication pages, teaching materials, and build configuration."
+keywords:
+  - "academic website"
+  - "personal website"
+  - "Jekyll"
+  - "academicpages"
+  - "research profile"
+version: "1.0.0"
+date-released: 2026-03-08
