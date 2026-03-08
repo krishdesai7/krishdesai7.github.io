@@ -5,7 +5,7 @@ title                    : "Krish Desai"
 title_separator          : "-"
 baseurl                  : ""
 name                     : &name "Krish Desai, PhD"
-description              : &description "Machine Learning Researcher"
+description              : &description "Krish Desai is a machine learning researcher at Lawrence Berkeley National Lab, working on unfolding, inference, and practical statistics for particle physics."
 url                      : "https://www.desai.ml"
 repository               : "krishdesai7/krishdesai7.github.io"
 
@@ -38,6 +38,18 @@ author:
   twitter          : "@krishdesai7"
   wikipedia        : # Username
   youtube          : # Username
+
+# Structured Data / sameAs links (used in Person schema for SEO)
+social:
+  type: Person
+  name: "Krish Desai"
+  links:
+    - "https://scholar.google.com/citations?user=StYT3XIAAAAJ"
+    - "https://orcid.org/0000-0003-2559-8910"
+    - "https://inspirehep.net/authors/1987978"
+    - "https://www.researchgate.net/profile/Krish-Desai"
+    - "https://github.com/krishdesai7"
+    - "https://www.linkedin.com/in/krish-desai"
 
 # Publication Categories
 publication_category:
