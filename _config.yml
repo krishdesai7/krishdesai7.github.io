@@ -57,11 +57,6 @@ alexa_site_verification  :
 yandex_site_verification :
 twitter.username         : "krishdesai7"
 
-# Analytics
-analytics:
-  provider: "google-analytics-4"
-  google:
-    tracking_id: "G-RMHJJ7H3MC"
 
 # Reading Files
 include:
