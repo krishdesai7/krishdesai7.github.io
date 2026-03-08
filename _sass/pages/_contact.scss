@@ -1,0 +1,13 @@
+@use "../design/" as *;
+
+
+dl {
+    font-size: $font-size-20;
+    margin: calc(-1 * var(--baseline)) var(--double-baseline) var(--double-baseline) var(--double-baseline);
+    dt {
+        font-family: $header-font-family;
+        font-weight: $weight-semibold;
+        padding-top: var(--one-and-half-baseline);
+        padding-bottom: var(--half-baseline);
+    }
+}
