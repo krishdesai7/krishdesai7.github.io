@@ -93,26 +93,55 @@
   <link rel="next" href="{{ paginator.next_page_path | prepend: seo_url }}">
 {% endif %}
 
-{% if site.og_image %}
-  <script type="application/ld+json">
+<!-- Person structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author.name | default: site.title }}",
+  "url": {{ seo_url | jsonify }},
+  "jobTitle": "{{ site.author.bio }}",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "{{ site.author.employer }}"
+  },
+  "alumniOf": [
     {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "url": {{ seo_url | jsonify }},
-      "logo": {{ site.og_image | prepend: '/images/' | jsonify }}
-    }
-  </script>
-{% endif %}
-{% if site.social %}
-  <script type="application/ld+json">
+      "@type": "CollegeOrUniversity",
+      "name": "University of California, Berkeley"
+    },
     {
-      "@context" : "http://schema.org",
-      "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
-      "name" : "{{ site.social.name | default: site.name }}",
-      "url" : {{ seo_url | jsonify }},
-      "sameAs" : {{ site.social.links | jsonify }}
+      "@type": "CollegeOrUniversity",
+      "name": "Yale University"
     }
-  </script>
+  ]{% if site.social.links %},
+  "sameAs": {{ site.social.links | jsonify }}
+  {% endif %}
+}
+</script>
+
+<!-- Breadcrumb structured data -->
+{% if page.title and page.title != "" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "{{ site.title }}",
+      "item": {{ seo_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ page.title }}",
+      "item": "{{ page.url | prepend: seo_url | remove: 'index.html' }}"
+    }
+  ]
+}
+</script>
 {% endif %}
 
 {% if site.google_site_verification %}

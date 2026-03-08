@@ -12,7 +12,7 @@ author_profile: false
     <div class="talks-grid">
       {% assign year_talks = year_group.items | sort: "date" | reverse %}
       {% for post in year_talks %}
-        {% include talk-single.html %}
+        {% include partials/talk-single.html %}
       {% endfor %}
     </div>
   </section>

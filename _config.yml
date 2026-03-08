@@ -44,12 +44,16 @@ social:
   type: Person
   name: "Krish Desai"
   links:
-    - "https://scholar.google.com/citations?user=StYT3XIAAAAJ"
+    - "https://scholar.google.com/citations?user=StYT3XIAAAAJ&hl=en"
     - "https://orcid.org/0000-0003-2559-8910"
     - "https://inspirehep.net/authors/1987978"
     - "https://www.researchgate.net/profile/Krish-Desai"
     - "https://github.com/krishdesai7"
     - "https://www.linkedin.com/in/krish-desai"
+    - "https://physics.berkeley.edu/people/graduate-student/krish-desai"
+    - "https://physics.yale.edu/media/summer-research/summer-research-2021-krish-desai"
+    - "https://profiles.lbl.gov/88748-krish-desai"
+    - "https://www.facebook.com/krish.desai.73/"
 
 # Publication Categories
 publication_category:

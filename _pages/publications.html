@@ -13,7 +13,7 @@ author_profile: false
   <h2>Journal Articles</h2>
   <div class="publications-grid">
     {% for post in journals %}
-      {% include publication-single.html %}
+      {% include partials/publication-single.html %}
     {% endfor %}
   </div>
 </section>
@@ -22,7 +22,7 @@ author_profile: false
   <h2>Theses</h2>
   <div class="publications-grid">
     {% for post in theses %}
-      {% include publication-single.html %}
+      {% include partials/publication-single.html %}
     {% endfor %}
   </div>
 </section>
@@ -31,7 +31,7 @@ author_profile: false
   <h2>Conference Proceedings</h2>
   <div class="publications-grid">
     {% for post in conferences %}
-      {% include publication-single.html %}
+      {% include partials/publication-single.html %}
     {% endfor %}
   </div>
 </section>
@@ -41,7 +41,7 @@ author_profile: false
     <h2>Preprints</h2>
     <div class="publications-grid">
       {% for post in preprints %}
-        {% include publication-single.html %}
+        {% include partials/publication-single.html %}
       {% endfor %}
     </div>
   </section>

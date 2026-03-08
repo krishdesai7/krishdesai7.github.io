@@ -32,7 +32,7 @@ author_profile: false
           {% assign post_start_year = post_start_year | minus: 1 %}
         {% endunless %}
         {% if post_start_year == start_year and post.semester == semester %}
-          {% include teaching-single.html %}
+          {% include partials/teaching-single.html %}
         {% endif %}
       {% endfor %}
     {% endfor %}
@@ -43,12 +43,12 @@ author_profile: false
       {% endunless %}
       {% unless semester_order contains post.semester %}
         {% if post_start_year == start_year %}
-          {% include teaching-single.html %}
+          {% include partials/teaching-single.html %}
         {% endif %}
       {% endunless %}
     {% endfor %}
   {% endfor %}
   {% for post in teaching_sorted %}
-    {% include teaching-single.html %}
+    {% include partials/teaching-single.html %}
   {% endfor %}
 </div>

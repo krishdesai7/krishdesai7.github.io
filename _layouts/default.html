@@ -3,10 +3,10 @@
 <!doctype html>
 <html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
   <head>
-    {% include head.html %}
+    {% include head/head.html %}
   </head>
   <body>
-    {% include masthead.html %}
+    {% include layout/masthead.html %}
     <div id="main" role="main">
       <div class="archive">
         {% if page.title and page.title != "" %}
@@ -18,7 +18,7 @@
       </div>
     </div>
     <footer>
-      {% include footer.html %}
+      {% include layout/footer.html %}
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>

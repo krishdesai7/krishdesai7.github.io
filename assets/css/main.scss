@@ -1,24 +1,22 @@
 ---
 ---
 @use "design/" as *;
-@use "fonts" as *;
-@use "themes" as *;
-@use "breakpoints" as *;
-@use "include/mixins" as *;
 
-/* These mostly emit CSS; using them without a namespace is fine */
+/* Layout */
 @use "layout/global";
 @use "layout/base";
-@use "include/utilities";
+@use "layout/utilities";
 @use "layout/masthead";
 @use "layout/home";
 @use "layout/footer";
-@use "pages/about";
 @use "layout/icons";
+@use "layout/modal";
+
+/* Pages */
+@use "pages/about";
 @use "pages/publications";
 @use "pages/talks";
 @use "pages/teaching";
 @use "pages/experience";
 @use "pages/cv";
 @use "pages/contact";
-@use "modal";
