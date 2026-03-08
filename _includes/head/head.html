@@ -27,27 +27,22 @@
   })();
 </script>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/all.css' | relative_url}}">
-<link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/sharp-duotone-regular.css' | relative_url}}">
-<link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/duotone-regular.css' | relative_url}}">
-<link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/slab-press-regular.css' | relative_url}}">
-<link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/graphite-thin.css' | relative_url}}">
-<!-- Academicons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
-<!-- MathJax -->
-<script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      tags: 'ams',
-      macros: {
-        Biblatex: '{B\\kern-.05em{\\scriptsize{I\\kern-.08em B}}\\kern-.1em\\LaTeX{}}'
-      }
-    }
-  };
-</script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+<!-- Font Awesome (critical - render blocking) -->
+<link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/all.min.css' | relative_url}}">
+<!-- Font Awesome variant styles (deferred - not needed for initial render) -->
+<link rel="preload" href="{{'/assets/fonts/font-awesome/css/sharp-duotone-regular.min.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{'/assets/fonts/font-awesome/css/duotone-regular.min.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{'/assets/fonts/font-awesome/css/slab-press-regular.min.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{'/assets/fonts/font-awesome/css/graphite-thin.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/sharp-duotone-regular.min.css' | relative_url}}">
+  <link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/duotone-regular.min.css' | relative_url}}">
+  <link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/slab-press-regular.min.css' | relative_url}}">
+  <link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/graphite-thin.css' | relative_url}}">
+</noscript>
+<!-- Academicons (deferred) -->
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css"></noscript>
 
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
