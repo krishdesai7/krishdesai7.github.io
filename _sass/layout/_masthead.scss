@@ -1,4 +1,5 @@
 @use "../design/" as *;
+@use "../breakpoints" as *;
 
 .masthead {
   background: var(--global-footer-bg-color);
@@ -65,5 +66,72 @@
   font-size: $font-size-20;
   &:hover {
     color: var(--theme-toggle-hover-color);
+  }
+}
+
+/* Hamburger toggle button — hidden on desktop */
+.nav__toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--global-nav-link-color);
+  font-size: $font-size-25;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover {
+    color: var(--global-nav-link-color-hover);
+  }
+}
+
+@include mobile-only {
+  .masthead__inner-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav__toggle {
+    display: block;
+  }
+
+  .visible-links {
+    display: none;
+    flex-direction: column;
+    gap: var(--half-baseline);
+    padding: var(--baseline) 0;
+
+    &.nav--open {
+      display: flex;
+    }
+  }
+
+  .nav__menu {
+    position: relative;
+  }
+
+  .greedy-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: var(--global-footer-bg-color);
+    border-bottom: 1px solid var(--global-dark-border-color);
+    z-index: 10;
+  }
+
+  .nav__menu-item > a {
+    padding: var(--quarter-baseline) var(--baseline);
+    display: block;
+  }
+
+  .nav__menu-item.theme-toggle {
+    padding: var(--quarter-baseline) var(--baseline);
+  }
+
+  /* Undo the desktop margin-left: auto on the last item */
+  .nav__menu ul > li:last-of-type {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

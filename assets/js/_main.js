@@ -35,6 +35,24 @@
   });
 })();
 
+// ===== HAMBURGER MENU =====
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('nav--open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+    const icon = navToggle.querySelector('i');
+    if (isOpen) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-xmark');
+    } else {
+      icon.classList.remove('fa-xmark');
+      icon.classList.add('fa-bars');
+    }
+  });
+}
+
 // ===== CLIPBOARD =====
 async function copyText(text) {
   await navigator.clipboard.writeText(text);

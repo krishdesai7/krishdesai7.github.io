@@ -1,4 +1,5 @@
 @use "../design/" as *;
+@use "../breakpoints" as *;
 
 .about-layout {
   display: grid;
@@ -84,4 +85,10 @@
 .author__content .author__bio {
   margin: 0;
   padding: 0;
+}
+
+@include mobile-only {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
 }

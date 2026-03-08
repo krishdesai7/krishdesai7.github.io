@@ -1,4 +1,5 @@
 @use "../design/" as *;
+@use "../breakpoints" as *;
 
 .experience-item {
   display: grid;
@@ -73,7 +74,25 @@
   }
 }
 
+@include mobile-only {
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: var(--half-baseline);
+  }
 
+  .experience-logo {
+    justify-self: center;
+    width: calc(var(--quadruple-baseline) * 1);
+    height: calc(var(--quadruple-baseline) * 1);
+  }
+
+  .experience-details {
+    flex-direction: column;
+    > .experience-dates {
+      margin-left: 0;
+    }
+  }
+}
 
 // Dark mode logo switching
 html[data-theme="dark"] {

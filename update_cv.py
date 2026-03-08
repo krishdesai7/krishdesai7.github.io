@@ -5,7 +5,7 @@ from pathlib import Path
 import re
 import sys
 import datetime
-from typing import Callable
+from typing import Callable, cast
 
 CV_FILE_PATH: Final[Path] = Path("_data/cv.json")
 CATEGORY_MAPPING: Final[dict[str, str]] = {
@@ -26,7 +26,7 @@ def load_markdown_files(directory: Path) -> list[dict[str, object]]:
     if directory.is_dir():
         items: list[dict[str, object]] = []
         for file in directory.glob("*.md"):
-            post: frontmatter.Post = frontmatter.load(file)
+            post: frontmatter.Post = frontmatter.load(file.as_posix())
             items.append(post.metadata)
         items.sort(key=lambda x: x.get("date", x.get("year", "")), reverse=True)
         return items
@@ -37,13 +37,13 @@ def html_to_markdown_bold(text: str) -> str:
     """Converts <strong>...</strong> HTML tags to **...** markdown bold."""
     return re.sub(r"<strong>(.*?)</strong>", r"**\1**", text)
 
-def get_publications(items: list[dict[str, object]]) -> list[dict[str, str | datetime.date]]:
+def get_publications(items: list[dict[str, str | datetime.date]]) -> list[dict[str, str | datetime.date]]:
     """Gets the publications section."""
     publications: list[dict[str, str | datetime.date]] = []
     for item in items:
         entry: dict[str, str | datetime.date] = {
             "name"      : item["title"],
-            "authors"   : html_to_markdown_bold(item["authors"]),
+            "authors"   : html_to_markdown_bold(cast(str, item["authors"])),
             "publisher" : item["venue"],
             "date"      : item["date"],
             "pdf"       : item["paperurl"],
@@ -54,7 +54,7 @@ def get_publications(items: list[dict[str, object]]) -> list[dict[str, str | dat
         publications.append(entry)
     return publications
 
-def get_talks(items: list[dict[str, object]]) -> list[dict[str, str | datetime.date]]:
+def get_talks(items: list[dict[str, str | datetime.date]]) -> list[dict[str, str | datetime.date]]:
     """Gets the talks section."""
     talks: list[dict[str, str | datetime.date]] = []
     for item in items:
@@ -66,7 +66,7 @@ def get_talks(items: list[dict[str, object]]) -> list[dict[str, str | datetime.d
         })
     return talks
 
-def get_experience(items: list[dict[str, object]]) -> list[dict[str, str | datetime.date]]:
+def get_experience(items: list[dict[str, str | datetime.date]]) -> list[dict[str, str | datetime.date]]:
     """Gets the experience section."""
     experience: list[dict[str, str | datetime.date]] = []
     for item in items:
@@ -80,9 +80,9 @@ def get_experience(items: list[dict[str, object]]) -> list[dict[str, str | datet
 
 SEMESTER_ORDER: Final[dict[str, int]] = {"Fall": 0, "Summer": 1, "Spring": 2}
 
-def get_teaching(items: list[dict[str, object]]) -> list[dict[str, str]]:
+def get_teaching(items: list[dict[str, str | datetime.date]]) -> list[dict[str, str | datetime.date]]:
     """Gets the teaching section."""
-    teaching: list[dict[str, str]] = []
+    teaching: list[dict[str, str | datetime.date]] = []
     for item in items:
         teaching.append({
             "name"        : f"{item['course']}: {item['title']}",
