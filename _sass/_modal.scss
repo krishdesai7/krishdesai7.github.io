@@ -1,4 +1,6 @@
 @use "design/" as *;
+@use "breakpoints" as *;
+
 .modal {
   display: none;
   position: fixed;
@@ -131,24 +133,34 @@
   }
 }
 
-/* Mobile responsiveness */
-@media (max-width: 600px) {
+@include mobile-only {
   .modal-content {
-    width: 95%;
-    margin: 10% auto;
-    max-height: 90vh;
+    max-width: 92%;
+    margin: var(--baseline) auto;
+    max-height: 85vh;
+  }
+
+  .modal-title {
+    font-size: $font-size-16;
+    margin: var(--quarter-baseline) 0 0 var(--half-baseline);
   }
 
   .modal-header {
-    padding: 16px 20px;
+    padding: var(--quarter-baseline) var(--half-baseline);
   }
 
   .modal-body {
-    padding: 20px;
+    padding: var(--half-baseline);
+  }
+
+  #biblatex-content {
+    font-size: $font-size-10;
+    word-break: break-all;
+    white-space: pre-wrap;
   }
 
   .modal-footer {
-    padding: 12px 20px;
+    padding: var(--quarter-baseline) var(--half-baseline);
     flex-direction: column;
 
     .btn {

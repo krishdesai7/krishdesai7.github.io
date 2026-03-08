@@ -53,6 +53,35 @@ if (navToggle && navLinks) {
   });
 }
 
+// ===== SCROLL-AWARE MASTHEAD (mobile) =====
+(function () {
+  const masthead = document.querySelector('.masthead');
+  if (!masthead) return;
+
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+
+  function onScroll() {
+    const currentY = window.scrollY;
+    if (currentY <= 0) {
+      masthead.classList.remove('masthead--hidden');
+    } else if (currentY > lastScrollY) {
+      masthead.classList.add('masthead--hidden');
+    } else {
+      masthead.classList.remove('masthead--hidden');
+    }
+    lastScrollY = currentY;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+})();
+
 // ===== CLIPBOARD =====
 async function copyText(text) {
   await navigator.clipboard.writeText(text);

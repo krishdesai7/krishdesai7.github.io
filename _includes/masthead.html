@@ -2,13 +2,11 @@
   <div class="masthead__inner-wrap">
     <div class="site-title">
       <a href="{{ site.url }}">
-        {{ site.title }}
+        <span class="site-title__full">{{ site.title }}</span>
+        <span class="site-title__short">KD</span>
       </a>
     </div>
     <div class="nav__menu">
-      <button id="nav-toggle" class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <i class="fa-sharp-duotone fa-regular fa-bars fa-fw" aria-hidden="true"></i>
-      </button>
       <nav id="site-nav" class="greedy-nav">
         <ul class="visible-links" id="nav-links">
           {% for link in site.data.navigation.main %}
@@ -17,14 +15,18 @@
                 {{ link.title }}
               </a>
           {% endfor %}
-          <li class="nav__menu-item theme-toggle">
-            <button id="theme-toggle" type="button" aria-label="Toggle theme">
-              <i id="theme-icon" class="fa-duotone fa-regular fa-fw fa-moon-stars"
-                aria-hidden="true">
-              </i>
-            </button>
         </ul>
       </nav>
+      <div class="nav__controls">
+        <button id="nav-toggle" class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <i class="fa-sharp-duotone fa-regular fa-bars fa-fw" aria-hidden="true"></i>
+        </button>
+        <button id="theme-toggle" type="button" aria-label="Toggle theme">
+          <i id="theme-icon" class="fa-duotone fa-regular fa-fw fa-moon-stars"
+            aria-hidden="true">
+          </i>
+        </button>
+      </div>
     </div>
   </div>
 </div>
