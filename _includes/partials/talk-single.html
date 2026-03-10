@@ -7,6 +7,7 @@
     </time>
   </div>
   <div class="talk-item" itemscope itemtype="https://schema.org/Event">
+    <meta itemprop="startDate" content="{{ post.date | date_to_xmlschema }}">
     <h3 class="talk-title" itemprop="name">
       <a href="{{ post.url | relative_url }}" rel="permalink" itemprop="url">{{ title }}</a>
     </h3>
@@ -16,10 +17,10 @@
           <span itemprop="name">
             {{ post.venue }}
           </span>
-        </div>
-        <div class="talk-location" itemprop="address">
-          <i class="fa-slab-press fa-regular fa-location-dot fa-fw pad-icon-right" aria-hidden="true"></i>
-          {{ post.location }}
+          <div class="talk-location" itemprop="address">
+            <i class="fa-slab-press fa-regular fa-location-dot fa-fw pad-icon-right" aria-hidden="true"></i>
+            {{ post.location }}
+          </div>
         </div>
         {% if post.link %}
           <div class="talk-link-single">

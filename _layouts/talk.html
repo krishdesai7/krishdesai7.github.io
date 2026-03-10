@@ -2,13 +2,16 @@
 layout: default
 ---
 <!-- Layout for page corresponding to individual talks -->
-<div id="main" role="main">
-  <meta itemprop="headline" content="{{ page.title }}">
-  <meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">
+<div id="main" role="main" itemscope itemtype="https://schema.org/Event">
+  <meta itemprop="name" content="{{ page.title }}">
+  <meta itemprop="startDate" content="{{ page.date | date_to_xmlschema }}">
   <div class="page__inner-wrap">
     <div class="talk-meta-single">
         <div class="talk-type-single">{{ page.type }}</div>
-        <div class="talk-venue-single">{{ page.venue }}</div>
+        <div class="talk-venue-single" itemprop="location" itemscope itemtype="https://schema.org/Place">
+          <span itemprop="name">{{ page.venue }}</span>
+          <meta itemprop="address" content="{{ page.location }}">
+        </div>
         <div class="talk-date-single">
           <i class="fa-graphite fa-thin fa-calendar fa-fw pad-icon-right" aria-hidden="true"></i>
           <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
