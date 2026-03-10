@@ -28,9 +28,7 @@
             <span class="publication-venue" itemprop="publisher">{{ post.venue }}</span>
           {% endif %}
         {% when 'conferences' %}
-          <span class="publication-venue" itemprop="isPartOf" itemscope itemtype="https://schema.org/Event">
-            <span itemprop="name">{{ post.venue }}</span>
-          </span>
+          <span class="publication-venue">{{ post.venue }}</span>
         {% else %}
           <span class="publication-venue" itemprop="name">{{ post.venue }}</span>
       {% endcase %}

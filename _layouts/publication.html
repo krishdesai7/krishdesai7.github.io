@@ -22,10 +22,8 @@ layout: default
               </span>
             {% endif %}
           {% when 'conferences' %}
-            <span class="publication-venue" itemprop="isPartOf" itemscope itemtype="https://schema.org/Event">
-              <span itemprop="name">
-                {{ page.venue }}
-              </span>
+            <span class="publication-venue">
+              {{ page.venue }}
             </span>
           {% else %}
             <span class="publication-venue" itemprop="name">
