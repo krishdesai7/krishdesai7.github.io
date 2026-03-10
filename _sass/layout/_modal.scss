@@ -99,16 +99,16 @@
 }
 
 .btn-primary {
-  background-color: var(--global-selection-bg-color);
-  color: var(--global-selection-text-color);
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
   &:hover {
-    background-color: var(--global-selection-bg-color-hover);
+    background-color: var(--btn-primary-bg-hover);
   }
 }
 
 .btn-secondary {
-  background-color: var(--global-selection-text-color);
-  color: var(--global-selection-bg-color);
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
   border: 2px solid var(--global-border-color);
 }
 /* BibLaTeX logo - CSS approximation of LaTeX rendering */

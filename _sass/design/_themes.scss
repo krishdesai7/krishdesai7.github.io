@@ -7,8 +7,8 @@ $border-radius-double    : 8px;
 $masthead-height         : 70px;
 
 /* Card shadow */
-$box-shadow              : 8px 8px 0 0 var(--global-dark-border-color),
-                           8px 8px 0 1px var(--global-border-color),
+$box-shadow              : 8px 8px 0 0 var(--box-shadow-offset-color),
+                           8px 8px 0 1px var(--box-shadow-border-color),
                            16px 16px 25px rgba(0, 0, 0, 0.18);
 
 /* ==========================================================================
@@ -123,6 +123,17 @@ $amber-400   : #fbbf24;
   --global-selection-text-color      : #{$ink-black};
   --global-selection-bg-color        : #{$parchment-200};
   --global-selection-bg-color-hover  : #{$parchment-400};
+
+  /* Buttons */
+  --btn-primary-bg                   : #{$parchment-200};
+  --btn-primary-bg-hover             : #{$parchment-400};
+  --btn-primary-text                 : #{$ink-black};
+  --btn-secondary-bg                 : #{$paper-white};
+  --btn-secondary-text               : #{$ink-dark};
+
+  /* Box shadow */
+  --box-shadow-offset-color          : #{$border-dark};
+  --box-shadow-border-color          : #{$border-light};
 }
 
 /* Dark theme — Traditional */
@@ -160,4 +171,15 @@ html[data-theme="dark"] {
    --global-selection-text-color      : #{$coal-950};
    --global-selection-bg-color        : #{$sepia-400};
    --global-selection-bg-color-hover  : #{$terracotta-600};
+
+   /* Buttons */
+   --btn-primary-bg                   : #{$parchment-50};
+   --btn-primary-bg-hover             : #{$parchment-100};
+   --btn-primary-text                 : #{$coal-950};
+   --btn-secondary-bg                 : #{$coal-800};
+   --btn-secondary-text               : #{$parchment-50};
+
+   /* Box shadow */
+   --box-shadow-offset-color          : rgba(0, 0, 0, 0.4);
+   --box-shadow-border-color          : #{$soot-700};
  }
