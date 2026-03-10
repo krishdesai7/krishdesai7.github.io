@@ -89,54 +89,15 @@
   font-size: $font-size-14;
   cursor: pointer;
   transition: all 0.2s;
-  border: none;
-  &:hover {
-    transform: translateY(-1px);
-    box-shadow: $box-shadow;
-  }
+  border: 1px solid var(--global-border-color);
+  background: transparent;
+  color: var(--global-text-color);
   width: var(--quadruple-baseline);
   height: var(--one-and-half-baseline);
-}
 
-.btn-primary {
-  background-color: var(--btn-primary-bg);
-  color: var(--btn-primary-text);
   &:hover {
-    background-color: var(--btn-primary-bg-hover);
-  }
-}
-
-.btn-secondary {
-  background-color: var(--btn-secondary-bg);
-  color: var(--btn-secondary-text);
-  border: 2px solid var(--global-border-color);
-}
-/* BibLaTeX logo - CSS approximation of LaTeX rendering */
-.biblatex-logo {
-  font-family: $header-font-family;
-  letter-spacing: -0.02em;
-
-  .bib-ib {
-    font-size: 0.7em;
-    text-transform: uppercase;
-    margin-left: -0.05em;
-    letter-spacing: -0.08em;
-  }
-
-  .bib-la {
-    margin-left: -0.1em;
-  }
-
-  .bib-a {
-    font-size: 0.85em;
-    text-transform: uppercase;
-    margin-left: -0.05em;
-  }
-
-  .bib-ex {
-    text-transform: lowercase;
-    margin-left: -0.12em;
-    vertical-align: -0.05em;
+    border-color: $terracotta-600;
+    color: $terracotta-600;
   }
 }
 
