@@ -7,6 +7,7 @@ course: "PHYSICS 7B"
 venue: "University of California, Berkeley"
 year: 2021
 semester: Summer
+last_modified_at: 2021-08-15
 location: "Berkeley, CA"
 materials: |
     - [Lab 102A](https://classes.berkeley.edu/content/2021-summer-physics-7b-102a-lab-102a)

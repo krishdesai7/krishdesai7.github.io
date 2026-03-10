@@ -172,6 +172,17 @@ category_archive:
   type: liquid
   path: /categories/
 
+# Sitemap exclusions
+defaults:
+  - scope:
+      path: "files"
+    values:
+      sitemap: false
+  - scope:
+      path: "talkmap"
+    values:
+      sitemap: false
+
 # HTML Compression
 # - http://jch.penibelst.de/
 compress_html:

@@ -1,4 +1,6 @@
+# TODO
+
 - [x] Improve BibLaTeX rendering
-- [ ] Color of Download button weird
-- [ ] Animation of Download button in BibLaTeX modal is weird
+- [x] Color of Download button weird
+- [x] Animation of Download button in BibLaTeX modal is weird
 - [x] Sun looks like a gear/settings icon

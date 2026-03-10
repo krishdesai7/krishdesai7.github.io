@@ -7,6 +7,7 @@ course: "PHYSICS 77"
 venue: "University of California, Berkeley"
 year: 2022
 semester: Fall
+last_modified_at: 2022-12-15
 location: "Berkeley, CA"
 materials: |
     - [Section 101](https://classes.berkeley.edu/content/2022-fall-physics-77-101-wor-101)

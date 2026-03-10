@@ -7,6 +7,7 @@ course: "PHYSICS 77"
 venue: "University of California, Berkeley"
 year: 2024
 semester: Summer
+last_modified_at: 2024-08-15
 location: "Berkeley, CA"
 materials: |
     - [Section 101](https://classes.berkeley.edu/content/2024-summer-physics-77-101-wor-101)

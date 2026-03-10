@@ -7,6 +7,7 @@ course: "PHYSICS 88"
 venue: "University of California, Berkeley"
 year: 2024
 semester: Fall
+last_modified_at: 2024-12-15
 location: "Berkeley, CA"
 materials: |
     - [Section 101](https://classes.berkeley.edu/content/2024-fall-physics-88-101-wor-101)
