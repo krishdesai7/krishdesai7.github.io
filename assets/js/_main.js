@@ -9,10 +9,10 @@
 
     if (next === 'dark') {
       html.setAttribute('data-theme', 'dark');
-      if (icon) { icon.classList.remove('fa-moon-stars'); icon.classList.add('fa-sun'); }
+      if (icon) { icon.classList.remove('fa-moon-stars'); icon.classList.add('fa-sun-bright'); }
     } else {
       html.removeAttribute('data-theme');
-      if (icon) { icon.classList.remove('fa-sun'); icon.classList.add('fa-moon-stars'); }
+      if (icon) { icon.classList.remove('fa-sun-bright'); icon.classList.add('fa-moon-stars'); }
     }
   }
 

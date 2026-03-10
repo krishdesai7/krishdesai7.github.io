@@ -4,6 +4,7 @@ title: "Publications"
 permalink: /publications/
 author_profile: false
 ---
+{% include head/mathjax.html %}
 {% assign journals = site.publications | where: "category", "journals" | reverse %}
 {% assign theses = site.publications | where: "category", "theses" | reverse %}
 {% assign conferences = site.publications | where: "category", "conferences" | reverse %}

@@ -91,13 +91,13 @@
     --fa-secondary-color: #b8a5e0;
   }
 
-  .fa-sun {
+  .fa-sun-bright {
     --fa-primary-color: #8a6e30;
     --fa-secondary-color: #9e7f3a;
     --fa-secondary-opacity: 1;
     transition: --fa-primary-color 0.2s ease, --fa-secondary-color 0.2s ease;
   }
-  &:hover .fa-sun {
+  &:hover .fa-sun-bright {
     --fa-primary-color: #b8922e;
     --fa-secondary-color: #c9a340;
   }

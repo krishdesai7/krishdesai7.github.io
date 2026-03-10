@@ -19,4 +19,5 @@ package-lock.json
 .cursor/
 
 .jekyll-metadata
+.jekyll-pid
 local.log
