@@ -51,6 +51,7 @@ $terracotta-700 : #814a38; /* pressed/active */
 /* Selection */
 $parchment-200 : #eee6d2; /* selection bg */
 $parchment-400 : #e4d7b7; /* selection hover */
+$parchment-500 : #d9ca9f; /* selection hover (deeper) */
 
 /* ==========================================================================
    Palette — Dark (Traditional)
@@ -121,12 +122,12 @@ $amber-400   : #fbbf24;
 
   /* Selection */
   --global-selection-text-color      : #{$ink-black};
-  --global-selection-bg-color        : #{$parchment-200};
-  --global-selection-bg-color-hover  : #{$parchment-400};
+  --global-selection-bg-color        : #{$parchment-300};
+  --global-selection-bg-color-hover  : #{$parchment-500};
 
   /* Buttons */
-  --btn-primary-bg                   : #{$parchment-200};
-  --btn-primary-bg-hover             : #{$parchment-400};
+  --btn-primary-bg                   : #{$parchment-300};
+  --btn-primary-bg-hover             : #{$parchment-500};
   --btn-primary-text                 : #{$ink-black};
   --btn-secondary-bg                 : #{$paper-white};
   --btn-secondary-text               : #{$ink-dark};
@@ -148,36 +149,36 @@ html[data-theme="dark"] {
    --global-dark-border-color         : #{$soot-600};
  
    /* Text */
-   --global-text-color                : #{$parchment-50};
-   --global-text-color-light          : #{$parchment-300};
-   --header-footer-text-color         : #{$parchment-100};
-   --global-masthead-link-color       : #{$parchment-50};
- 
+   --global-text-color                : #{$parchment-100};
+   --global-text-color-light          : #{$parchment-400};
+   --header-footer-text-color         : #{$parchment-200};
+   --global-masthead-link-color       : #{$parchment-100};
+
    /* Links (sepia/terracotta instead of cyan) */
-   --global-link-color                : #{$parchment-100};
+   --global-link-color                : #{$parchment-200};
    --global-link-color-hover          : #{$terracotta-600};
-   --global-link-color-visited        : #{$parchment-300};
+   --global-link-color-visited        : #{$parchment-400};
    --global-link-decoration-color     : #{$oxblood-500};
-   --global-masthead-link-color-hover : #{$parchment-300};
-   --global-nav-link-color            : #{$parchment-300};
+   --global-masthead-link-color-hover : #{$parchment-400};
+   --global-nav-link-color            : #{$parchment-400};
    --global-nav-link-color-hover      : #{$sepia-400};
    --theme-toggle-hover-color         : #{$amber-400};
- 
+
    /* Code blocks: warm paper-on-charcoal */
    --global-code-background-color     : #{$coal-800};
-   --global-code-text-color           : #{$parchment-100};
- 
+   --global-code-text-color           : #{$parchment-200};
+
    /* Selection: muted “aged paper” glow, not neon */
    --global-selection-text-color      : #{$coal-950};
    --global-selection-bg-color        : #{$sepia-400};
    --global-selection-bg-color-hover  : #{$terracotta-600};
 
    /* Buttons */
-   --btn-primary-bg                   : #{$parchment-50};
-   --btn-primary-bg-hover             : #{$parchment-100};
+   --btn-primary-bg                   : #{$parchment-100};
+   --btn-primary-bg-hover             : #{$parchment-200};
    --btn-primary-text                 : #{$coal-950};
    --btn-secondary-bg                 : #{$coal-800};
-   --btn-secondary-text               : #{$parchment-50};
+   --btn-secondary-text               : #{$parchment-100};
 
    /* Box shadow */
    --box-shadow-offset-color          : rgba(0, 0, 0, 0.4);
