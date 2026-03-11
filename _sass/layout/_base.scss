@@ -48,7 +48,8 @@ body {
 body {
   color: var(--global-text-color);
   font-family: $global-font-family;
-  line-height: 1.35;
+  font-size: $font-size-18;
+  line-height: 2;
   font-feature-settings: "onum" 1, "liga" 1, "clig" 1, "kern" 1;
 }
 

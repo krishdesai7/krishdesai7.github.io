@@ -1,0 +1,8 @@
+<div class="writing-item">
+  <h3 class="writing-title">
+    <a href="{{ post.url | relative_url }}" rel="permalink">{{ post.title }}</a>
+  </h3>
+  {% if post.description %}
+    <p class="writing-description">{{ post.description }}</p>
+  {% endif %}
+</div>

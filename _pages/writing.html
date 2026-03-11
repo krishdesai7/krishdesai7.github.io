@@ -1,0 +1,13 @@
+---
+layout: default
+title: "Writing"
+permalink: /writing/
+author_profile: false
+---
+{% assign writing_posts = site.writing | sort: "date" | reverse %}
+
+<div class="writing-grid">
+  {% for post in writing_posts %}
+    {% include partials/writing-single.html %}
+  {% endfor %}
+</div>

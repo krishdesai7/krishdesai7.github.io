@@ -1,0 +1,24 @@
+@use "../design/" as *;
+
+.writing-grid {
+  margin-top: var(--baseline);
+}
+
+.writing-item {
+  padding-bottom: var(--baseline);
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.writing-title {
+  margin-top: 0;
+  margin-bottom: var(--third-baseline);
+}
+
+.writing-description {
+  margin-top: 0;
+  margin-bottom: 0;
+}
