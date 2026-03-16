@@ -1,11 +1,12 @@
 ---
 layout: default
-title: ""
+title: "CV/Resume"
 permalink: /cv/
 author_profile: false
 redirect_from:
 - /cv.html
 ---
+{% include head/mathjax.html %}
 {% assign cv = site.data.cv %}
 
 <div class="cv-modern">
@@ -14,15 +15,15 @@ redirect_from:
     <div class="cv-buttons">
       <a href="{{ '/files/Resume.pdf' | relative_url }}" target="_blank" rel="noopener" class="cv-btn">
         <i class="fa-sharp-duotone fa-regular fa-file-user fa-fw" aria-hidden="true"></i>
-        Resume
+        View Resume (PDF)
       </a>
-      <a href="{{ '/files/CV.pdf' | relative_url }}" download class="cv-btn">
-        <i class="fa-sharp-duotone fa-regular fa-download fa-fw" aria-hidden="true"></i>
-        Download CV
+      <a href="{{ '/files/CV.pdf' | relative_url }}" target="_blank" rel="noopener" class="cv-btn">
+        <i class="fa-sharp-duotone fa-regular fa-file-pdf fa-fw" aria-hidden="true"></i>
+        View CV (PDF)
       </a>
       <button onclick="window.print()" class="cv-btn">
         <i class="fa-sharp-duotone fa-regular fa-print fa-fw" aria-hidden="true"></i>
-        Print
+        Print CV
       </button>
     </div>
     <div class="cv-grid-container">
