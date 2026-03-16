@@ -4,7 +4,10 @@ title: "Professional Experience"
 permalink: /experience/
 author_profile: false
 ---
-{% for post in site.experience reversed %}
+{% assign current_jobs = site.experience | where_exp: "item", "item.end_date == nil" | sort: "date" | reverse %}
+{% assign past_jobs = site.experience | where_exp: "item", "item.end_date" | sort: "end_date" | reverse %}
+{% assign sorted_experience = current_jobs | concat: past_jobs %}
+{% for post in sorted_experience %}
   <div class="experience-item">
     {% if post.logo %}
     <div class="experience-logo">

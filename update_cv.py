@@ -76,6 +76,13 @@ def get_experience(items: list[dict[str, str | datetime.date]]) -> list[dict[str
             "startDate" : item["date"],
             "endDate"   : item.get("end_date", "Present"),
         })
+    experience.sort(
+        key=lambda x: (
+            1 if x["endDate"] == "Present" else 0,
+            x["endDate"] if x["endDate"] != "Present" else datetime.date.max,
+        ),
+        reverse=True,
+    )
     return experience
 
 SEMESTER_ORDER: Final[dict[str, int]] = {"Fall": 0, "Summer": 1, "Spring": 2}

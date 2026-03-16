@@ -45,10 +45,22 @@
         ],
         "Professional Experience": [
             {
+                "name": "Lawrence Berkeley National Lab",
+                "position": "Machine Learning Researcher",
+                "startDate": "2020-09-01",
+                "endDate": "Present"
+            },
+            {
                 "name": "Emissary AI",
                 "position": "Machine Learning Engineer",
                 "startDate": "2025-05-01",
                 "endDate": "2025-12-31"
+            },
+            {
+                "name": "University of California",
+                "position": "Associate Instructor",
+                "startDate": "2020-08-01",
+                "endDate": "2024-12-31"
             },
             {
                 "name": "Bridgewater Associates",
@@ -61,18 +73,6 @@
                 "position": "PhD Research Intern",
                 "startDate": "2022-05-01",
                 "endDate": "2022-08-31"
-            },
-            {
-                "name": "Lawrence Berkeley National Lab",
-                "position": "Machine Learning Researcher",
-                "startDate": "2020-09-01",
-                "endDate": "2025-05-15"
-            },
-            {
-                "name": "University of California, Berkeley",
-                "position": "Associate Instructor",
-                "startDate": "2020-08-01",
-                "endDate": "2024-12-31"
             },
             {
                 "name": "Purple Gaze Inc.",
@@ -124,20 +124,20 @@
                 "note": "PhD (Physics) Dissertation"
             },
             {
-                "name": "Neural Posterior Unfolding",
-                "authors": "Fernando Torales Acosta, Jay Chan, **Krish Desai**, Vinicius Mikuni, Benjamin Nachman, and Jingjing Pan",
-                "publisher": "Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
-                "date": "2024-12-15",
-                "pdf": "https://www.desai.ml/files/neural-posterior-unfolding-neurips-paper.pdf",
-                "biblatex": "https://www.desai.ml/files/neural-posterior-unfolding-neurips-biblatex.bib"
-            },
-            {
                 "name": "Multidimensional Deconvolution with Profiling",
                 "authors": "Huanbiao Zhu, **Krish Desai**, Mikael Kuusela, Vinicius Mikuni, Benjamin Nachman, and Larry Wasserman",
                 "publisher": "Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
                 "date": "2024-12-15",
                 "pdf": "https://www.desai.ml/files/multidimensional-deconvolution-with-profiling-paper.pdf",
                 "biblatex": "https://www.desai.ml/files/multidimensional-deconvolution-with-profiling-biblatex.bib"
+            },
+            {
+                "name": "Neural Posterior Unfolding",
+                "authors": "Fernando Torales Acosta, Jay Chan, **Krish Desai**, Vinicius Mikuni, Benjamin Nachman, and Jingjing Pan",
+                "publisher": "Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
+                "date": "2024-12-15",
+                "pdf": "https://www.desai.ml/files/neural-posterior-unfolding-neurips-paper.pdf",
+                "biblatex": "https://www.desai.ml/files/neural-posterior-unfolding-neurips-biblatex.bib"
             },
             {
                 "name": "Moment Unfolding: Moment extraction using an unfolding protocol without binning",
@@ -252,13 +252,13 @@
         ],
         "Talks": [
             {
-                "name": "Multidimensional Deconvolution with Profiling",
+                "name": "Neural Posterior Unfolding",
                 "event": "Thirty-Eighth Annual Conference on Neural Information Processing Systems",
                 "date": "2024-12-15",
                 "location": "Vancouver, Canada"
             },
             {
-                "name": "Neural Posterior Unfolding",
+                "name": "Multidimensional Deconvolution with Profiling",
                 "event": "Thirty-Eighth Annual Conference on Neural Information Processing Systems",
                 "date": "2024-12-15",
                 "location": "Vancouver, Canada"
@@ -350,13 +350,13 @@
         ],
         "Teaching": [
             {
-                "name": "PHYSICS 88: Data Science Applications in Physics",
+                "name": "PHYSICS 77: Introduction to Computational Techniques in Physics",
                 "institution": "University of California, Berkeley",
                 "date": "Fall 2024",
                 "role": "Associate Instructor"
             },
             {
-                "name": "PHYSICS 77: Introduction to Computational Techniques in Physics",
+                "name": "PHYSICS 88: Data Science Applications in Physics",
                 "institution": "University of California, Berkeley",
                 "date": "Fall 2024",
                 "role": "Associate Instructor"

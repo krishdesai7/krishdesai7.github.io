@@ -39,7 +39,7 @@ npm run build
 
 ## Project Structure
 
-```
+```text
 .
 ├── _config.yml          # Jekyll configuration (site metadata, collections, plugins)
 ├── _data/
@@ -74,7 +74,7 @@ Each collection lives in a `_<name>/` directory. Files use date-prefixed slugs (
 layout: publication
 title: "Paper Title"
 collection: publications
-category: manuscripts   # manuscripts | conferences | preprints | theses
+category: manuscripts # manuscripts | conferences | preprints | theses
 permalink: /publications/2024-01-01-slug
 date: 2024-01-01
 venue: "Journal or Conference Name"
@@ -100,7 +100,7 @@ Wrap your own name in `<strong>` tags to bold it in author lists.
 layout: talk
 title: "Talk Title"
 collection: talks
-type: "Talk"             # Talk | Poster | Seminar
+type: "Talk" # Talk | Poster | Seminar
 permalink: /talks/2024-01-01-slug
 venue: "Conference Name"
 date: 2024-01-01
@@ -167,20 +167,20 @@ uv run update_cv.py
 
 Three GitHub Actions workflows automate deployment and data updates:
 
-| Workflow | Trigger | Action |
-|---|---|---|
-| `pages.yml` | Push to `master` | Builds Jekyll site and deploys to GitHub Pages |
-| `update_cv.yml` | Changes to collections or `update_cv.py` | Runs `update_cv.py` and commits updated `_data/cv.json` |
-| `scrape_talks.yml` | Changes to `_talks/` or `talkmap.py` | Runs `talkmap.py` and commits updated map files |
+| Workflow           | Trigger                                  | Action                                                  |
+| ------------------ | ---------------------------------------- | ------------------------------------------------------- |
+| `pages.yml`        | Push to `master`                         | Builds Jekyll site and deploys to GitHub Pages          |
+| `update_cv.yml`    | Changes to collections or `update_cv.py` | Runs `update_cv.py` and commits updated `_data/cv.json` |
+| `scrape_talks.yml` | Changes to `_talks/` or `talkmap.py`     | Runs `talkmap.py` and commits updated map files         |
 
 ## Technology Stack
 
-| Layer | Technology |
-|---|---|
-| Static site generator | [Jekyll](https://jekyllrb.com/) 4.4 |
-| CSS preprocessor | [Dart Sass](https://sass-lang.com/) via `sass-embedded` |
-| JavaScript minification | [Terser](https://terser.org/) |
-| Python dependency management | [uv](https://docs.astral.sh/uv/) |
-| Hosting | [GitHub Pages](https://pages.github.com/) |
-| Maps | [Leaflet](https://leafletjs.com/) via `folium` / `getorg` |
-| Geocoding | [Nominatim](https://nominatim.org/) via `geopy` |
+| Layer                        | Technology                                                |
+| ---------------------------- | --------------------------------------------------------- |
+| Static site generator        | [Jekyll](https://jekyllrb.com/) 4.4                       |
+| CSS preprocessor             | [Dart Sass](https://sass-lang.com/) via `sass-embedded`   |
+| JavaScript minification      | [Terser](https://terser.org/)                             |
+| Python dependency management | [uv](https://docs.astral.sh/uv/)                          |
+| Hosting                      | [GitHub Pages](https://pages.github.com/)                 |
+| Maps                         | [Leaflet](https://leafletjs.com/) via `folium` / `getorg` |
+| Geocoding                    | [Nominatim](https://nominatim.org/) via `geopy`           |
