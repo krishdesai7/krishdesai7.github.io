@@ -57,6 +57,27 @@ redirect_from:
           {% endcase %}
         </div>
       {% endfor %}
+      <div class="cv-grid-key">
+        Profiles:
+      </div>
+      <div class="cv-grid-value">
+        <div class="cv-profiles">
+          {% for profile in cv.basics.profiles %}
+            <a href="{{ profile[1] }}" target="_blank" rel="noopener" aria-label="{{ profile[0] }}" title="{{ profile[0] }}">
+              {% case profile[0] %}
+                {% when "Google Scholar" %}<i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i>
+                {% when "GitHub" %}<i class="fa-brands fa-fw fa-github" aria-hidden="true"></i>
+                {% when "LinkedIn" %}<i class="fa-brands fa-fw fa-linkedin" aria-hidden="true"></i>
+                {% when "ORCID" %}<i class="fa-brands fa-fw fa-orcid" aria-hidden="true"></i>
+                {% when "ResearchGate" %}<i class="ai ai-researchgate ai-fw" aria-hidden="true"></i>
+                {% when "INSPIRE-HEP" %}<i class="ai ai-inspire ai-fw" aria-hidden="true"></i>
+                {% when "arXiv" %}<i class="ai ai-arxiv ai-fw" aria-hidden="true"></i>
+                {% when "Semantic Scholar" %}<i class="ai ai-semantic-scholar ai-fw" aria-hidden="true"></i>
+              {% endcase %}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </section>
 

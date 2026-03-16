@@ -13,15 +13,21 @@
                 "city": "Berkeley",
                 "region": "CA",
                 "postalCode": "94720-8099",
-                "country": "United States"
+                "country": "United States",
+                "address_query": "Lawrence+Berkeley+National+Laboratory"
             },
-            "E-mail": "krishdesai7@gmail.com",
+            "E-mail": "krish@desai.ml",
             "Website": "https://www.desai.ml"
         },
         "profiles": {
             "Google Scholar": "https://scholar.google.com/citations?hl=en&user=StYT3XIAAAAJ",
-            "GitHub": "https://github.com/krishdesai7",
-            "LinkedIn": "https://www.linkedin.com/in/krish-desai"
+            "ORCID": "https://orcid.org/0000-0003-2559-8910",
+            "arXiv": "https://arxiv.org/a/desai_k_1",
+            "INSPIRE-HEP": "https://inspirehep.net/authors/1987978",
+            "Semantic Scholar": "https://www.semanticscholar.org/author/1885318652",
+            "ResearchGate": "https://www.researchgate.net/profile/Krish-Desai",
+            "LinkedIn": "https://www.linkedin.com/in/krish-desai",
+            "GitHub": "https://github.com/krishdesai7"
         }
     },
     "contents": {

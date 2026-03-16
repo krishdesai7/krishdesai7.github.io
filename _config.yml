@@ -14,9 +14,18 @@ author:
   name             : "Krish Desai, PhD"
   bio              : "Machine Learning Researcher"
   location         : "New York, NY"
-  employer         : "Lawrence Berkeley National Lab"
+  employer         : "Lawrence Berkeley National Laboratory"
+  employer_url     : "https://www.lbl.gov"
   uri              : "https://www.desai.ml" # URL
-  email            : "krishdesai7@gmail.com" 
+  email            : "krish@desai.ml"
+  address:
+    street1        : "Lawrence Berkeley National Laboratory"
+    street2        : "1 Cyclotron Rd, 50-5048"
+    city           : "Berkeley"
+    region         : "CA"
+    postalCode     : "94720-8099"
+    country        : "United States"
+    address_query  : "Lawrence+Berkeley+National+Laboratory"
 
   academia         : # URL
   arxiv            : "desai_k_1"
@@ -155,7 +164,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-timezone: America/Los_Angeles
+timezone: America/New_York
 
 # Plugins
 plugins:

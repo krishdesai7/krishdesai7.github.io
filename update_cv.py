@@ -1,5 +1,6 @@
 import json
 import frontmatter
+import yaml
 from typing import Final
 from pathlib import Path
 import re
@@ -8,6 +9,7 @@ import datetime
 from typing import Callable, cast
 
 CV_FILE_PATH: Final[Path] = Path("_data/cv.json")
+CONFIG_FILE_PATH: Final[Path] = Path("_config.yml")
 CATEGORY_MAPPING: Final[dict[str, str]] = {
     "publications": "Publications",
     "talks": "Talks",
@@ -103,10 +105,58 @@ def get_teaching(items: list[dict[str, str | datetime.date]]) -> list[dict[str, 
     ))
     return teaching
 
+PROFILE_URL_TEMPLATES: Final[dict[str, str]] = {
+    "googlescholar" : "https://scholar.google.com/citations?hl=en&user={}",
+    "orcid"         : "https://orcid.org/{}",
+    "arxiv"         : "https://arxiv.org/a/{}",
+    "inspirehep"    : "https://inspirehep.net/authors/{}",
+    "semantic"      : "https://www.semanticscholar.org/author/{}",
+    "researchgate"  : "https://www.researchgate.net/profile/{}",
+    "linkedin"      : "https://www.linkedin.com/in/{}",
+    "github"        : "https://github.com/{}",
+}
+
+PROFILE_DISPLAY_NAMES: Final[dict[str, str]] = {
+    "googlescholar" : "Google Scholar",
+    "github"        : "GitHub",
+    "linkedin"      : "LinkedIn",
+    "orcid"         : "ORCID",
+    "researchgate"  : "ResearchGate",
+    "inspirehep"    : "INSPIRE-HEP",
+    "arxiv"         : "arXiv",
+    "semantic"      : "Semantic Scholar",
+}
+
+def update_basics_from_config(cv_data: dict, config: dict) -> None:
+    """Updates cv.json basics and profiles from _config.yml."""
+    author = config["author"]
+    cv_data["basics"]["name"] = config["name"]
+    cv_data["basics"]["contact"]["Employment"] = {
+        "position" : author["bio"],
+        "company"  : author["employer"],
+        "url"      : author["employer_url"],
+    }
+    cv_data["basics"]["contact"]["Address"] = author["address"]
+    cv_data["basics"]["contact"]["E-mail"] = author["email"]
+    cv_data["basics"]["contact"]["Website"] = config["url"]
+    profiles: dict[str, str] = {}
+    for key, template in PROFILE_URL_TEMPLATES.items():
+        value = author.get(key)
+        if value:
+            profiles[PROFILE_DISPLAY_NAMES[key]] = template.format(value.lstrip("@"))
+    cv_data["basics"]["profiles"] = profiles
+
 def main() -> int:
     if CV_FILE_PATH.exists():
         with open(CV_FILE_PATH, "r") as f:
             cv_data: dict = json.load(f)
+        if CONFIG_FILE_PATH.exists():
+            with open(CONFIG_FILE_PATH, "r") as f:
+                config: dict = yaml.safe_load(f)
+            update_basics_from_config(cv_data, config)
+        else:
+            print(f"Config file {CONFIG_FILE_PATH} does not exist", file=sys.stderr)
+            return 4
         for category, json_key in CATEGORY_MAPPING.items():
             if hasattr(sys.modules[__name__], f"get_{category}"):
                 getter: Callable = getattr(sys.modules[__name__], f"get_{category}")
