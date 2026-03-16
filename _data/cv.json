@@ -45,6 +45,12 @@
         ],
         "Professional Experience": [
             {
+                "name": "Emissary AI",
+                "position": "Machine Learning Engineer",
+                "startDate": "2025-05-01",
+                "endDate": "2025-12-31"
+            },
+            {
                 "name": "Bridgewater Associates",
                 "position": "Investment Analyst Intern",
                 "startDate": "2023-06-01",
@@ -61,6 +67,12 @@
                 "position": "Machine Learning Researcher",
                 "startDate": "2020-09-01",
                 "endDate": "2025-05-15"
+            },
+            {
+                "name": "University of California, Berkeley",
+                "position": "Associate Instructor",
+                "startDate": "2020-08-01",
+                "endDate": "2024-12-31"
             },
             {
                 "name": "Purple Gaze Inc.",
