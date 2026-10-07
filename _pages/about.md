@@ -22,21 +22,24 @@ At Berkeley (2020–2025), working with Professor Benjamin Nachman at Lawrence B
 Moment Unfolding
 : A GAN-inspired method that unfolds the moments of a distribution directly, without histogram binning, enabling more precise comparisons with theory (_Physical Review D_, 2024).
 
+Reweighting Adversarial Networks
+: Generalizes Moment Unfolding to full phase-space unfolding, using a particle-level reweighting function steered by a Wasserstein critic. RANs remain stable even when particle- and detector-level distributions barely overlap, and outperform state-of-the-art methods at lower computational cost (_Physical Review X_, in press).
+
 Neural Posterior Unfolding
-: Uses normalizing flows and neural posterior estimation to perform unfolding, with implicit regularization from the network and fast, amortized inference (NeurIPS ML4PS, 2024).
+: Uses normalizing flows and neural posterior estimation to perform unfolding, with implicit regularization from the network and fast, amortized inference (_Journal of Instrumentation_, 2026).
 
 Unbinned Inference with Correlated Events
 : Shows that unbinned inference on unfolded data breaks a standard assumption—that events are statistically independent—and that ignoring the resulting correlations can significantly underestimate uncertainties (_European Physical Journal C_, 2025).
 
 Unfolding in the Presence of Nuisance Parameters
-: Extends the OmniFold algorithm so that machine learning–based unfolding can profile the nuisance parameters that encode an imperfectly known detector model (2025).
+: Extends the OmniFold algorithm so that machine learning–based unfolding can profile the nuisance parameters that encode an imperfectly known detector model (_Annals of Applied Statistics_, in press).
 
 SymmetryGAN
 : A deep learning method that automatically discovers the symmetries of a dataset, with applications from particle physics to broader data science (_Physical Review D_, 2022).
 
 More recently, the same questions about measurement and evaluation have carried over into language models: in "Unsupervised Evaluation of Multi-Turn Objective-Driven Interactions" (2025), my collaborators and I introduced unsupervised metrics for goal completion and model uncertainty in multi-turn LLM interactions, without relying on human-labelled ideal responses.
 
-This work has appeared in venues including NeurIPS (2021, 2022, 2024), _Physical Review D_, and the _European Physical Journal C_, and I have given invited talks at CERN, the Korea Institute for Advanced Study, NeurIPS, and the American Physical Society. The full lists are on the [publications](/publications/) and [talks](/talks/) pages.
+This work has appeared in venues including NeurIPS (2021, 2022, 2024), _Physical Review X_, _Physical Review D_, the _European Physical Journal C_, the _Journal of Instrumentation_, and the _Annals of Applied Statistics_, and I have given invited talks at CERN, the Korea Institute for Advanced Study, NeurIPS, and the American Physical Society. The full lists are on the [publications](/publications/) and [talks](/talks/) pages.
 
 ## Education
 

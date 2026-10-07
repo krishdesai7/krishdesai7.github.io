@@ -3,18 +3,18 @@
         "name": "Krish Desai, PhD",
         "contact": {
             "Employment": {
-                "position": "Machine Learning Researcher",
-                "company": "Lawrence Berkeley National Laboratory",
-                "url": "https://www.lbl.gov"
+                "position": "Data Scientist",
+                "company": "Bank of America",
+                "url": "https://www.bankofamerica.com"
             },
             "Address": {
-                "street1": "Lawrence Berkeley National Laboratory",
-                "street2": "1 Cyclotron Rd, 50-5048",
-                "city": "Berkeley",
-                "region": "CA",
-                "postalCode": "94720-8099",
+                "street1": "Bank of America Tower, 37S-31H",
+                "street2": "One Bryant Park",
+                "city": "New York",
+                "region": "NY",
+                "postalCode": "10036",
                 "country": "United States",
-                "address_query": "Lawrence+Berkeley+National+Laboratory"
+                "address_query": "Bank+of+America+Tower+One+Bryant+Park"
             },
             "E-mail": "krish@desai.ml",
             "Website": "https://www.desai.ml"
@@ -89,12 +89,28 @@
         ],
         "Publications": [
             {
+                "name": "Reweighting Adversarial Networks for Unbinned Unfolding",
+                "authors": "Umar Sohail Qureshi, **Krish Desai**, Jesse Thaler, and Benjamin Nachman",
+                "publisher": "Physical Review X",
+                "date": "2026-09-16",
+                "pdf": "https://www.desai.ml/files/reweighting-adversarial-networks-paper.pdf",
+                "biblatex": "https://www.desai.ml/files/reweighting-adversarial-networks-biblatex.bib"
+            },
+            {
                 "name": "Machine Learning-based Unfolding for Cross Section Measurements in the Presence of Nuisance Parameters",
                 "authors": "Huanbiao Zhu, **Krish Desai**, Mikael Kuusela, Vinicius Mikuni, Benjamin Nachman, and Larry Wasserman",
-                "publisher": "arXiv:2512.07074",
-                "date": "2025-12-08",
+                "publisher": "Annals of Applied Statistics",
+                "date": "2026-09-16",
                 "pdf": "https://www.desai.ml/files/ml-based-unfolding-and-profiling-paper.pdf",
                 "biblatex": "https://www.desai.ml/files/ml-based-unfolding-and-profiling-biblatex.bib"
+            },
+            {
+                "name": "Neural Posterior Unfolding",
+                "authors": "Fernando Torales Acosta, Jay Chan, **Krish Desai**, Vinicius Mikuni, Benjamin Nachman, Jingjing Pan, Francesco Rubbo",
+                "publisher": "Journal of Instrumentation",
+                "date": "2026-03-04",
+                "pdf": "https://www.desai.ml/files/neural-posterior-unfolding-preprint-paper.pdf",
+                "biblatex": "https://www.desai.ml/files/neural-posterior-unfolding-jinst-biblatex.bib"
             },
             {
                 "name": "Unsupervised Evaluation of Multi-Turn Objective-Driven Interactions",
@@ -113,14 +129,6 @@
                 "biblatex": "https://www.desai.ml/files/unbinned-inference-with-correlated-events-biblatex.bib"
             },
             {
-                "name": "Neural Posterior Unfolding",
-                "authors": "Fernando Torales Acosta, Jay Chan, **Krish Desai**, Vinicius Mikuni, Benjamin Nachman, Jingjing Pan, Francesco Rubbo",
-                "publisher": "arXiv:2509.06370",
-                "date": "2025-09-08",
-                "pdf": "https://www.desai.ml/files/neural-posterior-unfolding-preprint-paper.pdf",
-                "biblatex": "https://www.desai.ml/files/neural-posterior-unfolding-preprint-biblatex.bib"
-            },
-            {
                 "name": "Machine Learning Methods for Cross Section Measurements",
                 "authors": "**Krish Desai**",
                 "publisher": "University of California, Berkeley",
@@ -130,20 +138,20 @@
                 "note": "PhD (Physics) Dissertation"
             },
             {
-                "name": "Neural Posterior Unfolding",
-                "authors": "Fernando Torales Acosta, Jay Chan, **Krish Desai**, Vinicius Mikuni, Benjamin Nachman, and Jingjing Pan",
-                "publisher": "Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
-                "date": "2024-12-15",
-                "pdf": "https://www.desai.ml/files/neural-posterior-unfolding-neurips-paper.pdf",
-                "biblatex": "https://www.desai.ml/files/neural-posterior-unfolding-neurips-biblatex.bib"
-            },
-            {
                 "name": "Multidimensional Deconvolution with Profiling",
                 "authors": "Huanbiao Zhu, **Krish Desai**, Mikael Kuusela, Vinicius Mikuni, Benjamin Nachman, and Larry Wasserman",
                 "publisher": "Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
                 "date": "2024-12-15",
                 "pdf": "https://www.desai.ml/files/multidimensional-deconvolution-with-profiling-paper.pdf",
                 "biblatex": "https://www.desai.ml/files/multidimensional-deconvolution-with-profiling-biblatex.bib"
+            },
+            {
+                "name": "Neural Posterior Unfolding",
+                "authors": "Fernando Torales Acosta, Jay Chan, **Krish Desai**, Vinicius Mikuni, Benjamin Nachman, and Jingjing Pan",
+                "publisher": "Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS), ML4PS Track",
+                "date": "2024-12-15",
+                "pdf": "https://www.desai.ml/files/neural-posterior-unfolding-neurips-paper.pdf",
+                "biblatex": "https://www.desai.ml/files/neural-posterior-unfolding-neurips-biblatex.bib"
             },
             {
                 "name": "Moment Unfolding: Moment extraction using an unfolding protocol without binning",
@@ -258,13 +266,13 @@
         ],
         "Talks": [
             {
-                "name": "Multidimensional Deconvolution with Profiling",
+                "name": "Neural Posterior Unfolding",
                 "event": "Thirty-Eighth Annual Conference on Neural Information Processing Systems",
                 "date": "2024-12-15",
                 "location": "Vancouver, Canada"
             },
             {
-                "name": "Neural Posterior Unfolding",
+                "name": "Multidimensional Deconvolution with Profiling",
                 "event": "Thirty-Eighth Annual Conference on Neural Information Processing Systems",
                 "date": "2024-12-15",
                 "location": "Vancouver, Canada"
@@ -356,13 +364,13 @@
         ],
         "Teaching": [
             {
-                "name": "PHYSICS 88: Data Science Applications in Physics",
+                "name": "PHYSICS 77: Introduction to Computational Techniques in Physics",
                 "institution": "University of California, Berkeley",
                 "date": "Fall 2024",
                 "role": "Associate Instructor"
             },
             {
-                "name": "PHYSICS 77: Introduction to Computational Techniques in Physics",
+                "name": "PHYSICS 88: Data Science Applications in Physics",
                 "institution": "University of California, Berkeley",
                 "date": "Fall 2024",
                 "role": "Associate Instructor"

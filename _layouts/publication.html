@@ -26,6 +26,11 @@ layout: default
               {{ page.venue }}
             </span>
           {% else %}
+            {% if page.status %}
+              <span class="publication-type">
+                {{ page.status }}
+              </span>
+            {% endif %}
             <span class="publication-venue" itemprop="name">
               {{ page.venue }}
             </span>

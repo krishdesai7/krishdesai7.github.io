@@ -2,16 +2,18 @@
 layout: publication
 title: "Neural Posterior Unfolding"
 collection: publications
-category: preprints
-permalink: /publication/2025-09-08-neural-posterior-unfolding
-date: 2025-09-08
-venue: 'arXiv:2509.06370'
+category: journals
+permalink: /publication/2026-03-04-neural-posterior-unfolding
+redirect_from:
+  - /publication/2025-09-08-neural-posterior-unfolding
+date: 2026-03-04
+venue: 'Journal of Instrumentation'
 paperurl: 'https://www.desai.ml/files/neural-posterior-unfolding-preprint-paper.pdf'
-biblatexurl: 'https://www.desai.ml/files/neural-posterior-unfolding-preprint-biblatex.bib'
-citation: 'Acosta, F. T., Chan, J., Desai, K., Mikuni, V., Nachman, B., Pan, J., and Rubbo, F. "Neural Posterior Unfolding". <i>arXiv:2509.06370</i> (2025).'
+biblatexurl: 'https://www.desai.ml/files/neural-posterior-unfolding-jinst-biblatex.bib'
+citation: 'Acosta, F. T., Chan, J., Desai, K., Mikuni, V., Nachman, B., Pan, J., and Rubbo, F. "Neural Posterior Unfolding". <i>Journal of Instrumentation</i>, 21(03), P03004 (2026).'
 authors: 'Fernando Torales Acosta, Jay Chan, <strong>Krish Desai</strong>, Vinicius Mikuni, Benjamin Nachman, Jingjing Pan, Francesco Rubbo'
 code: 'https://github.com/jp2555/NPU'
-doi: 10.48550/arXiv.2509.06370
+doi: 10.1088/1748-0221/21/03/P03004
 arxiv: "2509.06370"
 scix: 2025arXiv250906370T
 inspirehep: 2967396

@@ -30,6 +30,9 @@
         {% when 'conferences' %}
           <span class="publication-venue">{{ post.venue }}</span>
         {% else %}
+          {% if post.status %}
+            <span class="publication-type">{{ post.status }}</span>
+          {% endif %}
           <span class="publication-venue" itemprop="name">{{ post.venue }}</span>
       {% endcase %}
     </div>
