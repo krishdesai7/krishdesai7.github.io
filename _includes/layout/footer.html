@@ -3,7 +3,7 @@
     &copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.title }}
   </span>
   <div class="page__footer-links">
-    <a href="mailto:{{ site.author.email }}">
+    <a href="{{ '/contact/' | relative_url }}">
       <i class="fa-sharp-duotone fa-regular fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Contact
     </a>
     <a href="https://github.com/{{ site.author.github }}">
