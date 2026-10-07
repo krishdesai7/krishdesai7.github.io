@@ -95,20 +95,20 @@
         ],
         "Publications": [
             {
-                "name": "Reweighting Adversarial Networks for Unbinned Unfolding",
-                "authors": "Umar Sohail Qureshi, **Krish Desai**, Jesse Thaler, and Benjamin Nachman",
-                "publisher": "Physical Review X",
-                "date": "2026-09-16",
-                "pdf": "https://www.desai.ml/files/reweighting-adversarial-networks-paper.pdf",
-                "biblatex": "https://www.desai.ml/files/reweighting-adversarial-networks-biblatex.bib"
-            },
-            {
                 "name": "Machine Learning-based Unfolding for Cross Section Measurements in the Presence of Nuisance Parameters",
                 "authors": "Huanbiao Zhu, **Krish Desai**, Mikael Kuusela, Vinicius Mikuni, Benjamin Nachman, and Larry Wasserman",
                 "publisher": "Annals of Applied Statistics",
                 "date": "2026-09-16",
                 "pdf": "https://www.desai.ml/files/ml-based-unfolding-and-profiling-paper.pdf",
                 "biblatex": "https://www.desai.ml/files/ml-based-unfolding-and-profiling-biblatex.bib"
+            },
+            {
+                "name": "Reweighting Adversarial Networks for Unbinned Unfolding",
+                "authors": "Umar Sohail Qureshi, **Krish Desai**, Jesse Thaler, and Benjamin Nachman",
+                "publisher": "Physical Review X",
+                "date": "2026-09-16",
+                "pdf": "https://www.desai.ml/files/reweighting-adversarial-networks-paper.pdf",
+                "biblatex": "https://www.desai.ml/files/reweighting-adversarial-networks-biblatex.bib"
             },
             {
                 "name": "Reweighting Adversarial Networks for Unbinned Unfolding",
@@ -378,13 +378,13 @@
         ],
         "Teaching": [
             {
-                "name": "PHYSICS 77: Introduction to Computational Techniques in Physics",
+                "name": "PHYSICS 88: Data Science Applications in Physics",
                 "institution": "University of California, Berkeley",
                 "date": "Fall 2024",
                 "role": "Associate Instructor"
             },
             {
-                "name": "PHYSICS 88: Data Science Applications in Physics",
+                "name": "PHYSICS 77: Introduction to Computational Techniques in Physics",
                 "institution": "University of California, Berkeley",
                 "date": "Fall 2024",
                 "role": "Associate Instructor"
@@ -408,13 +408,13 @@
                 "role": "Associate Instructor"
             },
             {
-                "name": "PHYSICS 77: Introduction to Computational Techniques in Physics",
+                "name": "PHYSICS 88: Data Science Applications in Physics",
                 "institution": "University of California, Berkeley",
                 "date": "Fall 2022",
                 "role": "Associate Instructor"
             },
             {
-                "name": "PHYSICS 88: Data Science Applications in Physics",
+                "name": "PHYSICS 77: Introduction to Computational Techniques in Physics",
                 "institution": "University of California, Berkeley",
                 "date": "Fall 2022",
                 "role": "Associate Instructor"
