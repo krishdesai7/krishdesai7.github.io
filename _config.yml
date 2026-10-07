@@ -168,15 +168,11 @@ timezone: America/New_York
 
 # Plugins
 plugins:
-  - jekyll-gist
-  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-redirect-from
 
 # Mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-gist
-  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-redirect-from
 
