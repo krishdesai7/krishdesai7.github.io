@@ -17,7 +17,7 @@ Conducted theoretical and computational research at Microsoft Research, advancin
 * Bridged discrete and continuous structures through new techniques applicable to optimization problems
 * Applied stochastic calculus and operator theory to establish quantitative relationships between local and non-local dynamics
 * Designed and executed numerical simulations to validate predictions about high-dimensional operators
-* Provided mathematical formalism and technical implementation acknowledged as significant contributions to the project
+* Quantitative modeling and analysis incorporated and acknowledged in Lanier et al. (2022)
 
 ## Technologies & Skills
 * Stochastic calculus, operator theory, and matrix models

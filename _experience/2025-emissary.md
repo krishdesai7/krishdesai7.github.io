@@ -16,12 +16,13 @@ Developed and fine-tuned language and vision-language models for client-specific
 ## Responsibilities
 
 - Developed and fine-tuned language and vision-language models for client-specific applications, including code completion and image-based IP violation detection
-- Improved model accuracy from around 30% to over 90% for medical message classification through architecture optimization and training refinements
-- Optimized training pipeline for distributed multi-GPU systems, improving scalability and throughput
+- Implemented a GRPO-based reinforcement learning pipeline for fine-tuning language and vision models on code completion and image-based IP violation detection
+- Improved model accuracy from around 30% to over 90% for redacted medical message classification through architecture optimization and training refinements
+- Refactored the training codebase for distributed multi-GPU systems, improving scalability and throughput for fine-tuning transformer models
 
 ## Technologies & Skills
 
 - Large language models and vision-language models
-- Model fine-tuning and architecture optimization
+- Model fine-tuning, reinforcement learning (GRPO), and architecture optimization
 - Distributed multi-GPU training
 - Python, PyTorch, and deep learning frameworks

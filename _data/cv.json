@@ -51,10 +51,16 @@
         ],
         "Professional Experience": [
             {
+                "name": "Bank of America",
+                "position": "Data Scientist, Data and AI Group",
+                "startDate": "2026-05-01",
+                "endDate": "Present"
+            },
+            {
                 "name": "Lawrence Berkeley National Lab",
                 "position": "Machine Learning Researcher",
-                "startDate": "2020-09-01",
-                "endDate": "Present"
+                "startDate": "2020-10-01",
+                "endDate": "2026-05-31"
             },
             {
                 "name": "Emissary AI",
@@ -84,7 +90,7 @@
                 "name": "Purple Gaze Inc.",
                 "position": "Software Developer Intern",
                 "startDate": "2020-05-01",
-                "endDate": "2020-07-31"
+                "endDate": "2020-08-31"
             }
         ],
         "Publications": [
