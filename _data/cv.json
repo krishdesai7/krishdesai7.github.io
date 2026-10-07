@@ -105,6 +105,14 @@
                 "biblatex": "https://www.desai.ml/files/ml-based-unfolding-and-profiling-biblatex.bib"
             },
             {
+                "name": "Reweighting Adversarial Networks for Unbinned Unfolding",
+                "authors": "Umar Sohail Qureshi, **Krish Desai**, Benjamin Nachman, and Jesse Thaler",
+                "publisher": "2026 Conference on Physics and AI (PAI26), Stanford University",
+                "date": "2026-06-10",
+                "pdf": "https://openreview.net/pdf?id=xbyOrwdZqn",
+                "biblatex": "https://www.desai.ml/files/reweighting-adversarial-networks-pai-biblatex.bib"
+            },
+            {
                 "name": "Neural Posterior Unfolding",
                 "authors": "Fernando Torales Acosta, Jay Chan, **Krish Desai**, Vinicius Mikuni, Benjamin Nachman, Jingjing Pan, Francesco Rubbo",
                 "publisher": "Journal of Instrumentation",
