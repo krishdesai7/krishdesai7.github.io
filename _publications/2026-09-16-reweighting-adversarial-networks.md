@@ -14,8 +14,9 @@ authors: "Umar Sohail Qureshi, <strong>Krish Desai</strong>, Jesse Thaler, and B
 code: https://github.com/umarsqureshi/RAN
 doi: 10.48550/arXiv.2606.06603
 arxiv: "2606.06603"
-scix: 2026arXiv260606603Q
+scix: "2026arXiv260606603S"
 inspirehep: 3165800
+researchgate: 406351256_Reweighting_Adversarial_Networks_for_Unbinned_Unfolding
 ---
 
 ## Abstract
