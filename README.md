@@ -175,12 +175,12 @@ Three GitHub Actions workflows automate deployment and data updates:
 
 ## Technology Stack
 
-| Layer                        | Technology                                                |
-| ---------------------------- | --------------------------------------------------------- |
-| Static site generator        | [Jekyll](https://jekyllrb.com/) 4.4                       |
-| CSS preprocessor             | [Dart Sass](https://sass-lang.com/) via `sass-embedded`   |
-| JavaScript minification      | [Terser](https://terser.org/)                             |
-| Python dependency management | [uv](https://docs.astral.sh/uv/)                          |
-| Hosting                      | [GitHub Pages](https://pages.github.com/)                 |
-| Maps                         | [Leaflet](https://leafletjs.com/) via `folium` / `getorg` |
-| Geocoding                    | [Nominatim](https://nominatim.org/) via `geopy`           |
+| Layer                        | Technology                                              |
+| ---------------------------- | ------------------------------------------------------- |
+| Static site generator        | [Jekyll](https://jekyllrb.com/) 4.4                     |
+| CSS preprocessor             | [Dart Sass](https://sass-lang.com/) via `sass-embedded` |
+| JavaScript minification      | [Terser](https://terser.org/)                           |
+| Python dependency management | [uv](https://docs.astral.sh/uv/)                        |
+| Hosting                      | [GitHub Pages](https://pages.github.com/)               |
+| Maps                         | [Leaflet](https://leafletjs.com/) via `getorg`          |
+| Geocoding                    | [Nominatim](https://nominatim.org/) via `geopy`         |
