@@ -46,7 +46,9 @@
   font-family: $nav-font-family;
   letter-spacing: 0.015em;
   color: var(--global-nav-link-color);
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
   &:hover {
     color: var(--global-nav-link-color-hover);
   }
@@ -73,7 +75,9 @@
   background: transparent;
   border: none;
   color: var(--global-nav-link-color);
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
   font-size: $font-size-20;
   &:hover {
     color: var(--theme-toggle-hover-color);
@@ -84,7 +88,9 @@
     --fa-primary-color: #7b6b9e;
     --fa-secondary-color: #9a8abf;
     --fa-secondary-opacity: 1;
-    transition: --fa-primary-color 0.2s ease, --fa-secondary-color 0.2s ease;
+    transition:
+      --fa-primary-color 0.2s ease,
+      --fa-secondary-color 0.2s ease;
   }
   &:hover .fa-moon-stars {
     --fa-primary-color: #9683c4;
@@ -95,7 +101,9 @@
     --fa-primary-color: #8a6e30;
     --fa-secondary-color: #9e7f3a;
     --fa-secondary-opacity: 1;
-    transition: --fa-primary-color 0.2s ease, --fa-secondary-color 0.2s ease;
+    transition:
+      --fa-primary-color 0.2s ease,
+      --fa-secondary-color 0.2s ease;
   }
   &:hover .fa-sun-bright {
     --fa-primary-color: #b8922e;

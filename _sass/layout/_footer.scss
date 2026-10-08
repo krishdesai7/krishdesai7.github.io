@@ -14,12 +14,12 @@
 }
 
 .page__footer-copyright {
-  grid-column: 1;               /* left */
+  grid-column: 1; /* left */
   justify-self: start;
 }
 
 .page__footer-links {
-  grid-column: 2;               /* center */
+  grid-column: 2; /* center */
   justify-self: center;
   display: flex;
   gap: var(--half-baseline);

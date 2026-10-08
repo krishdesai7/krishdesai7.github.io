@@ -29,7 +29,8 @@
 }
 
 .modal-header {
-  padding: var(--quarter  -baseline) var(--baseline) var(--quarter-baseline) var(--three-quarters-baseline);
+  padding: var(--quarter-baseline) var(--baseline) var(--quarter-baseline)
+    var(--three-quarters-baseline);
   border-bottom: 2px solid var(--global-border-color);
   display: flex;
   justify-content: space-between;

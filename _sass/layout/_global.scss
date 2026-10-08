@@ -27,7 +27,11 @@ a {
 .page__content,
 .publication__content,
 .talk__content {
-  p, li, blockquote, div, dd {
+  p,
+  li,
+  blockquote,
+  div,
+  dd {
     text-align: justify;
     text-justify: inter-word;
     hyphens: auto;
@@ -35,7 +39,7 @@ a {
     -moz-hyphens: auto;
     -ms-hyphens: auto;
   }
-  
+
   // Center-aligned elements should stay centered
   .text-center,
   [style*="text-align: center"] {
@@ -45,8 +49,10 @@ a {
 /* Grid Variables */
 :root {
   --content-base-max-width: 45rem;
-  --content-width-scale: 1;             /* default: no scaling, can be overridden in layout files */
-  --content-max-width: calc(var(--content-base-max-width) * var(--content-width-scale));
+  --content-width-scale: 1; /* default: no scaling, can be overridden in layout files */
+  --content-max-width: calc(
+    var(--content-base-max-width) * var(--content-width-scale)
+  );
 }
 
 #main {
@@ -56,10 +62,10 @@ a {
 }
 
 @if design.$paragraph-indent == true {
-.page__content p + p {
-      text-indent: design.$indent-var;
-      margin-top: -(design.$indent-var);
-    }
+  .page__content p + p {
+    text-indent: design.$indent-var;
+    margin-top: -(design.$indent-var);
+  }
 }
 /* Base Grid Container Mixin */
 @mixin grid-container {
