@@ -447,8 +447,13 @@
         "Leadership &amp; Service": [
             {
                 "name": "Invited Peer Reviewer",
+                "institution": "Archives of Computational Methods in Engineering",
+                "date": "2026"
+            },
+            {
+                "name": "Invited Peer Reviewer",
                 "institution": "Nature, Scientific Reports",
-                "date": "2025"
+                "date": "2025, 2026"
             },
             {
                 "name": "Invited Peer Reviewer",
@@ -463,7 +468,7 @@
             {
                 "name": "Invited Peer Reviewer",
                 "institution": "NeurIPS",
-                "date": "2022, 2024, 2025"
+                "date": "2022, 2024, 2025, 2026"
             },
             {
                 "name": "Campus Affairs Vice President, and Rules Officer",
@@ -490,20 +495,34 @@
     "Skills": {
         "Programming Languages": [
             "Python",
+            "C",
             "Julia",
-            "C"
+            "Bash"
+        ],
+        "LLMs & Agentic Systems": [
+            "Agentic Orchestration",
+            "LangGraph",
+            "Retrieval-Augmented Generation",
+            "LLM Evaluation",
+            "vLLM",
+            "Fine-Tuning",
+            "Reinforcement Learning (GRPO)"
         ],
         "Machine Learning": [
-            "TensorFlow/Keras",
             "PyTorch",
+            "JAX",
+            "Keras",
             "scikit-learn",
             "Deep Learning",
-            "Bayesian Methods",
-            "Generative Models"
+            "Generative Models",
+            "Normalizing Flows",
+            "Adversarial Networks"
         ],
-        "Data Science": [
+        "Statistics & Data Science": [
             "Statistical Inference",
-            "Bayesian Statistics",
+            "Bayesian Inference",
+            "Hierarchical Models",
+            "Uncertainty Quantification",
             "Monte Carlo",
             "Unfolding",
             "Deconvolution"
@@ -517,6 +536,7 @@
         ],
         "Computing": [
             "HPC",
+            "Distributed Multi-GPU Training",
             "Git",
             "Docker"
         ],

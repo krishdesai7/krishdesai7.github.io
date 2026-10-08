@@ -83,12 +83,23 @@
         margin-left: var(--baseline);
       }
 
+      // Skills: one flowing line per category, "·"-separated. Each skill stays
+      // whole (nowrap); only the gaps between skills may break across lines.
       ul {
         margin: 0 0 var(--quarter-baseline) 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: var(--half-baseline);
+        padding: 0;
         list-style: none;
+      }
+
+      .cv-skill-keyword {
+        display: inline;
+        white-space: nowrap;
+
+        &:not(:last-child)::after {
+          content: "\00b7";
+          margin: 0 0.5em 0 0.5em; // right side adds to the whitespace between items
+          color: var(--global-text-color-light);
+        }
       }
     }
   }
@@ -101,10 +112,6 @@
 
       .cv-grid-key {
         text-align: left;
-      }
-
-      .cv-grid-value ul {
-        grid-template-columns: 1fr 1fr;
       }
     }
 

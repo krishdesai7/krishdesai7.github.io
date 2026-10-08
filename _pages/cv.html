@@ -87,10 +87,11 @@ redirect_from:
     <h2 class="cv-section-title">{{ section[0] }}</h2>
     <div class="cv-grid-container">
       {% for row in section[1] %}
+      {% assign date_parts = row.date | split: "-" %}
       <div class="cv-grid-key">
         {% if row.startDate %}
         {{ row.startDate | date: "%B %Y" }} &ndash; {{ row.endDate | date: "%B %Y" }}
-        {% elsif row.date.size == 10 %}
+        {% elsif date_parts.size == 3 %}
         {{ row.date | date: "%B %Y" }}
         {% else %}
         {{ row.date }}
@@ -166,8 +167,8 @@ redirect_from:
       <div class="cv-grid-value">
         <ul>
           {% for skill in skill[1] %}
-          <li class="cv-skill-keyword">{{ skill }}
-            {% endfor %}
+          <li class="cv-skill-keyword">{{ skill }}</li>
+          {% endfor %}
         </ul>
       </div>
       {% endfor %}
