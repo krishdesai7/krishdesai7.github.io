@@ -28,34 +28,34 @@ redirect_from:
     </div>
     <div class="cv-grid-container">
       {% for contact in cv.basics.contact %}
-        <div class="cv-grid-key">
-          {{ contact[0] }}:
+      <div class="cv-grid-key">
+        {{ contact[0] }}:
+      </div>
+      <div class="cv-grid-value">
+        {% case contact[0] %}
+        {% when "E-mail" %}
+        <a href="mailto:{{ contact[1] }}">
+          {{ contact[1] }}
+        </a>
+        {% when "Website" %}
+        <a href="{{ contact[1] }}" target="_blank" rel="noopener">
+          {{ contact[1] }}
+        </a>
+        {% when "Address" %}
+        <a href="https://www.google.com/maps/search/?api=1&query={{ contact[1].address_query }}" target="_blank"
+          rel="noopener" class="cv-contact-address">
+          <div>{{ contact[1].street1 }},</div>
+          <div>{{ contact[1].street2 }},</div>
+          <div>{{ contact[1].city }}, {{ contact[1].region }} {{ contact[1].postalCode }},</div>
+          <div>{{ contact[1].country }}.</div>
+        </a>
+        {% when "Employment" %}
+        <div>{{ contact[1].position }}</div>
+        <div>
+          <a href="{{ contact[1].url }}" target="_blank" rel="noopener">{{ contact[1].company }}</a>
         </div>
-        <div class="cv-grid-value">
-          {% case contact[0] %}
-            {% when "E-mail" %}
-              <a href="mailto:{{ contact[1] }}">
-                {{ contact[1] }}
-              </a>
-            {% when "Website" %}
-              <a href="{{ contact[1] }}" target="_blank" rel="noopener">
-                {{ contact[1] }}
-              </a>
-            {% when "Address" %}
-              <a href="https://www.google.com/maps/search/?api=1&query={{ contact[1].address_query }}" target="_blank" rel="noopener"
-                class="cv-contact-address">
-                <div>{{ contact[1].street1 }},</div>
-                <div>{{ contact[1].street2 }},</div>
-                <div>{{ contact[1].city }}, {{ contact[1].region }} {{ contact[1].postalCode }},</div>
-                <div>{{ contact[1].country }}.</div>
-              </a>
-            {% when "Employment" %}
-              <div>{{ contact[1].position }}</div>
-              <div>
-                <a href="{{ contact[1].url }}" target="_blank" rel="noopener">{{ contact[1].company }}</a>
-              </div>
-          {% endcase %}
-        </div>
+        {% endcase %}
+      </div>
       {% endfor %}
       <div class="cv-grid-key">
         Profiles:
@@ -63,18 +63,19 @@ redirect_from:
       <div class="cv-grid-value">
         <div class="cv-profiles">
           {% for profile in cv.basics.profiles %}
-            <a href="{{ profile[1] }}" target="_blank" rel="noopener" aria-label="{{ profile[0] }}" title="{{ profile[0] }}">
-              {% case profile[0] %}
-                {% when "Google Scholar" %}<i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i>
-                {% when "GitHub" %}<i class="fa-brands fa-fw fa-github" aria-hidden="true"></i>
-                {% when "LinkedIn" %}<i class="fa-brands fa-fw fa-linkedin" aria-hidden="true"></i>
-                {% when "ORCID" %}<i class="fa-brands fa-fw fa-orcid" aria-hidden="true"></i>
-                {% when "ResearchGate" %}<i class="ai ai-researchgate ai-fw" aria-hidden="true"></i>
-                {% when "INSPIRE-HEP" %}<i class="ai ai-inspire ai-fw" aria-hidden="true"></i>
-                {% when "arXiv" %}<i class="ai ai-arxiv ai-fw" aria-hidden="true"></i>
-                {% when "Semantic Scholar" %}<i class="ai ai-semantic-scholar ai-fw" aria-hidden="true"></i>
-              {% endcase %}
-            </a>
+          <a href="{{ profile[1] }}" target="_blank" rel="noopener" aria-label="{{ profile[0] }}"
+            title="{{ profile[0] }}">
+            {% case profile[0] %}
+            {% when "Google Scholar" %}<i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i>
+            {% when "GitHub" %}<i class="fa-brands fa-fw fa-github" aria-hidden="true"></i>
+            {% when "LinkedIn" %}<i class="fa-brands fa-fw fa-linkedin" aria-hidden="true"></i>
+            {% when "ORCID" %}<i class="fa-brands fa-fw fa-orcid" aria-hidden="true"></i>
+            {% when "ResearchGate" %}<i class="ai ai-researchgate ai-fw" aria-hidden="true"></i>
+            {% when "INSPIRE-HEP" %}<i class="ai ai-inspire ai-fw" aria-hidden="true"></i>
+            {% when "arXiv" %}<i class="ai ai-arxiv ai-fw" aria-hidden="true"></i>
+            {% when "Semantic Scholar" %}<i class="ai ai-semantic-scholar ai-fw" aria-hidden="true"></i>
+            {% endcase %}
+          </a>
           {% endfor %}
         </div>
       </div>
@@ -82,92 +83,93 @@ redirect_from:
   </section>
 
   {% for section in cv.contents %}
-    <section class="cv-section">
-      <h2 class="cv-section-title">{{ section[0] }}</h2>
-      <div class="cv-grid-container">
-        {% for row in section[1] %}
-          <div class="cv-grid-key">
-            {% if row.startDate %}
-              {{ row.startDate | date: "%B %Y" }} &ndash; {{ row.endDate | date: "%B %Y" }}
-            {% elsif row.date.size == 10 %}
-              {{ row.date | date: "%B %Y" }}
-            {% else %}
-              {{ row.date }}
-            {% endif %}
-          </div>
-          <div class="cv-grid-value">
-            <div class="cv-item-institution">{{ row.name }}</div>
-            {% case section[0] %}
-              {% when "Education" %}
-                {% for degree in row.degree %}
-                  <div class="cv-item-title">
-                    {{ degree }}
-                  </div>
-                {% endfor %}
-              {% when "Professional Experience" %}
-                <div class="cv-item-title">
-                  {{ row.position }}
-                </div>
-              {% when "Publications" %}
-                <div class="cv-item-authors">
-                  {{ row.authors | markdownify }}
-                </div>
-                <div class="cv-item-title">
-                  {{ row.publisher }}
-                </div>
-                <div class="cv-item-note">
-                  {{ row.note }}
-                </div>
-                <div class="cv-item-links">
-                  <a href="{{ row.pdf }}" target="_blank" rel="noopener">PDF</a>
-                  <a href="{{ row.biblatex }}" target="_blank" rel="noopener" class="publication-link__text-biblatex">\(\Biblatex\)</a>
-                </div>
-              {% when "Honors &amp; Fellowships" %}
-                <div class="cv-item-title">
-                  {{ row.awarder }}
-                </div>
-                <div class="cv-item-note">
-                  {{ row.note }}
-                </div>
-              {% when "Talks" %}
-                <div class="cv-item-title">
-                  {{ row.event }}
-                </div>
-                <div class="cv-item-note">
-                  {{ row.location }}
-                </div>
-              {% when "Teaching" %}
-                <div class="cv-item-title">
-                  {{ row.role }}
-                </div>
-                <div class="cv-item-note">
-                  {{ row.institution }}
-                </div>
-              {% when "Leadership &amp; Service" %}
-                <div class="cv-item-note">
-                  {{ row.institution }}
-                </div>
-            {% endcase %}
-          </div>
-        {% endfor %}
+  <section class="cv-section">
+    <h2 class="cv-section-title">{{ section[0] }}</h2>
+    <div class="cv-grid-container">
+      {% for row in section[1] %}
+      <div class="cv-grid-key">
+        {% if row.startDate %}
+        {{ row.startDate | date: "%B %Y" }} &ndash; {{ row.endDate | date: "%B %Y" }}
+        {% elsif row.date.size == 10 %}
+        {{ row.date | date: "%B %Y" }}
+        {% else %}
+        {{ row.date }}
+        {% endif %}
       </div>
-    </section>
+      <div class="cv-grid-value">
+        <div class="cv-item-institution">{{ row.name }}</div>
+        {% case section[0] %}
+        {% when "Education" %}
+        {% for degree in row.degree %}
+        <div class="cv-item-title">
+          {{ degree }}
+        </div>
+        {% endfor %}
+        {% when "Professional Experience" %}
+        <div class="cv-item-title">
+          {{ row.position }}
+        </div>
+        {% when "Publications" %}
+        <div class="cv-item-authors">
+          {{ row.authors | markdownify }}
+        </div>
+        <div class="cv-item-title">
+          {{ row.publisher }}
+        </div>
+        <div class="cv-item-note">
+          {{ row.note }}
+        </div>
+        <div class="cv-item-links">
+          <a href="{{ row.pdf }}" target="_blank" rel="noopener">PDF</a>
+          <a href="{{ row.biblatex }}" target="_blank" rel="noopener"
+            class="publication-link__text-biblatex">\(\Biblatex\)</a>
+        </div>
+        {% when "Honors &amp; Fellowships" %}
+        <div class="cv-item-title">
+          {{ row.awarder }}
+        </div>
+        <div class="cv-item-note">
+          {{ row.note }}
+        </div>
+        {% when "Talks" %}
+        <div class="cv-item-title">
+          {{ row.event }}
+        </div>
+        <div class="cv-item-note">
+          {{ row.location }}
+        </div>
+        {% when "Teaching" %}
+        <div class="cv-item-title">
+          {{ row.role }}
+        </div>
+        <div class="cv-item-note">
+          {{ row.institution }}
+        </div>
+        {% when "Leadership &amp; Service" %}
+        <div class="cv-item-note">
+          {{ row.institution }}
+        </div>
+        {% endcase %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
   {% endfor %}
 
   <section class="cv-skills">
     <h2 class="cv-section-title">Skills</h2>
     <div class="cv-grid-container">
       {% for skill in cv.Skills %}
-        <div class="cv-grid-key">
-          {{ skill[0] }}
-        </div>
-        <div class="cv-grid-value">
-          <ul>
+      <div class="cv-grid-key">
+        {{ skill[0] }}
+      </div>
+      <div class="cv-grid-value">
+        <ul>
           {% for skill in skill[1] %}
-            <li class="cv-skill-keyword">{{ skill }}
-          {% endfor %}
-          </ul>
-        </div>
+          <li class="cv-skill-keyword">{{ skill }}
+            {% endfor %}
+        </ul>
+      </div>
       {% endfor %}
     </div>
   </section>

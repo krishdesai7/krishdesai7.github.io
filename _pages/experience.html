@@ -8,35 +8,35 @@ author_profile: false
 {% assign past_jobs = site.experience | where_exp: "item", "item.end_date" | sort: "end_date" | reverse %}
 {% assign sorted_experience = current_jobs | concat: past_jobs %}
 {% for post in sorted_experience %}
-  <div class="experience-item">
-    {% if post.logo %}
-    <div class="experience-logo">
-      {% if post.logo_dark %}
-        <img class="logo-light" src="{{ post.logo }}" alt="{{ post.venue }} logo" />
-        <img class="logo-dark" src="{{ post.logo_dark }}" alt="{{ post.venue }} logo" />
-      {% else %}
-        <img src="{{ post.logo }}" alt="{{ post.venue }} logo" />
-      {% endif %}
-    </div>
+<div class="experience-item">
+  {% if post.logo %}
+  <div class="experience-logo">
+    {% if post.logo_dark %}
+    <img class="logo-light" src="{{ post.logo }}" alt="{{ post.venue }} logo" />
+    <img class="logo-dark" src="{{ post.logo_dark }}" alt="{{ post.venue }} logo" />
+    {% else %}
+    <img src="{{ post.logo }}" alt="{{ post.venue }} logo" />
     {% endif %}
-    <div class="experience-body">
-      <div class="experience-header">
-        <h3 class="experience-company">{{ post.venue }}, </h3>
-        <div class="experience-location">{{ post.location }}</div>
+  </div>
+  {% endif %}
+  <div class="experience-body">
+    <div class="experience-header">
+      <h3 class="experience-company">{{ post.venue }}, </h3>
+      <div class="experience-location">{{ post.location }}</div>
+    </div>
+    <div class="experience-details">
+      <div class="experience-title">{{ post.title }}</div>
+      <div class="experience-dates">
+        {{ post.date | date: "%B %Y" }} &ndash; {% if post.end_date %}
+        {{ post.end_date | date: "%B %Y" }}
+        {% else %}
+        Present
+        {% endif %}
       </div>
-      <div class="experience-details">
-        <div class="experience-title">{{ post.title }}</div>
-        <div class="experience-dates">
-          {{ post.date | date: "%B %Y" }} &ndash; {% if post.end_date %}
-            {{ post.end_date | date: "%B %Y" }}
-          {% else %}
-            Present
-          {% endif %}
-        </div>
-      </div>
-      <div class="experience-content">
-        {{ post.content }}
-      </div>
+    </div>
+    <div class="experience-content">
+      {{ post.content }}
     </div>
   </div>
+</div>
 {% endfor %}

@@ -5,47 +5,49 @@ permalink: /contact/
 author_profile: false
 ---
 <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-    <input type="hidden" name="access_key" value="dc7d7e37-2f4e-4e86-93e4-763ca59f9085">
-    <input type="hidden" name="from_name" value="desai.ml contact form">
-    <input type="checkbox" name="botcheck" class="contact-form__botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <input type="hidden" name="access_key" value="dc7d7e37-2f4e-4e86-93e4-763ca59f9085">
+  <input type="hidden" name="from_name" value="desai.ml contact form">
+  <input type="checkbox" name="botcheck" class="contact-form__botcheck" tabindex="-1" autocomplete="off"
+    aria-hidden="true">
 
-    <label for="contact-name">Name</label>
-    <input type="text" id="contact-name" name="name" autocomplete="name" required>
+  <label for="contact-name">Name</label>
+  <input type="text" id="contact-name" name="name" autocomplete="name" required>
 
-    <label for="contact-email">Email</label>
-    <input type="email" id="contact-email" name="email" autocomplete="email" required>
+  <label for="contact-email">Email</label>
+  <input type="email" id="contact-email" name="email" autocomplete="email" required>
 
-    <label for="contact-subject">Subject</label>
-    <input type="text" id="contact-subject" name="subject" required>
+  <label for="contact-subject">Subject</label>
+  <input type="text" id="contact-subject" name="subject" required>
 
-    <label for="contact-message">Message</label>
-    <textarea id="contact-message" name="message" rows="7" required></textarea>
+  <label for="contact-message">Message</label>
+  <textarea id="contact-message" name="message" rows="7" required></textarea>
 
-    <button type="submit">Send message</button>
-    <p class="contact-form__status" role="status" aria-live="polite"></p>
+  <button type="submit">Send message</button>
+  <p class="contact-form__status" role="status" aria-live="polite"></p>
 </form>
 
 <dl class="contact-info">
-    <dt>
-        <i class="fa-sharp-duotone fa-regular fa-fw fa-building" aria-hidden="true"></i>
-        <span class="contact-info-label">Office:</span>
-    <dd>
-        <div class="contact-info-value">37S-31H</div>
-    <dt>
-        <i class="fa-sharp-duotone fa-regular fa-fw fa-map-location-dot" aria-hidden="true"></i>
-        <span class="contact-info-label">Address:</span>
-    <dd>
-        <div class="contact-info-value">
-            <a href="https://www.google.com/maps/search/?api=1&query={{ site.author.address.address_query }}" target="_blank" rel="noopener">
-                Bank of America Tower
-            </a>
-        </div>
-    <dd>
-        <div class="contact-info-value">
-            <div>One Bryant Park,</div>
-            <div>New York, NY 10036</div>
-            <div>United States.</div>
-        </div>
+  <dt>
+    <i class="fa-sharp-duotone fa-regular fa-fw fa-building" aria-hidden="true"></i>
+    <span class="contact-info-label">Office:</span>
+  <dd>
+    <div class="contact-info-value">37S-31H</div>
+  <dt>
+    <i class="fa-sharp-duotone fa-regular fa-fw fa-map-location-dot" aria-hidden="true"></i>
+    <span class="contact-info-label">Address:</span>
+  <dd>
+    <div class="contact-info-value">
+      <a href="https://www.google.com/maps/search/?api=1&query={{ site.author.address.address_query }}" target="_blank"
+        rel="noopener">
+        Bank of America Tower
+      </a>
+    </div>
+  <dd>
+    <div class="contact-info-value">
+      <div>One Bryant Park,</div>
+      <div>New York, NY 10036</div>
+      <div>United States.</div>
+    </div>
 </dl>
 
 <script>
