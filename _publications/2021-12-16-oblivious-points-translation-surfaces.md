@@ -19,4 +19,4 @@ researchgate: 357113876_Oblivious_points_on_translation_surfaces
 
 ## Abstract
 
-An oblivious point on a translation surface is a point with no closed geodesic passing through it. Nguyen et al. (<a href="https://doi.org/10.1007/s00208-019-01897-2">Mathematische Annalen, 2017</a>) showed that there are at most finitely many oblivious points on any given translation surface and constructed a family of surfaces with exactly one oblivious point. We construct new families of translation surfaces with arbitrarily many oblivious points and prove that there is a translation surface in every genus &ge; 3 with an oblivious point on it.
+An oblivious point on a translation surface is a point with no closed geodesic passing through it. Nguyen et al. ([Mathematische Annalen, 2017](https://doi.org/10.1007/s00208-019-01897-2)) showed that there are at most finitely many oblivious points on any given translation surface and constructed a family of surfaces with exactly one oblivious point. We construct new families of translation surfaces with arbitrarily many oblivious points and prove that there is a translation surface in every genus &ge; 3 with an oblivious point on it.
