@@ -7,7 +7,7 @@ default:
 # Serve locally with livereload in the background
 serve:
     #!/usr/bin/env bash
-    bundle exec jekyll serve -l -P {{port}} > local.log 2>&1 &
+    bundle exec jekyll serve -l -P {{ port }} > local.log 2>&1 &
     echo $! > .jekyll-pid
 
 # Stop the background Jekyll server
