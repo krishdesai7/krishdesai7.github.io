@@ -17,7 +17,7 @@
 
 <div class="publication-links">
   {% if include.pub.paperurl %}
-  <a href="{{ include.pub.paperurl }}" class="publication-link publication-link--paper" target="_blank" rel="noopener">
+  <a href="{{ include.pub.paperurl }}" class="publication-link publication-link--paper" target="_blank">
     <span class="publication-link__icon icon-pdf" aria-hidden="true">
       {% include icons/pdf.svg %}
     </span>
@@ -27,8 +27,7 @@
 
   {% if include.pub.slidesurl %}
   <span class="publication-link__separator" aria-hidden="true">•</span>
-  <a href="{{ include.pub.slidesurl }}" class="publication-link publication-link--slides" target="_blank"
-    rel="noopener">
+  <a href="{{ include.pub.slidesurl }}" class="publication-link publication-link--slides" target="_blank">
     <span class="publication-link__icon icon-ppt" aria-hidden="true">
       {% include icons/ppt.svg %}
     </span>
@@ -49,7 +48,7 @@
 
   {% if include.pub.code %}
   <span class="publication-link__separator" aria-hidden="true">•</span>
-  <a href="{{ include.pub.code }}" class="publication-link" target="_blank" rel="noopener">
+  <a href="{{ include.pub.code }}" class="publication-link" target="_blank">
     <i class="fa-brands fa-fw fa-github icon-pad-right" aria-hidden="true"></i>
     <span class="publication-link__text">Code</span>
   </a>
@@ -57,37 +56,35 @@
 
   <div class="publication-extra-icons" aria-label="Additional links">
     {% if include.pub.doi %}
-    <a href="https://doi.org/{{ include.pub.doi }}" class="publication-link" target="_blank" rel="noopener"
-      aria-label="DOI">
+    <a href="https://doi.org/{{ include.pub.doi }}" class="publication-link" target="_blank" aria-label="DOI">
       <i class="ai ai-doi ai-fw" aria-hidden="true"></i>
     </a>
     {% endif %}
     {% if include.pub.proquest %}
-    <a href="{{ include.pub.proquest }}" class="publication-link" target="_blank" rel="noopener" aria-label="ProQuest">
+    <a href="{{ include.pub.proquest }}" class="publication-link" target="_blank" aria-label="ProQuest">
       <i class="fa-sharp-duotone fa-regular fa-link fa-fw" aria-hidden="true"></i>
     </a>
     {% endif %}
     {% if include.pub.arxiv %}
-    <a href="https://arxiv.org/abs/{{ include.pub.arxiv }}" class="publication-link" target="_blank" rel="noopener"
-      aria-label="arXiv">
+    <a href="https://arxiv.org/abs/{{ include.pub.arxiv }}" class="publication-link" target="_blank" aria-label="arXiv">
       <i class="ai ai-arxiv ai-fw" aria-hidden="true"></i>
     </a>
     {% endif %}
     {% if include.pub.scix %}
-    <a href="https://scixplorer.org/abs/{{ include.pub.scix }}" class="publication-link" target="_blank" rel="noopener"
+    <a href="https://scixplorer.org/abs/{{ include.pub.scix }}" class="publication-link" target="_blank"
       aria-label="SciX">
       <i class="ai ai-ads ai-fw" aria-hidden="true"></i>
     </a>
     {% endif %}
     {% if include.pub.inspirehep %}
     <a href="https://inspirehep.net/literature/{{ include.pub.inspirehep }}" class="publication-link" target="_blank"
-      rel="noopener" aria-label="InspireHEP">
+      aria-label="InspireHEP">
       <i class="ai ai-inspire ai-fw" aria-hidden="true"></i>
     </a>
     {% endif %}
     {% if include.pub.researchgate %}
     <a href="https://www.researchgate.net/publication/{{ include.pub.researchgate }}" class="publication-link"
-      target="_blank" rel="noopener" aria-label="ResearchGate">
+      target="_blank" aria-label="ResearchGate">
       <i class="ai ai-researchgate ai-fw" aria-hidden="true"></i>
     </a>
     {% endif %}
