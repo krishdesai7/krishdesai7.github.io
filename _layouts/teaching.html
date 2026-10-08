@@ -7,29 +7,29 @@ layout: default
     <meta itemprop="headline" content="{{ page.title }}">
     <div class="page__inner-wrap">
       <div class="single-teaching-content" itemprop="text">
-          <div class="teaching-meta-group">
-              <span class="meta-label">Course code</span>
-              <span class="meta-value">{{ page.course }}</span>
-          </div>
+        <div class="teaching-meta-group">
+          <span class="meta-label">Course code</span>
+          <span class="meta-value">{{ page.course }}</span>
+        </div>
 
-          <div class="teaching-meta-group">
-              <span class="meta-label">Role</span>
-              <span class="meta-value"><i>{{ page.type }}</i></span>
-          </div>
+        <div class="teaching-meta-group">
+          <span class="meta-label">Role</span>
+          <span class="meta-value"><i>{{ page.type }}</i></span>
+        </div>
 
-          <div class="teaching-meta-group">
-              <span class="meta-label">Term</span>
-              <span class="meta-value">{{ page.semester }} {{ page.year }}</span>
-          </div>
+        <div class="teaching-meta-group">
+          <span class="meta-label">Term</span>
+          <span class="meta-value">{{ page.semester }} {{ page.year }}</span>
+        </div>
 
-            <div class="teaching-meta-group">
-              <span class="meta-label">Institution</span>
-              <span class="meta-value">{{ page.venue }}</span>
-            </div>
-            <div class="teaching-meta-group">
-              <span class="meta-label">Course details</span>
-              <span class="meta-value">{{ page.materials | markdownify }}</span>
-            </div>
+        <div class="teaching-meta-group">
+          <span class="meta-label">Institution</span>
+          <span class="meta-value">{{ page.venue }}</span>
+        </div>
+        <div class="teaching-meta-group">
+          <span class="meta-label">Course details</span>
+          <span class="meta-value">{{ page.materials | markdownify }}</span>
+        </div>
         <div class="course-description">
           <h3>Course description</h3>
           {{ page.description | markdownify }}

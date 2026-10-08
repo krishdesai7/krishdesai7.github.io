@@ -1,53 +1,56 @@
 ---
 ---
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
-  <head>
-    {% include head/head.html %}
-  </head>
-  <body>
-    {% include layout/masthead.html %}
-    <div id="main" role="main">
-      <div class="archive">
-        {% if page.title and page.title != "" %}
-          <h1 class="page__title">
-            {{ page.title }}
-          </h1>
-        {% endif %}
-        {{ content }}
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js" {% if site.site_theme=="dark" %} data-theme="dark" {% endif
+  %}>
+
+<head>
+  {% include head/head.html %}
+</head>
+
+<body>
+  {% include layout/masthead.html %}
+  <div id="main" role="main">
+    <div class="archive">
+      {% if page.title and page.title != "" %}
+      <h1 class="page__title">
+        {{ page.title }}
+      </h1>
+      {% endif %}
+      {{ content }}
+    </div>
+  </div>
+  <footer>
+    {% include layout/footer.html %}
+  </footer>
+
+  <!-- BibLaTeX Modal -->
+  <div id="biblatex-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          \(\Biblatex\)
+        </h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <pre id="biblatex-content"></pre>
+      </div>
+      <div class="modal-footer">
+        <button id="biblatex-download" class="btn btn-primary">
+          <i class="fa-sharp-duotone fa-regular fa-download fa-fw" aria-hidden="true"></i>
+          Download
+        </button>
+        <button id="biblatex-copy" class="btn btn-secondary">
+          <i class="fa-sharp-duotone fa-regular fa-clone-plus fa-fw icon-pad-right" aria-hidden="true"></i>
+          Copy
+        </button>
       </div>
     </div>
-    <footer>
-      {% include layout/footer.html %}
-    </footer>
+  </div>
 
-    <!-- BibLaTeX Modal -->
-    <div id="biblatex-modal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title">
-\(\Biblatex\)
-          </h3>
-          <button class="modal-close">&times;</button>
-        </div>
-        <div class="modal-body">
-          <pre id="biblatex-content"></pre>
-        </div>
-        <div class="modal-footer">
-          <button id="biblatex-download" class="btn btn-primary">
-            <i class="fa-sharp-duotone fa-regular fa-download fa-fw" aria-hidden="true"></i>
-            Download
-          </button>
-          <button id="biblatex-copy" class="btn btn-secondary">
-            <i class="fa-sharp-duotone fa-regular fa-clone-plus fa-fw icon-pad-right" aria-hidden="true"></i>
-            Copy
-          </button>
-        </div>
-      </div>
-    </div>
+  <script defer src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
+  <script data-goatcounter="https://desaiml.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
 
-    <script defer src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
-    <script data-goatcounter="https://desaiml.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
-  </body>
 </html>

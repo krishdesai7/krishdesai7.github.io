@@ -5,7 +5,7 @@ layout: default
 <article class="writing-post" itemscope itemtype="https://schema.org/Article">
   <meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">
   {% if page.description %}
-    <meta itemprop="description" content="{{ page.description }}">
+  <meta itemprop="description" content="{{ page.description }}">
   {% endif %}
   <section class="page__content" itemprop="articleBody">
     {{ content }}

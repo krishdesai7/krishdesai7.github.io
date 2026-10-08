@@ -8,50 +8,50 @@ layout: default
     <header>
       <div class="publication-meta">
         {% case page.category %}
-          {% when 'theses' %}
-            <span class="publication-venue" itemprop="publisher">
-              {{ page.venue }}
-            </span>
-          {% when 'preprints' %}
-            <span class="publication-type">
-              Preprint
-            </span>
-            {% if page.venue %}
-              <span class="publication-venue" itemprop="publisher">
-                {{ page.venue }}
-              </span>
-            {% endif %}
-          {% when 'conferences' %}
-            <span class="publication-venue">
-              {{ page.venue }}
-            </span>
-          {% else %}
-            {% if page.status %}
-              <span class="publication-type">
-                {{ page.status }}
-              </span>
-            {% endif %}
-            <span class="publication-venue" itemprop="name">
-              {{ page.venue }}
-            </span>
+        {% when 'theses' %}
+        <span class="publication-venue" itemprop="publisher">
+          {{ page.venue }}
+        </span>
+        {% when 'preprints' %}
+        <span class="publication-type">
+          Preprint
+        </span>
+        {% if page.venue %}
+        <span class="publication-venue" itemprop="publisher">
+          {{ page.venue }}
+        </span>
+        {% endif %}
+        {% when 'conferences' %}
+        <span class="publication-venue">
+          {{ page.venue }}
+        </span>
+        {% else %}
+        {% if page.status %}
+        <span class="publication-type">
+          {{ page.status }}
+        </span>
+        {% endif %}
+        <span class="publication-venue" itemprop="name">
+          {{ page.venue }}
+        </span>
         {% endcase %}
 
-          <span class="publication-date">
-            • <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-              {{ page.date | date: "%B %d, %Y" }}
-            </time>
-          </span>
+        <span class="publication-date">
+          • <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ page.date | date: "%B %d, %Y" }}
+          </time>
+        </span>
       </div>
 
       {% if page.category != 'theses' and page.authors %}
-        <div class="publication-authors">
-          {{ page.authors }}
-        </div>
+      <div class="publication-authors">
+        {{ page.authors }}
+      </div>
       {% endif %}
     </header>
 
     {% include partials/publication-links.html pub=page %}
-    
+
     <section class="page__content" itemprop="text">
       {{ content }}
     </section>
