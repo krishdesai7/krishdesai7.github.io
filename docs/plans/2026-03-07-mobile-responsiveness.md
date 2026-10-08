@@ -10,13 +10,14 @@
 
 ---
 
-### Task 1: Hamburger Menu — HTML + JS Toggle
+## Task 1: Hamburger Menu — HTML + JS Toggle
 
 **Files:**
+
 - Modify: `_includes/masthead.html`
 - Modify: `assets/js/_main.js`
 
-**Step 1: Add hamburger button and mobile structure to masthead**
+### Step 1.1: Add hamburger button and mobile structure to masthead
 
 In `_includes/masthead.html`, add a hamburger button inside `.nav__menu` before the `<nav>`, and give the `<ul>` an id for toggling:
 
@@ -24,28 +25,38 @@ In `_includes/masthead.html`, add a hamburger button inside `.nav__menu` before 
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="site-title">
-      <a href="{{ site.url }}">
-        {{ site.title }}
-      </a>
+      <a href="{{ site.url }}"> {{ site.title }} </a>
     </div>
     <div class="nav__menu">
-      <button id="nav-toggle" class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <i class="fa-sharp-duotone fa-regular fa-bars fa-fw" aria-hidden="true"></i>
+      <button
+        id="nav-toggle"
+        class="nav__toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <i
+          class="fa-sharp-duotone fa-regular fa-bars fa-fw"
+          aria-hidden="true"
+        ></i>
       </button>
       <nav id="site-nav" class="greedy-nav">
         <ul class="visible-links" id="nav-links">
           {% for link in site.data.navigation.main %}
-            <li class="nav__menu-item">
-              <a href="{{ link.url | relative_url }}">
-                {{ link.title }}
-              </a>
-          {% endfor %}
+          <li class="nav__menu-item">
+            <a href="{{ link.url | relative_url }}"> {{ link.title }} </a>
+            {% endfor %}
+          </li>
+
           <li class="nav__menu-item theme-toggle">
             <button id="theme-toggle" type="button" aria-label="Toggle theme">
-              <i id="theme-icon" class="fa-duotone fa-regular fa-fw fa-moon-stars"
-                aria-hidden="true">
+              <i
+                id="theme-icon"
+                class="fa-duotone fa-regular fa-fw fa-moon-stars"
+                aria-hidden="true"
+              >
               </i>
             </button>
+          </li>
         </ul>
       </nav>
     </div>
@@ -53,42 +64,42 @@ In `_includes/masthead.html`, add a hamburger button inside `.nav__menu` before 
 </div>
 ```
 
-**Step 2: Add JS toggle to `_main.js`**
+### Step 1.2: Add JS toggle to `_main.js`
 
 Add to `assets/js/_main.js` (at the top level, outside any existing IIFE):
 
 ```js
 // Hamburger menu toggle
-const navToggle = document.getElementById('nav-toggle');
-const navLinks = document.getElementById('nav-links');
+const navToggle = document.getElementById("nav-toggle");
+const navLinks = document.getElementById("nav-links");
 if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('nav--open');
-    navToggle.setAttribute('aria-expanded', isOpen);
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("nav--open");
+    navToggle.setAttribute("aria-expanded", isOpen);
     // Swap icon between bars and xmark
-    const icon = navToggle.querySelector('i');
+    const icon = navToggle.querySelector("i");
     if (isOpen) {
-      icon.classList.remove('fa-bars');
-      icon.classList.add('fa-xmark');
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
     } else {
-      icon.classList.remove('fa-xmark');
-      icon.classList.add('fa-bars');
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
     }
   });
 }
 ```
 
-**Step 3: Rebuild minified JS**
+### Step 1.3: Rebuild minified JS
 
 Run: `npm run build`
 Expected: `assets/js/main.min.js` is regenerated.
 
-**Step 4: Verify locally**
+### Step 1.4: Verify locally
 
 Run: `bundle exec jekyll serve -lH`
 Open in browser, resize to mobile width. Hamburger button should appear and toggle the nav open/closed (styling comes in Task 2).
 
-**Step 5: Commit**
+### Step 1.5: Commit
 
 ```bash
 git add _includes/masthead.html assets/js/_main.js assets/js/main.min.js
@@ -97,12 +108,13 @@ git commit -m "feat: add hamburger menu toggle for mobile nav"
 
 ---
 
-### Task 2: Hamburger Menu — CSS
+## Task 2: Hamburger Menu — CSS
 
 **Files:**
+
 - Modify: `_sass/layout/_masthead.scss`
 
-**Step 1: Add mobile styles for hamburger nav**
+### Step 2.1: Add mobile styles for hamburger nav
 
 Add to the end of `_sass/layout/_masthead.scss`:
 
@@ -175,11 +187,11 @@ Add to the end of `_sass/layout/_masthead.scss`:
 }
 ```
 
-**Step 2: Verify locally**
+### Step 2.2: Verify locally
 
 Resize browser to mobile width. Hamburger button should show, clicking it should reveal a vertical dropdown with all nav links styled properly. On desktop width, nothing should change.
 
-**Step 3: Commit**
+### Step 2.3: Commit
 
 ```bash
 git add _sass/layout/_masthead.scss
@@ -188,12 +200,13 @@ git commit -m "feat: style hamburger menu for mobile nav"
 
 ---
 
-### Task 3: Home Page — Mobile Layout
+## Task 3: Home Page — Mobile Layout
 
 **Files:**
+
 - Modify: `_sass/layout/_home.scss`
 
-**Step 1: Add mobile breakpoint**
+### Step 3.1: Add mobile breakpoint
 
 Add to the end of `_sass/layout/_home.scss`:
 
@@ -217,11 +230,11 @@ Add to the end of `_sass/layout/_home.scss`:
 }
 ```
 
-**Step 2: Verify locally**
+### Step 3.2: Verify locally
 
 On mobile width: profile image should be a small centered circle above the bio. Content grid should be single column. Desktop should be unchanged.
 
-**Step 3: Commit**
+### Step 3.3: Commit
 
 ```bash
 git add _sass/layout/_home.scss
@@ -230,12 +243,13 @@ git commit -m "feat: mobile layout for home page — circular avatar + single co
 
 ---
 
-### Task 4: About Page — Mobile Layout
+## Task 4: About Page — Mobile Layout
 
 **Files:**
+
 - Modify: `_sass/pages/_about.scss`
 
-**Step 1: Add mobile breakpoint**
+### Step 4.1: Add mobile breakpoint
 
 Add to the end of `_sass/pages/_about.scss`:
 
@@ -247,11 +261,11 @@ Add to the end of `_sass/pages/_about.scss`:
 }
 ```
 
-**Step 2: Verify locally**
+### Step 4.2: Verify locally
 
 On mobile width: author profile stacks above bio content. Desktop unchanged.
 
-**Step 3: Commit**
+### Step 4.3: Commit
 
 ```bash
 git add _sass/pages/_about.scss
@@ -260,12 +274,13 @@ git commit -m "feat: mobile layout for about page — single column"
 
 ---
 
-### Task 5: Publications — Mobile Layout
+## Task 5: Publications — Mobile Layout
 
 **Files:**
+
 - Modify: `_sass/pages/_publications.scss`
 
-**Step 1: Add mobile breakpoint**
+### Step 5.1: Add mobile breakpoint
 
 Add to the end of `_sass/pages/_publications.scss`:
 
@@ -278,11 +293,11 @@ Add to the end of `_sass/pages/_publications.scss`:
 }
 ```
 
-**Step 2: Verify locally**
+### Step 5.2: Verify locally
 
 On mobile width: date stacks above publication details, full width. Desktop unchanged.
 
-**Step 3: Commit**
+### Step 5.3: Commit
 
 ```bash
 git add _sass/pages/_publications.scss
@@ -291,12 +306,13 @@ git commit -m "feat: mobile layout for publications — single column"
 
 ---
 
-### Task 6: Experience — Mobile Layout
+## Task 6: Experience — Mobile Layout
 
 **Files:**
+
 - Modify: `_sass/pages/_experience.scss`
 
-**Step 1: Add mobile breakpoint**
+### Step 6.1: Add mobile breakpoint
 
 Add to the end of `_sass/pages/_experience.scss` (before the dark-mode logo-switching block):
 
@@ -322,11 +338,11 @@ Add to the end of `_sass/pages/_experience.scss` (before the dark-mode logo-swit
 }
 ```
 
-**Step 2: Verify locally**
+### Step 6.2: Verify locally
 
 On mobile width: logo centered above experience body, smaller. Dates stack below title/position instead of floating right. Desktop unchanged.
 
-**Step 3: Commit**
+### Step 6.3: Commit
 
 ```bash
 git add _sass/pages/_experience.scss
@@ -335,13 +351,14 @@ git commit -m "feat: mobile layout for experience — single column with centere
 
 ---
 
-### Task 7: Final Smoke Test
+## Task 7: Final Smoke Test
 
-**Step 1: Full rebuild and test**
+### Step 7.1: Full rebuild and test
 
 Run: `bundle exec jekyll serve -lH`
 
 Test all pages at ~375px width (iPhone SE) in browser dev tools:
+
 - [ ] Home: circular avatar, single-column grid
 - [ ] Navbar: hamburger works, opens/closes, all links accessible
 - [ ] About: single column
@@ -350,6 +367,7 @@ Test all pages at ~375px width (iPhone SE) in browser dev tools:
 - [ ] Talks, Teaching, CV, Contact, Footer: still look fine (no regression)
 
 Test at desktop width:
+
 - [ ] All pages look exactly as before
 
-**Step 2: Final commit if any tweaks needed**
+### Step 7.2: Final commit if any tweaks needed
