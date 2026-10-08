@@ -64,3 +64,45 @@
     grid-template-columns: 1fr;
   }
 }
+
+.home-profile__content {
+  p,
+  address {
+    margin: 0;
+  }
+
+  // Name: the one thing that should read first.
+  .home-profile__name {
+    font-family: $header-font-family;
+    font-size: $font-size-32;
+    font-weight: $weight-medium;
+    line-height: 1.15;
+    margin-bottom: var(--one-and-half-baseline);
+  }
+
+  // Each block is a tight cluster; the gap between blocks separates them.
+  .home-profile__block {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+
+    + .home-profile__block {
+      margin-top: var(--double-baseline);
+    }
+  }
+
+  // Degree / job title: the headline of each cluster.
+  .home-profile__lead {
+    font-family: $header-font-family-caps;
+    font-size: $font-size-18;
+    font-weight: $weight-medium;
+  }
+
+  // Street address: least important, so smaller, lighter and tighter still.
+  .home-profile__address {
+    margin-top: var(--quarter-baseline);
+    font-style: normal;
+    line-height: 1.3;
+    color: var(--global-text-color-light);
+  }
+}
