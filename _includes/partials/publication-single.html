@@ -2,9 +2,9 @@
 {% assign schema_type = "https://schema.org/CreativeWork" %}
 
 {% if post.category == "theses" %}
-    {% assign schema_type = "https://schema.org/Thesis" %}
+{% assign schema_type = "https://schema.org/Thesis" %}
 {% else %}
-    {% assign schema_type = "https://schema.org/ScholarlyArticle" %}
+{% assign schema_type = "https://schema.org/ScholarlyArticle" %}
 {% endif %}
 
 <div class="publication-row">
@@ -20,29 +20,29 @@
 
     <div class="publication-meta">
       {% case post.category %}
-        {% when 'theses' %}
-          <span class="publication-venue" itemprop="publisher">{{ post.venue }}</span>
-        {% when 'preprints' %}
-          <span class="publication-type">Preprint</span>
-          {% if post.venue %}
-            <span class="publication-venue" itemprop="publisher">{{ post.venue }}</span>
-          {% endif %}
-        {% when 'conferences' %}
-          <span class="publication-venue">{{ post.venue }}</span>
-        {% else %}
-          {% if post.status %}
-            <span class="publication-type">{{ post.status }}</span>
-          {% endif %}
-          <span class="publication-venue" itemprop="name">{{ post.venue }}</span>
+      {% when 'theses' %}
+      <span class="publication-venue" itemprop="publisher">{{ post.venue }}</span>
+      {% when 'preprints' %}
+      <span class="publication-type">Preprint</span>
+      {% if post.venue %}
+      <span class="publication-venue" itemprop="publisher">{{ post.venue }}</span>
+      {% endif %}
+      {% when 'conferences' %}
+      <span class="publication-venue">{{ post.venue }}</span>
+      {% else %}
+      {% if post.status %}
+      <span class="publication-type">{{ post.status }}</span>
+      {% endif %}
+      <span class="publication-venue" itemprop="name">{{ post.venue }}</span>
       {% endcase %}
     </div>
     {% if post.category != 'theses' %}
-      <div class="publication-authors">
-        {{ post.authors }}
-      </div>
+    <div class="publication-authors">
+      {{ post.authors }}
+    </div>
     {% endif %}
 
     {% include partials/publication-links.html pub=post %}
-    
+
   </div>
 </div>

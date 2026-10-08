@@ -13,30 +13,30 @@
     </h3>
 
     <div class="talk-meta">
-        <div class="talk-venue" itemprop="location" itemscope itemtype="https://schema.org/Place">
-          <span itemprop="name">
-            {{ post.venue }}
-          </span>
-          <div class="talk-location" itemprop="address">
-            <i class="fa-slab-press fa-regular fa-location-dot fa-fw pad-icon-right" aria-hidden="true"></i>
-            {{ post.location }}
-          </div>
+      <div class="talk-venue" itemprop="location" itemscope itemtype="https://schema.org/Place">
+        <span itemprop="name">
+          {{ post.venue }}
+        </span>
+        <div class="talk-location" itemprop="address">
+          <i class="fa-slab-press fa-regular fa-location-dot fa-fw pad-icon-right" aria-hidden="true"></i>
+          {{ post.location }}
         </div>
-        {% if post.link %}
-          <div class="talk-link-single">
-            <a href="{{ post.link }}" class="talk-link talk-link--details" target="_blank" rel="noopener">
-              <i class="fa-sharp-duotone fa-regular fa-link fa-fw pad-icon-right" aria-hidden="true"></i>
-              <span class="talk-link__text">URL</span>
-            </a>
-            {% if post.slidesurl %}
-            <span class="talk-link__separator" aria-hidden="true">•</span>
-              <a href="{{ post.slidesurl }}" class="talk-link talk-link--slides" target="_blank" rel="noopener">
-                <i class="fa-sharp-duotone fa-regular fa-file-ppt fa-fw pad-icon-right" aria-hidden="true"></i>
-                <span class="talk-link__text">Slides</span>
-              </a>
-          {% endif %}
-          </div>
+      </div>
+      {% if post.link %}
+      <div class="talk-link-single">
+        <a href="{{ post.link }}" class="talk-link talk-link--details" target="_blank" rel="noopener">
+          <i class="fa-sharp-duotone fa-regular fa-link fa-fw pad-icon-right" aria-hidden="true"></i>
+          <span class="talk-link__text">URL</span>
+        </a>
+        {% if post.slidesurl %}
+        <span class="talk-link__separator" aria-hidden="true">•</span>
+        <a href="{{ post.slidesurl }}" class="talk-link talk-link--slides" target="_blank" rel="noopener">
+          <i class="fa-sharp-duotone fa-regular fa-file-ppt fa-fw pad-icon-right" aria-hidden="true"></i>
+          <span class="talk-link__text">Slides</span>
+        </a>
         {% endif %}
+      </div>
+      {% endif %}
     </div>
   </div>
 </div>
