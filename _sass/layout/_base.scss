@@ -7,26 +7,53 @@ html {
 body {
   --bg: var(--global-bg-color);
   --rib: 2.8px; /* width of each diagonal band */
-  --intensity: 0.02;
+  /* Light mode: white highlights are invisible on paper, so every layer is dark. */
+  --rib-a: rgba(176, 130, 30, 0.02);
+  --rib-b: rgba(176, 130, 30, 0.028);
+  --grain-a: rgba(176, 130, 30, 0.014);
+  --grain-b: rgba(176, 130, 30, 0.014);
+  /* Gold-leaf glitter (light mode only): sparse flecks and a soft foil sheen */
+  --fleck: rgba(200, 150, 30, 0.45);
+  --fleck-soft: rgba(215, 170, 60, 0.3);
+  --sheen-hi: rgba(235, 195, 95, 0.07);
+  --sheen-lo: rgba(176, 130, 30, 0.045);
 
   background-image:
+    /* foil sheen: broad diagonal bands of lighter/deeper gold */
+    linear-gradient(
+      115deg,
+      transparent 0%,
+      var(--sheen-hi) 22%,
+      transparent 40%,
+      var(--sheen-lo) 62%,
+      transparent 78%,
+      var(--sheen-hi) 100%
+    ),
+    /* flecks: tiles with coprime sizes so they never read as a grid */
+    radial-gradient(circle at 23px 41px, var(--fleck) 0 0.7px, transparent 1.2px),
+    radial-gradient(circle at 88px 17px, var(--fleck-soft) 0 0.6px, transparent 1.1px),
+    radial-gradient(circle at 61px 109px, var(--fleck) 0 0.5px, transparent 1px),
     /* diagonal set 1 */
     repeating-linear-gradient(
       45deg,
-      rgba(255, 255, 255, var(--intensity)) 0 var(--rib),
+      var(--rib-a) 0 var(--rib),
       rgba(0, 0, 0, 0) var(--rib) calc(var(--rib) * 2)
     ),
     /* diagonal set 2 (counter-direction, offset) */
     repeating-linear-gradient(
         -45deg,
-        rgba(0, 0, 0, var(--intensity)) 0 var(--rib),
+        var(--rib-b) 0 var(--rib),
         rgba(0, 0, 0, 0) var(--rib) calc(var(--rib) * 2)
       ),
     /* micro grain */
-    radial-gradient(circle, rgba(255, 255, 255, 0.015) 1px, transparent 0.8px),
-    radial-gradient(circle, rgba(0, 0, 0, 0.015) 1px, transparent 0.8px),
+    radial-gradient(circle, var(--grain-a) 1px, transparent 0.8px),
+    radial-gradient(circle, var(--grain-b) 1px, transparent 0.8px),
     /* base */ linear-gradient(var(--bg), var(--bg));
   background-size:
+    auto,
+    197px 197px,
+    131px 131px,
+    149px 149px,
     auto,
     auto,
     3px 3px,
@@ -36,10 +63,31 @@ body {
     0 0,
     0 0,
     0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
     1.5px 1.5px,
     0 0;
-  background-repeat: repeat, repeat, repeat, repeat, no-repeat;
-  background-blend-mode: soft-light, soft-light, soft-light, soft-light, normal;
+  background-repeat:
+    no-repeat, repeat, repeat, repeat, repeat, repeat, repeat, repeat,
+    no-repeat;
+  /* soft-light does nothing on near-white, so light mode blends normally */
+  background-blend-mode: normal;
+}
+
+html[data-theme="dark"] body {
+  background-blend-mode:
+    normal, normal, normal, normal, soft-light, soft-light, soft-light,
+    soft-light, normal;
+  --rib-a: rgba(255, 255, 255, 0.02);
+  --rib-b: rgba(0, 0, 0, 0.02);
+  --grain-a: rgba(255, 255, 255, 0.015);
+  --grain-b: rgba(0, 0, 0, 0.015);
+  --fleck: transparent;
+  --fleck-soft: transparent;
+  --sheen-hi: transparent;
+  --sheen-lo: transparent;
 }
 
 body {
