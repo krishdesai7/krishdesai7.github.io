@@ -1,89 +1,89 @@
-
 /* Typographic settings for the template */
-$paragraph-indent        : true;
-$indent-var              : 1.3em;
-$border-radius-single    : 4px;
-$border-radius-double    : 8px;
-$masthead-height         : 70px;
+$paragraph-indent: true;
+$indent-var: 1.3em;
+$border-radius-single: 4px;
+$border-radius-double: 8px;
+$masthead-height: 70px;
 
 /* Card shadow */
-$box-shadow              : 8px 8px 0 0 var(--box-shadow-offset-color),
-                           8px 8px 0 1px var(--box-shadow-border-color),
-                           16px 16px 25px rgba(0, 0, 0, 0.18);
+$box-shadow:
+  8px 8px 0 0 var(--box-shadow-offset-color),
+  8px 8px 0 1px var(--box-shadow-border-color),
+  16px 16px 25px rgba(0, 0, 0, 0.18);
 
 /* ==========================================================================
    Grid
    ========================================================================== */
 
-$right-sidebar-width-narrow : 0;
-$right-sidebar-width        : 0;
-$right-sidebar-width-wide   : 0;
+$right-sidebar-width-narrow: 0;
+$right-sidebar-width: 0;
+$right-sidebar-width-wide: 0;
 
 /* ==========================================================================
    Palette — Light (Traditional)
    ========================================================================== */
 
 /* Paper tones */
-$paper-white   : #fdfcfa; /* Soft off-white, premium paper */
-$paper-cream   : #f8f6f3; /* Subtle cream undertone */
-$paper-beige   : #f0ede8; /* Warm beige for elevation */
-$paper-stone   : #e8e4de; /* Deeper stone for strong contrast */
+$paper-white: #fdfcfa; /* Soft off-white, premium paper */
+$paper-cream: #f8f6f3; /* Subtle cream undertone */
+$paper-beige: #f0ede8; /* Warm beige for elevation */
+$paper-stone: #e8e4de; /* Deeper stone for strong contrast */
 
 /* Text */
-$ink-black     : #1a1816; /* Deep charcoal */
-$ink-dark      : #2d2a27; /* Primary text */
-$ink-medium    : #4a4642; /* Secondary text */
-$ink-light     : #6b6662; /* Tertiary */
-$ink-muted     : #8b8682; /* De-emphasized */
+$ink-black: #1a1816; /* Deep charcoal */
+$ink-dark: #2d2a27; /* Primary text */
+$ink-medium: #4a4642; /* Secondary text */
+$ink-light: #6b6662; /* Tertiary */
+$ink-muted: #8b8682; /* De-emphasized */
 
 /* Borders */
-$border-light  : #e0dcd6;
-$border-medium : #d0cbc4;
-$border-dark   : #b8b3ac;
+$border-light: #e0dcd6;
+$border-medium: #d0cbc4;
+$border-dark: #b8b3ac;
 
 /* Accents */
-$sepia-600     : #5a4636; /* link */
-$sepia-700     : #3f2e23; /* hover */
-$oxblood-500   : #6a4a8a; /* link decoration: dusky purple */
-$terracotta-600 : #955a45; /* muted terracotta (hover) */
-$terracotta-700 : #814a38; /* pressed/active */
+$sepia-600: #5a4636; /* link */
+$sepia-700: #3f2e23; /* hover */
+$oxblood-500: #6a4a8a; /* link decoration: dusky purple */
+$terracotta-600: #955a45; /* muted terracotta (hover) */
+$terracotta-700: #814a38; /* pressed/active */
 
 /* Selection */
-$parchment-200 : #eee6d2; /* selection bg */
-$parchment-400 : #e4d7b7; /* selection hover */
-$parchment-500 : #d9ca9f; /* selection hover (deeper) */
+$parchment-200: #eee6d2; /* selection bg */
+$parchment-400: #e4d7b7; /* selection hover */
+$parchment-500: #d9ca9f; /* selection hover (deeper) */
 
 /* ==========================================================================
    Palette — Dark (Traditional)
    ========================================================================== */
 
 /* Backgrounds (warm charcoals) */
-$charcoal-black : #181614;
-$warm-graphite : #201E1D;
-$olive-charcoal : #10110C;
-$coal-950     : #0f0e0c;  /* footer/emphasis */
-$coal-900     : #161412;  /* main */
-$coal-850     : #1c1a17;  /* elevated */
-$coal-800     : #22201c;  /* hovers/code */
+$charcoal-black: #181614;
+$warm-graphite: #201e1d;
+$olive-charcoal: #10110c;
+$coal-950: #0f0e0c; /* footer/emphasis */
+$coal-900: #161412; /* main */
+$coal-850: #1c1a17; /* elevated */
+$coal-800: #22201c; /* hovers/code */
 
 /* Borders (warm greys) */
-$soot-700     : #3a352f;
-$soot-600     : #4a4440;
+$soot-700: #3a352f;
+$soot-600: #4a4440;
 
 /* Text (warm off-whites) */
-$parchment-50 : #f3efe9;  /* primary text */
-$parchment-100: #e7e1d9;  /* light text */
-$parchment-300: #cfc7bd;  /* tertiary/muted */
+$parchment-50: #f3efe9; /* primary text */
+$parchment-100: #e7e1d9; /* light text */
+$parchment-300: #cfc7bd; /* tertiary/muted */
 
 /* Links & accents */
-$sepia-500    : #6a5441;  /* link */
-$sepia-400    : #7a5f49;  /* hover */
-$sepia-600    : #5a4636;  /* visited */
+$sepia-500: #6a5441; /* link */
+$sepia-400: #7a5f49; /* hover */
+$sepia-600: #5a4636; /* visited */
 
-$terracotta-600 : #955a45; /* hover alt */
-$terracotta-700 : #814a38; /* pressed/active */
+$terracotta-600: #955a45; /* hover alt */
+$terracotta-700: #814a38; /* pressed/active */
 
-$amber-400   : #fbbf24;
+$amber-400: #fbbf24;
 
 /* ==========================================================================
    CSS Custom Properties
@@ -92,95 +92,95 @@ $amber-400   : #fbbf24;
 /* Light theme — Traditional */
 :root {
   /* Backgrounds */
-  --global-bg-color                  : #{$paper-white};
-  --global-footer-bg-color           : #{$paper-cream};
-  --global-hover-bg                  : #{$paper-beige};
+  --global-bg-color: #{$paper-white};
+  --global-footer-bg-color: #{$paper-cream};
+  --global-hover-bg: #{$paper-beige};
 
   /* Borders */
-  --global-border-color              : #{$border-light};
-  --global-dark-border-color         : #{$border-dark};
+  --global-border-color: #{$border-light};
+  --global-dark-border-color: #{$border-dark};
 
   /* Text */
-  --global-text-color                : #{$ink-dark};
-  --global-text-color-light          : #{$ink-light};
-  --header-footer-text-color         : #{$ink-medium};
-  --global-masthead-link-color       : #{$ink-dark};
+  --global-text-color: #{$ink-dark};
+  --global-text-color-light: #{$ink-light};
+  --header-footer-text-color: #{$ink-medium};
+  --global-masthead-link-color: #{$ink-dark};
 
   /* Links */
-  --global-link-color                : #{$sepia-600};
-  --global-link-color-hover          : #{$terracotta-600};
-  --global-link-color-visited        : #{$sepia-700};
-  --global-link-decoration-color     : #{$oxblood-500};
-  --global-masthead-link-color-hover : #{$ink-medium};
-  --global-nav-link-color            : #{$ink-medium};
-  --global-nav-link-color-hover      : #{$ink-muted};
-  --theme-toggle-hover-color         : #{$oxblood-500};
+  --global-link-color: #{$sepia-600};
+  --global-link-color-hover: #{$terracotta-600};
+  --global-link-color-visited: #{$sepia-700};
+  --global-link-decoration-color: #{$oxblood-500};
+  --global-masthead-link-color-hover: #{$ink-medium};
+  --global-nav-link-color: #{$ink-medium};
+  --global-nav-link-color-hover: #{$ink-muted};
+  --theme-toggle-hover-color: #{$oxblood-500};
 
   /* Code blocks */
-  --global-code-background-color     : #{$paper-stone};
-  --global-code-text-color           : #{$ink-dark};
+  --global-code-background-color: #{$paper-stone};
+  --global-code-text-color: #{$ink-dark};
 
   /* Selection */
-  --global-selection-text-color      : #{$ink-black};
-  --global-selection-bg-color        : #{$parchment-300};
-  --global-selection-bg-color-hover  : #{$parchment-500};
+  --global-selection-text-color: #{$ink-black};
+  --global-selection-bg-color: #{$parchment-300};
+  --global-selection-bg-color-hover: #{$parchment-500};
 
   /* Buttons */
-  --btn-primary-bg                   : #{$parchment-300};
-  --btn-primary-bg-hover             : #{$parchment-500};
-  --btn-primary-text                 : #{$ink-black};
-  --btn-secondary-bg                 : #{$paper-white};
-  --btn-secondary-text               : #{$ink-dark};
+  --btn-primary-bg: #{$parchment-300};
+  --btn-primary-bg-hover: #{$parchment-500};
+  --btn-primary-text: #{$ink-black};
+  --btn-secondary-bg: #{$paper-white};
+  --btn-secondary-text: #{$ink-dark};
 
   /* Box shadow */
-  --box-shadow-offset-color          : #{$border-dark};
-  --box-shadow-border-color          : #{$border-light};
+  --box-shadow-offset-color: #{$border-dark};
+  --box-shadow-border-color: #{$border-light};
 }
 
 /* Dark theme — Traditional */
 html[data-theme="dark"] {
-   /* Backgrounds */
-   --global-bg-color                  : #{$olive-charcoal};
-   --global-footer-bg-color           : #{$coal-950};
-   --global-hover-bg                  : #{$coal-850};
- 
-   /* Borders */
-   --global-border-color              : #{$soot-700};
-   --global-dark-border-color         : #{$soot-600};
- 
-   /* Text */
-   --global-text-color                : #{$parchment-100};
-   --global-text-color-light          : #{$parchment-400};
-   --header-footer-text-color         : #{$parchment-200};
-   --global-masthead-link-color       : #{$parchment-100};
+  /* Backgrounds */
+  --global-bg-color: #{$olive-charcoal};
+  --global-footer-bg-color: #{$coal-950};
+  --global-hover-bg: #{$coal-850};
 
-   /* Links (sepia/terracotta instead of cyan) */
-   --global-link-color                : #{$parchment-200};
-   --global-link-color-hover          : #{$terracotta-600};
-   --global-link-color-visited        : #{$parchment-400};
-   --global-link-decoration-color     : #{$oxblood-500};
-   --global-masthead-link-color-hover : #{$parchment-400};
-   --global-nav-link-color            : #{$parchment-400};
-   --global-nav-link-color-hover      : #{$sepia-400};
-   --theme-toggle-hover-color         : #{$amber-400};
+  /* Borders */
+  --global-border-color: #{$soot-700};
+  --global-dark-border-color: #{$soot-600};
 
-   /* Code blocks: warm paper-on-charcoal */
-   --global-code-background-color     : #{$coal-800};
-   --global-code-text-color           : #{$parchment-200};
+  /* Text */
+  --global-text-color: #{$parchment-100};
+  --global-text-color-light: #{$parchment-400};
+  --header-footer-text-color: #{$parchment-200};
+  --global-masthead-link-color: #{$parchment-100};
 
-   /* Selection: muted “aged paper” glow, not neon */
-   --global-selection-text-color      : #{$coal-950};
-   --global-selection-bg-color        : #{$sepia-400};
-   --global-selection-bg-color-hover  : #{$terracotta-600};
+  /* Links (sepia/terracotta instead of cyan) */
+  --global-link-color: #{$parchment-200};
+  --global-link-color-hover: #{$terracotta-600};
+  --global-link-color-visited: #{$parchment-400};
+  --global-link-decoration-color: #{$oxblood-500};
+  --global-masthead-link-color-hover: #{$parchment-400};
+  --global-nav-link-color: #{$parchment-400};
+  --global-nav-link-color-hover: #{$sepia-400};
+  --theme-toggle-hover-color: #{$amber-400};
 
-   /* Buttons */
-   --btn-primary-bg                   : #{$parchment-100};
-   --btn-primary-bg-hover             : #{$parchment-200};
-   --btn-primary-text                 : #{$coal-950};
-   --btn-secondary-bg                 : #{$coal-800};
-   --btn-secondary-text               : #{$parchment-100};
+  /* Code blocks: warm paper-on-charcoal */
+  --global-code-background-color: #{$coal-800};
+  --global-code-text-color: #{$parchment-200};
 
-   /* Box shadow */
-   --box-shadow-offset-color          : rgba(0, 0, 0, 0.4);
-   --box-shadow-border-color          : #{$soot-700};
- }
+  /* Selection: muted “aged paper” glow, not neon */
+  --global-selection-text-color: #{$coal-950};
+  --global-selection-bg-color: #{$sepia-400};
+  --global-selection-bg-color-hover: #{$terracotta-600};
+
+  /* Buttons */
+  --btn-primary-bg: #{$parchment-100};
+  --btn-primary-bg-hover: #{$parchment-200};
+  --btn-primary-text: #{$coal-950};
+  --btn-secondary-bg: #{$coal-800};
+  --btn-secondary-text: #{$parchment-100};
+
+  /* Box shadow */
+  --box-shadow-offset-color: rgba(0, 0, 0, 0.4);
+  --box-shadow-border-color: #{$soot-700};
+}

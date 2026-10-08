@@ -37,20 +37,32 @@ $x-large: 1280px !default;
 
 /* Utility classes for hiding/showing at breakpoints */
 @include mobile-only {
-  .mobile-hide { display: none !important; }
+  .mobile-hide {
+    display: none !important;
+  }
 }
 
 @include tablet-only {
-  .tablet-hide { display: none !important; }
+  .tablet-hide {
+    display: none !important;
+  }
 }
 
 @include desktop-only {
-  .desktop-hide { display: none !important; }
-  .desktop-only { display: block; }
+  .desktop-hide {
+    display: none !important;
+  }
+  .desktop-only {
+    display: block;
+  }
 }
 
 /* Default hide desktop-only on smaller screens */
 .desktop-only {
-  @include mobile-only { display: none !important; }
-  @include tablet-only { display: none !important; }
+  @include mobile-only {
+    display: none !important;
+  }
+  @include tablet-only {
+    display: none !important;
+  }
 }
