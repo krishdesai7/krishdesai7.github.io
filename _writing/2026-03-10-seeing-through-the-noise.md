@@ -7,6 +7,8 @@ description: "On inverse problems, the nature of measurement, and why honest unc
 layout: writing
 ---
 
+<!-- markdownlint-disable no-inline-html -->
+
 Every measurement[^1] is a half-truth. Not a deliberate one, but an inevitable one. The kind of half-truth that arises from the gap between what we want to know and what our instruments can tell us. A thermometer does not measure temperature; it measures the expansion of mercury, from which we infer temperature. A bathroom scale does not measure mass; it measures the deformation of a spring. A telescope does not show us a star; it collects photons that left the star years ago and passed through the expanse of space and an atmosphere that scattered and bent them along the way. Between the thing we care about and the number we write down, there is always an instrument that distorts, degrades, smears, and obscures the signal.
 
 This is not a problem unique to science. The inverse problem is a feature of all observation, all inference, all attempts to understand. When one listens to a friend speak in a crowded restaurant, one is solving an inverse problem; the problem of extracting a voice from a mixture of voices, clattering plates, background music. When doctors read an X-ray, they infer the conditions of their patient’s bones from shadows cast on a screen. When investors read a quarterly earnings report, they seek to separate genuine business performance from local choices and global macroeconomic effects that have nothing to do with the company itself.
