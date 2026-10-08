@@ -7,15 +7,14 @@ description: "On inverse problems, the nature of measurement, and why honest unc
 layout: writing
 ---
 
-<!-- markdownlint-disable no-inline-html -->
-
 Every measurement[^1] is a half-truth. Not a deliberate one, but an inevitable one. The kind of half-truth that arises from the gap between what we want to know and what our instruments can tell us. A thermometer does not measure temperature; it measures the expansion of mercury, from which we infer temperature. A bathroom scale does not measure mass; it measures the deformation of a spring. A telescope does not show us a star; it collects photons that left the star years ago and passed through the expanse of space and an atmosphere that scattered and bent them along the way. Between the thing we care about and the number we write down, there is always an instrument that distorts, degrades, smears, and obscures the signal.
 
 This is not a problem unique to science. The inverse problem is a feature of all observation, all inference, all attempts to understand. When one listens to a friend speak in a crowded restaurant, one is solving an inverse problem; the problem of extracting a voice from a mixture of voices, clattering plates, background music. When doctors read an X-ray, they infer the conditions of their patient’s bones from shadows cast on a screen. When investors read a quarterly earnings report, they seek to separate genuine business performance from local choices and global macroeconomic effects that have nothing to do with the company itself.
 
 The inverse problem is the deceptively simple question that unites all these situations: given what was observed, what truly happened? This inverse problem is among the most important and most underappreciated intellectual challenges in modern life.
 
-<p style="text-align: center;">* * *</p>
+\* \* \*
+{: style="text-align: center;"}
 
 The forward problem is easy. Given the true state of the world and the exact properties of one’s measuring instrument, however crude it may be, one can predict what the instrument will read. This is because the forward process is deterministic. That is not to say it is easy; as instruments and the distortions they induce into their measurements get increasingly complex, accurately modelling and applying the forward process can become correspondingly more challenging. Nonetheless, philosophically, the forward problem is a matter of simulation: start with truth, apply a known process, and arrive at observation.
 

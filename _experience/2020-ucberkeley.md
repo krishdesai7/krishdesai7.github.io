@@ -21,6 +21,8 @@ Served as Associate Instructor in the UC Berkeley Physics Department, teaching a
 - Physics 8B: Introductory Physics (Head Associate Instructor)
 - Physics 7B: Physics for Scientists and Engineers
 
+For my full teaching record, see the [teaching](/teaching/){:target="\_blank"} page.
+
 ## Technologies & Skills
 
 - Curriculum development and course instruction
