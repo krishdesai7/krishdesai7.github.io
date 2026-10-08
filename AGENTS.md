@@ -8,9 +8,9 @@ Jekyll-based academic personal website for Krish Desai, hosted on GitHub Pages a
 
 ## Development Commands
 
-```bash
-# Serve locally with live reload (http://127.0.0.1:4000)
-bundle exec jekyll serve --livereload
+```zsh
+# Serve locally (http://127.0.0.1:4000)
+bundle exec jekyll serve -lI
 
 # Build for production
 bundle exec jekyll build
@@ -19,10 +19,10 @@ bundle exec jekyll build
 npm run build
 
 # Generate talk location maps
-uv run talkmap.py
+uv run talkmaps/talkmap.py
 
 # Update CV JSON from collection frontmatter
-uv run update_cv.py
+uv run _data/update_cv.py
 
 # Install dependencies
 bundle install        # Ruby gems
