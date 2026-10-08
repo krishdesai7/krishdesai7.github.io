@@ -14,8 +14,8 @@ if TYPE_CHECKING:
     from collections.abc import Callable
     from typing import Final
 
-CV_FILE_PATH: Final[Path] = Path("cv.json")
-CONFIG_FILE_PATH: Final[Path] = Path("../_config.yml")
+CV_FILE_PATH: Final[Path] = Path("_data/cv.json")
+CONFIG_FILE_PATH: Final[Path] = Path("_config.yml")
 CATEGORY_MAPPING: Final[dict[str, str]] = {
     "publications": "Publications",
     "talks": "Talks",
@@ -74,14 +74,12 @@ def get_talks(
     """Gets the talks section."""
     talks: list[dict[str, str | datetime.date]] = []
     for item in items:
-        talks.append(
-            {
-                "name": item["title"],
-                "event": item["venue"],
-                "date": item["date"],
-                "location": item["location"],
-            }
-        )
+        talks.append({
+            "name": item["title"],
+            "event": item["venue"],
+            "date": item["date"],
+            "location": item["location"],
+        })
     return talks
 
 
@@ -91,14 +89,12 @@ def get_experience(
     """Gets the experience section."""
     experience: list[dict[str, str | datetime.date]] = []
     for item in items:
-        experience.append(
-            {
-                "name": item["venue"],
-                "position": item["title"],
-                "startDate": item["date"],
-                "endDate": item.get("end_date", "Present"),
-            }
-        )
+        experience.append({
+            "name": item["venue"],
+            "position": item["title"],
+            "startDate": item["date"],
+            "endDate": item.get("end_date", "Present"),
+        })
     experience.sort(
         key=lambda x: (
             1 if x["endDate"] == "Present" else 0,
@@ -118,14 +114,12 @@ def get_teaching(
     """Gets the teaching section."""
     teaching: list[dict[str, str | datetime.date]] = []
     for item in items:
-        teaching.append(
-            {
-                "name": f"{item['course']}: {item['title']}",
-                "institution": item["venue"],
-                "date": f"{item['semester']} {item['year']}",
-                "role": item["type"],
-            }
-        )
+        teaching.append({
+            "name": f"{item['course']}: {item['title']}",
+            "institution": item["venue"],
+            "date": f"{item['semester']} {item['year']}",
+            "role": item["type"],
+        })
 
     def sort_key(entry: dict[str, str | datetime.date]) -> tuple[int, int]:
         semester, year = cast(typ=str, val=entry["date"]).split()
