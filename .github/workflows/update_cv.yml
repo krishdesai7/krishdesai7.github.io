@@ -3,11 +3,11 @@ name: Update CV
 on:
   push:
     paths:
-      - '_publications/**'
-      - '_talks/**'
-      - '_experience/**'
-      - '_teaching/**'
-      - 'update_cv.py'
+      - "_publications/**"
+      - "_talks/**"
+      - "_experience/**"
+      - "_teaching/**"
+      - "update_cv.py"
 
 permissions:
   contents: write
@@ -17,24 +17,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v7
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Install uv
-      uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
+      - name: Install uv
+        uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
 
-    - name: Set up Python
-      run: uv sync
+      - name: Set up Python
+        run: uv sync
 
-    - name: Run update_cv script
-      run: |
-        uv run _data/update_cv.py
+      - name: Run update_cv script
+        run: |
+          uv run _data/update_cv.py
 
-    - name: Commit changes
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add _data/cv.json
-        git commit -m "Automated update of CV data" || echo "No changes to commit"
-        git push origin HEAD:${GITHUB_REF#refs/heads/}
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/cv.json
+          git commit -m "Automated update of CV data" || echo "No changes to commit"
+          git push origin HEAD:${GITHUB_REF#refs/heads/}

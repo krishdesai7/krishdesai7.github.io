@@ -3,59 +3,71 @@
   const html = document.documentElement;
 
   function setTheme(mode) {
-    const icon = document.getElementById('theme-icon');
-    const next = mode || localStorage.getItem('theme') ||
-      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const icon = document.getElementById("theme-icon");
+    const next =
+      mode ||
+      localStorage.getItem("theme") ||
+      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
 
-    if (next === 'dark') {
-      html.setAttribute('data-theme', 'dark');
-      if (icon) { icon.classList.remove('fa-moon-stars'); icon.classList.add('fa-sun-bright'); }
+    if (next === "dark") {
+      html.setAttribute("data-theme", "dark");
+      if (icon) {
+        icon.classList.remove("fa-moon-stars");
+        icon.classList.add("fa-sun-bright");
+      }
     } else {
-      html.removeAttribute('data-theme');
-      if (icon) { icon.classList.remove('fa-sun-bright'); icon.classList.add('fa-moon-stars'); }
+      html.removeAttribute("data-theme");
+      if (icon) {
+        icon.classList.remove("fa-sun-bright");
+        icon.classList.add("fa-moon-stars");
+      }
     }
   }
 
   function toggleTheme() {
-    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('theme', next);
+    const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", next);
     setTheme(next);
   }
 
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener("DOMContentLoaded", () => {
     setTheme();
 
-    const toggleBtn = document.getElementById('theme-toggle');
-    if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
+    const toggleBtn = document.getElementById("theme-toggle");
+    if (toggleBtn) toggleBtn.addEventListener("click", toggleTheme);
 
     // Respect OS changes unless the user pinned a choice
-    matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-      if (!localStorage.getItem('theme')) setTheme(e.matches ? 'dark' : 'light');
-    });
+    matchMedia("(prefers-color-scheme: dark)").addEventListener(
+      "change",
+      (e) => {
+        if (!localStorage.getItem("theme"))
+          setTheme(e.matches ? "dark" : "light");
+      },
+    );
   });
 })();
 
 // ===== HAMBURGER MENU =====
-const navToggle = document.getElementById('nav-toggle');
-const navLinks = document.getElementById('nav-links');
+const navToggle = document.getElementById("nav-toggle");
+const navLinks = document.getElementById("nav-links");
 if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('nav--open');
-    navToggle.setAttribute('aria-expanded', isOpen);
-    const icon = navToggle.querySelector('i');
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("nav--open");
+    navToggle.setAttribute("aria-expanded", isOpen);
+    const icon = navToggle.querySelector("i");
     if (isOpen) {
-      icon.classList.remove('fa-bars');
-      icon.classList.add('fa-xmark');
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
     } else {
-      icon.classList.remove('fa-xmark');
-      icon.classList.add('fa-bars');
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
     }
   });
 }
 
 // ===== SCROLL-AWARE MASTHEAD (mobile) =====
 (function () {
-  const masthead = document.querySelector('.masthead');
+  const masthead = document.querySelector(".masthead");
   if (!masthead) return;
 
   let lastScrollY = window.scrollY;
@@ -64,22 +76,26 @@ if (navToggle && navLinks) {
   function onScroll() {
     const currentY = window.scrollY;
     if (currentY <= 0) {
-      masthead.classList.remove('masthead--hidden');
+      masthead.classList.remove("masthead--hidden");
     } else if (currentY > lastScrollY) {
-      masthead.classList.add('masthead--hidden');
+      masthead.classList.add("masthead--hidden");
     } else {
-      masthead.classList.remove('masthead--hidden');
+      masthead.classList.remove("masthead--hidden");
     }
     lastScrollY = currentY;
     ticking = false;
   }
 
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(onScroll);
-      ticking = true;
-    }
-  }, { passive: true });
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        requestAnimationFrame(onScroll);
+        ticking = true;
+      }
+    },
+    { passive: true },
+  );
 })();
 
 // ===== CLIPBOARD =====
@@ -90,47 +106,47 @@ async function copyText(text) {
 function decodeEntitiesAndStripTags(htmlish) {
   // Decode common entities then strip HTML tags
   let s = htmlish
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'");
-  return s.replace(/<[^>]*>/g, '');
+  return s.replace(/<[^>]*>/g, "");
 }
 
 function markCopied(btn, ms = 2000) {
   if (!btn) return;
   const original = btn.textContent;
-  btn.classList.add('copied');
+  btn.classList.add("copied");
 
   // If the button has text, briefly swap it to a confirmation
-  if (original && original.trim().length) btn.textContent = 'Copied!';
+  if (original && original.trim().length) btn.textContent = "Copied!";
   setTimeout(() => {
-    btn.classList.remove('copied');
+    btn.classList.remove("copied");
     if (original && original.trim().length) btn.textContent = original;
   }, ms);
 }
 
 // Copy citation buttons: expects data-citation on the button
 window.copyToClipboard = async function (btn) {
-  const raw = btn?.getAttribute('data-citation') || '';
+  const raw = btn?.getAttribute("data-citation") || "";
   const text = decodeEntitiesAndStripTags(raw);
   await copyText(text);
   markCopied(btn, 1000);
 };
 
 // ===== BIBLATEX MODAL =====
-let currentBiblatexUrl = '';
-let currentBiblatexContent = '';
+let currentBiblatexUrl = "";
+let currentBiblatexContent = "";
 
 function formatBiblatexForDisplay(content) {
   // Prevent breaks between the assignment operator and opening brace so the URL stays attached.
-  return content.replace(/ = \{/g, ' =\u00a0{');
+  return content.replace(/ = \{/g, " =\u00a0{");
 }
 
 window.showBiblatexModal = async function (biblatexUrl) {
-  const modal = document.getElementById('biblatex-modal');
-  const contentEl = document.getElementById('biblatex-content');
+  const modal = document.getElementById("biblatex-modal");
+  const contentEl = document.getElementById("biblatex-content");
   if (!modal || !contentEl) return;
 
   currentBiblatexUrl = biblatexUrl;
@@ -140,25 +156,25 @@ window.showBiblatexModal = async function (biblatexUrl) {
     currentBiblatexContent = await res.text();
     contentEl.textContent = formatBiblatexForDisplay(currentBiblatexContent);
   } catch (err) {
-    currentBiblatexContent = '';
-    contentEl.textContent = 'Error loading BibLaTeX content';
-    console.error('Error fetching BibLaTeX:', err);
+    currentBiblatexContent = "";
+    contentEl.textContent = "Error loading BibLaTeX content";
+    console.error("Error fetching BibLaTeX:", err);
   }
 
-  modal.classList.add('show');
+  modal.classList.add("show");
 };
 
 function closeBiblatexModal() {
-  const modal = document.getElementById('biblatex-modal');
-  if (modal) modal.classList.remove('show');
+  const modal = document.getElementById("biblatex-modal");
+  if (modal) modal.classList.remove("show");
 }
 
 function downloadBiblatex() {
   if (!currentBiblatexContent) return;
-  const filename = (currentBiblatexUrl?.split('/')?.pop()) || 'citation.bib';
-  const blob = new Blob([currentBiblatexContent], { type: 'text/plain' });
+  const filename = currentBiblatexUrl?.split("/")?.pop() || "citation.bib";
+  const blob = new Blob([currentBiblatexContent], { type: "text/plain" });
   const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
+  const a = document.createElement("a");
   a.href = url;
   a.download = filename;
   document.body.appendChild(a);
@@ -167,30 +183,31 @@ function downloadBiblatex() {
   document.body.removeChild(a);
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   // Modal buttons
-  const btnClose = document.querySelector('.modal-close');
-  const btnDownload = document.getElementById('biblatex-download');
-  const btnCopy = document.getElementById('biblatex-copy');
-  const modal = document.getElementById('biblatex-modal');
+  const btnClose = document.querySelector(".modal-close");
+  const btnDownload = document.getElementById("biblatex-download");
+  const btnCopy = document.getElementById("biblatex-copy");
+  const modal = document.getElementById("biblatex-modal");
 
-  if (btnClose) btnClose.addEventListener('click', closeBiblatexModal);
-  if (btnDownload) btnDownload.addEventListener('click', downloadBiblatex);
-  if (btnCopy) btnCopy.addEventListener('click', async () => {
-    if (!currentBiblatexContent) return;
-    await copyText(currentBiblatexContent);
-    markCopied(btnCopy, 2000);
-  });
+  if (btnClose) btnClose.addEventListener("click", closeBiblatexModal);
+  if (btnDownload) btnDownload.addEventListener("click", downloadBiblatex);
+  if (btnCopy)
+    btnCopy.addEventListener("click", async () => {
+      if (!currentBiblatexContent) return;
+      await copyText(currentBiblatexContent);
+      markCopied(btnCopy, 2000);
+    });
 
   // Close when clicking backdrop
   if (modal) {
-    modal.addEventListener('click', e => {
+    modal.addEventListener("click", (e) => {
       if (e.target === modal) closeBiblatexModal();
     });
   }
 
   // Close with Escape
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeBiblatexModal();
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeBiblatexModal();
   });
 });

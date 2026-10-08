@@ -2,7 +2,7 @@ name: Build and deploy Jekyll (Dart Sass)
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v7
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '4.0.7'
+          ruby-version: "4.0.7"
           bundler-cache: true
       - run: bundle exec jekyll build -t
       - uses: actions/upload-pages-artifact@v5
