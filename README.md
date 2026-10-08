@@ -22,7 +22,7 @@ uv sync          # install Python packages
 ### Serve
 
 ```bash
-bundle exec jekyll serve --livereload
+bundle exec jekyll serve -lI
 ```
 
 The site is available at `http://127.0.0.1:4000`.
