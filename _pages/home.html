@@ -35,7 +35,7 @@ excerpt: "Machine learning for physics — unfolding, inference, and practical s
     {% for p in pubs limit:3 %}
     <div class="archive__item">
       <h4 class="archive__item-title">
-        <a href="{{ p.url | relative_url }}">
+        <a href="{{ p.url | relative_url }}" target="_blank">
           {{ p.title | escape }}
         </a>
       </h4>
@@ -45,7 +45,7 @@ excerpt: "Machine learning for physics — unfolding, inference, and practical s
     </div>
     {% endfor %}
     <p>
-      <a href="{{ '/publications/' | relative_url }}">
+      <a href="{{ '/publications/' | relative_url }}" target="_blank">
         All publications
         <i class="fa-sharp-duotone fa-regular fa-chevron-right fa-fw" aria-hidden="true"></i>
       </a>
@@ -60,7 +60,7 @@ excerpt: "Machine learning for physics — unfolding, inference, and practical s
     {% for t in talks limit:3 %}
     <div class="archive__item">
       <h4 class="archive__item-title">
-        <a href="{{ t.url | relative_url }}">
+        <a href="{{ t.url | relative_url }}" target="_blank">
           {{ t.title }}
         </a>
       </h4>
@@ -74,7 +74,7 @@ excerpt: "Machine learning for physics — unfolding, inference, and practical s
     </div>
     {% endfor %}
     <p>
-      <a href="{{ '/talks/' | relative_url }}">
+      <a href="{{ '/talks/' | relative_url }}" target="_blank">
         All talks
         <i class="fa-sharp-duotone fa-regular fa-chevron-right fa-fw" aria-hidden="true"></i>
       </a>
