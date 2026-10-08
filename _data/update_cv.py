@@ -10,8 +10,9 @@ import yaml
 
 if TYPE_CHECKING:
     from collections.abc import Callable
-CV_FILE_PATH: Final[Path] = Path("_data/cv.json")
-CONFIG_FILE_PATH: Final[Path] = Path("_config.yml")
+
+CV_FILE_PATH: Final[Path] = Path("cv.json")
+CONFIG_FILE_PATH: Final[Path] = Path("../_config.yml")
 CATEGORY_MAPPING: Final[dict[str, str]] = {
     "publications": "Publications",
     "talks": "Talks",
@@ -41,7 +42,7 @@ def load_markdown_files(directory: Path) -> list[dict[str, object]]:
 
 def html_to_markdown_bold(text: str) -> str:
     """Converts <strong>...</strong> HTML tags to **...** markdown bold."""
-    return re.sub(r"<strong>(.*?)</strong>", r"**\1**", text)
+    return re.sub(pattern=r"<strong>(.*?)</strong>", repl=r"**\1**", string=text)
 
 
 def get_publications(
@@ -52,7 +53,7 @@ def get_publications(
     for item in items:
         entry: dict[str, str | datetime.date] = {
             "name": item["title"],
-            "authors": html_to_markdown_bold(cast(str, item["authors"])),
+            "authors": html_to_markdown_bold(text=cast(typ=str, val=item["authors"])),
             "publisher": item["venue"],
             "date": item["date"],
             "pdf": item["paperurl"],
@@ -122,12 +123,12 @@ def get_teaching(
                 "role": item["type"],
             }
         )
-    teaching.sort(
-        key=lambda x: (
-            -int(x["date"].split()[-1]),
-            SEMESTER_ORDER.get(x["date"].split()[0], 99),
-        )
-    )
+
+    def sort_key(entry: dict[str, str | datetime.date]) -> tuple[int, int]:
+        semester, year = cast(typ=str, val=entry["date"]).split()
+        return -int(year), SEMESTER_ORDER.get(semester, 99)
+
+    teaching.sort(key=sort_key)
     return teaching
 
 
@@ -176,11 +177,11 @@ def update_basics_from_config(cv_data: dict, config: dict) -> None:
 
 def main() -> int:
     if CV_FILE_PATH.exists():
-        with open(CV_FILE_PATH, "r") as f:
-            cv_data: dict = json.load(f)
+        with open(file=CV_FILE_PATH, mode="r") as f:
+            cv_data: dict = json.load(fp=f)
         if CONFIG_FILE_PATH.exists():
-            with open(CONFIG_FILE_PATH, "r") as f:
-                config: dict = yaml.safe_load(f)
+            with open(file=CONFIG_FILE_PATH, mode="r") as f:
+                config: dict = yaml.safe_load(stream=f)
             update_basics_from_config(cv_data, config)
         else:
             print(f"Config file {CONFIG_FILE_PATH} does not exist", file=sys.stderr)
@@ -194,10 +195,12 @@ def main() -> int:
                     file=sys.stderr,
                 )
                 return 2
-            items: list[dict[str, object]] = load_markdown_files(Path(f"_{category}"))
+            items: list[dict[str, object]] = load_markdown_files(
+                directory=Path(f"_{category}")
+            )
             cv_data["contents"][json_key] = getter(items)
-        with open(CV_FILE_PATH, "w") as f:
-            json.dump(cv_data, f, indent=4, default=datetime.date.isoformat)
+        with open(file=CV_FILE_PATH, mode="w") as f:
+            json.dump(obj=cv_data, fp=f, indent=4, default=datetime.date.isoformat)
             f.write("\n")
         return 0
     print(f"CV file {CV_FILE_PATH} does not exist", file=sys.stderr)
@@ -205,4 +208,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    raise SystemExit(main())
