@@ -1,17 +1,19 @@
 <meta charset="utf-8">
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="32x32" media="(prefers-color-scheme: light)">
 <link rel="icon" href="{{ '/favicon-dark.ico' | relative_url }}" sizes="32x32" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="{{ '/assets/images/favicon-512.png' | relative_url }}" type="image/png" sizes="512x512" media="(prefers-color-scheme: light)">
-<link rel="icon" href="{{ '/assets/images/favicon-512-dark.png' | relative_url }}" type="image/png" sizes="512x512" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="{{ '/assets/images/favicon-512.png' | relative_url }}" type="image/png" sizes="512x512"
+  media="(prefers-color-scheme: light)">
+<link rel="icon" href="{{ '/assets/images/favicon-512-dark.png' | relative_url }}" type="image/png" sizes="512x512"
+  media="(prefers-color-scheme: dark)">
 <link rel="apple-touch-icon" href="{{ '/assets/images/favicon-180.png' | relative_url }}">
 {% include head/seo.html %}
 <!-- Blocking script to prevent dark mode flash - must run before CSS loads -->
 <script>
-  (function() {
+  (function () {
     // Get theme from localStorage
     const theme = localStorage.getItem('theme');
     const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    
+
     // Determine which theme to apply
     let appliedTheme;
     if (theme === 'dark' || theme === 'light') {
@@ -21,7 +23,7 @@
     } else {
       appliedTheme = 'light';
     }
-    
+
     // Apply theme immediately by setting data-theme attribute
     if (appliedTheme === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -30,13 +32,19 @@
 </script>
 
 <!-- Preload critical body font -->
-<link rel="preload" href="{{'/assets/fonts/cochineal/woff2/Cochineal-Roman.woff2' | relative_url}}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{'/assets/fonts/cochineal/woff2/Cochineal-Roman.woff2' | relative_url}}" as="font"
+  type="font/woff2" crossorigin>
 <!-- Font Awesome (deferred - icons are not needed for initial text render) -->
-<link rel="preload" href="{{'/assets/fonts/font-awesome/css/all.min.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="{{'/assets/fonts/font-awesome/css/sharp-duotone-regular.min.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="{{'/assets/fonts/font-awesome/css/duotone-regular.min.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="{{'/assets/fonts/font-awesome/css/slab-press-regular.min.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="{{'/assets/fonts/font-awesome/css/graphite-thin.css' | relative_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{'/assets/fonts/font-awesome/css/all.min.css' | relative_url}}" as="style"
+  onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{'/assets/fonts/font-awesome/css/sharp-duotone-regular.min.css' | relative_url}}" as="style"
+  onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{'/assets/fonts/font-awesome/css/duotone-regular.min.css' | relative_url}}" as="style"
+  onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{'/assets/fonts/font-awesome/css/slab-press-regular.min.css' | relative_url}}" as="style"
+  onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{'/assets/fonts/font-awesome/css/graphite-thin.css' | relative_url}}" as="style"
+  onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
   <link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/all.min.css' | relative_url}}">
   <link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/sharp-duotone-regular.min.css' | relative_url}}">
@@ -45,8 +53,11 @@
   <link rel="stylesheet" href="{{'/assets/fonts/font-awesome/css/graphite-thin.css' | relative_url}}">
 </noscript>
 <!-- Academicons (deferred) -->
-<link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css"></noscript>
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css" as="style"
+  onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+</noscript>
 
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
