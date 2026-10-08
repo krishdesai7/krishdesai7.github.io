@@ -39,11 +39,13 @@ SymmetryGAN
 
 The same thread runs through my work on AI systems today. A measurement is only as trustworthy as your understanding of how it was distorted, and the uncertainty it carries is part of the result. Evaluating an agent by what its outputs actually _do_ asks the same thing of it that unfolding asks of a collider detector.
 
-My physics research has appeared in venues including NeurIPS (2021, 2022, 2024), _Physical Review X_, _Physical Review D_, the _European Physical Journal C_, the _Journal of Instrumentation_, and the _Annals of Applied Statistics_, and I have given invited talks at CERN, the Korea Institute for Advanced Study, NeurIPS, and the American Physical Society. The full lists are on the [publications](/publications/) and [talks](/talks/) pages.
+My physics research has appeared in venues including NeurIPS (2021, 2022, 2024), _Physical Review X_, _Physical Review D_, the _European Physical Journal C_, the _Journal of Instrumentation_, and the _Annals of Applied Statistics_, and I have given invited talks at CERN, the Korea Institute for Advanced Study, NeurIPS, and the American Physical Society. More details about my research and talks can be found on the [publications](/publications/){:target="\_blank"} and [talks](/talks/){:target="\_blank"} pages.
 
 ## Education
 
-I completed my BS (Mathematics and Physics, with Distinction in both) and MS (Mathematics) at Yale University in 2020, and was awarded the Howard L. Schultz Prize for the most outstanding graduating senior in physics. At Yale I published research in pure mathematics (closed geodesics on flat surfaces) and theoretical physics (anharmonic oscillators via Padé approximants). I then completed my PhD in Physics at UC Berkeley in 2025.
+I earned my PhD in Physics at UC Berkeley in 2025, advised by Professor Benjamin Nachman. My dissertation, "Machine Learning Methods for Cross Section Measurements," develops a framework for applying modern generative and adversarial models to these particle physics measurements.
+
+For my undergraduate studies, I attended Yale, where I double majored in Mathematics and Physics (BS with Distinction in both) and completed a simultaneous MS (Mathematics) in 2020. At Yale, I was awarded the Howard L. Schultz Prize for the most outstanding graduating senior in physics. As part of my undergraduate research, I published papers in pure mathematics and theoretical physics.
 
 ## Industry Experience
 
@@ -66,4 +68,4 @@ I review for _Archives of Computational Methods in Engineering_, _Nature Scienti
 
 I'm drawn to thinking deeply about the logical structure of the world around us, and that curiosity doesn't stop at physics or machine learning. I'm happy to talk with anyone about anything from linguistics to molecular biology to computer architecture. Away from the desk, I play badminton and the piano, and enjoy running.
 
-I'm always open to research collaborations. If you have an idea you'd like to work on together, please [get in touch](/contact/).
+I'm always open to research collaborations. If you have an idea you'd like to work on together, please [get in touch](/contact/){:target="\_blank"}.
