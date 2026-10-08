@@ -1,15 +1,18 @@
+from __future__ import annotations
+
 import datetime
 import json
 import re
 import sys
 from pathlib import Path
-from typing import TYPE_CHECKING, Final, cast
+from typing import TYPE_CHECKING, cast
 
 import frontmatter
 import yaml
 
 if TYPE_CHECKING:
     from collections.abc import Callable
+    from typing import Final
 
 CV_FILE_PATH: Final[Path] = Path("cv.json")
 CONFIG_FILE_PATH: Final[Path] = Path("../_config.yml")
