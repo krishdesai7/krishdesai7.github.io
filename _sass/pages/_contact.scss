@@ -1,88 +1,88 @@
 @use "../design/" as *;
 
-
 .contact-info {
-    font-size: $font-size-20;
-    margin: calc(-1 * var(--baseline)) var(--double-baseline) var(--double-baseline) var(--double-baseline);
-    dt {
-        font-family: $header-font-family;
-        font-weight: $weight-semibold;
-        padding-top: var(--one-and-half-baseline);
-        padding-bottom: var(--half-baseline);
-    }
+  font-size: $font-size-20;
+  margin: calc(-1 * var(--baseline)) var(--double-baseline)
+    var(--double-baseline) var(--double-baseline);
+  dt {
+    font-family: $header-font-family;
+    font-weight: $weight-semibold;
+    padding-top: var(--one-and-half-baseline);
+    padding-bottom: var(--half-baseline);
+  }
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 36rem;
-    margin: 0 var(--double-baseline) var(--double-baseline) var(--double-baseline);
+  display: flex;
+  flex-direction: column;
+  max-width: 36rem;
+  margin: 0 var(--double-baseline) var(--double-baseline) var(--double-baseline);
 
-    label {
-        font-family: $header-font-family;
-        font-weight: $weight-semibold;
-        padding-top: var(--baseline);
-        padding-bottom: var(--third-baseline);
+  label {
+    font-family: $header-font-family;
+    font-weight: $weight-semibold;
+    padding-top: var(--baseline);
+    padding-bottom: var(--third-baseline);
+  }
+
+  input,
+  textarea {
+    font: inherit;
+    color: var(--global-text-color);
+    background: var(--global-bg-color);
+    border: 1px solid var(--global-border-color);
+    border-radius: $border-radius-single;
+    padding: var(--third-baseline) var(--half-baseline);
+
+    &:focus {
+      outline: none;
+      border-color: $terracotta-600;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  button {
+    align-self: flex-start;
+    margin-top: var(--one-and-half-baseline);
+    padding: var(--third-baseline) var(--baseline);
+    font-family: $button-font-family;
+    font-size: $font-size-16;
+    color: var(--global-text-color);
+    background: transparent;
+    border: 1px solid var(--global-border-color);
+    border-radius: $border-radius-single;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover:not(:disabled) {
+      border-color: $terracotta-600;
+      color: $terracotta-600;
     }
 
-    input,
-    textarea {
-        font: inherit;
-        color: var(--global-text-color);
-        background: var(--global-bg-color);
-        border: 1px solid var(--global-border-color);
-        border-radius: $border-radius-single;
-        padding: var(--third-baseline) var(--half-baseline);
-
-        &:focus {
-            outline: none;
-            border-color: $terracotta-600;
-        }
+    &:disabled {
+      opacity: 0.6;
+      cursor: wait;
     }
-
-    textarea {
-        resize: vertical;
-    }
-
-    button {
-        align-self: flex-start;
-        margin-top: var(--one-and-half-baseline);
-        padding: var(--third-baseline) var(--baseline);
-        font-family: $button-font-family;
-        font-size: $font-size-16;
-        color: var(--global-text-color);
-        background: transparent;
-        border: 1px solid var(--global-border-color);
-        border-radius: $border-radius-single;
-        cursor: pointer;
-        transition: all 0.2s;
-
-        &:hover:not(:disabled) {
-            border-color: $terracotta-600;
-            color: $terracotta-600;
-        }
-
-        &:disabled {
-            opacity: 0.6;
-            cursor: wait;
-        }
-    }
+  }
 }
 
 .contact-form__botcheck {
-    display: none;
+  display: none;
 }
 
 .contact-form__status {
-    min-height: var(--baseline);
-    margin-top: var(--baseline);
-    font-family: $header-font-family;
+  min-height: var(--baseline);
+  margin-top: var(--baseline);
+  font-family: $header-font-family;
 
-    &.is-success {
-        color: var(--global-link-color);
-    }
+  &.is-success {
+    color: var(--global-link-color);
+  }
 
-    &.is-error {
-        color: $terracotta-600;
-    }
+  &.is-error {
+    color: $terracotta-600;
+  }
 }

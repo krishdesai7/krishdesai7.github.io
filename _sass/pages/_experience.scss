@@ -43,7 +43,7 @@
 .experience-header {
   display: flex;
   align-items: baseline;
-  >.experience-company {
+  > .experience-company {
     margin-right: var(--quarter-baseline);
     font-family: $header-font-family-caps;
     font-weight: $weight-regular;
@@ -54,7 +54,7 @@
 .experience-details {
   display: flex;
   margin-bottom: var(--baseline);
-    font-size: $font-size-20;
+  font-size: $font-size-20;
   > .experience-dates {
     margin-left: auto;
   }

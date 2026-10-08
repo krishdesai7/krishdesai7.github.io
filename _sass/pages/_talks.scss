@@ -10,18 +10,21 @@
   padding-bottom: var(--baseline);
 }
 
-.talk-title, .talk-meta, .talk-description, .talk-links {
+.talk-title,
+.talk-meta,
+.talk-description,
+.talk-links {
   margin-top: 0;
   margin-bottom: var(--third-baseline);
 }
 
 .talk-meta.talk-venue {
-    font-style: italic;
-  }
+  font-style: italic;
+}
 
 .talk-links.talk-link__separator {
-    margin: 0 var(--quarter-baseline);
-  }
+  margin: 0 var(--quarter-baseline);
+}
 
 // Individual talk page styles
 .talk-type-single {

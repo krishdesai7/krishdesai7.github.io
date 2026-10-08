@@ -9,7 +9,7 @@
     font-variant: small-caps;
     font-family: $header-font-family-caps;
     padding-top: var(--third-baseline);
-    }
+  }
 }
 
 .author__urls {
@@ -17,7 +17,8 @@
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: var(--quarter-baseline);
-  dt, dd {
+  dt,
+  dd {
     margin: 0;
     text-wrap: nowrap;
   }
@@ -31,14 +32,14 @@
     align-items: center;
     font-family: $sans-serif;
     text-decoration: none;
-  
+
     .user-name {
       text-decoration-line: underline;
       text-decoration-style: dotted;
       text-decoration-color: var(--global-link-decoration-color);
       text-underline-offset: 0.24em;
     }
-  
+
     .user-id {
       font-family: $code-font-family;
       color: var(--global-text-color-light);
@@ -48,21 +49,22 @@
       padding: 0.1rem 0.2rem;
       justify-self: start;
     }
-  
+
     &:hover .user-id {
       color: inherit;
     }
-  
+
     &:focus,
     &:focus-visible {
-      .user-name, .user-id {
+      .user-name,
+      .user-id {
         border: inherit;
         border-radius: inherit;
         padding: inherit;
         text-decoration: inherit;
       }
     }
-  }  
+  }
   hr.divider {
     grid-column: 1 / -1;
     margin: var(--quarter-baseline);
